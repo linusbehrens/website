@@ -88,10 +88,10 @@ pre {
 		background-color: #000;
 		color: #bdbdbd;
 	}
-	code {
-		background-color: #111;
-		border-color: #222;
-	}
+	/* code { */
+	/* 	background-color: #111; */
+	/* 	border-color: #222; */
+	/* } */
 	hr {
 		border-color: #222;
 	}
