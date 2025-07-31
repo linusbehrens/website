@@ -30,15 +30,22 @@ a {
 }
 
 code > span > span > * , code > span > * , code > * {
-  background: #ffffff00;
+  background: #ffffff55;
+  font-family: 'Noto Sans Mono';
+  font-size: 14px;
+}
+code {
+    width: 100%;
+  background: #ffffff55;
   font-family: 'Noto Sans Mono';
   font-size: 14px;
 }
 
-code {
-  background: #ffffff55;
-  font-family: 'Noto Sans Mono';
-  font-size: 14px;
+code:has(br) {
+  display: block;
+}
+code.long {
+  display: block;
 }
 
 /* body { */
