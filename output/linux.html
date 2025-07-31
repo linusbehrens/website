@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="blog, git, dev-log, life-log" />
+	<meta name="description" content="Why linux is superior" />
+	<meta name="author" content="linusbehrens" />
+	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
+	<title>Why Linux - Linus Blog</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Linus Blog Atom Feed" />
+	<link rel="alternate" href="atom_content.xml" type="application/atom+xml" title="Linus Blog Atom Feed with content" />
+	<link rel="icon" href="/favicon.png" type="image/png" />
+</head>
+<body>
+	<nav id="menuwrap">
+		<table id="menu" width="100%" border="0">
+		<tr>
+			<td id="links" align="left">
+				<a href="index.html">Blog</a> |
+				<a href="/git/" title="Git repository with some of my projects">Git</a> |
+				<a href="/releases/">Releases</a> |
+				<a href="gopher://codemadness.org">Gopherhole</a>
+			</td>
+			<td id="links-contact" align="right">
+				<span class="hidden"> | </span>
+				<a href="feeds.html">Feeds</a> |
+				<a href="pgp.asc">PGP</a> |
+				<a href="mailto:mail@linus-behrens.de">Mail</a>
+			</td>
+		</tr>
+		</table>
+	</nav>
+	<hr class="hidden" />
+	<main id="mainwrap">
+		<div id="main">
+			<article>
+<header>
+	<h1>Why Linux</h1>
+	<p>
+	<strong>Last modification on </strong> <time>2024-09-05</time>
+	</p>
+</header>
+
+<h1 id="why-gnulinux">Why GNU/Linux</h1>
+<blockquote>
+<p>This is the Unix philosophy: Write programs that do one thing and do
+it well. Write programs to work together. Write programs to handle text
+streams, because that is a univeRsal interface</p>
+<p><em>- Doug McIlroy, the inventor of Unix pipes and one of the
+founders of the Unix tradition</em></p>
+</blockquote>
+<p>Linux at its core is the idea of intercompatability born in the body
+of a kernel. What I love in Linux is not how fast and free it is. Not
+how amazingly many people contribute to one goal. It is the way I use it
+and how it allowed me to fit the most bare bones software to my
+needs.</p>
+<h2 id="examples-for-the-perfect-fit">Examples for the perfect fit</h2>
+<p>My senior high note taking setup is pretty complex. However it does
+fit my workflow perfectly.</p>
+<ul>
+<li><a href="/posts/neovim">neovim</a> note taking</li>
+<li><a href="posts/tex"></a> for long-term sheets</li>
+<li><a href="posts/markdown">markdown</a> for short-term notes in
+lessons</li>
+<li>pandoc turns markdown into <code>\tex</code></li>
+<li>telescope and todo-comments for todo lists</li>
+<li><a href="posts/anki">anki</a> for everyday learning</li>
+<li>github for backing up and syncing my data (homelab in the
+future)</li>
+</ul>
+<p>With that setup I am albe to quickly make notes in my lessons as well
+as clearly structure my long-term sheets. With having anki on any of my
+devices I am able to learn everywhere.</p>
+<p>If I want I could even run all of that over ssh from a homelab of
+server at school.</p>
+<h2 id="intercompatability">Intercompatability</h2>
+<p>My shell runs in <a
+href="https://github.com/alacritty/alacritty">alacritty</a> (macOS) and
+<a href="https://st.suckless.org/">st</a> (arch and void). My most used
+and centered tool is <a href="/posts/neovim">neovim</a>. With my
+configuration it is beautiful and works seemlesly. With telescope I
+quickly open my <code>&lt;subject&gt;.refile.md</code> note and later
+the week I convert it to <code>&lt;subject.refile.tex</code> with
+pandoc. The important information gets refiled into
+<code>&lt;subject&gt;.tex</code> and tagged as
+<code>ANKI: &lt;subject&gt;</code>. So if I open telescope to see my
+todos the anki sign reminds me of entering the information to my
+<code>anki deck</code>. Every evening I push my files to github to be
+safe for a data loss.</p>
+<h2 id="options-example-distributions">Options (example
+distributions)</h2>
+<p>The following are distros I have used.</p>
+<ul>
+<li>Manjaro (Why does it exists exactly)</li>
+<li>Mint (If you would want to cheat)</li>
+<li><a href="/content/arch.md">Arch</a> (Amazing documentation, pacman,
+AUR)</li>
+<li>Arco (No systemd arch)</li>
+<li>Gentoo (If you want it you know it)</li>
+<li>Void (small, but no systemd!)</li>
+</ul>
+<p>On my <strong>x61s ThinkPad</strong> I run Arch Linux. It is light
+weight and has amazing documentary. The arch wiki is one of the best
+documents and I even refer to it to non specific arch users.</p>
+<p>The <strong>2013 Mac mini</strong> runs void linux. Not because I
+don’t like arch as much, but because after inserting a bootable usb and
+entering grubs “install arch for x86_64” I got a black screen for days.
+I choose void because I liked the neofetch batch and because it has no
+<code>systemd</code> elevating the performence and reducing drama. I
+mainly use that mashine as a ssh server.</p>
+<p>Both mashines run <a href="https://www.suckless.org">suckless
+software</a>. Namely <code>dwm</code>, <code>dmenu</code>, and
+<code>st</code>. I am really happy with how good it works, but I do not
+feel well using <code>X</code>.</p>
+<p>My <strong>MacBook</strong> runs macOS because Asahi sucks at the
+moment. However I use the tiling window manager <code>yabaii</code> and
+<a href="https://github.com/alacritty/alacritty">alacritty</a> to come
+closer to a linux experience.</p>
+
+			</article>
+		</div>
+	</main>
+</body>
+</html>

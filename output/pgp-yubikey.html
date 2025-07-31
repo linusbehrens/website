@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="blog, git, dev-log, life-log" />
+	<meta name="description" content="Setup for pgp supported by a yubikey" />
+	<meta name="author" content="linusbehrens" />
+	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
+	<title>yubikey pgp config - Linus Blog</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Linus Blog Atom Feed" />
+	<link rel="alternate" href="atom_content.xml" type="application/atom+xml" title="Linus Blog Atom Feed with content" />
+	<link rel="icon" href="/favicon.png" type="image/png" />
+</head>
+<body>
+	<nav id="menuwrap">
+		<table id="menu" width="100%" border="0">
+		<tr>
+			<td id="links" align="left">
+				<a href="index.html">Blog</a> |
+				<a href="/git/" title="Git repository with some of my projects">Git</a> |
+				<a href="/releases/">Releases</a> |
+				<a href="gopher://codemadness.org">Gopherhole</a>
+			</td>
+			<td id="links-contact" align="right">
+				<span class="hidden"> | </span>
+				<a href="feeds.html">Feeds</a> |
+				<a href="pgp.asc">PGP</a> |
+				<a href="mailto:mail@linus-behrens.de">Mail</a>
+			</td>
+		</tr>
+		</table>
+	</nav>
+	<hr class="hidden" />
+	<main id="mainwrap">
+		<div id="main">
+			<article>
+<header>
+	<h1>yubikey pgp config</h1>
+	<p>
+	<strong>Last modification on </strong> <time>2025-07-05</time>
+	</p>
+</header>
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--expert</span> <span class="at">--full-gen-key</span></span></code></pre></div>
+<ul>
+<li>Enter <code>RSA</code></li>
+<li>Enter <code>4096</code></li>
+<li>Enter expiration date</li>
+<li>Enter user information and email</li>
+<li>Enter random input (mouse, keyboard) to gain entropy</li>
+</ul>
+<p>Output:</p>
+<pre><code>gpg: key &lt;keyID&gt; marked as ultimately trusted</code></pre>
+<h2 id="add-authentication-key-if-not-default">Add authentication key
+(if not default)</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--expert</span> <span class="at">--edit-key</span> <span class="op">&lt;</span>keyID<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">addkey</span></span></code></pre></div>
+<ul>
+<li>Enter the <code>passphrase</code></li>
+<li>Enter <code>8</code> for RSA</li>
+<li>Enter <code>S</code> for disabling “sign”</li>
+<li>Enter <code>E</code> for disabling “encrypt”</li>
+<li>Enter <code>A</code> for enabling “authentication”</li>
+<li>Enter <code>Q</code> for leaving dialoge</li>
+<li>Enter key size</li>
+<li>Enter same expiration date as before</li>
+<li>Enter <code>Y</code> to safe the changes</li>
+</ul>
+<h2 id="back-pgp-key-up">Back pgp-Key up</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--export-secret-key</span> <span class="at">--armor</span> <span class="op">&lt;</span>KeyID<span class="op">&gt;</span></span></code></pre></div>
+<ul>
+<li>Store output safe</li>
+</ul>
+<h2 id="add-pgp-keys-to-the-yubikey">Add pgp-keys to the YubiKey</h2>
+<ul>
+<li>Insert YubiKey into a USB port</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--edit-key</span> <span class="op">&lt;</span>KeyID<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">keytocard</span></span></code></pre></div>
+<ul>
+<li>Signature subkey:
+<ul>
+<li>Enter <code>keytocard</code></li>
+<li>Enter <code>Y</code> to continue</li>
+<li>Enter <code>1</code> to move the signature subkey to a slot in the
+yubikey</li>
+<li>Enter <code>key 1</code></li>
+</ul></li>
+<li>Encryption subkey:
+<ul>
+<li>Enter <code>keytocard</code></li>
+<li>Enter <code>Y</code> to continue</li>
+<li>Enter <code>2</code> to move the encryption subkey to a slot in the
+yubikey</li>
+<li>Enter <code>key 1</code></li>
+<li>Enter <code>key 2</code></li>
+</ul></li>
+<li>Authentication subkey
+<ul>
+<li>Enter <code>keytocard</code></li>
+<li>Enter <code>3</code> to move the authentication subkey to a slot in
+the yubikey</li>
+</ul></li>
+<li>Enter <code>quit</code> to leave</li>
+</ul>
+<p>When asked <strong>do not safe</strong> your changes enabling you to
+copy the key to another Yubikey.</p>
+<hr />
+<p><a
+href="https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP">article
+by yubikey</a></p>
+
+			</article>
+		</div>
+	</main>
+</body>
+</html>
