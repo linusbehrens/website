@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>dotfiles, branch HEAD</title>
+<subtitle>Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</subtitle>
+<entry>
+<id>e749fc5087f79d24189e5c9ca26d122158ccee3b</id>
+<published>2025-07-23T18:29:49Z</published>
+<updated>2025-07-23T18:29:49Z</updated>
+<title> M .config/nvim/lazy-lock.json</title>
+<link rel="alternate" type="text/html" href="commit/e749fc5087f79d24189e5c9ca26d122158ccee3b.html" />
+<author>
+<name>linusbehrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit e749fc5087f79d24189e5c9ca26d122158ccee3b
+parent a682e974022217760e75f6f82fbd590f2e756d73
+Author: linusbehrens &lt;mail@linus-behrens.de&gt;
+Date:   Wed, 23 Jul 2025 20:29:49 +0200
+
+ M .config/nvim/lazy-lock.json
+
+</content>
+</entry>
+<entry>
+<id>a682e974022217760e75f6f82fbd590f2e756d73</id>
+<published>2025-07-23T18:28:02Z</published>
+<updated>2025-07-23T18:28:02Z</updated>
+<title>nitrogen dustin</title>
+<link rel="alternate" type="text/html" href="commit/a682e974022217760e75f6f82fbd590f2e756d73.html" />
+<author>
+<name>linusbehrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit a682e974022217760e75f6f82fbd590f2e756d73
+parent 0523cbda2e00de2e476f7a56d4eb970df9a37015
+Author: linusbehrens &lt;mail@linus-behrens.de&gt;
+Date:   Wed, 23 Jul 2025 20:28:02 +0200
+
+nitrogen dustin
+
+</content>
+</entry>
+<entry>
+<id>0523cbda2e00de2e476f7a56d4eb970df9a37015</id>
+<published>2025-07-23T16:14:03Z</published>
+<updated>2025-07-23T16:14:03Z</updated>
+<title>exit</title>
+<link rel="alternate" type="text/html" href="commit/0523cbda2e00de2e476f7a56d4eb970df9a37015.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 0523cbda2e00de2e476f7a56d4eb970df9a37015
+parent 444a02940a47b2da61a2ae6997f2fc10128d38be
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Wed, 23 Jul 2025 18:14:03 +0200
+
+exit
+
+</content>
+</entry>
+<entry>
+<id>444a02940a47b2da61a2ae6997f2fc10128d38be</id>
+<published>2025-07-19T21:40:55Z</published>
+<updated>2025-07-19T21:40:55Z</updated>
+<title>dustin herkules img oberbürgermeister jojo</title>
+<link rel="alternate" type="text/html" href="commit/444a02940a47b2da61a2ae6997f2fc10128d38be.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 444a02940a47b2da61a2ae6997f2fc10128d38be
+parent 7b4a956f28c038487018610bfd60a4d707b1c0ee
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Sat, 19 Jul 2025 23:40:55 +0200
+
+dustin herkules img oberbürgermeister jojo
+
+</content>
+</entry>
+<entry>
+<id>7b4a956f28c038487018610bfd60a4d707b1c0ee</id>
+<published>2025-07-19T20:38:37Z</published>
+<updated>2025-07-19T20:38:37Z</updated>
+<title>email client mblaze</title>
+<link rel="alternate" type="text/html" href="commit/7b4a956f28c038487018610bfd60a4d707b1c0ee.html" />
+<author>
+<name>linusbehrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 7b4a956f28c038487018610bfd60a4d707b1c0ee
+parent 22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108
+Author: linusbehrens &lt;mail@linus-behrens.de&gt;
+Date:   Sat, 19 Jul 2025 22:38:37 +0200
+
+email client mblaze
+
+</content>
+</entry>
+<entry>
+<id>22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108</id>
+<published>2025-07-18T23:10:29Z</published>
+<updated>2025-07-18T23:10:29Z</updated>
+<title>fix and script compability</title>
+<link rel="alternate" type="text/html" href="commit/22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108.html" />
+<author>
+<name>linusbehrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108
+parent 3edcac6650246cc867626865c81c56caef48b1df
+Author: linusbehrens &lt;mail@linus-behrens.de&gt;
+Date:   Sat, 19 Jul 2025 01:10:29 +0200
+
+fix and script compability
+
+</content>
+</entry>
+<entry>
+<id>3edcac6650246cc867626865c81c56caef48b1df</id>
+<published>2025-07-18T13:07:20Z</published>
+<updated>2025-07-18T13:07:20Z</updated>
+<title>Merge pull request #1 from linusbehrens/tmp</title>
+<link rel="alternate" type="text/html" href="commit/3edcac6650246cc867626865c81c56caef48b1df.html" />
+<author>
+<name>Linus</name>
+<email>93053722+linusbehrens@users.noreply.github.com</email>
+</author>
+<content>commit 3edcac6650246cc867626865c81c56caef48b1df
+parent 8a935471be56aba0560c8064c032be9779084676
+Author: Linus &lt;93053722+linusbehrens@users.noreply.github.com&gt;
+Date:   Fri, 18 Jul 2025 15:07:20 +0200
+
+Merge pull request #1 from linusbehrens/tmp
+
+neovim stuff
+</content>
+</entry>
+<entry>
+<id>50a2f03703a65532ab36f5769f5118bb77f44f9f</id>
+<published>2025-07-18T13:07:09Z</published>
+<updated>2025-07-18T13:07:09Z</updated>
+<title>Merge branch &#39;main&#39; into tmp</title>
+<link rel="alternate" type="text/html" href="commit/50a2f03703a65532ab36f5769f5118bb77f44f9f.html" />
+<author>
+<name>Linus</name>
+<email>93053722+linusbehrens@users.noreply.github.com</email>
+</author>
+<content>commit 50a2f03703a65532ab36f5769f5118bb77f44f9f
+parent d2d4275b96dac0a4cbccfcba7fc2cd36090065aa
+Author: Linus &lt;93053722+linusbehrens@users.noreply.github.com&gt;
+Date:   Fri, 18 Jul 2025 15:07:09 +0200
+
+Merge branch &#39;main&#39; into tmp
+</content>
+</entry>
+<entry>
+<id>d2d4275b96dac0a4cbccfcba7fc2cd36090065aa</id>
+<published>2025-07-18T13:03:41Z</published>
+<updated>2025-07-18T13:03:41Z</updated>
+<title>neovim stuff</title>
+<link rel="alternate" type="text/html" href="commit/d2d4275b96dac0a4cbccfcba7fc2cd36090065aa.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit d2d4275b96dac0a4cbccfcba7fc2cd36090065aa
+parent 78f1dc8cd42106ea941351dd7c265e8375071204
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Fri, 18 Jul 2025 15:03:41 +0200
+
+neovim stuff
+
+</content>
+</entry>
+<entry>
+<id>8a935471be56aba0560c8064c032be9779084676</id>
+<published>2025-07-18T13:01:26Z</published>
+<updated>2025-07-18T13:01:26Z</updated>
+<title>mini without gh4</title>
+<link rel="alternate" type="text/html" href="commit/8a935471be56aba0560c8064c032be9779084676.html" />
+<author>
+<name>linusbehrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 8a935471be56aba0560c8064c032be9779084676
+parent 78f1dc8cd42106ea941351dd7c265e8375071204
+Author: linusbehrens &lt;mail@linus-behrens.de&gt;
+Date:   Fri, 18 Jul 2025 15:01:26 +0200
+
+mini without gh4
+
+</content>
+</entry>
+<entry>
+<id>78f1dc8cd42106ea941351dd7c265e8375071204</id>
+<published>2025-07-13T13:54:20Z</published>
+<updated>2025-07-13T13:54:20Z</updated>
+<title>tmux color adjust</title>
+<link rel="alternate" type="text/html" href="commit/78f1dc8cd42106ea941351dd7c265e8375071204.html" />
+<author>
+<name>linusbehrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 78f1dc8cd42106ea941351dd7c265e8375071204
+parent b9305eddbd443db1fa43a74f404440945f4a555a
+Author: linusbehrens &lt;mail@linus-behrens.de&gt;
+Date:   Sun, 13 Jul 2025 15:54:20 +0200
+
+tmux color adjust
+
+</content>
+</entry>
+<entry>
+<id>b9305eddbd443db1fa43a74f404440945f4a555a</id>
+<published>2025-07-08T21:33:00Z</published>
+<updated>2025-07-08T21:33:00Z</updated>
+<title>taskell themed</title>
+<link rel="alternate" type="text/html" href="commit/b9305eddbd443db1fa43a74f404440945f4a555a.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit b9305eddbd443db1fa43a74f404440945f4a555a
+parent bee2da6f59d9de0bcda1e548c9368548e7d4c2fc
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Tue,  8 Jul 2025 23:33:00 +0200
+
+taskell themed
+
+</content>
+</entry>
+<entry>
+<id>bee2da6f59d9de0bcda1e548c9368548e7d4c2fc</id>
+<published>2025-07-08T16:25:19Z</published>
+<updated>2025-07-08T16:25:19Z</updated>
+<title>taskell, nvim spell and idk plan9???</title>
+<link rel="alternate" type="text/html" href="commit/bee2da6f59d9de0bcda1e548c9368548e7d4c2fc.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit bee2da6f59d9de0bcda1e548c9368548e7d4c2fc
+parent 209f4d67ed121998f9d606d82e78c33f96a26c73
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Tue,  8 Jul 2025 18:25:19 +0200
+
+taskell, nvim spell and idk plan9???
+
+</content>
+</entry>
+<entry>
+<id>209f4d67ed121998f9d606d82e78c33f96a26c73</id>
+<published>2025-07-04T13:10:29Z</published>
+<updated>2025-07-04T13:10:29Z</updated>
+<title>new init in readme</title>
+<link rel="alternate" type="text/html" href="commit/209f4d67ed121998f9d606d82e78c33f96a26c73.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 209f4d67ed121998f9d606d82e78c33f96a26c73
+parent 8a6847cc113fcec44c7c115913b92bd25a3430e0
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Fri,  4 Jul 2025 15:10:29 +0200
+
+new init in readme
+
+</content>
+</entry>
+<entry>
+<id>8a6847cc113fcec44c7c115913b92bd25a3430e0</id>
+<published>2025-07-04T13:07:18Z</published>
+<updated>2025-07-04T13:07:18Z</updated>
+<title>new readme</title>
+<link rel="alternate" type="text/html" href="commit/8a6847cc113fcec44c7c115913b92bd25a3430e0.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 8a6847cc113fcec44c7c115913b92bd25a3430e0
+parent 22b928589bfc77086e8dc196f04e6afdacba65f5
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Fri,  4 Jul 2025 15:07:18 +0200
+
+new readme
+
+</content>
+</entry>
+<entry>
+<id>22b928589bfc77086e8dc196f04e6afdacba65f5</id>
+<published>2025-07-04T10:31:58Z</published>
+<updated>2025-07-04T10:31:58Z</updated>
+<title>dmenu-mac und dmenu added</title>
+<link rel="alternate" type="text/html" href="commit/22b928589bfc77086e8dc196f04e6afdacba65f5.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 22b928589bfc77086e8dc196f04e6afdacba65f5
+parent 50438928af00af95a908967b46e0902fd420c6aa
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Fri,  4 Jul 2025 12:31:58 +0200
+
+dmenu-mac und dmenu added
+
+</content>
+</entry>
+<entry>
+<id>50438928af00af95a908967b46e0902fd420c6aa</id>
+<published>2025-07-02T07:14:18Z</published>
+<updated>2025-07-02T07:14:18Z</updated>
+<title>linux device, wmenu, etc.</title>
+<link rel="alternate" type="text/html" href="commit/50438928af00af95a908967b46e0902fd420c6aa.html" />
+<author>
+<name>Linus Behrens</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 50438928af00af95a908967b46e0902fd420c6aa
+parent d3f431f8c0397b3766dce37439c5f7d599d012d6
+Author: Linus Behrens &lt;mail@linus-behrens.de&gt;
+Date:   Wed,  2 Jul 2025 09:14:18 +0200
+
+linux device, wmenu, etc.
+
+</content>
+</entry>
+<entry>
+<id>d3f431f8c0397b3766dce37439c5f7d599d012d6</id>
+<published>2025-06-16T08:52:39Z</published>
+<updated>2025-06-16T08:52:39Z</updated>
+<title>backup for mbplinux</title>
+<link rel="alternate" type="text/html" href="commit/d3f431f8c0397b3766dce37439c5f7d599d012d6.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit d3f431f8c0397b3766dce37439c5f7d599d012d6
+parent 888e3ed5359652d6d47f5668f8fce6de3f4966c9
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Mon, 16 Jun 2025 10:52:39 +0200
+
+backup for mbplinux
+
+</content>
+</entry>
+<entry>
+<id>888e3ed5359652d6d47f5668f8fce6de3f4966c9</id>
+<published>2025-05-22T20:41:51Z</published>
+<updated>2025-05-22T20:41:51Z</updated>
+<title>Add Nix configuration flake</title>
+<link rel="alternate" type="text/html" href="commit/888e3ed5359652d6d47f5668f8fce6de3f4966c9.html" />
+<author>
+<name>Linus Behrens</name>
+<email>linus@MacBookPro.fritz.box</email>
+</author>
+<content>commit 888e3ed5359652d6d47f5668f8fce6de3f4966c9
+parent 7fa5011548d3842f09c3738013c26acefae66b2c
+Author: Linus Behrens &lt;linus@MacBookPro.fritz.box&gt;
+Date:   Thu, 22 May 2025 22:41:51 +0200
+
+Add Nix configuration flake
+
+</content>
+</entry>
+<entry>
+<id>7fa5011548d3842f09c3738013c26acefae66b2c</id>
+<published>2025-05-22T14:21:19Z</published>
+<updated>2025-05-22T14:21:19Z</updated>
+<title>minimas nvim + bash</title>
+<link rel="alternate" type="text/html" href="commit/7fa5011548d3842f09c3738013c26acefae66b2c.html" />
+<author>
+<name>Linus Behrens</name>
+<email>linus@MacBookPro.fritz.box</email>
+</author>
+<content>commit 7fa5011548d3842f09c3738013c26acefae66b2c
+parent d6cb3888ec3864a928fb9e2a72595706fb50bfb0
+Author: Linus Behrens &lt;linus@MacBookPro.fritz.box&gt;
+Date:   Thu, 22 May 2025 16:21:19 +0200
+
+minimas nvim + bash
+
+</content>
+</entry>
+<entry>
+<id>d6cb3888ec3864a928fb9e2a72595706fb50bfb0</id>
+<published>2025-05-16T13:07:08Z</published>
+<updated>2025-05-16T13:07:08Z</updated>
+<title>zen mode changes</title>
+<link rel="alternate" type="text/html" href="commit/d6cb3888ec3864a928fb9e2a72595706fb50bfb0.html" />
+<author>
+<name>Linus Behrens</name>
+<email>linus@MacBookPro.fritz.box</email>
+</author>
+<content>commit d6cb3888ec3864a928fb9e2a72595706fb50bfb0
+parent dbdc3e8f82ca61efb0e399a4d4d422cb846fbb30
+Author: Linus Behrens &lt;linus@MacBookPro.fritz.box&gt;
+Date:   Fri, 16 May 2025 15:07:08 +0200
+
+zen mode changes
+
+</content>
+</entry>
+<entry>
+<id>dbdc3e8f82ca61efb0e399a4d4d422cb846fbb30</id>
+<published>2025-05-13T19:14:04Z</published>
+<updated>2025-05-13T19:14:04Z</updated>
+<title>new custom</title>
+<link rel="alternate" type="text/html" href="commit/dbdc3e8f82ca61efb0e399a4d4d422cb846fbb30.html" />
+<author>
+<name>Linus Behrens</name>
+<email>linus@MacBookPro.fritz.box</email>
+</author>
+<content>commit dbdc3e8f82ca61efb0e399a4d4d422cb846fbb30
+parent 7a30b6d1e10f92d73bca20eb78051eb85898615e
+Author: Linus Behrens &lt;linus@MacBookPro.fritz.box&gt;
+Date:   Tue, 13 May 2025 21:14:04 +0200
+
+new custom
+
+</content>
+</entry>
+<entry>
+<id>7a30b6d1e10f92d73bca20eb78051eb85898615e</id>
+<published>2025-05-13T13:45:22Z</published>
+<updated>2025-05-13T13:45:22Z</updated>
+<title>zshenv</title>
+<link rel="alternate" type="text/html" href="commit/7a30b6d1e10f92d73bca20eb78051eb85898615e.html" />
+<author>
+<name>Linus Behrens</name>
+<email>linus@MacBook-Pro-von-Linus.local</email>
+</author>
+<content>commit 7a30b6d1e10f92d73bca20eb78051eb85898615e
+parent 26f1a68ebd18cc77460c17b93d0fae469e7c1583
+Author: Linus Behrens &lt;linus@MacBook-Pro-von-Linus.local&gt;
+Date:   Tue, 13 May 2025 15:45:22 +0200
+
+zshenv
+
+</content>
+</entry>
+<entry>
+<id>26f1a68ebd18cc77460c17b93d0fae469e7c1583</id>
+<published>2025-05-13T13:42:04Z</published>
+<updated>2025-05-13T13:42:04Z</updated>
+<title>all .config</title>
+<link rel="alternate" type="text/html" href="commit/26f1a68ebd18cc77460c17b93d0fae469e7c1583.html" />
+<author>
+<name>Linus Behrens</name>
+<email>linus@MacBook-Pro-von-Linus.local</email>
+</author>
+<content>commit 26f1a68ebd18cc77460c17b93d0fae469e7c1583
+parent 27c7361a5632123bbb40c64f959c668375a513af
+Author: Linus Behrens &lt;linus@MacBook-Pro-von-Linus.local&gt;
+Date:   Tue, 13 May 2025 15:42:04 +0200
+
+all .config
+
+</content>
+</entry>
+<entry>
+<id>27c7361a5632123bbb40c64f959c668375a513af</id>
+<published>2025-05-11T13:19:36Z</published>
+<updated>2025-05-11T13:19:36Z</updated>
+<title>yazi</title>
+<link rel="alternate" type="text/html" href="commit/27c7361a5632123bbb40c64f959c668375a513af.html" />
+<author>
+<name>linus</name>
+<email>linus@behrens-familie.de</email>
+</author>
+<content>commit 27c7361a5632123bbb40c64f959c668375a513af
+parent 93892729262cee7143ee410bf0b06f9aa94d2e7d
+Author: linus &lt;linus@behrens-familie.de&gt;
+Date:   Sun, 11 May 2025 13:19:36 +0000
+
+yazi
+
+</content>
+</entry>
+<entry>
+<id>93892729262cee7143ee410bf0b06f9aa94d2e7d</id>
+<published>2025-05-11T12:57:01Z</published>
+<updated>2025-05-11T12:57:01Z</updated>
+<title>ghostty 2</title>
+<link rel="alternate" type="text/html" href="commit/93892729262cee7143ee410bf0b06f9aa94d2e7d.html" />
+<author>
+<name>KoenigLinus</name>
+<email>linus@behrens-familie.de</email>
+</author>
+<content>commit 93892729262cee7143ee410bf0b06f9aa94d2e7d
+parent 3f2be61c779cf9f97b6070736bc6d67e119512f7
+Author: KoenigLinus &lt;linus@behrens-familie.de&gt;
+Date:   Sun, 11 May 2025 14:57:01 +0200
+
+ghostty 2
+
+</content>
+</entry>
+<entry>
+<id>3f2be61c779cf9f97b6070736bc6d67e119512f7</id>
+<published>2025-04-17T10:04:59Z</published>
+<updated>2025-04-17T10:04:59Z</updated>
+<title>17.04.2025 linux switch</title>
+<link rel="alternate" type="text/html" href="commit/3f2be61c779cf9f97b6070736bc6d67e119512f7.html" />
+<author>
+<name>KoenigLinus</name>
+<email>linus@behrens-familie.de</email>
+</author>
+<content>commit 3f2be61c779cf9f97b6070736bc6d67e119512f7
+parent ca9ede56f3a82772e34d320344d016933de4ccc8
+Author: KoenigLinus &lt;linus@behrens-familie.de&gt;
+Date:   Thu, 17 Apr 2025 12:04:59 +0200
+
+17.04.2025 linux switch
+
+</content>
+</entry>
+<entry>
+<id>ca9ede56f3a82772e34d320344d016933de4ccc8</id>
+<published>2024-12-07T12:24:54Z</published>
+<updated>2024-12-07T12:24:54Z</updated>
+<title>exec</title>
+<link rel="alternate" type="text/html" href="commit/ca9ede56f3a82772e34d320344d016933de4ccc8.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit ca9ede56f3a82772e34d320344d016933de4ccc8
+parent 3cf164e711d14df5fe5fdd29d93c3eb085e40dd1
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Sat,  7 Dec 2024 13:24:54 +0100
+
+exec
+
+</content>
+</entry>
+<entry>
+<id>3cf164e711d14df5fe5fdd29d93c3eb085e40dd1</id>
+<published>2024-11-25T21:32:54Z</published>
+<updated>2024-11-25T21:32:54Z</updated>
+<title>exec</title>
+<link rel="alternate" type="text/html" href="commit/3cf164e711d14df5fe5fdd29d93c3eb085e40dd1.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit 3cf164e711d14df5fe5fdd29d93c3eb085e40dd1
+parent 1c7f1b725bf89d7b253a39f2028fb380a0d407c5
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Mon, 25 Nov 2024 22:32:54 +0100
+
+exec
+
+</content>
+</entry>
+<entry>
+<id>1c7f1b725bf89d7b253a39f2028fb380a0d407c5</id>
+<published>2024-11-22T11:04:29Z</published>
+<updated>2024-11-22T11:04:29Z</updated>
+<title>Update README.md</title>
+<link rel="alternate" type="text/html" href="commit/1c7f1b725bf89d7b253a39f2028fb380a0d407c5.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit 1c7f1b725bf89d7b253a39f2028fb380a0d407c5
+parent dc32af1243e731ee9f37f7ea4ed6bb2ebbed9747
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Fri, 22 Nov 2024 12:04:29 +0100
+
+Update README.md
+</content>
+</entry>
+<entry>
+<id>dc32af1243e731ee9f37f7ea4ed6bb2ebbed9747</id>
+<published>2024-11-21T17:41:01Z</published>
+<updated>2024-11-21T17:41:01Z</updated>
+<title>exec</title>
+<link rel="alternate" type="text/html" href="commit/dc32af1243e731ee9f37f7ea4ed6bb2ebbed9747.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit dc32af1243e731ee9f37f7ea4ed6bb2ebbed9747
+parent bfdf0f94a83e0ce02ea3e4401e59d17bee7f9e72
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Thu, 21 Nov 2024 18:41:01 +0100
+
+exec
+
+</content>
+</entry>
+<entry>
+<id>bfdf0f94a83e0ce02ea3e4401e59d17bee7f9e72</id>
+<published>2024-11-21T16:27:45Z</published>
+<updated>2024-11-21T16:27:45Z</updated>
+<title>exec</title>
+<link rel="alternate" type="text/html" href="commit/bfdf0f94a83e0ce02ea3e4401e59d17bee7f9e72.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit bfdf0f94a83e0ce02ea3e4401e59d17bee7f9e72
+parent f4526c4249a8865fabcfb381c1f5f5213b7f3aad
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Thu, 21 Nov 2024 17:27:45 +0100
+
+exec
+
+</content>
+</entry>
+<entry>
+<id>f4526c4249a8865fabcfb381c1f5f5213b7f3aad</id>
+<published>2024-11-21T16:23:09Z</published>
+<updated>2024-11-21T16:23:09Z</updated>
+<title>exec</title>
+<link rel="alternate" type="text/html" href="commit/f4526c4249a8865fabcfb381c1f5f5213b7f3aad.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit f4526c4249a8865fabcfb381c1f5f5213b7f3aad
+parent 2a99a9b5ab2c8794327bd85aa32d670d24b8c4c0
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Thu, 21 Nov 2024 17:23:09 +0100
+
+exec
+
+</content>
+</entry>
+<entry>
+<id>2a99a9b5ab2c8794327bd85aa32d670d24b8c4c0</id>
+<published>2024-11-21T15:44:05Z</published>
+<updated>2024-11-21T15:44:05Z</updated>
+<title>exec</title>
+<link rel="alternate" type="text/html" href="commit/2a99a9b5ab2c8794327bd85aa32d670d24b8c4c0.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit 2a99a9b5ab2c8794327bd85aa32d670d24b8c4c0
+parent b67de902ef45026efb986d6f8d6def4364a6e101
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Thu, 21 Nov 2024 16:44:05 +0100
+
+exec
+
+</content>
+</entry>
+<entry>
+<id>b67de902ef45026efb986d6f8d6def4364a6e101</id>
+<published>2024-11-21T15:37:29Z</published>
+<updated>2024-11-21T15:37:29Z</updated>
+<title>Initial commit</title>
+<link rel="alternate" type="text/html" href="commit/b67de902ef45026efb986d6f8d6def4364a6e101.html" />
+<author>
+<name>Linus</name>
+<email>93053722+KoenigLinus@users.noreply.github.com</email>
+</author>
+<content>commit b67de902ef45026efb986d6f8d6def4364a6e101
+Author: Linus &lt;93053722+KoenigLinus@users.noreply.github.com&gt;
+Date:   Thu, 21 Nov 2024 16:37:29 +0100
+
+Initial commit
+</content>
+</entry>
+</feed>

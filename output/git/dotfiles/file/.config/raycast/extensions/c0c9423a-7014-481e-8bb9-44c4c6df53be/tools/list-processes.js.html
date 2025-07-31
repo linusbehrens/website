@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>list-processes.js - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../../../../"><img src="../../../../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../../../../log.html">Log</a> | <a href="../../../../../../files.html">Files</a> | <a href="../../../../../../refs.html">Refs</a> | <a href="../../../../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> list-processes.js (1599B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> &quot;use strict&quot;;var p=Object.defineProperty;var w=Object.getOwnPropertyDescriptor;var I=Object.getOwnPropertyNames;var N=Object.prototype.hasOwnProperty;var O=(s,e)=&gt;{for(var r in e)p(s,r,{get:e[r],enumerable:!0})},$=(s,e,r,o)=&gt;{if(e&amp;&amp;typeof e==&quot;object&quot;||typeof e==&quot;function&quot;)for(let t of I(e))!N.call(s,t)&amp;&amp;t!==r&amp;&amp;p(s,t,{get:()=&gt;e[t],enumerable:!(o=w(e,t))||o.enumerable});return s};var v=s=&gt;$(p({},&quot;__esModule&quot;,{value:!0}),s);var R={};O(R,{default:()=&gt;f});module.exports=v(R);var m=require(&quot;child_process&quot;);async function u(){return new Promise((s,e)=&gt;{(0,m.exec)(&quot;ps -eo pid,ppid,pcpu,rss,comm&quot;,(r,o)=&gt;{if(r!=null){e(r);return}let t=o.split(`
+<a href="#l2" class="line" id="l2">      2</a> `).map(n=&gt;{let c=[&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],a=/(\d+)\s+(\d+)\s+(\d+[.|,]\d+)\s+(\d+)\s+(.*)/,[,l,P,h,y,i]=n.match(a)??c,g=i.match(/[^/]*[^/]*$/i)?.[0]??&quot;&quot;,S=i.includes(&quot;.prefPane&quot;),d=i.includes(&quot;.app/&quot;);return{id:parseInt(l),pid:parseInt(P),cpu:parseFloat(h),mem:parseInt(y),type:S?&quot;prefPane&quot;:d?&quot;app&quot;:&quot;binary&quot;,path:i,processName:g,appName:d?i.match(/(?&lt;=\/)[^/]+(?=\.app\/)/)?.[0]:void 0}}).filter(n=&gt;n.processName!==&quot;&quot;);s(t)})})}var x=(s,e=&quot;mem&quot;,r=&quot;desc&quot;)=&gt;[...s].sort((o,t)=&gt;{let n=o[e],c=t[e];if(n===c)return 0;if(n===void 0)return 1;if(c===void 0)return-1;let a=n&lt;c?-1:1;return r===&quot;desc&quot;?-a:a}),B=(s,e)=&gt;e?.length?s.filter(r=&gt;{let o=`${r.path} ${r.processName} ${r.appName||&quot;&quot;}`.toLowerCase();return e.some(t=&gt;o.includes(t.toLowerCase()))}):s,F=(s,e)=&gt;{if(s.length===0&amp;&amp;e?.length)throw new Error(`No processes found matching &quot;${e.join(&quot;, &quot;)}&quot;`)};async function f(s){let e=await u(),r=B(e,s?.searchTerm);return F(r,s?.searchTerm),x(r,s?.sortBy,s?.sortOrder)}
+</pre>
+</div>
+</body>
+</html>

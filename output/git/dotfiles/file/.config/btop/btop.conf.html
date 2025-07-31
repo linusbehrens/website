@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>btop.conf - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../"><img src="../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../log.html">Log</a> | <a href="../../../files.html">Files</a> | <a href="../../../refs.html">Refs</a> | <a href="../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> btop.conf (8648B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> #? Config file for btop v. 1.4.3
+<a href="#l2" class="line" id="l2">      2</a> 
+<a href="#l3" class="line" id="l3">      3</a> #* Name of a btop++/bpytop/bashtop formatted &quot;.theme&quot; file, &quot;Default&quot; and &quot;TTY&quot; for builtin themes.
+<a href="#l4" class="line" id="l4">      4</a> #* Themes should be placed in &quot;../share/btop/themes&quot; relative to binary or &quot;$HOME/.config/btop/themes&quot;
+<a href="#l5" class="line" id="l5">      5</a> color_theme = &quot;Default&quot;
+<a href="#l6" class="line" id="l6">      6</a> 
+<a href="#l7" class="line" id="l7">      7</a> #* If the theme set background should be shown, set to False if you want terminal background transparency.
+<a href="#l8" class="line" id="l8">      8</a> theme_background = True
+<a href="#l9" class="line" id="l9">      9</a> 
+<a href="#l10" class="line" id="l10">     10</a> #* Sets if 24-bit truecolor should be used, will convert 24-bit colors to 256 color (6x6x6 color cube) if false.
+<a href="#l11" class="line" id="l11">     11</a> truecolor = True
+<a href="#l12" class="line" id="l12">     12</a> 
+<a href="#l13" class="line" id="l13">     13</a> #* Set to true to force tty mode regardless if a real tty has been detected or not.
+<a href="#l14" class="line" id="l14">     14</a> #* Will force 16-color mode and TTY theme, set all graph symbols to &quot;tty&quot; and swap out other non tty friendly symbols.
+<a href="#l15" class="line" id="l15">     15</a> force_tty = False
+<a href="#l16" class="line" id="l16">     16</a> 
+<a href="#l17" class="line" id="l17">     17</a> #* Define presets for the layout of the boxes. Preset 0 is always all boxes shown with default settings. Max 9 presets.
+<a href="#l18" class="line" id="l18">     18</a> #* Format: &quot;box_name:P:G,box_name:P:G&quot; P=(0 or 1) for alternate positions, G=graph symbol to use for box.
+<a href="#l19" class="line" id="l19">     19</a> #* Use whitespace &quot; &quot; as separator between different presets.
+<a href="#l20" class="line" id="l20">     20</a> #* Example: &quot;cpu:0:default,mem:0:tty,proc:1:default cpu:0:braille,proc:0:tty&quot;
+<a href="#l21" class="line" id="l21">     21</a> presets = &quot;cpu:1:default,proc:0:default cpu:0:default,mem:0:default,net:0:default cpu:0:block,net:0:tty&quot;
+<a href="#l22" class="line" id="l22">     22</a> 
+<a href="#l23" class="line" id="l23">     23</a> #* Set to True to enable &quot;h,j,k,l,g,G&quot; keys for directional control in lists.
+<a href="#l24" class="line" id="l24">     24</a> #* Conflicting keys for h:&quot;help&quot; and k:&quot;kill&quot; is accessible while holding shift.
+<a href="#l25" class="line" id="l25">     25</a> vim_keys = False
+<a href="#l26" class="line" id="l26">     26</a> 
+<a href="#l27" class="line" id="l27">     27</a> #* Rounded corners on boxes, is ignored if TTY mode is ON.
+<a href="#l28" class="line" id="l28">     28</a> rounded_corners = True
+<a href="#l29" class="line" id="l29">     29</a> 
+<a href="#l30" class="line" id="l30">     30</a> #* Default symbols to use for graph creation, &quot;braille&quot;, &quot;block&quot; or &quot;tty&quot;.
+<a href="#l31" class="line" id="l31">     31</a> #* &quot;braille&quot; offers the highest resolution but might not be included in all fonts.
+<a href="#l32" class="line" id="l32">     32</a> #* &quot;block&quot; has half the resolution of braille but uses more common characters.
+<a href="#l33" class="line" id="l33">     33</a> #* &quot;tty&quot; uses only 3 different symbols but will work with most fonts and should work in a real TTY.
+<a href="#l34" class="line" id="l34">     34</a> #* Note that &quot;tty&quot; only has half the horizontal resolution of the other two, so will show a shorter historical view.
+<a href="#l35" class="line" id="l35">     35</a> graph_symbol = &quot;braille&quot;
+<a href="#l36" class="line" id="l36">     36</a> 
+<a href="#l37" class="line" id="l37">     37</a> # Graph symbol to use for graphs in cpu box, &quot;default&quot;, &quot;braille&quot;, &quot;block&quot; or &quot;tty&quot;.
+<a href="#l38" class="line" id="l38">     38</a> graph_symbol_cpu = &quot;default&quot;
+<a href="#l39" class="line" id="l39">     39</a> 
+<a href="#l40" class="line" id="l40">     40</a> # Graph symbol to use for graphs in cpu box, &quot;default&quot;, &quot;braille&quot;, &quot;block&quot; or &quot;tty&quot;.
+<a href="#l41" class="line" id="l41">     41</a> graph_symbol_mem = &quot;default&quot;
+<a href="#l42" class="line" id="l42">     42</a> 
+<a href="#l43" class="line" id="l43">     43</a> # Graph symbol to use for graphs in cpu box, &quot;default&quot;, &quot;braille&quot;, &quot;block&quot; or &quot;tty&quot;.
+<a href="#l44" class="line" id="l44">     44</a> graph_symbol_net = &quot;default&quot;
+<a href="#l45" class="line" id="l45">     45</a> 
+<a href="#l46" class="line" id="l46">     46</a> # Graph symbol to use for graphs in cpu box, &quot;default&quot;, &quot;braille&quot;, &quot;block&quot; or &quot;tty&quot;.
+<a href="#l47" class="line" id="l47">     47</a> graph_symbol_proc = &quot;default&quot;
+<a href="#l48" class="line" id="l48">     48</a> 
+<a href="#l49" class="line" id="l49">     49</a> #* Manually set which boxes to show. Available values are &quot;cpu mem net proc&quot; and &quot;gpu0&quot; through &quot;gpu5&quot;, separate values with whitespace.
+<a href="#l50" class="line" id="l50">     50</a> shown_boxes = &quot;cpu mem net proc&quot;
+<a href="#l51" class="line" id="l51">     51</a> 
+<a href="#l52" class="line" id="l52">     52</a> #* Update time in milliseconds, recommended 2000 ms or above for better sample times for graphs.
+<a href="#l53" class="line" id="l53">     53</a> update_ms = 2000
+<a href="#l54" class="line" id="l54">     54</a> 
+<a href="#l55" class="line" id="l55">     55</a> #* Processes sorting, &quot;pid&quot; &quot;program&quot; &quot;arguments&quot; &quot;threads&quot; &quot;user&quot; &quot;memory&quot; &quot;cpu lazy&quot; &quot;cpu direct&quot;,
+<a href="#l56" class="line" id="l56">     56</a> #* &quot;cpu lazy&quot; sorts top process over time (easier to follow), &quot;cpu direct&quot; updates top process directly.
+<a href="#l57" class="line" id="l57">     57</a> proc_sorting = &quot;cpu lazy&quot;
+<a href="#l58" class="line" id="l58">     58</a> 
+<a href="#l59" class="line" id="l59">     59</a> #* Reverse sorting order, True or False.
+<a href="#l60" class="line" id="l60">     60</a> proc_reversed = False
+<a href="#l61" class="line" id="l61">     61</a> 
+<a href="#l62" class="line" id="l62">     62</a> #* Show processes as a tree.
+<a href="#l63" class="line" id="l63">     63</a> proc_tree = False
+<a href="#l64" class="line" id="l64">     64</a> 
+<a href="#l65" class="line" id="l65">     65</a> #* Use the cpu graph colors in the process list.
+<a href="#l66" class="line" id="l66">     66</a> proc_colors = True
+<a href="#l67" class="line" id="l67">     67</a> 
+<a href="#l68" class="line" id="l68">     68</a> #* Use a darkening gradient in the process list.
+<a href="#l69" class="line" id="l69">     69</a> proc_gradient = True
+<a href="#l70" class="line" id="l70">     70</a> 
+<a href="#l71" class="line" id="l71">     71</a> #* If process cpu usage should be of the core it&#39;s running on or usage of the total available cpu power.
+<a href="#l72" class="line" id="l72">     72</a> proc_per_core = False
+<a href="#l73" class="line" id="l73">     73</a> 
+<a href="#l74" class="line" id="l74">     74</a> #* Show process memory as bytes instead of percent.
+<a href="#l75" class="line" id="l75">     75</a> proc_mem_bytes = True
+<a href="#l76" class="line" id="l76">     76</a> 
+<a href="#l77" class="line" id="l77">     77</a> #* Show cpu graph for each process.
+<a href="#l78" class="line" id="l78">     78</a> proc_cpu_graphs = True
+<a href="#l79" class="line" id="l79">     79</a> 
+<a href="#l80" class="line" id="l80">     80</a> #* Use /proc/[pid]/smaps for memory information in the process info box (very slow but more accurate)
+<a href="#l81" class="line" id="l81">     81</a> proc_info_smaps = False
+<a href="#l82" class="line" id="l82">     82</a> 
+<a href="#l83" class="line" id="l83">     83</a> #* Show proc box on left side of screen instead of right.
+<a href="#l84" class="line" id="l84">     84</a> proc_left = False
+<a href="#l85" class="line" id="l85">     85</a> 
+<a href="#l86" class="line" id="l86">     86</a> #* (Linux) Filter processes tied to the Linux kernel(similar behavior to htop).
+<a href="#l87" class="line" id="l87">     87</a> proc_filter_kernel = False
+<a href="#l88" class="line" id="l88">     88</a> 
+<a href="#l89" class="line" id="l89">     89</a> #* In tree-view, always accumulate child process resources in the parent process.
+<a href="#l90" class="line" id="l90">     90</a> proc_aggregate = False
+<a href="#l91" class="line" id="l91">     91</a> 
+<a href="#l92" class="line" id="l92">     92</a> #* Sets the CPU stat shown in upper half of the CPU graph, &quot;total&quot; is always available.
+<a href="#l93" class="line" id="l93">     93</a> #* Select from a list of detected attributes from the options menu.
+<a href="#l94" class="line" id="l94">     94</a> cpu_graph_upper = &quot;Auto&quot;
+<a href="#l95" class="line" id="l95">     95</a> 
+<a href="#l96" class="line" id="l96">     96</a> #* Sets the CPU stat shown in lower half of the CPU graph, &quot;total&quot; is always available.
+<a href="#l97" class="line" id="l97">     97</a> #* Select from a list of detected attributes from the options menu.
+<a href="#l98" class="line" id="l98">     98</a> cpu_graph_lower = &quot;Auto&quot;
+<a href="#l99" class="line" id="l99">     99</a> 
+<a href="#l100" class="line" id="l100">    100</a> #* Toggles if the lower CPU graph should be inverted.
+<a href="#l101" class="line" id="l101">    101</a> cpu_invert_lower = True
+<a href="#l102" class="line" id="l102">    102</a> 
+<a href="#l103" class="line" id="l103">    103</a> #* Set to True to completely disable the lower CPU graph.
+<a href="#l104" class="line" id="l104">    104</a> cpu_single_graph = False
+<a href="#l105" class="line" id="l105">    105</a> 
+<a href="#l106" class="line" id="l106">    106</a> #* Show cpu box at bottom of screen instead of top.
+<a href="#l107" class="line" id="l107">    107</a> cpu_bottom = False
+<a href="#l108" class="line" id="l108">    108</a> 
+<a href="#l109" class="line" id="l109">    109</a> #* Shows the system uptime in the CPU box.
+<a href="#l110" class="line" id="l110">    110</a> show_uptime = True
+<a href="#l111" class="line" id="l111">    111</a> 
+<a href="#l112" class="line" id="l112">    112</a> #* Show cpu temperature.
+<a href="#l113" class="line" id="l113">    113</a> check_temp = True
+<a href="#l114" class="line" id="l114">    114</a> 
+<a href="#l115" class="line" id="l115">    115</a> #* Which sensor to use for cpu temperature, use options menu to select from list of available sensors.
+<a href="#l116" class="line" id="l116">    116</a> cpu_sensor = &quot;Auto&quot;
+<a href="#l117" class="line" id="l117">    117</a> 
+<a href="#l118" class="line" id="l118">    118</a> #* Show temperatures for cpu cores also if check_temp is True and sensors has been found.
+<a href="#l119" class="line" id="l119">    119</a> show_coretemp = True
+<a href="#l120" class="line" id="l120">    120</a> 
+<a href="#l121" class="line" id="l121">    121</a> #* Set a custom mapping between core and coretemp, can be needed on certain cpus to get correct temperature for correct core.
+<a href="#l122" class="line" id="l122">    122</a> #* Use lm-sensors or similar to see which cores are reporting temperatures on your machine.
+<a href="#l123" class="line" id="l123">    123</a> #* Format &quot;x:y&quot; x=core with wrong temp, y=core with correct temp, use space as separator between multiple entries.
+<a href="#l124" class="line" id="l124">    124</a> #* Example: &quot;4:0 5:1 6:3&quot;
+<a href="#l125" class="line" id="l125">    125</a> cpu_core_map = &quot;&quot;
+<a href="#l126" class="line" id="l126">    126</a> 
+<a href="#l127" class="line" id="l127">    127</a> #* Which temperature scale to use, available values: &quot;celsius&quot;, &quot;fahrenheit&quot;, &quot;kelvin&quot; and &quot;rankine&quot;.
+<a href="#l128" class="line" id="l128">    128</a> temp_scale = &quot;celsius&quot;
+<a href="#l129" class="line" id="l129">    129</a> 
+<a href="#l130" class="line" id="l130">    130</a> #* Use base 10 for bits/bytes sizes, KB = 1000 instead of KiB = 1024.
+<a href="#l131" class="line" id="l131">    131</a> base_10_sizes = False
+<a href="#l132" class="line" id="l132">    132</a> 
+<a href="#l133" class="line" id="l133">    133</a> #* Show CPU frequency.
+<a href="#l134" class="line" id="l134">    134</a> show_cpu_freq = True
+<a href="#l135" class="line" id="l135">    135</a> 
+<a href="#l136" class="line" id="l136">    136</a> #* Draw a clock at top of screen, formatting according to strftime, empty string to disable.
+<a href="#l137" class="line" id="l137">    137</a> #* Special formatting: /host = hostname | /user = username | /uptime = system uptime
+<a href="#l138" class="line" id="l138">    138</a> clock_format = &quot;%X&quot;
+<a href="#l139" class="line" id="l139">    139</a> 
+<a href="#l140" class="line" id="l140">    140</a> #* Update main ui in background when menus are showing, set this to false if the menus is flickering too much for comfort.
+<a href="#l141" class="line" id="l141">    141</a> background_update = True
+<a href="#l142" class="line" id="l142">    142</a> 
+<a href="#l143" class="line" id="l143">    143</a> #* Custom cpu model name, empty string to disable.
+<a href="#l144" class="line" id="l144">    144</a> custom_cpu_name = &quot;&quot;
+<a href="#l145" class="line" id="l145">    145</a> 
+<a href="#l146" class="line" id="l146">    146</a> #* Optional filter for shown disks, should be full path of a mountpoint, separate multiple values with whitespace &quot; &quot;.
+<a href="#l147" class="line" id="l147">    147</a> #* Begin line with &quot;exclude=&quot; to change to exclude filter, otherwise defaults to &quot;most include&quot; filter. Example: disks_filter=&quot;exclude=/boot /home/user&quot;.
+<a href="#l148" class="line" id="l148">    148</a> disks_filter = &quot;&quot;
+<a href="#l149" class="line" id="l149">    149</a> 
+<a href="#l150" class="line" id="l150">    150</a> #* Show graphs instead of meters for memory values.
+<a href="#l151" class="line" id="l151">    151</a> mem_graphs = True
+<a href="#l152" class="line" id="l152">    152</a> 
+<a href="#l153" class="line" id="l153">    153</a> #* Show mem box below net box instead of above.
+<a href="#l154" class="line" id="l154">    154</a> mem_below_net = False
+<a href="#l155" class="line" id="l155">    155</a> 
+<a href="#l156" class="line" id="l156">    156</a> #* Count ZFS ARC in cached and available memory.
+<a href="#l157" class="line" id="l157">    157</a> zfs_arc_cached = True
+<a href="#l158" class="line" id="l158">    158</a> 
+<a href="#l159" class="line" id="l159">    159</a> #* If swap memory should be shown in memory box.
+<a href="#l160" class="line" id="l160">    160</a> show_swap = True
+<a href="#l161" class="line" id="l161">    161</a> 
+<a href="#l162" class="line" id="l162">    162</a> #* Show swap as a disk, ignores show_swap value above, inserts itself after first disk.
+<a href="#l163" class="line" id="l163">    163</a> swap_disk = True
+<a href="#l164" class="line" id="l164">    164</a> 
+<a href="#l165" class="line" id="l165">    165</a> #* If mem box should be split to also show disks info.
+<a href="#l166" class="line" id="l166">    166</a> show_disks = True
+<a href="#l167" class="line" id="l167">    167</a> 
+<a href="#l168" class="line" id="l168">    168</a> #* Filter out non physical disks. Set this to False to include network disks, RAM disks and similar.
+<a href="#l169" class="line" id="l169">    169</a> only_physical = True
+<a href="#l170" class="line" id="l170">    170</a> 
+<a href="#l171" class="line" id="l171">    171</a> #* Read disks list from /etc/fstab. This also disables only_physical.
+<a href="#l172" class="line" id="l172">    172</a> use_fstab = True
+<a href="#l173" class="line" id="l173">    173</a> 
+<a href="#l174" class="line" id="l174">    174</a> #* Setting this to True will hide all datasets, and only show ZFS pools. (IO stats will be calculated per-pool)
+<a href="#l175" class="line" id="l175">    175</a> zfs_hide_datasets = False
+<a href="#l176" class="line" id="l176">    176</a> 
+<a href="#l177" class="line" id="l177">    177</a> #* Set to true to show available disk space for privileged users.
+<a href="#l178" class="line" id="l178">    178</a> disk_free_priv = False
+<a href="#l179" class="line" id="l179">    179</a> 
+<a href="#l180" class="line" id="l180">    180</a> #* Toggles if io activity % (disk busy time) should be shown in regular disk usage view.
+<a href="#l181" class="line" id="l181">    181</a> show_io_stat = True
+<a href="#l182" class="line" id="l182">    182</a> 
+<a href="#l183" class="line" id="l183">    183</a> #* Toggles io mode for disks, showing big graphs for disk read/write speeds.
+<a href="#l184" class="line" id="l184">    184</a> io_mode = False
+<a href="#l185" class="line" id="l185">    185</a> 
+<a href="#l186" class="line" id="l186">    186</a> #* Set to True to show combined read/write io graphs in io mode.
+<a href="#l187" class="line" id="l187">    187</a> io_graph_combined = False
+<a href="#l188" class="line" id="l188">    188</a> 
+<a href="#l189" class="line" id="l189">    189</a> #* Set the top speed for the io graphs in MiB/s (100 by default), use format &quot;mountpoint:speed&quot; separate disks with whitespace &quot; &quot;.
+<a href="#l190" class="line" id="l190">    190</a> #* Example: &quot;/mnt/media:100 /:20 /boot:1&quot;.
+<a href="#l191" class="line" id="l191">    191</a> io_graph_speeds = &quot;&quot;
+<a href="#l192" class="line" id="l192">    192</a> 
+<a href="#l193" class="line" id="l193">    193</a> #* Set fixed values for network graphs in Mebibits. Is only used if net_auto is also set to False.
+<a href="#l194" class="line" id="l194">    194</a> net_download = 100
+<a href="#l195" class="line" id="l195">    195</a> 
+<a href="#l196" class="line" id="l196">    196</a> net_upload = 100
+<a href="#l197" class="line" id="l197">    197</a> 
+<a href="#l198" class="line" id="l198">    198</a> #* Use network graphs auto rescaling mode, ignores any values set above and rescales down to 10 Kibibytes at the lowest.
+<a href="#l199" class="line" id="l199">    199</a> net_auto = True
+<a href="#l200" class="line" id="l200">    200</a> 
+<a href="#l201" class="line" id="l201">    201</a> #* Sync the auto scaling for download and upload to whichever currently has the highest scale.
+<a href="#l202" class="line" id="l202">    202</a> net_sync = True
+<a href="#l203" class="line" id="l203">    203</a> 
+<a href="#l204" class="line" id="l204">    204</a> #* Starts with the Network Interface specified here.
+<a href="#l205" class="line" id="l205">    205</a> net_iface = &quot;&quot;
+<a href="#l206" class="line" id="l206">    206</a> 
+<a href="#l207" class="line" id="l207">    207</a> #* &quot;True&quot; shows bitrates in base 10 (Kbps, Mbps). &quot;False&quot; shows bitrates in binary sizes (Kibps, Mibps, etc.). &quot;Auto&quot; uses base_10_sizes.
+<a href="#l208" class="line" id="l208">    208</a> base_10_bitrate = &quot;Auto&quot;
+<a href="#l209" class="line" id="l209">    209</a> 
+<a href="#l210" class="line" id="l210">    210</a> #* Show battery stats in top right if battery is present.
+<a href="#l211" class="line" id="l211">    211</a> show_battery = True
+<a href="#l212" class="line" id="l212">    212</a> 
+<a href="#l213" class="line" id="l213">    213</a> #* Which battery to use if multiple are present. &quot;Auto&quot; for auto detection.
+<a href="#l214" class="line" id="l214">    214</a> selected_battery = &quot;Auto&quot;
+<a href="#l215" class="line" id="l215">    215</a> 
+<a href="#l216" class="line" id="l216">    216</a> #* Show power stats of battery next to charge indicator.
+<a href="#l217" class="line" id="l217">    217</a> show_battery_watts = True
+<a href="#l218" class="line" id="l218">    218</a> 
+<a href="#l219" class="line" id="l219">    219</a> #* Set loglevel for &quot;~/.config/btop/btop.log&quot; levels are: &quot;ERROR&quot; &quot;WARNING&quot; &quot;INFO&quot; &quot;DEBUG&quot;.
+<a href="#l220" class="line" id="l220">    220</a> #* The level set includes all lower levels, i.e. &quot;DEBUG&quot; will show all logging info.
+<a href="#l221" class="line" id="l221">    221</a> log_level = &quot;WARNING&quot;
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>new css (code in darkmode) und header2 - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/82c5ab6b7ed8e43f935558119d70bf2015473f2e.html">82c5ab6b7ed8e43f935558119d70bf2015473f2e</a>
+<b>parent</b> <a href="../commit/30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963.html">30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Thu, 31 Jul 2025 21:15:01 +0200
+
+new css (code in darkmode) und header2
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">css/style.css</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">output/index.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">output/style.css</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">templates/index.html/header.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+</table></pre><pre>4 files changed, 16 insertions(+), 16 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/css/style.css.html">css/style.css</a> b/<a href="../file/css/style.css.html">css/style.css</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -88,10 +88,10 @@ pre {
+</a> 		background-color: #000;
+ 		color: #bdbdbd;
+ 	}
+<a href="#h0-0-3" id="h0-0-3" class="d">-	code {
+</a><a href="#h0-0-4" id="h0-0-4" class="d">-		background-color: #111;
+</a><a href="#h0-0-5" id="h0-0-5" class="d">-		border-color: #222;
+</a><a href="#h0-0-6" id="h0-0-6" class="d">-	}
+</a><a href="#h0-0-7" id="h0-0-7" class="i">+	/* code { */
+</a><a href="#h0-0-8" id="h0-0-8" class="i">+	/* 	background-color: #111; */
+</a><a href="#h0-0-9" id="h0-0-9" class="i">+	/* 	border-color: #222; */
+</a><a href="#h0-0-10" id="h0-0-10" class="i">+	/* } */
+</a> 	hr {
+ 		border-color: #222;
+ 	}
+<b>diff --git a/<a id="h1" href="../file/output/index.html.html">output/index.html</a> b/<a href="../file/output/index.html.html">output/index.html</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h1-0-3" id="h1-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h1-0-4" id="h1-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h1-0-5" id="h1-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h1-0-6" id="h1-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h1-0-7" id="h1-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h1-0-8" id="h1-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h1-0-12" id="h1-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h2" href="../file/output/style.css.html">output/style.css</a> b/<a href="../file/output/style.css.html">output/style.css</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -88,10 +88,10 @@ pre {
+</a> 		background-color: #000;
+ 		color: #bdbdbd;
+ 	}
+<a href="#h2-0-3" id="h2-0-3" class="d">-	code {
+</a><a href="#h2-0-4" id="h2-0-4" class="d">-		background-color: #111;
+</a><a href="#h2-0-5" id="h2-0-5" class="d">-		border-color: #222;
+</a><a href="#h2-0-6" id="h2-0-6" class="d">-	}
+</a><a href="#h2-0-7" id="h2-0-7" class="i">+	/* code { */
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+	/* 	background-color: #111; */
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+	/* 	border-color: #222; */
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+	/* } */
+</a> 	hr {
+ 		border-color: #222;
+ 	}
+<b>diff --git a/<a id="h3" href="../file/templates/index.html/header.html.html">templates/index.html/header.html</a> b/<a href="../file/templates/index.html/header.html.html">templates/index.html/header.html</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h3-0-3" id="h3-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h3-0-4" id="h3-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h3-0-5" id="h3-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h3-0-12" id="h3-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:${sitemail}&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+</pre>
+</div>
+</body>
+</html>

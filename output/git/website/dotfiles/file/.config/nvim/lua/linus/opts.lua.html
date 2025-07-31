@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>opts.lua - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../../../"><img src="../../../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../../../log.html">Log</a> | <a href="../../../../../files.html">Files</a> | <a href="../../../../../refs.html">Refs</a> | <a href="../../../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> opts.lua (853B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> vim.o.encoding = &quot;utf-8&quot;
+<a href="#l2" class="line" id="l2">      2</a> vim.o.fileencoding = &quot;utf-8&quot;
+<a href="#l3" class="line" id="l3">      3</a> vim.opt.spell = true
+<a href="#l4" class="line" id="l4">      4</a> vim.opt.spelllang = { &quot;en&quot;, &quot;de&quot; }
+<a href="#l5" class="line" id="l5">      5</a> vim.opt.spellfile = vim.fn.expand(&quot;~/.config/nvim/spell/en.utf-8.add&quot;)
+<a href="#l6" class="line" id="l6">      6</a> vim.opt.spellfile = vim.fn.expand(&quot;~/.config/nvim/spell/de.utf-8.add&quot;)
+<a href="#l7" class="line" id="l7">      7</a> 
+<a href="#l8" class="line" id="l8">      8</a> -------------------------------------------------------------
+<a href="#l9" class="line" id="l9">      9</a> 
+<a href="#l10" class="line" id="l10">     10</a> vim.opt.clipboard = &quot;unnamedplus&quot;
+<a href="#l11" class="line" id="l11">     11</a> 
+<a href="#l12" class="line" id="l12">     12</a> -------------------------------------------------------------
+<a href="#l13" class="line" id="l13">     13</a> 
+<a href="#l14" class="line" id="l14">     14</a> vim.opt.tabstop = 4
+<a href="#l15" class="line" id="l15">     15</a> vim.opt.shiftwidth = 4
+<a href="#l16" class="line" id="l16">     16</a> vim.opt.expandtab = true
+<a href="#l17" class="line" id="l17">     17</a> vim.opt.smartindent = false
+<a href="#l18" class="line" id="l18">     18</a> vim.opt.wrap = false
+<a href="#l19" class="line" id="l19">     19</a> 
+<a href="#l20" class="line" id="l20">     20</a> -------------------------------------------------------------
+<a href="#l21" class="line" id="l21">     21</a> 
+<a href="#l22" class="line" id="l22">     22</a> vim.opt.number = true
+<a href="#l23" class="line" id="l23">     23</a> vim.opt.relativenumber = true
+<a href="#l24" class="line" id="l24">     24</a> 
+<a href="#l25" class="line" id="l25">     25</a> -------------------------------------------------------------
+<a href="#l26" class="line" id="l26">     26</a> 
+<a href="#l27" class="line" id="l27">     27</a> vim.opt.swapfile = false
+<a href="#l28" class="line" id="l28">     28</a> vim.opt.backup = false
+<a href="#l29" class="line" id="l29">     29</a> 
+<a href="#l30" class="line" id="l30">     30</a> -------------------------------------------------------------
+<a href="#l31" class="line" id="l31">     31</a> 
+<a href="#l32" class="line" id="l32">     32</a> vim.opt.termguicolors = true
+<a href="#l33" class="line" id="l33">     33</a> 
+</pre>
+</div>
+</body>
+</html>

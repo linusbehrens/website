@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>17.04.2025 linux switch - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/3f2be61c779cf9f97b6070736bc6d67e119512f7.html">3f2be61c779cf9f97b6070736bc6d67e119512f7</a>
+<b>parent</b> <a href="../commit/ca9ede56f3a82772e34d320344d016933de4ccc8.html">ca9ede56f3a82772e34d320344d016933de4ccc8</a>
+<b>Author:</b> KoenigLinus &lt;<a href="mailto:linus@behrens-familie.de">linus@behrens-familie.de</a>&gt;
+<b>Date:</b>   Thu, 17 Apr 2025 12:04:59 +0200
+
+17.04.2025 linux switch
+
+<b>Diffstat:</b>
+<table><tr><td class="A">A</td><td><a href="#h0">.sources/plan9port</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">ghostty/config</a></td><td> | </td><td class="num">34</td><td><span class="i">++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">init.bash</a></td><td> | </td><td class="num">3</td><td><span class="i">+++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">nvim/init.lua</a></td><td> | </td><td class="num">11</td><td><span class="i">++++++++++</span><span class="d">-</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h4">nvim/lazy-lock.json</a></td><td> | </td><td class="num">44</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">nvim/lazyvim.json</a></td><td> | </td><td class="num">5</td><td><span class="i">+++</span><span class="d">--</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h6">nvim/lua/config/highlite.lua</a></td><td> | </td><td class="num">9</td><td><span class="i">+++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h7">nvim/lua/config/keymaps.lua</a></td><td> | </td><td class="num">9</td><td><span class="i">+++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h8">nvim/lua/config/lazy.lua</a></td><td> | </td><td class="num">2</td><td><span class="i">+</span><span class="d">-</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h9">nvim/lua/plugins/bufferline.lua</a></td><td> | </td><td class="num">12</td><td><span class="i">++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h10">nvim/lua/plugins/example.lua</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="D">D</td><td><a href="#h11">nvim/lua/plugins/gruvbox.lua</a></td><td> | </td><td class="num">9</td><td><span class="i"></span><span class="d">---------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h12">nvim/lua/plugins/lualine.lua</a></td><td> | </td><td class="num">51</td><td><span class="i">++++++++++++++++++++++++++</span><span class="d">-------------------------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h13">nvim/lua/plugins/mini.lua</a></td><td> | </td><td class="num">33</td><td><span class="i">+++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h14">nvim/lua/plugins/neotree.lua</a></td><td> | </td><td class="num">20</td><td><span class="i">++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h15">nvim/lua/plugins/no-neck-pain.lua</a></td><td> | </td><td class="num">3</td><td><span class="i">+++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h16">nvim/lua/plugins/opacity.lua</a></td><td> | </td><td class="num">3</td><td><span class="i">+++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h17">nvim/lua/plugins/render.lua</a></td><td> | </td><td class="num">14</td><td><span class="i">++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h18">nvim/lua/plugins/starter-mini.lua</a></td><td> | </td><td class="num">66</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h19">nvim/lua/plugins/todo-comment.lua</a></td><td> | </td><td class="num">84</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++</span><span class="d">----------------------------------------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h20">nvim/lua/plugins/user/highlights.lua</a></td><td> | </td><td class="num">13</td><td><span class="i">+++++++++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>21 files changed, 347 insertions(+), 80 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.sources/plan9port.html">.sources/plan9port</a> b/<a href="../file/.sources/plan9port.html">.sources/plan9port</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h0-0-0" id="h0-0-0" class="i">+Subproject commit 9da5b4451365e33c4f561d74a99ad5c17ff20fed
+</a><b>diff --git a/<a id="h1" href="../file/ghostty/config.html">ghostty/config</a> b/<a href="../file/ghostty/config.html">ghostty/config</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1,34 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+# Config generated by Ghostty Config
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+
+</a><a href="#h1-0-2" id="h1-0-2" class="i">+cursor-style = block
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+cursor-style-blink = false
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+shell-integration-features = no-cursor
+</a><a href="#h1-0-5" id="h1-0-5" class="i">+
+</a><a href="#h1-0-6" id="h1-0-6" class="i">+macos-titlebar-proxy-icon = hidden
+</a><a href="#h1-0-7" id="h1-0-7" class="i">+title = &quot; &quot;
+</a><a href="#h1-0-8" id="h1-0-8" class="i">+
+</a><a href="#h1-0-9" id="h1-0-9" class="i">+clipboard-read = allow
+</a><a href="#h1-0-10" id="h1-0-10" class="i">+clipboard-write = allow
+</a><a href="#h1-0-11" id="h1-0-11" class="i">+theme = tokyonight-storm
+</a><a href="#h1-0-12" id="h1-0-12" class="i">+background = #24283b
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+foreground = #c0caf5
+</a><a href="#h1-0-14" id="h1-0-14" class="i">+selection-background = #364a82
+</a><a href="#h1-0-15" id="h1-0-15" class="i">+selection-foreground = #c0caf5
+</a><a href="#h1-0-16" id="h1-0-16" class="i">+cursor-color = #c0caf5
+</a><a href="#h1-0-17" id="h1-0-17" class="i">+cursor-text = #1d202f
+</a><a href="#h1-0-18" id="h1-0-18" class="i">+palette = 0=#1d202f
+</a><a href="#h1-0-19" id="h1-0-19" class="i">+palette = 1=#f7768e
+</a><a href="#h1-0-20" id="h1-0-20" class="i">+palette = 2=#9ece6a
+</a><a href="#h1-0-21" id="h1-0-21" class="i">+palette = 3=#e0af68
+</a><a href="#h1-0-22" id="h1-0-22" class="i">+palette = 4=#7aa2f7
+</a><a href="#h1-0-23" id="h1-0-23" class="i">+palette = 5=#bb9af7
+</a><a href="#h1-0-24" id="h1-0-24" class="i">+palette = 6=#7dcfff
+</a><a href="#h1-0-25" id="h1-0-25" class="i">+palette = 7=#a9b1d6
+</a><a href="#h1-0-26" id="h1-0-26" class="i">+palette = 8=#414868
+</a><a href="#h1-0-27" id="h1-0-27" class="i">+palette = 9=#f7768e
+</a><a href="#h1-0-28" id="h1-0-28" class="i">+palette = 10=#9ece6a
+</a><a href="#h1-0-29" id="h1-0-29" class="i">+palette = 11=#e0af68
+</a><a href="#h1-0-30" id="h1-0-30" class="i">+palette = 12=#7aa2f7
+</a><a href="#h1-0-31" id="h1-0-31" class="i">+palette = 13=#bb9af7
+</a><a href="#h1-0-32" id="h1-0-32" class="i">+palette = 14=#7dcfff
+</a><a href="#h1-0-33" id="h1-0-33" class="i">+palette = 15=#c0caf5
+</a><b>diff --git a/<a id="h2" href="../file/init.bash.html">init.bash</a> b/<a href="../file/init.bash.html">init.bash</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -9,3 +9,6 @@ ln -s ~/dotfiles/.sources/ ~/.sources
+</a> 
+ rm -rf ~/.scripts
+ ln -s ~/dotfiles/.scripts/ ~/.scripts
+<a href="#h2-0-3" id="h2-0-3" class="i">+
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+rm -rf $HOME/Library/Application Support/com.mitchellh.ghostty
+</a><a href="#h2-0-5" id="h2-0-5" class="i">+ln -s $HOME/dotfiles/ghostty/ $HOME/Library/Application Support/com.mitchellh.ghostty
+</a><b>diff --git a/<a id="h3" href="../file/nvim/init.lua.html">nvim/init.lua</a> b/<a href="../file/nvim/init.lua.html">nvim/init.lua</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -1,9 +1,18 @@
+</a><a href="#h3-0-0" id="h3-0-0" class="d">--- bootstrap lazy.nvim, LazyVim and your plugins
+</a> require(&quot;config.lazy&quot;)
+<a href="#h3-0-2" id="h3-0-2" class="i">+-- local my_theme = require(&quot;linus-theme&quot;)
+</a><a href="#h3-0-3" id="h3-0-3" class="i">+-- my_theme.setup()
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+
+</a><a href="#h3-0-5" id="h3-0-5" class="i">+-------------------------------------------------------------
+</a> 
+ vim.o.encoding = &quot;utf-8&quot;
+ vim.o.fileencoding = &quot;utf-8&quot;
+<a href="#h3-0-9" id="h3-0-9" class="i">+vim.opt.spell = true
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+vim.opt.spelllang = { &quot;en&quot;, &quot;de&quot; }
+</a> 
+ vim.opt.tabstop = 4
+ vim.opt.shiftwidth = 4
+ vim.opt.expandtab = true
+<a href="#h3-0-15" id="h3-0-15" class="i">+
+</a><a href="#h3-0-16" id="h3-0-16" class="i">+-------------------------------------------------------------
+</a><a href="#h3-0-17" id="h3-0-17" class="i">+
+</a><a href="#h3-0-18" id="h3-0-18" class="i">+vim.opt.termguicolors = true
+</a><b>diff --git a/<a id="h4" href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a> b/<a href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -0,0 +1,44 @@
+</a><a href="#h4-0-0" id="h4-0-0" class="i">+{
+</a><a href="#h4-0-1" id="h4-0-1" class="i">+  &quot;LazyVim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;3f034d0a7f58031123300309f2efd3bb0356ee21&quot; },
+</a><a href="#h4-0-2" id="h4-0-2" class="i">+  &quot;blink.cmp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;cb5e346d9e0efa7a3eee7fd4da0b690c48d2a98e&quot; },
+</a><a href="#h4-0-3" id="h4-0-3" class="i">+  &quot;bufferline.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3&quot; },
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+  &quot;catppuccin&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;5b5e3aef9ad7af84f463d17b5479f06b87d5c429&quot; },
+</a><a href="#h4-0-5" id="h4-0-5" class="i">+  &quot;conform.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;b1a75324ddf96b7bb84963a297b1ed334db087c0&quot; },
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+  &quot;friendly-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;efff286dd74c22f731cdec26a70b46e5b203c619&quot; },
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+  &quot;fzf-lua&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6488ada2f376e47789391dc353b6d91a3f9de6f6&quot; },
+</a><a href="#h4-0-8" id="h4-0-8" class="i">+  &quot;gitsigns.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;17ab794b6fce6fce768430ebc925347e349e1d60&quot; },
+</a><a href="#h4-0-9" id="h4-0-9" class="i">+  &quot;grug-far.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6ef402861468c6bd987155be17a34ba4291dc1d0&quot; },
+</a><a href="#h4-0-10" id="h4-0-10" class="i">+  &quot;gruvbox.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;12b5420b665e8053d74eb075d8a589477333f67d&quot; },
+</a><a href="#h4-0-11" id="h4-0-11" class="i">+  &quot;lazy.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a&quot; },
+</a><a href="#h4-0-12" id="h4-0-12" class="i">+  &quot;lazydev.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c&quot; },
+</a><a href="#h4-0-13" id="h4-0-13" class="i">+  &quot;lualine.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;f4f791f67e70d378a754d02da068231d2352e5bc&quot; },
+</a><a href="#h4-0-14" id="h4-0-14" class="i">+  &quot;markview.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;4f9ad36efe01c283aa886453ba75bf569c897c84&quot; },
+</a><a href="#h4-0-15" id="h4-0-15" class="i">+  &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1a31f824b9cd5bc6f342fc29e9a53b60d74af245&quot; },
+</a><a href="#h4-0-16" id="h4-0-16" class="i">+  &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;fc98833b6da5de5a9c5b1446ac541577059555be&quot; },
+</a><a href="#h4-0-17" id="h4-0-17" class="i">+  &quot;mini.ai&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;e139eb1101beb0250fea322f8c07a42f0f175688&quot; },
+</a><a href="#h4-0-18" id="h4-0-18" class="i">+  &quot;mini.icons&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;397ed3807e96b59709ef3292f0a3e253d5c1dc0a&quot; },
+</a><a href="#h4-0-19" id="h4-0-19" class="i">+  &quot;mini.pairs&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;69864a2efb36c030877421634487fd90db1e4298&quot; },
+</a><a href="#h4-0-20" id="h4-0-20" class="i">+  &quot;mini.starter&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d8038690eadf203a40863c3a9423df880a901d39&quot; },
+</a><a href="#h4-0-21" id="h4-0-21" class="i">+  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;73d63376352ac731379892e27ac7b3d9449148e3&quot; },
+</a><a href="#h4-0-22" id="h4-0-22" class="i">+  &quot;no-neck-pain.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;53c8ef094c86e8897be2dcce0259d35914f6cdc0&quot; },
+</a><a href="#h4-0-23" id="h4-0-23" class="i">+  &quot;noice.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;0427460c2d7f673ad60eb02b35f5e9926cf67c59&quot; },
+</a><a href="#h4-0-24" id="h4-0-24" class="i">+  &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8d3bce9764e627b62b07424e0df77f680d47ffdb&quot; },
+</a><a href="#h4-0-25" id="h4-0-25" class="i">+  &quot;nvim-lint&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;81e8ba7655cc4395b1092ef4e1b6e83f54cd54ad&quot; },
+</a><a href="#h4-0-26" id="h4-0-26" class="i">+  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;3e873195f501b1e02d9fd7e5af5cbe74fc2f98c1&quot; },
+</a><a href="#h4-0-27" id="h4-0-27" class="i">+  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;523a9e148919f58eb5a013f76787e57696e00c93&quot; },
+</a><a href="#h4-0-28" id="h4-0-28" class="i">+  &quot;nvim-treesitter-textobjects&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;9937e5e356e5b227ec56d83d0a9d0a0f6bc9cad4&quot; },
+</a><a href="#h4-0-29" id="h4-0-29" class="i">+  &quot;nvim-ts-autotag&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a1d526af391f6aebb25a8795cbc05351ed3620b5&quot; },
+</a><a href="#h4-0-30" id="h4-0-30" class="i">+  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;4c3a5848ee0b09ecdea73adcd2a689190aeb728c&quot; },
+</a><a href="#h4-0-31" id="h4-0-31" class="i">+  &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;166a79a55bfa7a4db3e26fc031b4d92af71d0b51&quot; },
+</a><a href="#h4-0-32" id="h4-0-32" class="i">+  &quot;plenary.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;857c5ac632080dba10aae49dba902ce3abf91b35&quot; },
+</a><a href="#h4-0-33" id="h4-0-33" class="i">+  &quot;snacks.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;bc0630e43be5699bb94dadc302c0d21615421d93&quot; },
+</a><a href="#h4-0-34" id="h4-0-34" class="i">+  &quot;substitute.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;9db749a880e3dd3b0eb57f698aa8f1e1630e1f25&quot; },
+</a><a href="#h4-0-35" id="h4-0-35" class="i">+  &quot;telescope-fzf-native.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1f08ed60cafc8f6168b72b80be2b2ea149813e55&quot; },
+</a><a href="#h4-0-36" id="h4-0-36" class="i">+  &quot;telescope.nvim&quot;: { &quot;branch&quot;: &quot;0.1.x&quot;, &quot;commit&quot;: &quot;a0bbec21143c7bc5f8bb02e0005fa0b982edc026&quot; },
+</a><a href="#h4-0-37" id="h4-0-37" class="i">+  &quot;todo-comments.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;304a8d204ee787d2544d8bc23cd38d2f929e7cc5&quot; },
+</a><a href="#h4-0-38" id="h4-0-38" class="i">+  &quot;tokyonight.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;057ef5d260c1931f1dffd0f052c685dcd14100a3&quot; },
+</a><a href="#h4-0-39" id="h4-0-39" class="i">+  &quot;transparent.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8a2749a2fa74f97fe6557f61b89ac7fd873f3c21&quot; },
+</a><a href="#h4-0-40" id="h4-0-40" class="i">+  &quot;trouble.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;85bedb7eb7fa331a2ccbecb9202d8abba64d37b3&quot; },
+</a><a href="#h4-0-41" id="h4-0-41" class="i">+  &quot;ts-comments.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1bd9d0ba1d8b336c3db50692ffd0955fe1bb9f0c&quot; },
+</a><a href="#h4-0-42" id="h4-0-42" class="i">+  &quot;which-key.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;370ec46f710e058c9c1646273e6b225acf47cbed&quot; }
+</a><a href="#h4-0-43" id="h4-0-43" class="i">+}
+</a><b>diff --git a/<a id="h5" href="../file/nvim/lazyvim.json.html">nvim/lazyvim.json</a> b/<a href="../file/nvim/lazyvim.json.html">nvim/lazyvim.json</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -2,8 +2,9 @@
+</a>   &quot;extras&quot;: [
+ 
+   ],
+<a href="#h5-0-3" id="h5-0-3" class="i">+  &quot;install_version&quot;: 7,
+</a>   &quot;news&quot;: {
+<a href="#h5-0-5" id="h5-0-5" class="d">-    &quot;NEWS.md&quot;: &quot;7429&quot;
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+    &quot;NEWS.md&quot;: &quot;10960&quot;
+</a>   },
+<a href="#h5-0-8" id="h5-0-8" class="d">-  &quot;version&quot;: 7
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+  &quot;version&quot;: 8
+</a> }
+ \ No newline at end of file
+<b>diff --git a/<a id="h6" href="../file/nvim/lua/config/highlite.lua.html">nvim/lua/config/highlite.lua</a> b/<a href="../file/nvim/lua/config/highlite.lua.html">nvim/lua/config/highlite.lua</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -0,0 +1,9 @@
+</a><a href="#h6-0-0" id="h6-0-0" class="i">+-- -- ~/.config/nvim/lua/config/highlights.lua
+</a><a href="#h6-0-1" id="h6-0-1" class="i">+-- return {
+</a><a href="#h6-0-2" id="h6-0-2" class="i">+--   -- Beispiel: Tree-sitter Textfarben dimmen
+</a><a href="#h6-0-3" id="h6-0-3" class="i">+--   [&quot;@text&quot;] = { fg = &quot;#000000&quot; }, -- normaler Text
+</a><a href="#h6-0-4" id="h6-0-4" class="i">+--   [&quot;@text.strong&quot;] = { fg = &quot;#000000&quot;, bold = true },
+</a><a href="#h6-0-5" id="h6-0-5" class="i">+--   [&quot;@text.emphasis&quot;] = { fg = &quot;#000000&quot;, italic = true },
+</a><a href="#h6-0-6" id="h6-0-6" class="i">+--   [&quot;@text.literal&quot;] = { fg = &quot;#444444&quot; }, -- inline code
+</a><a href="#h6-0-7" id="h6-0-7" class="i">+--   [&quot;@comment&quot;] = { fg = &quot;#555555&quot;, italic = true }, -- Kommentare dunkler machen
+</a><a href="#h6-0-8" id="h6-0-8" class="i">+-- }
+</a><b>diff --git a/<a id="h7" href="../file/nvim/lua/config/keymaps.lua.html">nvim/lua/config/keymaps.lua</a> b/<a href="../file/nvim/lua/config/keymaps.lua.html">nvim/lua/config/keymaps.lua</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -1,3 +1,12 @@
+</a> -- Keymaps are automatically loaded on the VeryLazy event
+ -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+ -- Add any additional keymaps here
+<a href="#h7-0-3" id="h7-0-3" class="i">+--
+</a><a href="#h7-0-4" id="h7-0-4" class="i">+
+</a><a href="#h7-0-5" id="h7-0-5" class="i">+-- NoNeckPain
+</a><a href="#h7-0-6" id="h7-0-6" class="i">+--
+</a><a href="#h7-0-7" id="h7-0-7" class="i">+
+</a><a href="#h7-0-8" id="h7-0-8" class="i">+local map = LazyVim.safe_keymap_set
+</a><a href="#h7-0-9" id="h7-0-9" class="i">+
+</a><a href="#h7-0-10" id="h7-0-10" class="i">+map(&quot;n&quot;, &quot;&lt;leader&gt;z&quot;, &quot;&lt;cmd&gt;NoNeckPain&lt;cr&gt;&quot;, { desc = &quot;NoNeckPain: zen&quot; })
+</a><a href="#h7-0-11" id="h7-0-11" class="i">+map(&quot;n&quot;, &quot;&lt;leader&gt;h&quot;, &quot;&lt;cmd&gt;TransparentToggle&lt;cr&gt;&quot;, { desc = &quot;Transparency: toggle&quot; })
+</a><b>diff --git a/<a id="h8" href="../file/nvim/lua/config/lazy.lua.html">nvim/lua/config/lazy.lua</a> b/<a href="../file/nvim/lua/config/lazy.lua.html">nvim/lua/config/lazy.lua</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -30,7 +30,7 @@ require(&quot;lazy&quot;).setup({
+</a>     version = false, -- always use the latest git commit
+     -- version = &quot;*&quot;, -- try installing the latest stable version for plugins that support semver
+   },
+<a href="#h8-0-3" id="h8-0-3" class="d">-  install = { colorscheme = { &quot;tokyonight&quot;, &quot;habamax&quot; } },
+</a><a href="#h8-0-4" id="h8-0-4" class="i">+  -- install = { colorscheme = { &quot;tokyonight&quot;, &quot;habamax&quot; } },
+</a>   checker = {
+     enabled = true, -- check for plugin updates periodically
+     notify = false, -- notify on update
+<b>diff --git a/<a id="h9" href="../file/nvim/lua/plugins/bufferline.lua.html">nvim/lua/plugins/bufferline.lua</a> b/<a href="../file/nvim/lua/plugins/bufferline.lua.html">nvim/lua/plugins/bufferline.lua</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -0,0 +1,12 @@
+</a><a href="#h9-0-0" id="h9-0-0" class="i">+return {
+</a><a href="#h9-0-1" id="h9-0-1" class="i">+  -- add gruvbox
+</a><a href="#h9-0-2" id="h9-0-2" class="i">+  { &quot;ellisonleao/gruvbox.nvim&quot; },
+</a><a href="#h9-0-3" id="h9-0-3" class="i">+
+</a><a href="#h9-0-4" id="h9-0-4" class="i">+  -- Configure LazyVim to load gruvbox
+</a><a href="#h9-0-5" id="h9-0-5" class="i">+  {
+</a><a href="#h9-0-6" id="h9-0-6" class="i">+    &quot;LazyVim/LazyVim&quot;,
+</a><a href="#h9-0-7" id="h9-0-7" class="i">+    opts = {
+</a><a href="#h9-0-8" id="h9-0-8" class="i">+      colorscheme = &quot;gruvbox&quot;,
+</a><a href="#h9-0-9" id="h9-0-9" class="i">+    },
+</a><a href="#h9-0-10" id="h9-0-10" class="i">+  },
+</a><a href="#h9-0-11" id="h9-0-11" class="i">+}
+</a><b>diff --git a/<a id="h10" href="../file/nvim/lua/plugins/example.lua.html">nvim/lua/plugins/example.lua</a> b/<a href="../file/nvim/lua/plugins/example.lua.html">nvim/lua/plugins/example.lua</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -131,6 +131,7 @@ return {
+</a>         &quot;query&quot;,
+         &quot;regex&quot;,
+         &quot;tsx&quot;,
+<a href="#h10-0-3" id="h10-0-3" class="i">+        &quot;latex&quot;,
+</a>         &quot;typescript&quot;,
+         &quot;vim&quot;,
+         &quot;yaml&quot;,
+<b>diff --git a/<a id="h11" href="../file/nvim/lua/plugins/gruvbox.lua.html">nvim/lua/plugins/gruvbox.lua</a> b/<a href="../file/nvim/lua/plugins/gruvbox.lua.html">nvim/lua/plugins/gruvbox.lua</a></b>
+<a href="#h11-0" id="h11-0" class="h">@@ -1,9 +0,0 @@
+</a><a href="#h11-0-0" id="h11-0-0" class="d">--- ~/.config/nvim/lua/plugins/gruvbox.lua
+</a><a href="#h11-0-1" id="h11-0-1" class="d">-return {
+</a><a href="#h11-0-2" id="h11-0-2" class="d">-  &quot;ellisonleao/gruvbox.nvim&quot;,
+</a><a href="#h11-0-3" id="h11-0-3" class="d">-  lazy = false, -- Load immediately
+</a><a href="#h11-0-4" id="h11-0-4" class="d">-  priority = 1000,
+</a><a href="#h11-0-5" id="h11-0-5" class="d">-  config = function()
+</a><a href="#h11-0-6" id="h11-0-6" class="d">-    vim.cmd([[colorscheme gruvbox]])
+</a><a href="#h11-0-7" id="h11-0-7" class="d">-  end,
+</a><a href="#h11-0-8" id="h11-0-8" class="d">-}
+</a><b>diff --git a/<a id="h12" href="../file/nvim/lua/plugins/lualine.lua.html">nvim/lua/plugins/lualine.lua</a> b/<a href="../file/nvim/lua/plugins/lualine.lua.html">nvim/lua/plugins/lualine.lua</a></b>
+<a href="#h12-0" id="h12-0" class="h">@@ -1,28 +1,29 @@
+</a> return {
+   &quot;nvim-lualine/lualine.nvim&quot;,
+<a href="#h12-0-2" id="h12-0-2" class="d">-  dependencies = { &quot;nvim-tree/nvim-web-devicons&quot; },
+</a><a href="#h12-0-3" id="h12-0-3" class="d">-  config = function()
+</a><a href="#h12-0-4" id="h12-0-4" class="d">-    local lualine = require(&quot;lualine&quot;)
+</a><a href="#h12-0-5" id="h12-0-5" class="d">-    local lazy_status = require(&quot;lazy.status&quot;) -- to configure lazy pending updates count
+</a><a href="#h12-0-6" id="h12-0-6" class="d">-
+</a><a href="#h12-0-7" id="h12-0-7" class="d">-    lualine.setup({
+</a><a href="#h12-0-8" id="h12-0-8" class="d">-      options = {
+</a><a href="#h12-0-9" id="h12-0-9" class="d">-        theme = &quot;gruvbox&quot;,
+</a><a href="#h12-0-10" id="h12-0-10" class="d">-        section_separators = &quot;&quot;,
+</a><a href="#h12-0-11" id="h12-0-11" class="d">-        component_separators = &quot;&quot;,
+</a><a href="#h12-0-12" id="h12-0-12" class="d">-      },
+</a><a href="#h12-0-13" id="h12-0-13" class="d">-      sections = {
+</a><a href="#h12-0-14" id="h12-0-14" class="d">-        lualine_x = {
+</a><a href="#h12-0-15" id="h12-0-15" class="d">-          {
+</a><a href="#h12-0-16" id="h12-0-16" class="d">-            lazy_status.updates,
+</a><a href="#h12-0-17" id="h12-0-17" class="d">-            cond = lazy_status.has_updates,
+</a><a href="#h12-0-18" id="h12-0-18" class="d">-            color = { fg = &quot;#ff9e64&quot; },
+</a><a href="#h12-0-19" id="h12-0-19" class="d">-          },
+</a><a href="#h12-0-20" id="h12-0-20" class="d">-          { &quot;encoding&quot; },
+</a><a href="#h12-0-21" id="h12-0-21" class="d">-          { &quot;fileformat&quot; },
+</a><a href="#h12-0-22" id="h12-0-22" class="d">-          { &quot;filetype&quot; },
+</a><a href="#h12-0-23" id="h12-0-23" class="d">-        },
+</a><a href="#h12-0-24" id="h12-0-24" class="d">-      },
+</a><a href="#h12-0-25" id="h12-0-25" class="d">-    })
+</a><a href="#h12-0-26" id="h12-0-26" class="d">-  end,
+</a><a href="#h12-0-27" id="h12-0-27" class="i">+  enabled = false,
+</a><a href="#h12-0-28" id="h12-0-28" class="i">+  -- dependencies = { &quot;nvim-tree/nvim-web-devicons&quot; },
+</a><a href="#h12-0-29" id="h12-0-29" class="i">+  -- config = function()
+</a><a href="#h12-0-30" id="h12-0-30" class="i">+  --   local lualine = require(&quot;lualine&quot;)
+</a><a href="#h12-0-31" id="h12-0-31" class="i">+  --   local lazy_status = require(&quot;lazy.status&quot;) -- to configure lazy pending updates count
+</a><a href="#h12-0-32" id="h12-0-32" class="i">+  --
+</a><a href="#h12-0-33" id="h12-0-33" class="i">+  --   lualine.setup({
+</a><a href="#h12-0-34" id="h12-0-34" class="i">+  --     options = {
+</a><a href="#h12-0-35" id="h12-0-35" class="i">+  --       -- theme = &quot;gruvbox&quot;,
+</a><a href="#h12-0-36" id="h12-0-36" class="i">+  --       section_separators = &quot;&quot;,
+</a><a href="#h12-0-37" id="h12-0-37" class="i">+  --       component_separators = &quot;&quot;,
+</a><a href="#h12-0-38" id="h12-0-38" class="i">+  --     },
+</a><a href="#h12-0-39" id="h12-0-39" class="i">+  --     sections = {
+</a><a href="#h12-0-40" id="h12-0-40" class="i">+  --       lualine_x = {
+</a><a href="#h12-0-41" id="h12-0-41" class="i">+  --         {
+</a><a href="#h12-0-42" id="h12-0-42" class="i">+  --           lazy_status.updates,
+</a><a href="#h12-0-43" id="h12-0-43" class="i">+  --           cond = lazy_status.has_updates,
+</a><a href="#h12-0-44" id="h12-0-44" class="i">+  --           color = { fg = &quot;#ff9e64&quot; },
+</a><a href="#h12-0-45" id="h12-0-45" class="i">+  --         },
+</a><a href="#h12-0-46" id="h12-0-46" class="i">+  --         { &quot;encoding&quot; },
+</a><a href="#h12-0-47" id="h12-0-47" class="i">+  --         { &quot;fileformat&quot; },
+</a><a href="#h12-0-48" id="h12-0-48" class="i">+  --         { &quot;filetype&quot; },
+</a><a href="#h12-0-49" id="h12-0-49" class="i">+  --       },
+</a><a href="#h12-0-50" id="h12-0-50" class="i">+  --     },
+</a><a href="#h12-0-51" id="h12-0-51" class="i">+  --   })
+</a><a href="#h12-0-52" id="h12-0-52" class="i">+  --end,
+</a> }
+<b>diff --git a/<a id="h13" href="../file/nvim/lua/plugins/mini.lua.html">nvim/lua/plugins/mini.lua</a> b/<a href="../file/nvim/lua/plugins/mini.lua.html">nvim/lua/plugins/mini.lua</a></b>
+<a href="#h13-0" id="h13-0" class="h">@@ -0,0 +1,33 @@
+</a><a href="#h13-0-0" id="h13-0-0" class="i">+-- ~/.config/nvim/lua/plugins/softwrap.lua
+</a><a href="#h13-0-1" id="h13-0-1" class="i">+return {
+</a><a href="#h13-0-2" id="h13-0-2" class="i">+  -- Das ist ein Dummy-Eintrag, damit LazyVim ihn lädt
+</a><a href="#h13-0-3" id="h13-0-3" class="i">+  -- Du kannst stattdessen auch ein echtes Plugin hier rein tun, wenn du willst.
+</a><a href="#h13-0-4" id="h13-0-4" class="i">+  -- Aber dieser Configblock funktioniert ohne Plugin!
+</a><a href="#h13-0-5" id="h13-0-5" class="i">+  &quot;nvim-lua/plenary.nvim&quot;, -- oder irgendein vorhandenes Plugin als Träger
+</a><a href="#h13-0-6" id="h13-0-6" class="i">+  config = function()
+</a><a href="#h13-0-7" id="h13-0-7" class="i">+    local function toggle_wrap()
+</a><a href="#h13-0-8" id="h13-0-8" class="i">+      local enabled = vim.wo.wrap
+</a><a href="#h13-0-9" id="h13-0-9" class="i">+      vim.wo.wrap = not enabled
+</a><a href="#h13-0-10" id="h13-0-10" class="i">+      vim.wo.linebreak = not enabled
+</a><a href="#h13-0-11" id="h13-0-11" class="i">+      vim.wo.breakindent = not enabled
+</a><a href="#h13-0-12" id="h13-0-12" class="i">+      if not enabled then
+</a><a href="#h13-0-13" id="h13-0-13" class="i">+        vim.notify(&quot;Soft wrap enabled&quot;, vim.log.levels.INFO)
+</a><a href="#h13-0-14" id="h13-0-14" class="i">+      else
+</a><a href="#h13-0-15" id="h13-0-15" class="i">+        vim.notify(&quot;Soft wrap disabled&quot;, vim.log.levels.INFO)
+</a><a href="#h13-0-16" id="h13-0-16" class="i">+      end
+</a><a href="#h13-0-17" id="h13-0-17" class="i">+    end
+</a><a href="#h13-0-18" id="h13-0-18" class="i">+
+</a><a href="#h13-0-19" id="h13-0-19" class="i">+    -- Autocommand für bestimmte Dateitypen
+</a><a href="#h13-0-20" id="h13-0-20" class="i">+    vim.api.nvim_create_autocmd(&quot;FileType&quot;, {
+</a><a href="#h13-0-21" id="h13-0-21" class="i">+      pattern = { &quot;markdown&quot;, &quot;tex&quot;, &quot;text&quot;, &quot;plaintex&quot; },
+</a><a href="#h13-0-22" id="h13-0-22" class="i">+      callback = function()
+</a><a href="#h13-0-23" id="h13-0-23" class="i">+        vim.opt_local.wrap = true
+</a><a href="#h13-0-24" id="h13-0-24" class="i">+        vim.opt_local.linebreak = true
+</a><a href="#h13-0-25" id="h13-0-25" class="i">+        vim.opt_local.breakindent = true
+</a><a href="#h13-0-26" id="h13-0-26" class="i">+      end,
+</a><a href="#h13-0-27" id="h13-0-27" class="i">+    })
+</a><a href="#h13-0-28" id="h13-0-28" class="i">+
+</a><a href="#h13-0-29" id="h13-0-29" class="i">+    -- Toggle auf &lt;leader&gt;z
+</a><a href="#h13-0-30" id="h13-0-30" class="i">+    vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;t&quot;, toggle_wrap, { desc = &quot;Toggle soft wrap&quot; })
+</a><a href="#h13-0-31" id="h13-0-31" class="i">+  end,
+</a><a href="#h13-0-32" id="h13-0-32" class="i">+}
+</a><b>diff --git a/<a id="h14" href="../file/nvim/lua/plugins/neotree.lua.html">nvim/lua/plugins/neotree.lua</a> b/<a href="../file/nvim/lua/plugins/neotree.lua.html">nvim/lua/plugins/neotree.lua</a></b>
+<a href="#h14-0" id="h14-0" class="h">@@ -0,0 +1,20 @@
+</a><a href="#h14-0-0" id="h14-0-0" class="i">+return {
+</a><a href="#h14-0-1" id="h14-0-1" class="i">+  &quot;nvim-neo-tree/neo-tree.nvim&quot;,
+</a><a href="#h14-0-2" id="h14-0-2" class="i">+  opts = {
+</a><a href="#h14-0-3" id="h14-0-3" class="i">+    filesystem = {
+</a><a href="#h14-0-4" id="h14-0-4" class="i">+      hijack_netrw_behavior = &quot;open_current&quot;, -- Keeps Neo-tree from opening automatically
+</a><a href="#h14-0-5" id="h14-0-5" class="i">+      window = {
+</a><a href="#h14-0-6" id="h14-0-6" class="i">+        position = &quot;float&quot;,
+</a><a href="#h14-0-7" id="h14-0-7" class="i">+        width = 30,
+</a><a href="#h14-0-8" id="h14-0-8" class="i">+      },
+</a><a href="#h14-0-9" id="h14-0-9" class="i">+    },
+</a><a href="#h14-0-10" id="h14-0-10" class="i">+    event_handlers = {
+</a><a href="#h14-0-11" id="h14-0-11" class="i">+      {
+</a><a href="#h14-0-12" id="h14-0-12" class="i">+        event = &quot;file_opened&quot;,
+</a><a href="#h14-0-13" id="h14-0-13" class="i">+        handler = function()
+</a><a href="#h14-0-14" id="h14-0-14" class="i">+          require(&quot;neo-tree.command&quot;).execute({ action = &quot;close&quot; })
+</a><a href="#h14-0-15" id="h14-0-15" class="i">+        end,
+</a><a href="#h14-0-16" id="h14-0-16" class="i">+      },
+</a><a href="#h14-0-17" id="h14-0-17" class="i">+    },
+</a><a href="#h14-0-18" id="h14-0-18" class="i">+  },
+</a><a href="#h14-0-19" id="h14-0-19" class="i">+}
+</a><b>diff --git a/<a id="h15" href="../file/nvim/lua/plugins/no-neck-pain.lua.html">nvim/lua/plugins/no-neck-pain.lua</a> b/<a href="../file/nvim/lua/plugins/no-neck-pain.lua.html">nvim/lua/plugins/no-neck-pain.lua</a></b>
+<a href="#h15-0" id="h15-0" class="h">@@ -0,0 +1,3 @@
+</a><a href="#h15-0-0" id="h15-0-0" class="i">+return {
+</a><a href="#h15-0-1" id="h15-0-1" class="i">+  &quot;shortcuts/no-neck-pain.nvim&quot;,
+</a><a href="#h15-0-2" id="h15-0-2" class="i">+}
+</a><b>diff --git a/<a id="h16" href="../file/nvim/lua/plugins/opacity.lua.html">nvim/lua/plugins/opacity.lua</a> b/<a href="../file/nvim/lua/plugins/opacity.lua.html">nvim/lua/plugins/opacity.lua</a></b>
+<a href="#h16-0" id="h16-0" class="h">@@ -0,0 +1,3 @@
+</a><a href="#h16-0-0" id="h16-0-0" class="i">+return {
+</a><a href="#h16-0-1" id="h16-0-1" class="i">+  &quot;xiyaowong/transparent.nvim&quot;,
+</a><a href="#h16-0-2" id="h16-0-2" class="i">+}
+</a><b>diff --git a/<a id="h17" href="../file/nvim/lua/plugins/render.lua.html">nvim/lua/plugins/render.lua</a> b/<a href="../file/nvim/lua/plugins/render.lua.html">nvim/lua/plugins/render.lua</a></b>
+<a href="#h17-0" id="h17-0" class="h">@@ -0,0 +1,14 @@
+</a><a href="#h17-0-0" id="h17-0-0" class="i">+return {
+</a><a href="#h17-0-1" id="h17-0-1" class="i">+  &quot;OXY2DEV/markview.nvim&quot;,
+</a><a href="#h17-0-2" id="h17-0-2" class="i">+  lazy = false,
+</a><a href="#h17-0-3" id="h17-0-3" class="i">+}
+</a><a href="#h17-0-4" id="h17-0-4" class="i">+
+</a><a href="#h17-0-5" id="h17-0-5" class="i">+-- return {
+</a><a href="#h17-0-6" id="h17-0-6" class="i">+--   &quot;MeanderingProgrammer/render-markdown.nvim&quot;,
+</a><a href="#h17-0-7" id="h17-0-7" class="i">+--   dependencies = { &quot;nvim-treesitter/nvim-treesitter&quot;, &quot;echasnovski/mini.nvim&quot; }, -- if you use the mini.nvim suite
+</a><a href="#h17-0-8" id="h17-0-8" class="i">+--   -- dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;echasnovski/mini.icons&#39; }, -- if you use standalone mini plugins
+</a><a href="#h17-0-9" id="h17-0-9" class="i">+--   -- dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;nvim-tree/nvim-web-devicons&#39; }, -- if you prefer nvim-web-devicons
+</a><a href="#h17-0-10" id="h17-0-10" class="i">+--   ---@module &#39;render-markdown&#39;
+</a><a href="#h17-0-11" id="h17-0-11" class="i">+--   ---@type render.md.UserConfig
+</a><a href="#h17-0-12" id="h17-0-12" class="i">+--   opts = {},
+</a><a href="#h17-0-13" id="h17-0-13" class="i">+-- }
+</a><b>diff --git a/<a id="h18" href="../file/nvim/lua/plugins/starter-mini.lua.html">nvim/lua/plugins/starter-mini.lua</a> b/<a href="../file/nvim/lua/plugins/starter-mini.lua.html">nvim/lua/plugins/starter-mini.lua</a></b>
+<a href="#h18-0" id="h18-0" class="h">@@ -0,0 +1,66 @@
+</a><a href="#h18-0-0" id="h18-0-0" class="i">+return {
+</a><a href="#h18-0-1" id="h18-0-1" class="i">+  &quot;echasnovski/mini.starter&quot;,
+</a><a href="#h18-0-2" id="h18-0-2" class="i">+  version = false, -- wait till new 0.7.0 release to put it back on semver
+</a><a href="#h18-0-3" id="h18-0-3" class="i">+  event = &quot;VimEnter&quot;,
+</a><a href="#h18-0-4" id="h18-0-4" class="i">+  opts = function()
+</a><a href="#h18-0-5" id="h18-0-5" class="i">+    local logo = table.concat({
+</a><a href="#h18-0-6" id="h18-0-6" class="i">+      &quot;neovim&quot;,
+</a><a href="#h18-0-7" id="h18-0-7" class="i">+    }, &quot;\n&quot;)
+</a><a href="#h18-0-8" id="h18-0-8" class="i">+    local pad = string.rep(&quot; &quot;, 1)
+</a><a href="#h18-0-9" id="h18-0-9" class="i">+    local new_section = function(name, action, section)
+</a><a href="#h18-0-10" id="h18-0-10" class="i">+      return { name = name, action = action, section = pad .. section }
+</a><a href="#h18-0-11" id="h18-0-11" class="i">+    end
+</a><a href="#h18-0-12" id="h18-0-12" class="i">+
+</a><a href="#h18-0-13" id="h18-0-13" class="i">+    local starter = require(&quot;mini.starter&quot;)
+</a><a href="#h18-0-14" id="h18-0-14" class="i">+    --stylua: ignore
+</a><a href="#h18-0-15" id="h18-0-15" class="i">+    local config = {
+</a><a href="#h18-0-16" id="h18-0-16" class="i">+      evaluate_single = true,
+</a><a href="#h18-0-17" id="h18-0-17" class="i">+      header = logo,
+</a><a href="#h18-0-18" id="h18-0-18" class="i">+      items = {
+</a><a href="#h18-0-19" id="h18-0-19" class="i">+        new_section(&quot;Find file&quot;,       LazyVim.pick(),                        &quot;Telescope&quot;),
+</a><a href="#h18-0-20" id="h18-0-20" class="i">+        new_section(&quot;New file&quot;,        &quot;ene | startinsert&quot;,                   &quot;Built-in&quot;),
+</a><a href="#h18-0-21" id="h18-0-21" class="i">+        new_section(&quot;Recent files&quot;,    LazyVim.pick(&quot;oldfiles&quot;),              &quot;Telescope&quot;),
+</a><a href="#h18-0-22" id="h18-0-22" class="i">+        new_section(&quot;Find text&quot;,       LazyVim.pick(&quot;live_grep&quot;),             &quot;Telescope&quot;),
+</a><a href="#h18-0-23" id="h18-0-23" class="i">+        new_section(&quot;Config&quot;,          LazyVim.pick.config_files(),           &quot;Config&quot;),
+</a><a href="#h18-0-24" id="h18-0-24" class="i">+        new_section(&quot;Restore session&quot;, [[lua require(&quot;persistence&quot;).load()]], &quot;Session&quot;),
+</a><a href="#h18-0-25" id="h18-0-25" class="i">+        new_section(&quot;Lazy Extras&quot;,     &quot;LazyExtras&quot;,                          &quot;Config&quot;),
+</a><a href="#h18-0-26" id="h18-0-26" class="i">+        new_section(&quot;Lazy&quot;,            &quot;Lazy&quot;,                                &quot;Config&quot;),
+</a><a href="#h18-0-27" id="h18-0-27" class="i">+        new_section(&quot;Quit&quot;,            &quot;qa&quot;,                                  &quot;Built-in&quot;),
+</a><a href="#h18-0-28" id="h18-0-28" class="i">+      },
+</a><a href="#h18-0-29" id="h18-0-29" class="i">+      content_hooks = {
+</a><a href="#h18-0-30" id="h18-0-30" class="i">+        starter.gen_hook.adding_bullet(pad .. &quot;░ &quot;, false),
+</a><a href="#h18-0-31" id="h18-0-31" class="i">+        starter.gen_hook.aligning(&quot;center&quot;, &quot;center&quot;),
+</a><a href="#h18-0-32" id="h18-0-32" class="i">+      },
+</a><a href="#h18-0-33" id="h18-0-33" class="i">+    }
+</a><a href="#h18-0-34" id="h18-0-34" class="i">+    return config
+</a><a href="#h18-0-35" id="h18-0-35" class="i">+  end,
+</a><a href="#h18-0-36" id="h18-0-36" class="i">+  config = function(_, config)
+</a><a href="#h18-0-37" id="h18-0-37" class="i">+    -- close Lazy and re-open when starter is ready
+</a><a href="#h18-0-38" id="h18-0-38" class="i">+    if vim.o.filetype == &quot;lazy&quot; then
+</a><a href="#h18-0-39" id="h18-0-39" class="i">+      vim.cmd.close()
+</a><a href="#h18-0-40" id="h18-0-40" class="i">+      vim.api.nvim_create_autocmd(&quot;User&quot;, {
+</a><a href="#h18-0-41" id="h18-0-41" class="i">+        pattern = &quot;MiniStarterOpened&quot;,
+</a><a href="#h18-0-42" id="h18-0-42" class="i">+        callback = function()
+</a><a href="#h18-0-43" id="h18-0-43" class="i">+          require(&quot;lazy&quot;).show()
+</a><a href="#h18-0-44" id="h18-0-44" class="i">+        end,
+</a><a href="#h18-0-45" id="h18-0-45" class="i">+      })
+</a><a href="#h18-0-46" id="h18-0-46" class="i">+    end
+</a><a href="#h18-0-47" id="h18-0-47" class="i">+
+</a><a href="#h18-0-48" id="h18-0-48" class="i">+    local starter = require(&quot;mini.starter&quot;)
+</a><a href="#h18-0-49" id="h18-0-49" class="i">+    starter.setup(config)
+</a><a href="#h18-0-50" id="h18-0-50" class="i">+
+</a><a href="#h18-0-51" id="h18-0-51" class="i">+    vim.api.nvim_create_autocmd(&quot;User&quot;, {
+</a><a href="#h18-0-52" id="h18-0-52" class="i">+      pattern = &quot;LazyVimStarted&quot;,
+</a><a href="#h18-0-53" id="h18-0-53" class="i">+      callback = function(ev)
+</a><a href="#h18-0-54" id="h18-0-54" class="i">+        local stats = require(&quot;lazy&quot;).stats()
+</a><a href="#h18-0-55" id="h18-0-55" class="i">+        local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+</a><a href="#h18-0-56" id="h18-0-56" class="i">+        local pad_footer = string.rep(&quot; &quot;, 8)
+</a><a href="#h18-0-57" id="h18-0-57" class="i">+        starter.config.footer = pad_footer .. &quot;⚡ Neovim loaded &quot; .. stats.count .. &quot; plugins in &quot; .. ms .. &quot;ms&quot;
+</a><a href="#h18-0-58" id="h18-0-58" class="i">+        -- INFO: based on @echasnovski&#39;s recommendation (thanks a lot!!!)
+</a><a href="#h18-0-59" id="h18-0-59" class="i">+        if vim.bo[ev.buf].filetype == &quot;ministarter&quot; then
+</a><a href="#h18-0-60" id="h18-0-60" class="i">+          pcall(starter.refresh)
+</a><a href="#h18-0-61" id="h18-0-61" class="i">+        end
+</a><a href="#h18-0-62" id="h18-0-62" class="i">+      end,
+</a><a href="#h18-0-63" id="h18-0-63" class="i">+    })
+</a><a href="#h18-0-64" id="h18-0-64" class="i">+  end,
+</a><a href="#h18-0-65" id="h18-0-65" class="i">+}
+</a><b>diff --git a/<a id="h19" href="../file/nvim/lua/plugins/todo-comment.lua.html">nvim/lua/plugins/todo-comment.lua</a> b/<a href="../file/nvim/lua/plugins/todo-comment.lua.html">nvim/lua/plugins/todo-comment.lua</a></b>
+<a href="#h19-0" id="h19-0" class="h">@@ -1,49 +1,49 @@
+</a> return {
+<a href="#h19-0-1" id="h19-0-1" class="d">-    &quot;folke/todo-comments.nvim&quot;,
+</a><a href="#h19-0-2" id="h19-0-2" class="d">-    dependencies = { &quot;nvim-lua/plenary.nvim&quot; },
+</a><a href="#h19-0-3" id="h19-0-3" class="d">-    opts = {
+</a><a href="#h19-0-4" id="h19-0-4" class="d">-        keywords = {
+</a><a href="#h19-0-5" id="h19-0-5" class="d">-            FIX = {
+</a><a href="#h19-0-6" id="h19-0-6" class="d">-                icon = &quot; &quot;, -- icon used for the sign, and in search results
+</a><a href="#h19-0-7" id="h19-0-7" class="d">-                color = &quot;error&quot;, -- can be a hex color, or a named color (see below)
+</a><a href="#h19-0-8" id="h19-0-8" class="d">-                alt = { &quot;FIXME&quot;, &quot;BUG&quot;, &quot;FIXIT&quot;, &quot;ISSUE&quot; }, -- a set of other keywords that all map to this FIX keywords
+</a><a href="#h19-0-9" id="h19-0-9" class="d">-                -- signs = false, -- configure signs for some keywords individually
+</a><a href="#h19-0-10" id="h19-0-10" class="d">-            },
+</a><a href="#h19-0-11" id="h19-0-11" class="d">-            TODO = { icon = &quot; &quot;, color = &quot;info&quot; },
+</a><a href="#h19-0-12" id="h19-0-12" class="d">-            HACK = { icon = &quot; &quot;, color = &quot;warning&quot; },
+</a><a href="#h19-0-13" id="h19-0-13" class="d">-            WARN = { icon = &quot; &quot;, color = &quot;warning&quot;, alt = { &quot;WARNING&quot;, &quot;XXX&quot; } },
+</a><a href="#h19-0-14" id="h19-0-14" class="d">-            PERF = { icon = &quot; &quot;, alt = { &quot;OPTIM&quot;, &quot;PERFORMANCE&quot;, &quot;OPTIMIZE&quot; } },
+</a><a href="#h19-0-15" id="h19-0-15" class="d">-            NOTE = { icon = &quot; &quot;, color = &quot;hint&quot;, alt = { &quot;INFO&quot; } },
+</a><a href="#h19-0-16" id="h19-0-16" class="i">+  &quot;folke/todo-comments.nvim&quot;,
+</a><a href="#h19-0-17" id="h19-0-17" class="i">+  dependencies = { &quot;nvim-lua/plenary.nvim&quot; },
+</a><a href="#h19-0-18" id="h19-0-18" class="i">+  opts = {
+</a><a href="#h19-0-19" id="h19-0-19" class="i">+    keywords = {
+</a><a href="#h19-0-20" id="h19-0-20" class="i">+      FIX = {
+</a><a href="#h19-0-21" id="h19-0-21" class="i">+        icon = &quot; &quot;, -- icon used for the sign, and in search results
+</a><a href="#h19-0-22" id="h19-0-22" class="i">+        color = &quot;error&quot;, -- can be a hex color, or a named color (see below)
+</a><a href="#h19-0-23" id="h19-0-23" class="i">+        alt = { &quot;FIXME&quot;, &quot;BUG&quot;, &quot;FIXIT&quot;, &quot;ISSUE&quot; }, -- a set of other keywords that all map to this FIX keywords
+</a><a href="#h19-0-24" id="h19-0-24" class="i">+        -- signs = false, -- configure signs for some keywords individually
+</a><a href="#h19-0-25" id="h19-0-25" class="i">+      },
+</a><a href="#h19-0-26" id="h19-0-26" class="i">+      TODO = { icon = &quot; &quot;, color = &quot;info&quot; },
+</a><a href="#h19-0-27" id="h19-0-27" class="i">+      HACK = { icon = &quot; &quot;, color = &quot;warning&quot; },
+</a><a href="#h19-0-28" id="h19-0-28" class="i">+      WARN = { icon = &quot; &quot;, color = &quot;warning&quot;, alt = { &quot;WARNING&quot;, &quot;XXX&quot; } },
+</a><a href="#h19-0-29" id="h19-0-29" class="i">+      PERF = { icon = &quot; &quot;, alt = { &quot;OPTIM&quot;, &quot;PERFORMANCE&quot;, &quot;OPTIMIZE&quot; } },
+</a><a href="#h19-0-30" id="h19-0-30" class="i">+      NOTE = { icon = &quot; &quot;, color = &quot;hint&quot;, alt = { &quot;INFO&quot; } },
+</a> 
+<a href="#h19-0-32" id="h19-0-32" class="d">-            --  FIX:  Test
+</a><a href="#h19-0-33" id="h19-0-33" class="d">-            --  TODO: Test
+</a><a href="#h19-0-34" id="h19-0-34" class="d">-            --  HACK: Test
+</a><a href="#h19-0-35" id="h19-0-35" class="d">-            --  WARN: Test
+</a><a href="#h19-0-36" id="h19-0-36" class="d">-            --  PERF: Test
+</a><a href="#h19-0-37" id="h19-0-37" class="d">-            --  NOTE: Test
+</a><a href="#h19-0-38" id="h19-0-38" class="d">-            --  TEST: Test
+</a><a href="#h19-0-39" id="h19-0-39" class="i">+      --  FIX:  Test
+</a><a href="#h19-0-40" id="h19-0-40" class="i">+      --  TODO: Test
+</a><a href="#h19-0-41" id="h19-0-41" class="i">+      --  HACK: Test
+</a><a href="#h19-0-42" id="h19-0-42" class="i">+      --  WARN: Test
+</a><a href="#h19-0-43" id="h19-0-43" class="i">+      --  PERF: Test
+</a><a href="#h19-0-44" id="h19-0-44" class="i">+      --  NOTE: Test
+</a><a href="#h19-0-45" id="h19-0-45" class="i">+      --  TEST: Test
+</a> 
+<a href="#h19-0-47" id="h19-0-47" class="d">-            HERLEITUNG = { icon = &quot;󰧆&quot;, color = &quot;#cfcfcf&quot; },
+</a><a href="#h19-0-48" id="h19-0-48" class="d">-            UEBEN = { icon = &quot;&quot;, color = &quot;warning&quot; },
+</a><a href="#h19-0-49" id="h19-0-49" class="d">-            LERNEN = { icon = &quot;󰑖&quot;, color = &quot;info&quot; },
+</a><a href="#h19-0-50" id="h19-0-50" class="d">-            RESEARCH = { icon = &quot;&quot;, color = &quot;hint&quot; },
+</a><a href="#h19-0-51" id="h19-0-51" class="d">-            ANKI = { icon = &quot;&quot;, color = &quot;#9654b0&quot; },
+</a><a href="#h19-0-52" id="h19-0-52" class="d">-            WTF = { icon = &quot;&quot;, color = &quot;error&quot;, alt = { &quot;WARNING&quot;, &quot;XXX&quot; } },
+</a><a href="#h19-0-53" id="h19-0-53" class="d">-            ARNECKE = { icon = &quot;󰑴&quot;, color = &quot;#ffa3f1&quot;, alt = { &quot;WARNING&quot;, &quot;XXX&quot; } },
+</a><a href="#h19-0-54" id="h19-0-54" class="i">+      HERLEITUNG = { icon = &quot;󰧆&quot;, color = &quot;#cfcfcf&quot; },
+</a><a href="#h19-0-55" id="h19-0-55" class="i">+      UEBEN = { icon = &quot;&quot;, color = &quot;warning&quot; },
+</a><a href="#h19-0-56" id="h19-0-56" class="i">+      LERNEN = { icon = &quot;󰑖&quot;, color = &quot;info&quot; },
+</a><a href="#h19-0-57" id="h19-0-57" class="i">+      RESEARCH = { icon = &quot;&quot;, color = &quot;hint&quot; },
+</a><a href="#h19-0-58" id="h19-0-58" class="i">+      ANKI = { icon = &quot;&quot;, color = &quot;#9654b0&quot; },
+</a><a href="#h19-0-59" id="h19-0-59" class="i">+      WTF = { icon = &quot;&quot;, color = &quot;error&quot;, alt = { &quot;WARNING&quot;, &quot;XXX&quot; } },
+</a><a href="#h19-0-60" id="h19-0-60" class="i">+      ARNECKE = { icon = &quot;󰑴&quot;, color = &quot;#ffa3f1&quot;, alt = { &quot;WARNING&quot;, &quot;XXX&quot; } },
+</a> 
+<a href="#h19-0-62" id="h19-0-62" class="d">-            --  HERLEITUNG: Test
+</a><a href="#h19-0-63" id="h19-0-63" class="d">-            --  UEBEN:      Test
+</a><a href="#h19-0-64" id="h19-0-64" class="d">-            --  LERNEN:     Test
+</a><a href="#h19-0-65" id="h19-0-65" class="d">-            --  RESEARCH:   Test
+</a><a href="#h19-0-66" id="h19-0-66" class="d">-            --  ANKI:       Test
+</a><a href="#h19-0-67" id="h19-0-67" class="d">-            --  WTF:        Test
+</a><a href="#h19-0-68" id="h19-0-68" class="d">-            --  ARNECKE:    Test
+</a><a href="#h19-0-69" id="h19-0-69" class="d">-        },
+</a><a href="#h19-0-70" id="h19-0-70" class="i">+      --  HERLEITUNG: Test
+</a><a href="#h19-0-71" id="h19-0-71" class="i">+      --  UEBEN:      Test
+</a><a href="#h19-0-72" id="h19-0-72" class="i">+      --  LERNEN:     Test
+</a><a href="#h19-0-73" id="h19-0-73" class="i">+      --  RESEARCH:   Test
+</a><a href="#h19-0-74" id="h19-0-74" class="i">+      --  ANKI:       Test
+</a><a href="#h19-0-75" id="h19-0-75" class="i">+      --  WTF:        Test
+</a><a href="#h19-0-76" id="h19-0-76" class="i">+      --  ARNECKE:    Test
+</a><a href="#h19-0-77" id="h19-0-77" class="i">+    },
+</a> 
+<a href="#h19-0-79" id="h19-0-79" class="d">-        highlight = {
+</a><a href="#h19-0-80" id="h19-0-80" class="d">-            multiline = true, -- enable multine todo comments
+</a><a href="#h19-0-81" id="h19-0-81" class="d">-            comments_only = false, -- uses treesitter to match keywords in comments only
+</a><a href="#h19-0-82" id="h19-0-82" class="d">-            max_line_len = 400, -- ignore lines longer than this
+</a><a href="#h19-0-83" id="h19-0-83" class="d">-        },
+</a><a href="#h19-0-84" id="h19-0-84" class="i">+    highlight = {
+</a><a href="#h19-0-85" id="h19-0-85" class="i">+      multiline = true, -- enable multine todo comments
+</a><a href="#h19-0-86" id="h19-0-86" class="i">+      comments_only = false, -- uses treesitter to match keywords in comments only
+</a><a href="#h19-0-87" id="h19-0-87" class="i">+      max_line_len = 400, -- ignore lines longer than this
+</a>     },
+<a href="#h19-0-89" id="h19-0-89" class="i">+  },
+</a> }
+<b>diff --git a/<a id="h20" href="../file/nvim/lua/plugins/user/highlights.lua.html">nvim/lua/plugins/user/highlights.lua</a> b/<a href="../file/nvim/lua/plugins/user/highlights.lua.html">nvim/lua/plugins/user/highlights.lua</a></b>
+<a href="#h20-0" id="h20-0" class="h">@@ -0,0 +1,13 @@
+</a><a href="#h20-0-0" id="h20-0-0" class="i">+vim.api.nvim_create_augroup(&quot;TransparentBackground&quot;, { clear = true })
+</a><a href="#h20-0-1" id="h20-0-1" class="i">+vim.api.nvim_create_autocmd(&quot;ColorScheme&quot;, {
+</a><a href="#h20-0-2" id="h20-0-2" class="i">+  group = &quot;TransparentBackground&quot;,
+</a><a href="#h20-0-3" id="h20-0-3" class="i">+  callback = function()
+</a><a href="#h20-0-4" id="h20-0-4" class="i">+    -- Remove the background from Normal text and floating windows
+</a><a href="#h20-0-5" id="h20-0-5" class="i">+    vim.api.nvim_set_hl(0, &quot;Normal&quot;, { bg = &quot;none&quot; })
+</a><a href="#h20-0-6" id="h20-0-6" class="i">+    vim.api.nvim_set_hl(0, &quot;NormalFloat&quot;, { bg = &quot;none&quot; })
+</a><a href="#h20-0-7" id="h20-0-7" class="i">+
+</a><a href="#h20-0-8" id="h20-0-8" class="i">+    -- Optionally, remove background from other UI elements
+</a><a href="#h20-0-9" id="h20-0-9" class="i">+    vim.api.nvim_set_hl(0, &quot;SignColumn&quot;, { bg = &quot;none&quot; })
+</a><a href="#h20-0-10" id="h20-0-10" class="i">+    vim.api.nvim_set_hl(0, &quot;EndOfBuffer&quot;, { bg = &quot;none&quot; })
+</a><a href="#h20-0-11" id="h20-0-11" class="i">+  end,
+</a><a href="#h20-0-12" id="h20-0-12" class="i">+})
+</a></pre>
+</div>
+</body>
+</html>

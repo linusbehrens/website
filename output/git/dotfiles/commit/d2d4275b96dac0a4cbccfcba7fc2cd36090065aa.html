@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>neovim stuff - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/d2d4275b96dac0a4cbccfcba7fc2cd36090065aa.html">d2d4275b96dac0a4cbccfcba7fc2cd36090065aa</a>
+<b>parent</b> <a href="../commit/78f1dc8cd42106ea941351dd7c265e8375071204.html">78f1dc8cd42106ea941351dd7c265e8375071204</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Fri, 18 Jul 2025 15:03:41 +0200
+
+neovim stuff
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.config/bash/.bashrc</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">.config/fish/conf.d/rustup.fish</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">.config/nvim/lazy-lock.json</a></td><td> | </td><td class="num">35</td><td><span class="i">++++++++++++++++</span><span class="d">-------------------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">.config/nvim/lua/linus/extensions/buffer_picker.chat.lua</a></td><td> | </td><td class="num">72</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">.config/nvim/lua/linus/keys.lua</a></td><td> | </td><td class="num">41</td><td><span class="i">++++++++++++++++++++++++++++++</span><span class="d">-----------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h5">.config/nvim/lua/linus/plugins/eyeliner.lua</a></td><td> | </td><td class="num">14</td><td><span class="i">++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h6">.config/nvim/lua/linus/plugins/lsp.lua</a></td><td> | </td><td class="num">182</td><td><span class="i">+++++++++++++</span><span class="d">-------------------------------------------------------------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h7">.config/nvim/lua/linus/plugins/luasnip.lua</a></td><td> | </td><td class="num">11</td><td><span class="i">++++++++</span><span class="d">---</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h8">.config/nvim/lua/linus/plugins/mason.lua</a></td><td> | </td><td class="num">60</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="D">D</td><td><a href="#h9">.config/nvim/lua/linus/plugins/neo-tree.lua</a></td><td> | </td><td class="num">41</td><td><span class="i"></span><span class="d">-----------------------------------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h10">.config/nvim/lua/linus/plugins/neotree.lua</a></td><td> | </td><td class="num">52</td><td><span class="i">++++++++++++++++++++++++++++++++++++</span><span class="d">----------------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h11">.config/nvim/lua/linus/plugins/no-neck-pain.lua</a></td><td> | </td><td class="num">3</td><td><span class="i"></span><span class="d">---</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h12">.config/nvim/lua/linus/plugins/rustaceanvim.lua</a></td><td> | </td><td class="num">10</td><td><span class="i">++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h13">.config/nvim/lua/linus/plugins/telescope.lua</a></td><td> | </td><td class="num">13</td><td><span class="i">++++</span><span class="d">---------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h14">.config/nvim/lua/linus/plugins/transparent.lua</a></td><td> | </td><td class="num">16</td><td><span class="i"></span><span class="d">----------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h15">.config/nvim/lua/linus/plugins/treesitter.lua</a></td><td> | </td><td class="num">7</td><td><span class="i">++++</span><span class="d">---</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h16">.config/nvim/lua/linus/plugins/undotree.lua</a></td><td> | </td><td class="num">12</td><td><span class="i">++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h17">.config/nvim/lua/linus/plugins/zen-mode.lua</a></td><td> | </td><td class="num">3</td><td><span class="i">+++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h18">.config/zed/prompts/prompts-library-db.0.mdb/data.mdb</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h19">.config/zed/prompts/prompts-library-db.0.mdb/lock.mdb</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h20">.config/zed/settings.json</a></td><td> | </td><td class="num">21</td><td><span class="i">+++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h21">.zshenv</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+</table></pre><pre>22 files changed, 321 insertions(+), 275 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a> b/<a href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -60,6 +60,7 @@ alias t=&quot;taskell&quot;
+</a> export GPG_TTY=$(tty)
+ export PATH=&quot;$PATH:/opt/homebrew/bin&quot;
+ export PATH=&quot;$HOME/.local/bin:$PATH&quot;
+<a href="#h0-0-3" id="h0-0-3" class="i">+export PATH=&quot;$HOME/.cargo/bin:$PATH&quot;
+</a> export PLAN9=/Users/linus/.sources/plan9port
+ export PATH=$PATH:$PLAN9/bin
+ export XDG_CONFIG_HOME=&quot;$HOME/.config&quot;
+<b>diff --git a/<a id="h1" href="../file/.config/fish/conf.d/rustup.fish.html">.config/fish/conf.d/rustup.fish</a> b/<a href="../file/.config/fish/conf.d/rustup.fish.html">.config/fish/conf.d/rustup.fish</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+source &quot;$HOME/.cargo/env.fish&quot;
+</a><b>diff --git a/<a id="h2" href="../file/.config/nvim/lazy-lock.json.html">.config/nvim/lazy-lock.json</a> b/<a href="../file/.config/nvim/lazy-lock.json.html">.config/nvim/lazy-lock.json</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -1,33 +1,30 @@
+</a> {
+   &quot;Comment.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;e30b7f2008e52442154b66f7c519bfd2f1e32acb&quot; },
+   &quot;LuaSnip&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;458560534a73f7f8d7a11a146c801db00b081df0&quot; },
+<a href="#h2-0-3" id="h2-0-3" class="d">-  &quot;cmp-buffer&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b74fab3656eea9de20a9b8116afa3cfc4ec09657&quot; },
+</a><a href="#h2-0-4" id="h2-0-4" class="d">-  &quot;cmp-cmdline&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d250c63aa13ead745e3a40f61fdd3470efde3923&quot; },
+</a><a href="#h2-0-5" id="h2-0-5" class="d">-  &quot;cmp-nvim-lsp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a8912b88ce488f411177fc8aed358b04dc246d7b&quot; },
+</a><a href="#h2-0-6" id="h2-0-6" class="d">-  &quot;cmp-path&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;c6635aae33a50d6010bf1aa756ac2398a2d54c32&quot; },
+</a><a href="#h2-0-7" id="h2-0-7" class="d">-  &quot;cmp-tw2css&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1abe0eebcb57fcbd5538d054f0db61f4e4a1302b&quot; },
+</a><a href="#h2-0-8" id="h2-0-8" class="d">-  &quot;csvview.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6eb9c7293d35c40a71ec1eb9c653d80e8de5a2e9&quot; },
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+  &quot;csvview.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;2a2631ed90a9e6b038a6e3047b6cf332d5b45ff3&quot; },
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+  &quot;eyeliner.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8f197eb30cecdf4c2cc9988a5eecc6bc34c0c7d6&quot; },
+</a>   &quot;lazy.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a&quot; },
+<a href="#h2-0-12" id="h2-0-12" class="d">-  &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d39a75bbce4b8aad5d627191ea915179c77c100f&quot; },
+</a><a href="#h2-0-13" id="h2-0-13" class="d">-  &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;888d6ee499d8089a3a4be4309d239d6be1c1e6c0&quot; },
+</a><a href="#h2-0-14" id="h2-0-14" class="d">-  &quot;mini.starter&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d8038690eadf203a40863c3a9423df880a901d39&quot; },
+</a><a href="#h2-0-15" id="h2-0-15" class="d">-  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;v3.x&quot;, &quot;commit&quot;: &quot;f481de16a0eb59c985abac8985e3f2e2f75b4875&quot; },
+</a><a href="#h2-0-16" id="h2-0-16" class="d">-  &quot;no-neck-pain.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a60021e199b585f560ffb380e8c464ab75d0030b&quot; },
+</a><a href="#h2-0-17" id="h2-0-17" class="d">-  &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;f535005e6ad1016383f24e39559833759453564e&quot; },
+</a><a href="#h2-0-18" id="h2-0-18" class="d">-  &quot;nvim-cmp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b5311ab3ed9c846b585c0c15b7559be131ec4be9&quot; },
+</a><a href="#h2-0-19" id="h2-0-19" class="d">-  &quot;nvim-keyboard-layouts&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a92fd605aded617726384ab35fa9458c0d6ae664&quot; },
+</a><a href="#h2-0-20" id="h2-0-20" class="d">-  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;ac1dfbe3b60e5e23a2cff90e3bd6a3bc88031a57&quot; },
+</a><a href="#h2-0-21" id="h2-0-21" class="d">-  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;066fd6505377e3fd4aa219e61ce94c2b8bdb0b79&quot; },
+</a><a href="#h2-0-22" id="h2-0-22" class="d">-  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;f1420728f59843eb2ef084406b3d0201a0a0932d&quot; },
+</a><a href="#h2-0-23" id="h2-0-23" class="i">+  &quot;lazydev.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c&quot; },
+</a><a href="#h2-0-24" id="h2-0-24" class="i">+  &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a9c876d72d82b6640266f8b248ac05a63630b1d9&quot; },
+</a><a href="#h2-0-25" id="h2-0-25" class="i">+  &quot;mason-null-ls.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de19726de7260c68d94691afb057fa73d3cc53e7&quot; },
+</a><a href="#h2-0-26" id="h2-0-26" class="i">+  &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8024d64e1330b86044fed4c8494ef3dcd483a67c&quot; },
+</a><a href="#h2-0-27" id="h2-0-27" class="i">+  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;v3.x&quot;, &quot;commit&quot;: &quot;cea666ef965884414b1b71f6b39a537f9238bdb2&quot; },
+</a><a href="#h2-0-28" id="h2-0-28" class="i">+  &quot;none-ls.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a5954f00ee88bcdf154e931198ec636a26a1077c&quot; },
+</a><a href="#h2-0-29" id="h2-0-29" class="i">+  &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de740991c12411b663994b2860f1a4fd0937c130&quot; },
+</a><a href="#h2-0-30" id="h2-0-30" class="i">+  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;dbfd8da6206b4ab0e2fe9b72a538f82e2b410102&quot; },
+</a><a href="#h2-0-31" id="h2-0-31" class="i">+  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;42fc28ba918343ebfd5565147a42a26580579482&quot; },
+</a><a href="#h2-0-32" id="h2-0-32" class="i">+  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;0422a19d9aa3aad2c7e5cca167e5407b13407a9d&quot; },
+</a>   &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;166a79a55bfa7a4db3e26fc031b4d92af71d0b51&quot; },
+   &quot;plenary.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;857c5ac632080dba10aae49dba902ce3abf91b35&quot; },
+<a href="#h2-0-35" id="h2-0-35" class="i">+  &quot;rustaceanvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;709d35ca3a8e42ec855467de62d43f70f7adc656&quot; },
+</a>   &quot;snacks.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;bc0630e43be5699bb94dadc302c0d21615421d93&quot; },
+   &quot;substitute.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;9db749a880e3dd3b0eb57f698aa8f1e1630e1f25&quot; },
+   &quot;telescope.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;a0bbec21143c7bc5f8bb02e0005fa0b982edc026&quot; },
+<a href="#h2-0-39" id="h2-0-39" class="d">-  &quot;transparent.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8a2749a2fa74f97fe6557f61b89ac7fd873f3c21&quot; },
+</a><a href="#h2-0-40" id="h2-0-40" class="i">+  &quot;transparent.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8ac59883de84e9cd1850ea25cf087031c5ba7d54&quot; },
+</a>   &quot;trouble.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;85bedb7eb7fa331a2ccbecb9202d8abba64d37b3&quot; },
+   &quot;typst-preview.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;dea4525d5420b7c32eebda7de15a6beb9d6574fa&quot; },
+<a href="#h2-0-43" id="h2-0-43" class="d">-  &quot;vague.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;74e913317594b95ed083b10e60f7a81d1141b1a9&quot; },
+</a><a href="#h2-0-44" id="h2-0-44" class="i">+  &quot;undotree&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;28f2f54a34baff90ea6f4a735ef1813ad875c743&quot; },
+</a><a href="#h2-0-45" id="h2-0-45" class="i">+  &quot;vague.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;53b6060efb85a18c4587a39e5fb2c1071c719ab2&quot; },
+</a>   &quot;which-key.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;370ec46f710e058c9c1646273e6b225acf47cbed&quot; },
+   &quot;zen-mode.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;863f150ca321b3dd8aa1a2b69b5f411a220e144f&quot; }
+ }
+<b>diff --git a/<a id="h3" href="../file/.config/nvim/lua/linus/extensions/buffer_picker.chat.lua.html">.config/nvim/lua/linus/extensions/buffer_picker.chat.lua</a> b/<a href="../file/.config/nvim/lua/linus/extensions/buffer_picker.chat.lua.html">.config/nvim/lua/linus/extensions/buffer_picker.chat.lua</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -0,0 +1,72 @@
+</a><a href="#h3-0-0" id="h3-0-0" class="i">+local M = {}
+</a><a href="#h3-0-1" id="h3-0-1" class="i">+
+</a><a href="#h3-0-2" id="h3-0-2" class="i">+-- Get a list of open buffers and their names
+</a><a href="#h3-0-3" id="h3-0-3" class="i">+local function get_buffers()
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+  local buffers = {}
+</a><a href="#h3-0-5" id="h3-0-5" class="i">+  for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+    if vim.api.nvim_buf_is_loaded(bufnr) and vim.fn.buflisted(bufnr) == 1 then
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+      local name = vim.fn.bufname(bufnr)
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+      table.insert(buffers, { nr = bufnr, name = name })
+</a><a href="#h3-0-9" id="h3-0-9" class="i">+    end
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+  end
+</a><a href="#h3-0-11" id="h3-0-11" class="i">+  return buffers
+</a><a href="#h3-0-12" id="h3-0-12" class="i">+end
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+
+</a><a href="#h3-0-14" id="h3-0-14" class="i">+-- Create the floating window and handle selection
+</a><a href="#h3-0-15" id="h3-0-15" class="i">+function M.open_buffer_picker()
+</a><a href="#h3-0-16" id="h3-0-16" class="i">+  local buffers = get_buffers()
+</a><a href="#h3-0-17" id="h3-0-17" class="i">+  if #buffers == 0 then
+</a><a href="#h3-0-18" id="h3-0-18" class="i">+    print(&quot;No buffers found&quot;)
+</a><a href="#h3-0-19" id="h3-0-19" class="i">+    return
+</a><a href="#h3-0-20" id="h3-0-20" class="i">+  end
+</a><a href="#h3-0-21" id="h3-0-21" class="i">+
+</a><a href="#h3-0-22" id="h3-0-22" class="i">+  local lines = {}
+</a><a href="#h3-0-23" id="h3-0-23" class="i">+  for _, b in ipairs(buffers) do
+</a><a href="#h3-0-24" id="h3-0-24" class="i">+    table.insert(lines, string.format(&quot;[%d] %s&quot;, b.nr, b.name))
+</a><a href="#h3-0-25" id="h3-0-25" class="i">+  end
+</a><a href="#h3-0-26" id="h3-0-26" class="i">+
+</a><a href="#h3-0-27" id="h3-0-27" class="i">+  local buf = vim.api.nvim_create_buf(false, true)
+</a><a href="#h3-0-28" id="h3-0-28" class="i">+  vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+</a><a href="#h3-0-29" id="h3-0-29" class="i">+
+</a><a href="#h3-0-30" id="h3-0-30" class="i">+  -- Size and position
+</a><a href="#h3-0-31" id="h3-0-31" class="i">+  local width = math.floor(vim.o.columns * 0.6)
+</a><a href="#h3-0-32" id="h3-0-32" class="i">+  local height = #lines
+</a><a href="#h3-0-33" id="h3-0-33" class="i">+  local row = math.floor((vim.o.lines - height) / 2)
+</a><a href="#h3-0-34" id="h3-0-34" class="i">+  local col = math.floor((vim.o.columns - width) / 2)
+</a><a href="#h3-0-35" id="h3-0-35" class="i">+
+</a><a href="#h3-0-36" id="h3-0-36" class="i">+  local win = vim.api.nvim_open_win(buf, true, {
+</a><a href="#h3-0-37" id="h3-0-37" class="i">+    relative = &quot;editor&quot;,
+</a><a href="#h3-0-38" id="h3-0-38" class="i">+    width = width,
+</a><a href="#h3-0-39" id="h3-0-39" class="i">+    height = height,
+</a><a href="#h3-0-40" id="h3-0-40" class="i">+    row = row,
+</a><a href="#h3-0-41" id="h3-0-41" class="i">+    col = col,
+</a><a href="#h3-0-42" id="h3-0-42" class="i">+    style = &quot;minimal&quot;,
+</a><a href="#h3-0-43" id="h3-0-43" class="i">+    border = &quot;rounded&quot;,
+</a><a href="#h3-0-44" id="h3-0-44" class="i">+  })
+</a><a href="#h3-0-45" id="h3-0-45" class="i">+
+</a><a href="#h3-0-46" id="h3-0-46" class="i">+  -- Map &lt;Enter&gt; to switch buffer
+</a><a href="#h3-0-47" id="h3-0-47" class="i">+  vim.api.nvim_buf_set_keymap(buf, &quot;n&quot;, &quot;&lt;CR&gt;&quot;, &quot;&quot;, {
+</a><a href="#h3-0-48" id="h3-0-48" class="i">+    noremap = true,
+</a><a href="#h3-0-49" id="h3-0-49" class="i">+    callback = function()
+</a><a href="#h3-0-50" id="h3-0-50" class="i">+      local line = vim.api.nvim_get_current_line()
+</a><a href="#h3-0-51" id="h3-0-51" class="i">+      local nr = tonumber(string.match(line, &quot;%[(%d+)%]&quot;))
+</a><a href="#h3-0-52" id="h3-0-52" class="i">+      if nr then
+</a><a href="#h3-0-53" id="h3-0-53" class="i">+        vim.cmd(&quot;b &quot; .. nr)
+</a><a href="#h3-0-54" id="h3-0-54" class="i">+        vim.api.nvim_win_close(win, true)
+</a><a href="#h3-0-55" id="h3-0-55" class="i">+      end
+</a><a href="#h3-0-56" id="h3-0-56" class="i">+    end,
+</a><a href="#h3-0-57" id="h3-0-57" class="i">+  })
+</a><a href="#h3-0-58" id="h3-0-58" class="i">+
+</a><a href="#h3-0-59" id="h3-0-59" class="i">+  vim.api.nvim_buf_set_keymap(buf, &quot;n&quot;, &quot;q&quot;, &quot;&quot;, {
+</a><a href="#h3-0-60" id="h3-0-60" class="i">+    noremap = true,
+</a><a href="#h3-0-61" id="h3-0-61" class="i">+    callback = function()
+</a><a href="#h3-0-62" id="h3-0-62" class="i">+      vim.api.nvim_win_close(win, true)
+</a><a href="#h3-0-63" id="h3-0-63" class="i">+    end,
+</a><a href="#h3-0-64" id="h3-0-64" class="i">+  })
+</a><a href="#h3-0-65" id="h3-0-65" class="i">+end
+</a><a href="#h3-0-66" id="h3-0-66" class="i">+
+</a><a href="#h3-0-67" id="h3-0-67" class="i">+-- Map the function to a command
+</a><a href="#h3-0-68" id="h3-0-68" class="i">+vim.api.nvim_create_user_command(&quot;BufferPicker&quot;, M.open_buffer_picker, {})
+</a><a href="#h3-0-69" id="h3-0-69" class="i">+
+</a><a href="#h3-0-70" id="h3-0-70" class="i">+return M
+</a><a href="#h3-0-71" id="h3-0-71" class="i">+
+</a><b>diff --git a/<a id="h4" href="../file/.config/nvim/lua/linus/keys.lua.html">.config/nvim/lua/linus/keys.lua</a> b/<a href="../file/.config/nvim/lua/linus/keys.lua.html">.config/nvim/lua/linus/keys.lua</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -1,18 +1,37 @@
+</a> -- leader key auf space
+ vim.g.mapleader = &quot; &quot;
+ 
+<a href="#h4-0-3" id="h4-0-3" class="d">--- Setze die Navigationstasten auf die Bone-Positionen der ursprünglichen HJKL-Tasten
+</a> -- vim.cmd(&quot;set langmap=bh,nj,rk,sl,mb,lr&quot;)
+ 
+<a href="#h4-0-6" id="h4-0-6" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;eu&quot;, &quot;:ZenMode &lt;CR&gt;&quot;,           { desc = &quot;zen mode&quot; }, { silent = true })
+</a><a href="#h4-0-7" id="h4-0-7" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ee&quot;, &quot;&lt;cmd&gt;Neotree toggle float&lt;CR&gt;&quot;, { desc = &quot;neotree toggle&quot; }, { silent = true })
+</a><a href="#h4-0-8" id="h4-0-8" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;eE&quot;, &quot;&lt;cmd&gt;Neotree focus float&lt;CR&gt;&quot;, { desc = &quot;neotree focus&quot; }, { silent = true })
+</a><a href="#h4-0-9" id="h4-0-9" class="d">-
+</a><a href="#h4-0-10" id="h4-0-10" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;qw&quot;, &quot;&lt;cmd&gt;write&lt;cr&gt;&quot;, 		{ desc = &quot;write&quot; }, { silent = true })
+</a><a href="#h4-0-11" id="h4-0-11" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;qq&quot;, &quot;&lt;cmd&gt;quit&lt;cr&gt;&quot;, 		    { desc = &quot;quit&quot; })
+</a><a href="#h4-0-12" id="h4-0-12" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;qg&quot;, &quot;&lt;cmd&gt;wq&lt;cr&gt;&quot;, 		    { desc = &quot;write and quit&quot; })
+</a><a href="#h4-0-13" id="h4-0-13" class="d">-
+</a><a href="#h4-0-14" id="h4-0-14" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;r&quot;, &quot;&lt;cmd&gt;redo&lt;cr&gt;&quot;, 		    { desc = &quot;redo&quot; })
+</a><a href="#h4-0-15" id="h4-0-15" class="d">-vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;,&quot;, &quot;:&quot;, 		                { desc = &quot;cmd mode&quot; })
+</a><a href="#h4-0-16" id="h4-0-16" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/zen-mode.lua
+</a><a href="#h4-0-17" id="h4-0-17" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;eu&quot;, &quot;:ZenMode &lt;CR&gt;&quot;,                                  { desc = &quot;zen mode&quot; }, { silent = true })
+</a><a href="#h4-0-18" id="h4-0-18" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/neotree.lua
+</a><a href="#h4-0-19" id="h4-0-19" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ee&quot;, &quot;&lt;cmd&gt;Neotree toggle float&lt;CR&gt;&quot;,                  { desc = &quot;neotree toggle&quot; }, { silent = true })
+</a><a href="#h4-0-20" id="h4-0-20" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;eE&quot;, &quot;&lt;cmd&gt;Neotree focus float&lt;CR&gt;&quot;,                   { desc = &quot;neotree focus&quot; }, { silent = true })
+</a><a href="#h4-0-21" id="h4-0-21" class="i">+-- netrw
+</a><a href="#h4-0-22" id="h4-0-22" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;nn&quot;, vim.cmd.Ex,                                       { desc = &quot;open netrw&quot; })
+</a><a href="#h4-0-23" id="h4-0-23" class="i">+-- write and quit
+</a><a href="#h4-0-24" id="h4-0-24" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;qw&quot;, &quot;&lt;cmd&gt;write&lt;cr&gt;&quot;, 		                        { desc = &quot;write&quot; }, { silent = true })
+</a><a href="#h4-0-25" id="h4-0-25" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;qq&quot;, &quot;&lt;cmd&gt;quit&lt;cr&gt;&quot;, 		                            { desc = &quot;quit&quot; })
+</a><a href="#h4-0-26" id="h4-0-26" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;qg&quot;, &quot;&lt;cmd&gt;wq&lt;cr&gt;&quot;, 		                            { desc = &quot;write and quit&quot; })
+</a><a href="#h4-0-27" id="h4-0-27" class="i">+-- redo
+</a><a href="#h4-0-28" id="h4-0-28" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;r&quot;, &quot;&lt;cmd&gt;redo&lt;cr&gt;&quot;, 		                            { desc = &quot;redo&quot; })
+</a><a href="#h4-0-29" id="h4-0-29" class="i">+-- cmd
+</a><a href="#h4-0-30" id="h4-0-30" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;,&quot;, &quot;&lt;cmd&gt;e $HOME/.config/nvim/lua/linus&quot;,             { desc = &quot;cmd mode&quot; })
+</a><a href="#h4-0-31" id="h4-0-31" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/telescope.lua
+</a><a href="#h4-0-32" id="h4-0-32" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;&lt;space&gt;&quot;, &quot;&lt;cmd&gt;Telescope find_files&lt;cr&gt;&quot;,             { desc = &quot;Find files&quot; })
+</a><a href="#h4-0-33" id="h4-0-33" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;en&quot;, &quot;&lt;cmd&gt;Telescope find_files theme=dropdown&lt;cr&gt;&quot;,   { desc = &quot;Find file names&quot; })
+</a><a href="#h4-0-34" id="h4-0-34" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;er&quot;, &quot;&lt;cmd&gt;Telescope oldfiles&lt;cr&gt;&quot;,                    { desc = &quot;Find recent files&quot; })
+</a><a href="#h4-0-35" id="h4-0-35" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;es&quot;, &quot;&lt;cmd&gt;Telescope live_grep&lt;cr&gt;&quot;,                   { desc = &quot;grep files string&quot; })
+</a><a href="#h4-0-36" id="h4-0-36" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ew&quot;, &quot;&lt;cmd&gt;Telescope grep_string&lt;cr&gt;&quot;,                 { desc = &quot;Find word under coursor&quot; })
+</a><a href="#h4-0-37" id="h4-0-37" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;et&quot;, &quot;&lt;cmd&gt;Telescope grep_string search=TODO&lt;cr&gt;&quot;,     { desc = &quot;Find TODO&quot; })
+</a><a href="#h4-0-38" id="h4-0-38" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/undotree.lua
+</a><a href="#h4-0-39" id="h4-0-39" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;u&quot;, &quot;vim.cmd.UndotreeToggle&quot;,                          { desc = &quot;Toggle undo tree&quot; })
+</a><a href="#h4-0-40" id="h4-0-40" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/eyeliner.lua
+</a><a href="#h4-0-41" id="h4-0-41" class="i">+vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ey&quot;, &quot;vim.cmd.EyelinerToggle&quot;,                          { desc = &quot;Toggle autocompletion (eyeliner)&quot; })
+</a><a href="#h4-0-42" id="h4-0-42" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/luasnip.lua
+</a><a href="#h4-0-43" id="h4-0-43" class="i">+vim.keymap.set({ &quot;i&quot; }, &quot;&lt;C-e&gt;&quot;, function() ls.expand() end, { silent = true})
+</a><a href="#h4-0-44" id="h4-0-44" class="i">+vim.keymap.set({ &quot;i&quot;, &quot;s&quot; }, &quot;&lt;C-J&gt;&quot;, function() ls.jump(1) end, { silent = true })
+</a><a href="#h4-0-45" id="h4-0-45" class="i">+vim.keymap.set({ &quot;i&quot;, &quot;s&quot; }, &quot;&lt;C-K&gt;&quot;, function() ls.jump(-1) end, { silent = true })
+</a> 
+ 
+<b>diff --git a/<a id="h5" href="../file/.config/nvim/lua/linus/plugins/eyeliner.lua.html">.config/nvim/lua/linus/plugins/eyeliner.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/eyeliner.lua.html">.config/nvim/lua/linus/plugins/eyeliner.lua</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -0,0 +1,14 @@
+</a><a href="#h5-0-0" id="h5-0-0" class="i">+-- Auto completion
+</a><a href="#h5-0-1" id="h5-0-1" class="i">+return {
+</a><a href="#h5-0-2" id="h5-0-2" class="i">+    &#39;jinh0/eyeliner.nvim&#39;,
+</a><a href="#h5-0-3" id="h5-0-3" class="i">+    config = function()
+</a><a href="#h5-0-4" id="h5-0-4" class="i">+        require&#39;eyeliner&#39;.setup {
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+            -- show highlights only after keypress
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+            highlight_on_key = true,
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+        }
+</a><a href="#h5-0-8" id="h5-0-8" class="i">+    end,
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+}
+</a><a href="#h5-0-10" id="h5-0-10" class="i">+
+</a><a href="#h5-0-11" id="h5-0-11" class="i">+-- Keymap
+</a><a href="#h5-0-12" id="h5-0-12" class="i">+-- EyelinerToggle
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+-- /Users/linus/.config/nvim/lua/linus/keys.lua
+</a><b>diff --git a/<a id="h6" href="../file/.config/nvim/lua/linus/plugins/lsp.lua.html">.config/nvim/lua/linus/plugins/lsp.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/lsp.lua.html">.config/nvim/lua/linus/plugins/lsp.lua</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -1,161 +1,35 @@
+</a> return {
+     &quot;neovim/nvim-lspconfig&quot;,
+     dependencies = {
+<a href="#h6-0-3" id="h6-0-3" class="d">-        &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h6-0-4" id="h6-0-4" class="d">-        &quot;williamboman/mason-lspconfig.nvim&quot;,
+</a><a href="#h6-0-5" id="h6-0-5" class="d">-        &quot;hrsh7th/cmp-nvim-lsp&quot;,
+</a><a href="#h6-0-6" id="h6-0-6" class="d">-        &quot;hrsh7th/cmp-buffer&quot;,
+</a><a href="#h6-0-7" id="h6-0-7" class="d">-        &quot;hrsh7th/cmp-path&quot;,
+</a><a href="#h6-0-8" id="h6-0-8" class="d">-        &quot;hrsh7th/cmp-cmdline&quot;,
+</a><a href="#h6-0-9" id="h6-0-9" class="d">-        &quot;jcha0713/cmp-tw2css&quot;,
+</a><a href="#h6-0-10" id="h6-0-10" class="d">-        &quot;hrsh7th/nvim-cmp&quot;,
+</a><a href="#h6-0-11" id="h6-0-11" class="d">-    },
+</a><a href="#h6-0-12" id="h6-0-12" class="d">-
+</a><a href="#h6-0-13" id="h6-0-13" class="d">-    config = function()
+</a><a href="#h6-0-14" id="h6-0-14" class="d">-        -- Consistent ronding for boders
+</a><a href="#h6-0-15" id="h6-0-15" class="d">-        vim.diagnostic.config({
+</a><a href="#h6-0-16" id="h6-0-16" class="d">-            float = { border = &quot;rounded&quot; }
+</a><a href="#h6-0-17" id="h6-0-17" class="d">-        })
+</a><a href="#h6-0-18" id="h6-0-18" class="d">-
+</a><a href="#h6-0-19" id="h6-0-19" class="d">-        local cmp = require(&#39;cmp&#39;)
+</a><a href="#h6-0-20" id="h6-0-20" class="d">-        local cmp_lsp = require(&quot;cmp_nvim_lsp&quot;)
+</a><a href="#h6-0-21" id="h6-0-21" class="d">-        local capabilities = vim.tbl_deep_extend(
+</a><a href="#h6-0-22" id="h6-0-22" class="d">-            &quot;force&quot;,
+</a><a href="#h6-0-23" id="h6-0-23" class="d">-            {},
+</a><a href="#h6-0-24" id="h6-0-24" class="d">-            vim.lsp.protocol.make_client_capabilities(),
+</a><a href="#h6-0-25" id="h6-0-25" class="d">-            cmp_lsp.default_capabilities())
+</a><a href="#h6-0-26" id="h6-0-26" class="d">-
+</a><a href="#h6-0-27" id="h6-0-27" class="d">-        require(&quot;mason&quot;).setup()
+</a><a href="#h6-0-28" id="h6-0-28" class="d">-        require(&quot;mason-lspconfig&quot;).setup({
+</a><a href="#h6-0-29" id="h6-0-29" class="d">-            automatic_installation = false,
+</a><a href="#h6-0-30" id="h6-0-30" class="d">-            ensure_installed = {
+</a><a href="#h6-0-31" id="h6-0-31" class="d">-                &quot;lua_ls&quot;,
+</a><a href="#h6-0-32" id="h6-0-32" class="d">-                &quot;rust_analyzer&quot;,
+</a><a href="#h6-0-33" id="h6-0-33" class="d">-                &quot;tinymist&quot;,
+</a><a href="#h6-0-34" id="h6-0-34" class="d">-            },
+</a><a href="#h6-0-35" id="h6-0-35" class="d">-            handlers = {
+</a><a href="#h6-0-36" id="h6-0-36" class="d">-                function(server_name)
+</a><a href="#h6-0-37" id="h6-0-37" class="d">-                    require(&quot;lspconfig&quot;)[server_name].setup {
+</a><a href="#h6-0-38" id="h6-0-38" class="d">-                        capabilities = capabilities
+</a><a href="#h6-0-39" id="h6-0-39" class="d">-                    }
+</a><a href="#h6-0-40" id="h6-0-40" class="d">-                end,
+</a><a href="#h6-0-41" id="h6-0-41" class="d">-                [&quot;svelte&quot;] = function()
+</a><a href="#h6-0-42" id="h6-0-42" class="d">-                    require(&quot;lspconfig&quot;)[&quot;svelte&quot;].setup({
+</a><a href="#h6-0-43" id="h6-0-43" class="d">-                        capabilities = capabilities,
+</a><a href="#h6-0-44" id="h6-0-44" class="d">-                        on_attach = function(client, bufnr)
+</a><a href="#h6-0-45" id="h6-0-45" class="d">-                            vim.api.nvim_create_autocmd(&quot;BufWritePost&quot;, {
+</a><a href="#h6-0-46" id="h6-0-46" class="d">-                                pattern = { &quot;*.js&quot;, &quot;*.ts&quot; },
+</a><a href="#h6-0-47" id="h6-0-47" class="d">-                                callback = function(ctx)
+</a><a href="#h6-0-48" id="h6-0-48" class="d">-                                    -- this bad boy updates imports between svelte and ts/js files
+</a><a href="#h6-0-49" id="h6-0-49" class="d">-                                    client.notify(&quot;$/onDidChangeTsOrJsFile&quot;, { uri = ctx.match })
+</a><a href="#h6-0-50" id="h6-0-50" class="d">-                                end,
+</a><a href="#h6-0-51" id="h6-0-51" class="d">-                            })
+</a><a href="#h6-0-52" id="h6-0-52" class="d">-                        end
+</a><a href="#h6-0-53" id="h6-0-53" class="d">-                    })
+</a><a href="#h6-0-54" id="h6-0-54" class="d">-                end,
+</a><a href="#h6-0-55" id="h6-0-55" class="d">-                [&quot;tinymist&quot;] = function()
+</a><a href="#h6-0-56" id="h6-0-56" class="d">-                    require(&quot;lspconfig&quot;)[&quot;tinymist&quot;].setup {
+</a><a href="#h6-0-57" id="h6-0-57" class="d">-                        capabilities = capabilities,
+</a><a href="#h6-0-58" id="h6-0-58" class="d">-                        settings = {
+</a><a href="#h6-0-59" id="h6-0-59" class="d">-                            formatterMode = &quot;typstyle&quot;,
+</a><a href="#h6-0-60" id="h6-0-60" class="d">-                            exportPdf = &quot;never&quot;
+</a><a href="#h6-0-61" id="h6-0-61" class="d">-                        },
+</a><a href="#h6-0-62" id="h6-0-62" class="d">-                    }
+</a><a href="#h6-0-63" id="h6-0-63" class="d">-                end,
+</a><a href="#h6-0-64" id="h6-0-64" class="d">-                [&quot;lua_ls&quot;] = function()
+</a><a href="#h6-0-65" id="h6-0-65" class="d">-                    local lspconfig = require(&quot;lspconfig&quot;)
+</a><a href="#h6-0-66" id="h6-0-66" class="d">-                    lspconfig.lua_ls.setup {
+</a><a href="#h6-0-67" id="h6-0-67" class="d">-                        capabilities = capabilities,
+</a><a href="#h6-0-68" id="h6-0-68" class="d">-                        settings = {
+</a><a href="#h6-0-69" id="h6-0-69" class="d">-                            Lua = {
+</a><a href="#h6-0-70" id="h6-0-70" class="d">-                                runtime = { version = &quot;Lua 5.1&quot; },
+</a><a href="#h6-0-71" id="h6-0-71" class="d">-                                diagnostics = {
+</a><a href="#h6-0-72" id="h6-0-72" class="d">-                                    globals = { &quot;bit&quot;, &quot;vim&quot;, &quot;it&quot;, &quot;describe&quot;, &quot;before_each&quot;, &quot;after_each&quot; },
+</a><a href="#h6-0-73" id="h6-0-73" class="d">-                                }
+</a><a href="#h6-0-74" id="h6-0-74" class="d">-                            }
+</a><a href="#h6-0-75" id="h6-0-75" class="d">-                        }
+</a><a href="#h6-0-76" id="h6-0-76" class="d">-                    }
+</a><a href="#h6-0-77" id="h6-0-77" class="d">-                end
+</a><a href="#h6-0-78" id="h6-0-78" class="d">-            }
+</a><a href="#h6-0-79" id="h6-0-79" class="d">-
+</a><a href="#h6-0-80" id="h6-0-80" class="d">-        })
+</a><a href="#h6-0-81" id="h6-0-81" class="d">-        local l = vim.lsp
+</a><a href="#h6-0-82" id="h6-0-82" class="d">-        l.handlers[&quot;textDocument/hover&quot;] = function(_, result, ctx, config)
+</a><a href="#h6-0-83" id="h6-0-83" class="d">-            config = config or { border = &quot;rounded&quot;, focusable = true }
+</a><a href="#h6-0-84" id="h6-0-84" class="d">-            config.focus_id = ctx.method
+</a><a href="#h6-0-85" id="h6-0-85" class="d">-            if not (result and result.contents) then
+</a><a href="#h6-0-86" id="h6-0-86" class="d">-                return
+</a><a href="#h6-0-87" id="h6-0-87" class="d">-            end
+</a><a href="#h6-0-88" id="h6-0-88" class="d">-            local markdown_lines = l.util.convert_input_to_markdown_lines(result.contents)
+</a><a href="#h6-0-89" id="h6-0-89" class="d">-            markdown_lines = vim.tbl_filter(function(line)
+</a><a href="#h6-0-90" id="h6-0-90" class="d">-                return line ~= &quot;&quot;
+</a><a href="#h6-0-91" id="h6-0-91" class="d">-            end, markdown_lines)
+</a><a href="#h6-0-92" id="h6-0-92" class="d">-            if vim.tbl_isempty(markdown_lines) then
+</a><a href="#h6-0-93" id="h6-0-93" class="d">-                return
+</a><a href="#h6-0-94" id="h6-0-94" class="d">-            end
+</a><a href="#h6-0-95" id="h6-0-95" class="d">-            return l.util.open_floating_preview(markdown_lines, &quot;markdown&quot;, config)
+</a><a href="#h6-0-96" id="h6-0-96" class="d">-        end
+</a><a href="#h6-0-97" id="h6-0-97" class="d">-
+</a><a href="#h6-0-98" id="h6-0-98" class="d">-        local cmp_select = { behavior = cmp.SelectBehavior.Select }
+</a><a href="#h6-0-99" id="h6-0-99" class="d">-        vim.api.nvim_set_hl(0, &quot;CmpNormal&quot;, {})
+</a><a href="#h6-0-100" id="h6-0-100" class="d">-        cmp.setup({
+</a><a href="#h6-0-101" id="h6-0-101" class="d">-            snippet = {
+</a><a href="#h6-0-102" id="h6-0-102" class="d">-                expand = function(args)
+</a><a href="#h6-0-103" id="h6-0-103" class="d">-                    require(&#39;luasnip&#39;).lsp_expand(args.body) -- For `luasnip` users.
+</a><a href="#h6-0-104" id="h6-0-104" class="d">-                end,
+</a><a href="#h6-0-105" id="h6-0-105" class="d">-            },
+</a><a href="#h6-0-106" id="h6-0-106" class="d">-            mapping = cmp.mapping.preset.insert({
+</a><a href="#h6-0-107" id="h6-0-107" class="d">-                [&#39;&lt;C-p&gt;&#39;] = cmp.mapping.select_prev_item(cmp_select),
+</a><a href="#h6-0-108" id="h6-0-108" class="d">-                [&#39;&lt;C-n&gt;&#39;] = cmp.mapping.select_next_item(cmp_select),
+</a><a href="#h6-0-109" id="h6-0-109" class="d">-                [&#39;&lt;C-y&gt;&#39;] = cmp.mapping.confirm({ select = true }),
+</a><a href="#h6-0-110" id="h6-0-110" class="d">-                [&#39;&lt;C-e&gt;&#39;] = vim.NIL
+</a><a href="#h6-0-111" id="h6-0-111" class="d">-            }),
+</a><a href="#h6-0-112" id="h6-0-112" class="d">-
+</a><a href="#h6-0-113" id="h6-0-113" class="d">-            window = {
+</a><a href="#h6-0-114" id="h6-0-114" class="d">-                completion = {
+</a><a href="#h6-0-115" id="h6-0-115" class="d">-                    scrollbar = false,
+</a><a href="#h6-0-116" id="h6-0-116" class="d">-                    border = &quot;rounded&quot;,
+</a><a href="#h6-0-117" id="h6-0-117" class="d">-                    winhighlight = &quot;Normal:CmpNormal&quot;,
+</a><a href="#h6-0-118" id="h6-0-118" class="i">+        {
+</a><a href="#h6-0-119" id="h6-0-119" class="i">+        &quot;folke/lazydev.nvim&quot;,
+</a><a href="#h6-0-120" id="h6-0-120" class="i">+            ft = &quot;lua&quot;, -- only load on lua files
+</a><a href="#h6-0-121" id="h6-0-121" class="i">+            opts = {
+</a><a href="#h6-0-122" id="h6-0-122" class="i">+                library = {
+</a><a href="#h6-0-123" id="h6-0-123" class="i">+                    -- See the configuration section for more details
+</a><a href="#h6-0-124" id="h6-0-124" class="i">+                    -- Load luvit types when the `vim.uv` word is found
+</a><a href="#h6-0-125" id="h6-0-125" class="i">+                    { path = &quot;${3rd}/luv/library&quot;, words = { &quot;vim%.uv&quot; } },
+</a>                 },
+<a href="#h6-0-127" id="h6-0-127" class="d">-                documentation = {
+</a><a href="#h6-0-128" id="h6-0-128" class="d">-                    scrollbar = false,
+</a><a href="#h6-0-129" id="h6-0-129" class="d">-                    border = &quot;rounded&quot;,
+</a><a href="#h6-0-130" id="h6-0-130" class="d">-                    winhighlight = &quot;Normal:CmpNormal&quot;,
+</a><a href="#h6-0-131" id="h6-0-131" class="d">-                }
+</a>             },
+<a href="#h6-0-133" id="h6-0-133" class="d">-            sources = cmp.config.sources({
+</a><a href="#h6-0-134" id="h6-0-134" class="d">-                {
+</a><a href="#h6-0-135" id="h6-0-135" class="d">-                    name = &quot;nvim_lsp&quot;,
+</a><a href="#h6-0-136" id="h6-0-136" class="d">-                    entry_filter = function(entry, ctx)
+</a><a href="#h6-0-137" id="h6-0-137" class="d">-                        return require(&quot;cmp&quot;).lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+</a><a href="#h6-0-138" id="h6-0-138" class="d">-                    end,
+</a><a href="#h6-0-139" id="h6-0-139" class="d">-                },
+</a><a href="#h6-0-140" id="h6-0-140" class="d">-                { name = &#39;cmp-tw2css&#39; },
+</a><a href="#h6-0-141" id="h6-0-141" class="d">-            }, {})
+</a><a href="#h6-0-142" id="h6-0-142" class="d">-        })
+</a><a href="#h6-0-143" id="h6-0-143" class="d">-
+</a><a href="#h6-0-144" id="h6-0-144" class="d">-
+</a><a href="#h6-0-145" id="h6-0-145" class="d">-        local autocmd = vim.api.nvim_create_autocmd
+</a><a href="#h6-0-146" id="h6-0-146" class="d">-        autocmd({ &quot;BufEnter&quot;, &quot;BufWinEnter&quot; }, {
+</a><a href="#h6-0-147" id="h6-0-147" class="d">-            pattern = { &quot;*.vert&quot;, &quot;*.frag&quot; },
+</a><a href="#h6-0-148" id="h6-0-148" class="d">-            callback = function(e)
+</a><a href="#h6-0-149" id="h6-0-149" class="d">-                vim.cmd(&quot;set filetype=glsl&quot;)
+</a><a href="#h6-0-150" id="h6-0-150" class="d">-            end
+</a><a href="#h6-0-151" id="h6-0-151" class="d">-
+</a><a href="#h6-0-152" id="h6-0-152" class="d">-        })
+</a><a href="#h6-0-153" id="h6-0-153" class="i">+        }
+</a><a href="#h6-0-154" id="h6-0-154" class="i">+    },
+</a> 
+<a href="#h6-0-156" id="h6-0-156" class="d">-        autocmd(&#39;LspAttach&#39;, {
+</a><a href="#h6-0-157" id="h6-0-157" class="d">-            callback = function(e)
+</a><a href="#h6-0-158" id="h6-0-158" class="d">-                local opts = { buffer = e.buf }
+</a><a href="#h6-0-159" id="h6-0-159" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;gd&quot;, function() vim.lsp.buf.definition() end, opts)
+</a><a href="#h6-0-160" id="h6-0-160" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;K&quot;, function() vim.lsp.buf.hover() end, opts)
+</a><a href="#h6-0-161" id="h6-0-161" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;lf&quot;, vim.lsp.buf.format)
+</a><a href="#h6-0-162" id="h6-0-162" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;la&quot;, function() vim.lsp.buf.code_action() end, opts)
+</a><a href="#h6-0-163" id="h6-0-163" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;lr&quot;, function() vim.lsp.buf.rename() end, opts)
+</a><a href="#h6-0-164" id="h6-0-164" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;lk&quot;, function() vim.diagnostic.open_float() end, opts)
+</a><a href="#h6-0-165" id="h6-0-165" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ln&quot;, function() vim.diagnostic.goto_next() end, opts)
+</a><a href="#h6-0-166" id="h6-0-166" class="d">-                vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;lp&quot;, function() vim.diagnostic.goto_prev() end, opts)
+</a><a href="#h6-0-167" id="h6-0-167" class="d">-            end
+</a><a href="#h6-0-168" id="h6-0-168" class="d">-        })
+</a><a href="#h6-0-169" id="h6-0-169" class="d">-    end
+</a><a href="#h6-0-170" id="h6-0-170" class="i">+    config = function()
+</a><a href="#h6-0-171" id="h6-0-171" class="i">+        -- require(&quot;lspconfig&quot;).lua_ls.setup()
+</a><a href="#h6-0-172" id="h6-0-172" class="i">+        vim.lsp.enable(&quot;html-lsp&quot;)
+</a><a href="#h6-0-173" id="h6-0-173" class="i">+        vim.lsp.enable(&quot;lua_ls&quot;)
+</a><a href="#h6-0-174" id="h6-0-174" class="i">+        -- require(&quot;mason&quot;).setup()
+</a><a href="#h6-0-175" id="h6-0-175" class="i">+        -- require(&quot;mason-lspconfig&quot;).setup({
+</a><a href="#h6-0-176" id="h6-0-176" class="i">+        --     automatic_installation = true,
+</a><a href="#h6-0-177" id="h6-0-177" class="i">+        --     ensure_installed = {
+</a><a href="#h6-0-178" id="h6-0-178" class="i">+        --         &quot;lua_ls&quot;,
+</a><a href="#h6-0-179" id="h6-0-179" class="i">+        --         &quot;rust_analyzer&quot;,
+</a><a href="#h6-0-180" id="h6-0-180" class="i">+        --         &quot;html-lsp&quot;,
+</a><a href="#h6-0-181" id="h6-0-181" class="i">+        --         &quot;clangd&quot;,
+</a><a href="#h6-0-182" id="h6-0-182" class="i">+        --         &quot;tinymist&quot;,
+</a><a href="#h6-0-183" id="h6-0-183" class="i">+        --     },
+</a><a href="#h6-0-184" id="h6-0-184" class="i">+        --     
+</a><a href="#h6-0-185" id="h6-0-185" class="i">+        -- })
+</a><a href="#h6-0-186" id="h6-0-186" class="i">+        -- local l = vim.lsp
+</a><a href="#h6-0-187" id="h6-0-187" class="i">+    end,
+</a> }
+<b>diff --git a/<a id="h7" href="../file/.config/nvim/lua/linus/plugins/luasnip.lua.html">.config/nvim/lua/linus/plugins/luasnip.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/luasnip.lua.html">.config/nvim/lua/linus/plugins/luasnip.lua</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -1,3 +1,5 @@
+</a><a href="#h7-0-0" id="h7-0-0" class="i">+-- Snippet loader
+</a><a href="#h7-0-1" id="h7-0-1" class="i">+-- https://github.com/L3MON4D3/LuaSnip
+</a> return {
+     &quot;L3MON4D3/LuaSnip&quot;,
+     version = &quot;v2.*&quot;,
+<a href="#h7-1" id="h7-1" class="h">@@ -10,9 +12,6 @@ return {
+</a>         --     ls.setup({ enable_autosnippets = false })
+         -- end, { silent = false })
+         -- vim.keymap.set({ &quot;i&quot; }, &quot;&lt;Tab&gt;&quot;, function() ls.expand() end, { silent = true })
+<a href="#h7-1-3" id="h7-1-3" class="d">-        vim.keymap.set({ &quot;i&quot; }, &quot;&lt;C-e&gt;&quot;, function() ls.expand() end, { silent = true})
+</a><a href="#h7-1-4" id="h7-1-4" class="d">-        vim.keymap.set({ &quot;i&quot;, &quot;s&quot; }, &quot;&lt;C-J&gt;&quot;, function() ls.jump(1) end, { silent = true })
+</a><a href="#h7-1-5" id="h7-1-5" class="d">-        vim.keymap.set({ &quot;i&quot;, &quot;s&quot; }, &quot;&lt;C-K&gt;&quot;, function() ls.jump(-1) end, { silent = true })
+</a> 
+ 
+         ls.config.setup({
+<a href="#h7-2" id="h7-2" class="h">@@ -22,3 +21,9 @@ return {
+</a>         })
+     end
+ }
+<a href="#h7-2-3" id="h7-2-3" class="i">+
+</a><a href="#h7-2-4" id="h7-2-4" class="i">+-- keymaps:
+</a><a href="#h7-2-5" id="h7-2-5" class="i">+-- $HOME/.config/nvim/lua/linus/keys.lua
+</a><a href="#h7-2-6" id="h7-2-6" class="i">+
+</a><a href="#h7-2-7" id="h7-2-7" class="i">+-- snippets:
+</a><a href="#h7-2-8" id="h7-2-8" class="i">+-- $HOME/.config/nvim/lua/linus/snippets
+</a><b>diff --git a/<a id="h8" href="../file/.config/nvim/lua/linus/plugins/mason.lua.html">.config/nvim/lua/linus/plugins/mason.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/mason.lua.html">.config/nvim/lua/linus/plugins/mason.lua</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -0,0 +1,60 @@
+</a><a href="#h8-0-0" id="h8-0-0" class="i">+-- https://github.com/mason-org/mason.nvim
+</a><a href="#h8-0-1" id="h8-0-1" class="i">+
+</a><a href="#h8-0-2" id="h8-0-2" class="i">+-- ~/.config/nvim/lua/plugins/mason.lua
+</a><a href="#h8-0-3" id="h8-0-3" class="i">+return {
+</a><a href="#h8-0-4" id="h8-0-4" class="i">+  {
+</a><a href="#h8-0-5" id="h8-0-5" class="i">+    &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h8-0-6" id="h8-0-6" class="i">+    config = function()
+</a><a href="#h8-0-7" id="h8-0-7" class="i">+      require(&quot;mason&quot;).setup()
+</a><a href="#h8-0-8" id="h8-0-8" class="i">+    end,
+</a><a href="#h8-0-9" id="h8-0-9" class="i">+  },
+</a><a href="#h8-0-10" id="h8-0-10" class="i">+  {
+</a><a href="#h8-0-11" id="h8-0-11" class="i">+    &quot;williamboman/mason-lspconfig.nvim&quot;,
+</a><a href="#h8-0-12" id="h8-0-12" class="i">+    dependencies = { &quot;williamboman/mason.nvim&quot;, &quot;neovim/nvim-lspconfig&quot; },
+</a><a href="#h8-0-13" id="h8-0-13" class="i">+    config = function()
+</a><a href="#h8-0-14" id="h8-0-14" class="i">+      require(&quot;mason-lspconfig&quot;).setup({
+</a><a href="#h8-0-15" id="h8-0-15" class="i">+        ensure_installed = {
+</a><a href="#h8-0-16" id="h8-0-16" class="i">+          &quot;lua_ls&quot;,
+</a><a href="#h8-0-17" id="h8-0-17" class="i">+          &quot;pyright&quot;,
+</a><a href="#h8-0-18" id="h8-0-18" class="i">+          &quot;tsserver&quot;,
+</a><a href="#h8-0-19" id="h8-0-19" class="i">+        },
+</a><a href="#h8-0-20" id="h8-0-20" class="i">+        automatic_installation = true,
+</a><a href="#h8-0-21" id="h8-0-21" class="i">+      })
+</a><a href="#h8-0-22" id="h8-0-22" class="i">+
+</a><a href="#h8-0-23" id="h8-0-23" class="i">+      local lspconfig = require(&quot;lspconfig&quot;)
+</a><a href="#h8-0-24" id="h8-0-24" class="i">+
+</a><a href="#h8-0-25" id="h8-0-25" class="i">+      -- Example: configure LSP servers here
+</a><a href="#h8-0-26" id="h8-0-26" class="i">+      local servers = { &quot;lua_ls&quot;, &quot;pyright&quot;, &quot;tsserver&quot; }
+</a><a href="#h8-0-27" id="h8-0-27" class="i">+      for _, server in ipairs(servers) do
+</a><a href="#h8-0-28" id="h8-0-28" class="i">+        lspconfig[server].setup({})
+</a><a href="#h8-0-29" id="h8-0-29" class="i">+      end
+</a><a href="#h8-0-30" id="h8-0-30" class="i">+    end,
+</a><a href="#h8-0-31" id="h8-0-31" class="i">+  },
+</a><a href="#h8-0-32" id="h8-0-32" class="i">+  {
+</a><a href="#h8-0-33" id="h8-0-33" class="i">+    &quot;jay-babu/mason-null-ls.nvim&quot;,
+</a><a href="#h8-0-34" id="h8-0-34" class="i">+    dependencies = {
+</a><a href="#h8-0-35" id="h8-0-35" class="i">+      &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h8-0-36" id="h8-0-36" class="i">+      &quot;nvimtools/none-ls.nvim&quot;, -- formerly &quot;jose-elias-alvarez/null-ls.nvim&quot;
+</a><a href="#h8-0-37" id="h8-0-37" class="i">+    },
+</a><a href="#h8-0-38" id="h8-0-38" class="i">+    config = function()
+</a><a href="#h8-0-39" id="h8-0-39" class="i">+      require(&quot;mason-null-ls&quot;).setup({
+</a><a href="#h8-0-40" id="h8-0-40" class="i">+        ensure_installed = {
+</a><a href="#h8-0-41" id="h8-0-41" class="i">+          &quot;prettier&quot;,
+</a><a href="#h8-0-42" id="h8-0-42" class="i">+          &quot;stylua&quot;,
+</a><a href="#h8-0-43" id="h8-0-43" class="i">+          &quot;black&quot;,
+</a><a href="#h8-0-44" id="h8-0-44" class="i">+        },
+</a><a href="#h8-0-45" id="h8-0-45" class="i">+        automatic_installation = true,
+</a><a href="#h8-0-46" id="h8-0-46" class="i">+      })
+</a><a href="#h8-0-47" id="h8-0-47" class="i">+
+</a><a href="#h8-0-48" id="h8-0-48" class="i">+      local null_ls = require(&quot;null-ls&quot;)
+</a><a href="#h8-0-49" id="h8-0-49" class="i">+
+</a><a href="#h8-0-50" id="h8-0-50" class="i">+      null_ls.setup({
+</a><a href="#h8-0-51" id="h8-0-51" class="i">+        sources = {
+</a><a href="#h8-0-52" id="h8-0-52" class="i">+          null_ls.builtins.formatting.prettier,
+</a><a href="#h8-0-53" id="h8-0-53" class="i">+          null_ls.builtins.formatting.stylua,
+</a><a href="#h8-0-54" id="h8-0-54" class="i">+          null_ls.builtins.formatting.black,
+</a><a href="#h8-0-55" id="h8-0-55" class="i">+        },
+</a><a href="#h8-0-56" id="h8-0-56" class="i">+      })
+</a><a href="#h8-0-57" id="h8-0-57" class="i">+    end,
+</a><a href="#h8-0-58" id="h8-0-58" class="i">+  },
+</a><a href="#h8-0-59" id="h8-0-59" class="i">+}
+</a><b>diff --git a/<a id="h9" href="../file/.config/nvim/lua/linus/plugins/neo-tree.lua.html">.config/nvim/lua/linus/plugins/neo-tree.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/neo-tree.lua.html">.config/nvim/lua/linus/plugins/neo-tree.lua</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -1,41 +0,0 @@
+</a><a href="#h9-0-0" id="h9-0-0" class="d">--- lua/plugins/neo-tree.lua
+</a><a href="#h9-0-1" id="h9-0-1" class="d">-return {
+</a><a href="#h9-0-2" id="h9-0-2" class="d">-  {
+</a><a href="#h9-0-3" id="h9-0-3" class="d">-    &quot;nvim-neo-tree/neo-tree.nvim&quot;,
+</a><a href="#h9-0-4" id="h9-0-4" class="d">-    branch = &quot;v3.x&quot;,
+</a><a href="#h9-0-5" id="h9-0-5" class="d">-    cmd = &quot;Neotree&quot;,
+</a><a href="#h9-0-6" id="h9-0-6" class="d">-    dependencies = {
+</a><a href="#h9-0-7" id="h9-0-7" class="d">-      &quot;nvim-lua/plenary.nvim&quot;,
+</a><a href="#h9-0-8" id="h9-0-8" class="d">-      &quot;nvim-tree/nvim-web-devicons&quot;,  -- file icons
+</a><a href="#h9-0-9" id="h9-0-9" class="d">-      &quot;MunifTanjim/nui.nvim&quot;,
+</a><a href="#h9-0-10" id="h9-0-10" class="d">-    },
+</a><a href="#h9-0-11" id="h9-0-11" class="d">-    opts = {
+</a><a href="#h9-0-12" id="h9-0-12" class="d">-      filesystem = {
+</a><a href="#h9-0-13" id="h9-0-13" class="d">-        follow_current_file = true,  -- sync tree with open file
+</a><a href="#h9-0-14" id="h9-0-14" class="d">-        use_libuv_file_watcher = true,
+</a><a href="#h9-0-15" id="h9-0-15" class="d">-      },
+</a><a href="#h9-0-16" id="h9-0-16" class="d">-      window = {
+</a><a href="#h9-0-17" id="h9-0-17" class="d">-        position = &quot;float&quot;,
+</a><a href="#h9-0-18" id="h9-0-18" class="d">-        width = 40,
+</a><a href="#h9-0-19" id="h9-0-19" class="d">-      },
+</a><a href="#h9-0-20" id="h9-0-20" class="d">-      default_component_configs = {
+</a><a href="#h9-0-21" id="h9-0-21" class="d">-        icon = {
+</a><a href="#h9-0-22" id="h9-0-22" class="d">-          folder_closed = &quot;&quot;,
+</a><a href="#h9-0-23" id="h9-0-23" class="d">-          folder_open = &quot;&quot;,
+</a><a href="#h9-0-24" id="h9-0-24" class="d">-          folder_empty = &quot;&quot;,
+</a><a href="#h9-0-25" id="h9-0-25" class="d">-        },
+</a><a href="#h9-0-26" id="h9-0-26" class="d">-        modified = { symbol = &quot;●&quot; },
+</a><a href="#h9-0-27" id="h9-0-27" class="d">-        git_status = {
+</a><a href="#h9-0-28" id="h9-0-28" class="d">-          symbols = {
+</a><a href="#h9-0-29" id="h9-0-29" class="d">-            added    = &quot;+&quot;,  -- new file
+</a><a href="#h9-0-30" id="h9-0-30" class="d">-            modified = &quot;~&quot;,  -- modified file
+</a><a href="#h9-0-31" id="h9-0-31" class="d">-            deleted  = &quot;✖&quot;,  -- deleted file
+</a><a href="#h9-0-32" id="h9-0-32" class="d">-            renamed  = &quot;➜&quot;,
+</a><a href="#h9-0-33" id="h9-0-33" class="d">-            unstaged = &quot;★&quot;,
+</a><a href="#h9-0-34" id="h9-0-34" class="d">-          },
+</a><a href="#h9-0-35" id="h9-0-35" class="d">-        },
+</a><a href="#h9-0-36" id="h9-0-36" class="d">-      },
+</a><a href="#h9-0-37" id="h9-0-37" class="d">-    },
+</a><a href="#h9-0-38" id="h9-0-38" class="d">-  },
+</a><a href="#h9-0-39" id="h9-0-39" class="d">-}
+</a><a href="#h9-0-40" id="h9-0-40" class="d">-
+</a><b>diff --git a/<a id="h10" href="../file/.config/nvim/lua/linus/plugins/neotree.lua.html">.config/nvim/lua/linus/plugins/neotree.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/neotree.lua.html">.config/nvim/lua/linus/plugins/neotree.lua</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -1,24 +1,44 @@
+</a><a href="#h10-0-0" id="h10-0-0" class="i">+-- lua/plugins/neo-tree.lua
+</a><a href="#h10-0-1" id="h10-0-1" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/neotree.lua
+</a> return {
+<a href="#h10-0-3" id="h10-0-3" class="d">-  &quot;nvim-neo-tree/neo-tree.nvim&quot;,
+</a><a href="#h10-0-4" id="h10-0-4" class="d">-  opts = {
+</a><a href="#h10-0-5" id="h10-0-5" class="d">-    filesystem = {
+</a><a href="#h10-0-6" id="h10-0-6" class="d">-      hijack_netrw_behavior = &quot;open_current&quot;, -- Keeps Neo-tree from opening automatically
+</a><a href="#h10-0-7" id="h10-0-7" class="i">+  {
+</a><a href="#h10-0-8" id="h10-0-8" class="i">+    &quot;nvim-neo-tree/neo-tree.nvim&quot;,
+</a><a href="#h10-0-9" id="h10-0-9" class="i">+    branch = &quot;v3.x&quot;,
+</a><a href="#h10-0-10" id="h10-0-10" class="i">+    cmd = &quot;Neotree&quot;,
+</a><a href="#h10-0-11" id="h10-0-11" class="i">+    dependencies = {
+</a><a href="#h10-0-12" id="h10-0-12" class="i">+      &quot;nvim-lua/plenary.nvim&quot;,
+</a><a href="#h10-0-13" id="h10-0-13" class="i">+      &quot;nvim-tree/nvim-web-devicons&quot;,  -- file icons
+</a><a href="#h10-0-14" id="h10-0-14" class="i">+      &quot;MunifTanjim/nui.nvim&quot;,
+</a><a href="#h10-0-15" id="h10-0-15" class="i">+    },
+</a><a href="#h10-0-16" id="h10-0-16" class="i">+    opts = {
+</a><a href="#h10-0-17" id="h10-0-17" class="i">+      filesystem = {
+</a><a href="#h10-0-18" id="h10-0-18" class="i">+        follow_current_file = true,  -- sync tree with open file
+</a><a href="#h10-0-19" id="h10-0-19" class="i">+        use_libuv_file_watcher = true,
+</a><a href="#h10-0-20" id="h10-0-20" class="i">+      },
+</a>       window = {
+         position = &quot;float&quot;,
+<a href="#h10-0-23" id="h10-0-23" class="d">-        width = 30,
+</a><a href="#h10-0-24" id="h10-0-24" class="i">+        width = 40,
+</a>       },
+<a href="#h10-0-26" id="h10-0-26" class="d">-    },
+</a><a href="#h10-0-27" id="h10-0-27" class="d">-    event_handlers = {
+</a><a href="#h10-0-28" id="h10-0-28" class="d">-      {
+</a><a href="#h10-0-29" id="h10-0-29" class="d">-        event = &quot;file_opened&quot;,
+</a><a href="#h10-0-30" id="h10-0-30" class="d">-        handler = function()
+</a><a href="#h10-0-31" id="h10-0-31" class="d">-          require(&quot;neo-tree.command&quot;).execute({ action = &quot;close&quot; })
+</a><a href="#h10-0-32" id="h10-0-32" class="d">-        end,
+</a><a href="#h10-0-33" id="h10-0-33" class="i">+      default_component_configs = {
+</a><a href="#h10-0-34" id="h10-0-34" class="i">+        icon = {
+</a><a href="#h10-0-35" id="h10-0-35" class="i">+          folder_closed = &quot;&quot;,
+</a><a href="#h10-0-36" id="h10-0-36" class="i">+          folder_open = &quot;&quot;,
+</a><a href="#h10-0-37" id="h10-0-37" class="i">+          folder_empty = &quot;&quot;,
+</a><a href="#h10-0-38" id="h10-0-38" class="i">+        },
+</a><a href="#h10-0-39" id="h10-0-39" class="i">+        modified = { symbol = &quot;●&quot; },
+</a><a href="#h10-0-40" id="h10-0-40" class="i">+        git_status = {
+</a><a href="#h10-0-41" id="h10-0-41" class="i">+          symbols = {
+</a><a href="#h10-0-42" id="h10-0-42" class="i">+            added    = &quot;+&quot;,  -- new file
+</a><a href="#h10-0-43" id="h10-0-43" class="i">+            modified = &quot;~&quot;,  -- modified file
+</a><a href="#h10-0-44" id="h10-0-44" class="i">+            deleted  = &quot;✖&quot;,  -- deleted file
+</a><a href="#h10-0-45" id="h10-0-45" class="i">+            renamed  = &quot;➜&quot;,
+</a><a href="#h10-0-46" id="h10-0-46" class="i">+            unstaged = &quot;★&quot;,
+</a><a href="#h10-0-47" id="h10-0-47" class="i">+          },
+</a><a href="#h10-0-48" id="h10-0-48" class="i">+        },
+</a>       },
+     },
+   },
+<a href="#h10-0-52" id="h10-0-52" class="d">-  keys = {
+</a><a href="#h10-0-53" id="h10-0-53" class="d">-    { &quot;&lt;leader&gt;e&quot;, &quot;&lt;cmd&gt;Neotree toggle float&lt;cr&gt;&quot;, desc = &quot;Toggle File Explorer (Float)&quot; },
+</a><a href="#h10-0-54" id="h10-0-54" class="d">-    { &quot;&lt;leader&gt;E&quot;, &quot;&lt;cmd&gt;Neotree focus float&lt;cr&gt;&quot;, desc = &quot;Focus File Explorer&quot; },
+</a><a href="#h10-0-55" id="h10-0-55" class="d">-  },
+</a> }
+<a href="#h10-0-57" id="h10-0-57" class="i">+
+</a><a href="#h10-0-58" id="h10-0-58" class="i">+-- keympas
+</a><a href="#h10-0-59" id="h10-0-59" class="i">+-- $HOME/.config/nvim/lua/linus/keys.lua
+</a><b>diff --git a/<a id="h11" href="../file/.config/nvim/lua/linus/plugins/no-neck-pain.lua.html">.config/nvim/lua/linus/plugins/no-neck-pain.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/no-neck-pain.lua.html">.config/nvim/lua/linus/plugins/no-neck-pain.lua</a></b>
+<a href="#h11-0" id="h11-0" class="h">@@ -1,3 +0,0 @@
+</a><a href="#h11-0-0" id="h11-0-0" class="d">-return {
+</a><a href="#h11-0-1" id="h11-0-1" class="d">-  &quot;shortcuts/no-neck-pain.nvim&quot;,
+</a><a href="#h11-0-2" id="h11-0-2" class="d">-}
+</a><b>diff --git a/<a id="h12" href="../file/.config/nvim/lua/linus/plugins/rustaceanvim.lua.html">.config/nvim/lua/linus/plugins/rustaceanvim.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/rustaceanvim.lua.html">.config/nvim/lua/linus/plugins/rustaceanvim.lua</a></b>
+<a href="#h12-0" id="h12-0" class="h">@@ -0,0 +1,10 @@
+</a><a href="#h12-0-0" id="h12-0-0" class="i">+return {
+</a><a href="#h12-0-1" id="h12-0-1" class="i">+    &#39;mrcjkb/rustaceanvim&#39;,
+</a><a href="#h12-0-2" id="h12-0-2" class="i">+    version = &#39;^6&#39;, -- Recommended
+</a><a href="#h12-0-3" id="h12-0-3" class="i">+    lazy = false, -- This plugin is already lazy
+</a><a href="#h12-0-4" id="h12-0-4" class="i">+    [&quot;rust-analyzer&quot;] = { 
+</a><a href="#h12-0-5" id="h12-0-5" class="i">+        cargo = {
+</a><a href="#h12-0-6" id="h12-0-6" class="i">+            allFeatures = true,
+</a><a href="#h12-0-7" id="h12-0-7" class="i">+        },
+</a><a href="#h12-0-8" id="h12-0-8" class="i">+    },
+</a><a href="#h12-0-9" id="h12-0-9" class="i">+}
+</a><b>diff --git a/<a id="h13" href="../file/.config/nvim/lua/linus/plugins/telescope.lua.html">.config/nvim/lua/linus/plugins/telescope.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/telescope.lua.html">.config/nvim/lua/linus/plugins/telescope.lua</a></b>
+<a href="#h13-0" id="h13-0" class="h">@@ -1,4 +1,4 @@
+</a><a href="#h13-0-0" id="h13-0-0" class="d">--- lua/plugins/telescope.lua
+</a><a href="#h13-0-1" id="h13-0-1" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/telescope.lua
+</a> return {
+   {
+     &quot;nvim-telescope/telescope.nvim&quot;,
+<a href="#h13-1" id="h13-1" class="h">@@ -15,13 +15,8 @@ return {
+</a>         },
+       },
+     },
+<a href="#h13-1-3" id="h13-1-3" class="d">-    keys = {
+</a><a href="#h13-1-4" id="h13-1-4" class="d">-      { &quot;&lt;leader&gt;ff&quot;, &quot;&lt;cmd&gt;Telescope find_files theme=dropdown&lt;cr&gt;&quot;, desc = &quot;Find Files&quot; },
+</a><a href="#h13-1-5" id="h13-1-5" class="d">-      { &quot;&lt;leader&gt;fr&quot;, &quot;&lt;cmd&gt;Telescope oldfiles&lt;cr&gt;&quot;, desc = &quot;Recent Files&quot; },
+</a><a href="#h13-1-6" id="h13-1-6" class="d">-      { &quot;&lt;leader&gt;fg&quot;, &quot;&lt;cmd&gt;Telescope live_grep&lt;cr&gt;&quot;, desc = &quot;Find in Files (Grep)&quot; },
+</a><a href="#h13-1-7" id="h13-1-7" class="d">-      { &quot;&lt;leader&gt;fw&quot;, &quot;&lt;cmd&gt;Telescope grep_string&lt;cr&gt;&quot;, desc = &quot;Find Word Under Cursor&quot; },
+</a><a href="#h13-1-8" id="h13-1-8" class="d">-      { &quot;&lt;leader&gt;ft&quot;, &quot;&lt;cmd&gt;Telescope grep_string search=TODO&lt;cr&gt;&quot;, desc = &quot;Find TODO/FIXME&quot; },
+</a><a href="#h13-1-9" id="h13-1-9" class="d">-    {&quot;&lt;leader&gt;&lt;space&gt;&quot;, &quot;&lt;cmd&gt;Telescope find_files&lt;cr&gt;&quot;, { desc = &quot;Find Files&quot; }}
+</a><a href="#h13-1-10" id="h13-1-10" class="d">-    },
+</a>   },
+ }
+<a href="#h13-1-13" id="h13-1-13" class="i">+
+</a><a href="#h13-1-14" id="h13-1-14" class="i">+-- keymaps:
+</a><a href="#h13-1-15" id="h13-1-15" class="i">+-- $HOME/.config/nvim/lua/linus/keys.lua
+</a><b>diff --git a/<a id="h14" href="../file/.config/nvim/lua/linus/plugins/transparent.lua.html">.config/nvim/lua/linus/plugins/transparent.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/transparent.lua.html">.config/nvim/lua/linus/plugins/transparent.lua</a></b>
+<a href="#h14-0" id="h14-0" class="h">@@ -1,16 +0,0 @@
+</a><a href="#h14-0-0" id="h14-0-0" class="d">--- lua/plugins/transparent.lua
+</a><a href="#h14-0-1" id="h14-0-1" class="d">-return {
+</a><a href="#h14-0-2" id="h14-0-2" class="d">-  {
+</a><a href="#h14-0-3" id="h14-0-3" class="d">-    &quot;xiyaowong/transparent.nvim&quot;,
+</a><a href="#h14-0-4" id="h14-0-4" class="d">-    lazy = false,  -- load immediately to apply transparency
+</a><a href="#h14-0-5" id="h14-0-5" class="d">-    opts = {
+</a><a href="#h14-0-6" id="h14-0-6" class="d">-      extra_groups = {
+</a><a href="#h14-0-7" id="h14-0-7" class="d">-        &quot;NormalFloat&quot;,       -- make floating windows transparent
+</a><a href="#h14-0-8" id="h14-0-8" class="d">-        &quot;NeoTreeNormal&quot;,     -- neo-tree window
+</a><a href="#h14-0-9" id="h14-0-9" class="d">-        &quot;NeoTreeNormalNC&quot;,   -- neo-tree (no focus)
+</a><a href="#h14-0-10" id="h14-0-10" class="d">-      },
+</a><a href="#h14-0-11" id="h14-0-11" class="d">-      exclude_groups = {},   -- no exclusions, all backgrounds cleared
+</a><a href="#h14-0-12" id="h14-0-12" class="d">-    },
+</a><a href="#h14-0-13" id="h14-0-13" class="d">-  },
+</a><a href="#h14-0-14" id="h14-0-14" class="d">-}
+</a><a href="#h14-0-15" id="h14-0-15" class="d">-
+</a><b>diff --git a/<a id="h15" href="../file/.config/nvim/lua/linus/plugins/treesitter.lua.html">.config/nvim/lua/linus/plugins/treesitter.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/treesitter.lua.html">.config/nvim/lua/linus/plugins/treesitter.lua</a></b>
+<a href="#h15-0" id="h15-0" class="h">@@ -4,10 +4,11 @@ return {
+</a>     config = function()
+         require(&quot;nvim-treesitter.configs&quot;).setup({
+             ensure_installed = {
+<a href="#h15-0-3" id="h15-0-3" class="d">-                &quot;vimdoc&quot;, &quot;javascript&quot;, &quot;typescript&quot;, &quot;c&quot;, &quot;lua&quot;, &quot;rust&quot;,
+</a><a href="#h15-0-4" id="h15-0-4" class="d">-                &quot;jsdoc&quot;, &quot;bash&quot;, &quot;typst&quot;, &quot;svelte&quot;, &quot;python&quot;, &quot;glsl&quot;
+</a><a href="#h15-0-5" id="h15-0-5" class="i">+                &quot;c&quot;, &quot;lua&quot;, &quot;rust&quot;, &quot;Markdown&quot;, &quot;python&quot;, &quot;html&quot;, &quot;css&quot;, &quot;typst&quot;, &quot;bash&quot;,
+</a><a href="#h15-0-6" id="h15-0-6" class="i">+                &quot;vimdoc&quot;, &quot;javascript&quot;, &quot;typescript&quot;, 
+</a><a href="#h15-0-7" id="h15-0-7" class="i">+                &quot;jsdoc&quot;, &quot;svelte&quot;, &quot;glsl&quot;
+</a>             },
+<a href="#h15-0-9" id="h15-0-9" class="d">-            sync_install = false,
+</a><a href="#h15-0-10" id="h15-0-10" class="i">+            sync_install = true,
+</a>             auto_install = true,
+             indent = {
+                 enable = true
+<b>diff --git a/<a id="h16" href="../file/.config/nvim/lua/linus/plugins/undotree.lua.html">.config/nvim/lua/linus/plugins/undotree.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/undotree.lua.html">.config/nvim/lua/linus/plugins/undotree.lua</a></b>
+<a href="#h16-0" id="h16-0" class="h">@@ -0,0 +1,12 @@
+</a><a href="#h16-0-0" id="h16-0-0" class="i">+-- https://github.com/mbbill/undotree
+</a><a href="#h16-0-1" id="h16-0-1" class="i">+return {
+</a><a href="#h16-0-2" id="h16-0-2" class="i">+    &quot;mbbill/undotree&quot;,
+</a><a href="#h16-0-3" id="h16-0-3" class="i">+    config = function()
+</a><a href="#h16-0-4" id="h16-0-4" class="i">+        vim.g.undotree_WindowLayout = 2
+</a><a href="#h16-0-5" id="h16-0-5" class="i">+        vim.g.undotree_SplitWidth = 40
+</a><a href="#h16-0-6" id="h16-0-6" class="i">+        vim.g.undotree_SetFocusWhenToggle = 1
+</a><a href="#h16-0-7" id="h16-0-7" class="i">+    end,
+</a><a href="#h16-0-8" id="h16-0-8" class="i">+}
+</a><a href="#h16-0-9" id="h16-0-9" class="i">+
+</a><a href="#h16-0-10" id="h16-0-10" class="i">+-- keymaps
+</a><a href="#h16-0-11" id="h16-0-11" class="i">+-- $HOME/.config/nvim/lua/linus/keys.lua
+</a><b>diff --git a/<a id="h17" href="../file/.config/nvim/lua/linus/plugins/zen-mode.lua.html">.config/nvim/lua/linus/plugins/zen-mode.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/zen-mode.lua.html">.config/nvim/lua/linus/plugins/zen-mode.lua</a></b>
+<a href="#h17-0" id="h17-0" class="h">@@ -1,3 +1,4 @@
+</a><a href="#h17-0-0" id="h17-0-0" class="i">+-- $HOME/.config/nvim/lua/linus/plugins/zen-mode.lua
+</a> return {
+   &quot;folke/zen-mode.nvim&quot;,
+   opts = {
+<a href="#h17-1" id="h17-1" class="h">@@ -48,3 +49,5 @@ return {
+</a>     on_close = function() end,
+   },
+ }
+<a href="#h17-1-3" id="h17-1-3" class="i">+-- keymaps
+</a><a href="#h17-1-4" id="h17-1-4" class="i">+-- $HOME/.config/nvim/lua/linus/keys.lua
+</a><b>diff --git a/<a id="h18" href="../file/.config/zed/prompts/prompts-library-db.0.mdb/data.mdb.html">.config/zed/prompts/prompts-library-db.0.mdb/data.mdb</a> b/<a href="../file/.config/zed/prompts/prompts-library-db.0.mdb/data.mdb.html">.config/zed/prompts/prompts-library-db.0.mdb/data.mdb</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h19" href="../file/.config/zed/prompts/prompts-library-db.0.mdb/lock.mdb.html">.config/zed/prompts/prompts-library-db.0.mdb/lock.mdb</a> b/<a href="../file/.config/zed/prompts/prompts-library-db.0.mdb/lock.mdb.html">.config/zed/prompts/prompts-library-db.0.mdb/lock.mdb</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h20" href="../file/.config/zed/settings.json.html">.config/zed/settings.json</a> b/<a href="../file/.config/zed/settings.json.html">.config/zed/settings.json</a></b>
+<a href="#h20-0" id="h20-0" class="h">@@ -0,0 +1,21 @@
+</a><a href="#h20-0-0" id="h20-0-0" class="i">+// Zed settings
+</a><a href="#h20-0-1" id="h20-0-1" class="i">+//
+</a><a href="#h20-0-2" id="h20-0-2" class="i">+// For information on how to configure Zed, see the Zed
+</a><a href="#h20-0-3" id="h20-0-3" class="i">+// documentation: https://zed.dev/docs/configuring-zed
+</a><a href="#h20-0-4" id="h20-0-4" class="i">+//
+</a><a href="#h20-0-5" id="h20-0-5" class="i">+// To see all of Zed&#39;s default settings without changing your
+</a><a href="#h20-0-6" id="h20-0-6" class="i">+// custom settings, run `zed: open default settings` from the
+</a><a href="#h20-0-7" id="h20-0-7" class="i">+// command palette (cmd-shift-p / ctrl-shift-p)
+</a><a href="#h20-0-8" id="h20-0-8" class="i">+{
+</a><a href="#h20-0-9" id="h20-0-9" class="i">+  &quot;features&quot;: {
+</a><a href="#h20-0-10" id="h20-0-10" class="i">+    &quot;edit_prediction_provider&quot;: &quot;zed&quot;
+</a><a href="#h20-0-11" id="h20-0-11" class="i">+  },
+</a><a href="#h20-0-12" id="h20-0-12" class="i">+  &quot;vim_mode&quot;: true,
+</a><a href="#h20-0-13" id="h20-0-13" class="i">+  &quot;ui_font_size&quot;: 16,
+</a><a href="#h20-0-14" id="h20-0-14" class="i">+  &quot;buffer_font_size&quot;: 16,
+</a><a href="#h20-0-15" id="h20-0-15" class="i">+  &quot;theme&quot;: {
+</a><a href="#h20-0-16" id="h20-0-16" class="i">+    &quot;mode&quot;: &quot;system&quot;,
+</a><a href="#h20-0-17" id="h20-0-17" class="i">+    &quot;light&quot;: &quot;One Dark&quot;,
+</a><a href="#h20-0-18" id="h20-0-18" class="i">+    &quot;dark&quot;: &quot;One Dark&quot;
+</a><a href="#h20-0-19" id="h20-0-19" class="i">+  }
+</a><a href="#h20-0-20" id="h20-0-20" class="i">+}
+</a><b>diff --git a/<a id="h21" href="../file/.zshenv.html">.zshenv</a> b/<a href="../file/.zshenv.html">.zshenv</a></b>
+<a href="#h21-0" id="h21-0" class="h">@@ -6,3 +6,4 @@ export LESSHISTFILE=&quot;$HOME/.config/less/history&quot;
+</a> 
+ # mv ~/.gitconfig ~/.config/git/config
+ 
+<a href="#h21-0-3" id="h21-0-3" class="i">+. &quot;$HOME/.cargo/env&quot;
+</a></pre>
+</div>
+</body>
+</html>

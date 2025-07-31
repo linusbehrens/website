@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>taskell, nvim spell and idk plan9??? - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/bee2da6f59d9de0bcda1e548c9368548e7d4c2fc.html">bee2da6f59d9de0bcda1e548c9368548e7d4c2fc</a>
+<b>parent</b> <a href="../commit/209f4d67ed121998f9d606d82e78c33f96a26c73.html">209f4d67ed121998f9d606d82e78c33f96a26c73</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Tue,  8 Jul 2025 18:25:19 +0200
+
+taskell, nvim spell and idk plan9???
+
+<b>Diffstat:</b>
+<table><tr><td class="A">A</td><td><a href="#h0">.config/nvim/spell/de.utf-8.spl</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">.config/nvim/spell/de.utf-8.sug</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">.config/taskell/bindings.ini</a></td><td> | </td><td class="num">54</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">.config/taskell/config.ini</a></td><td> | </td><td class="num">17</td><td><span class="i">+++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h4">.config/taskell/template.md</a></td><td> | </td><td class="num">8</td><td><span class="i">++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h5">.config/taskell/theme.ini</a></td><td> | </td><td class="num">25</td><td><span class="i">+++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>6 files changed, 104 insertions(+), 0 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/nvim/spell/de.utf-8.spl.html">.config/nvim/spell/de.utf-8.spl</a> b/<a href="../file/.config/nvim/spell/de.utf-8.spl.html">.config/nvim/spell/de.utf-8.spl</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h1" href="../file/.config/nvim/spell/de.utf-8.sug.html">.config/nvim/spell/de.utf-8.sug</a> b/<a href="../file/.config/nvim/spell/de.utf-8.sug.html">.config/nvim/spell/de.utf-8.sug</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h2" href="../file/.config/taskell/bindings.ini.html">.config/taskell/bindings.ini</a> b/<a href="../file/.config/taskell/bindings.ini.html">.config/taskell/bindings.ini</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,54 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+# general
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+quit = q
+</a><a href="#h2-0-2" id="h2-0-2" class="i">+undo = u
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+redo = r
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+search = /
+</a><a href="#h2-0-5" id="h2-0-5" class="i">+help = ?
+</a><a href="#h2-0-6" id="h2-0-6" class="i">+due = !
+</a><a href="#h2-0-7" id="h2-0-7" class="i">+
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+# navigation
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+previous = k
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+next = j
+</a><a href="#h2-0-11" id="h2-0-11" class="i">+left = h
+</a><a href="#h2-0-12" id="h2-0-12" class="i">+right = l
+</a><a href="#h2-0-13" id="h2-0-13" class="i">+bottom = G
+</a><a href="#h2-0-14" id="h2-0-14" class="i">+top = g
+</a><a href="#h2-0-15" id="h2-0-15" class="i">+
+</a><a href="#h2-0-16" id="h2-0-16" class="i">+# new tasks
+</a><a href="#h2-0-17" id="h2-0-17" class="i">+new = a
+</a><a href="#h2-0-18" id="h2-0-18" class="i">+newAbove = O
+</a><a href="#h2-0-19" id="h2-0-19" class="i">+newBelow = o
+</a><a href="#h2-0-20" id="h2-0-20" class="i">+duplicate = +
+</a><a href="#h2-0-21" id="h2-0-21" class="i">+
+</a><a href="#h2-0-22" id="h2-0-22" class="i">+# editing tasks
+</a><a href="#h2-0-23" id="h2-0-23" class="i">+edit = e, A, i
+</a><a href="#h2-0-24" id="h2-0-24" class="i">+clear = C
+</a><a href="#h2-0-25" id="h2-0-25" class="i">+delete = D
+</a><a href="#h2-0-26" id="h2-0-26" class="i">+detail = &lt;Enter&gt;
+</a><a href="#h2-0-27" id="h2-0-27" class="i">+dueDate = @
+</a><a href="#h2-0-28" id="h2-0-28" class="i">+clearDate = &lt;Backspace&gt;
+</a><a href="#h2-0-29" id="h2-0-29" class="i">+
+</a><a href="#h2-0-30" id="h2-0-30" class="i">+# moving tasks
+</a><a href="#h2-0-31" id="h2-0-31" class="i">+moveUp = K
+</a><a href="#h2-0-32" id="h2-0-32" class="i">+moveDown = J
+</a><a href="#h2-0-33" id="h2-0-33" class="i">+# move to top of previous list
+</a><a href="#h2-0-34" id="h2-0-34" class="i">+moveLeftTop = ˙
+</a><a href="#h2-0-35" id="h2-0-35" class="i">+# move to top of next list
+</a><a href="#h2-0-36" id="h2-0-36" class="i">+moveRightTop = ¬
+</a><a href="#h2-0-37" id="h2-0-37" class="i">+# move to bottom of previous list
+</a><a href="#h2-0-38" id="h2-0-38" class="i">+moveLeftBottom = H
+</a><a href="#h2-0-39" id="h2-0-39" class="i">+# move to bottom of next list
+</a><a href="#h2-0-40" id="h2-0-40" class="i">+moveRightBottom = L
+</a><a href="#h2-0-41" id="h2-0-41" class="i">+# move to bottom of last list
+</a><a href="#h2-0-42" id="h2-0-42" class="i">+complete = &lt;Space&gt;
+</a><a href="#h2-0-43" id="h2-0-43" class="i">+# move to top of last list
+</a><a href="#h2-0-44" id="h2-0-44" class="i">+completeToTop = T
+</a><a href="#h2-0-45" id="h2-0-45" class="i">+# select a list to move to
+</a><a href="#h2-0-46" id="h2-0-46" class="i">+moveMenu = m
+</a><a href="#h2-0-47" id="h2-0-47" class="i">+
+</a><a href="#h2-0-48" id="h2-0-48" class="i">+# lists
+</a><a href="#h2-0-49" id="h2-0-49" class="i">+listNew = N
+</a><a href="#h2-0-50" id="h2-0-50" class="i">+listEdit = E
+</a><a href="#h2-0-51" id="h2-0-51" class="i">+listDelete = X
+</a><a href="#h2-0-52" id="h2-0-52" class="i">+listRight = &gt;
+</a><a href="#h2-0-53" id="h2-0-53" class="i">+listLeft = &lt;
+</a><b>diff --git a/<a id="h3" href="../file/.config/taskell/config.ini.html">.config/taskell/config.ini</a> b/<a href="../file/.config/taskell/config.ini.html">.config/taskell/config.ini</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -0,0 +1,17 @@
+</a><a href="#h3-0-0" id="h3-0-0" class="i">+[general]
+</a><a href="#h3-0-1" id="h3-0-1" class="i">+filename = taskell.md
+</a><a href="#h3-0-2" id="h3-0-2" class="i">+
+</a><a href="#h3-0-3" id="h3-0-3" class="i">+[layout]
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+padding = 1
+</a><a href="#h3-0-5" id="h3-0-5" class="i">+column_width = 30
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+column_padding = 3
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+description_indicator = &quot;≡&quot;
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+statusbar = true
+</a><a href="#h3-0-9" id="h3-0-9" class="i">+
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+[markdown]
+</a><a href="#h3-0-11" id="h3-0-11" class="i">+title = &quot;##&quot;
+</a><a href="#h3-0-12" id="h3-0-12" class="i">+task = &quot;-&quot;
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+summary = &quot;    &gt;&quot;
+</a><a href="#h3-0-14" id="h3-0-14" class="i">+due = &quot;    @&quot;
+</a><a href="#h3-0-15" id="h3-0-15" class="i">+subtask = &quot;    *&quot;
+</a><a href="#h3-0-16" id="h3-0-16" class="i">+localTimes = false
+</a><b>diff --git a/<a id="h4" href="../file/.config/taskell/template.md.html">.config/taskell/template.md</a> b/<a href="../file/.config/taskell/template.md.html">.config/taskell/template.md</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -0,0 +1,8 @@
+</a><a href="#h4-0-0" id="h4-0-0" class="i">+## To Do
+</a><a href="#h4-0-1" id="h4-0-1" class="i">+
+</a><a href="#h4-0-2" id="h4-0-2" class="i">+
+</a><a href="#h4-0-3" id="h4-0-3" class="i">+## Doing
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+
+</a><a href="#h4-0-5" id="h4-0-5" class="i">+
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+## Done
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+
+</a><b>diff --git a/<a id="h5" href="../file/.config/taskell/theme.ini.html">.config/taskell/theme.ini</a> b/<a href="../file/.config/taskell/theme.ini.html">.config/taskell/theme.ini</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -0,0 +1,25 @@
+</a><a href="#h5-0-0" id="h5-0-0" class="i">+[other]
+</a><a href="#h5-0-1" id="h5-0-1" class="i">+
+</a><a href="#h5-0-2" id="h5-0-2" class="i">+; list title
+</a><a href="#h5-0-3" id="h5-0-3" class="i">+title.fg = green
+</a><a href="#h5-0-4" id="h5-0-4" class="i">+
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+; status bar
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+statusBar.bg = blue
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+statusBar.fg = black
+</a><a href="#h5-0-8" id="h5-0-8" class="i">+
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+; current list title
+</a><a href="#h5-0-10" id="h5-0-10" class="i">+titleCurrent.fg = blue
+</a><a href="#h5-0-11" id="h5-0-11" class="i">+
+</a><a href="#h5-0-12" id="h5-0-12" class="i">+; current task
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+taskCurrent.fg = magenta
+</a><a href="#h5-0-14" id="h5-0-14" class="i">+
+</a><a href="#h5-0-15" id="h5-0-15" class="i">+; subtasks
+</a><a href="#h5-0-16" id="h5-0-16" class="i">+; selected
+</a><a href="#h5-0-17" id="h5-0-17" class="i">+subtaskCurrent.fg = magenta
+</a><a href="#h5-0-18" id="h5-0-18" class="i">+; incomplete
+</a><a href="#h5-0-19" id="h5-0-19" class="i">+subtaskIncomplete.fg = blue
+</a><a href="#h5-0-20" id="h5-0-20" class="i">+; complete
+</a><a href="#h5-0-21" id="h5-0-21" class="i">+subtaskComplete.fg = yellow
+</a><a href="#h5-0-22" id="h5-0-22" class="i">+
+</a><a href="#h5-0-23" id="h5-0-23" class="i">+; disabled
+</a><a href="#h5-0-24" id="h5-0-24" class="i">+disabled.fg = yellow
+</a></pre>
+</div>
+</body>
+</html>

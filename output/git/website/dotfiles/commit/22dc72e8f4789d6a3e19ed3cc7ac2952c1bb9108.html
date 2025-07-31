@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>fix and script compability - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108.html">22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108</a>
+<b>parent</b> <a href="../commit/3edcac6650246cc867626865c81c56caef48b1df.html">3edcac6650246cc867626865c81c56caef48b1df</a>
+<b>Author:</b> linusbehrens &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Sat, 19 Jul 2025 01:10:29 +0200
+
+fix and script compability
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.config/bash/.bashrc</a></td><td> | </td><td class="num">19</td><td><span class="i">+++++++++</span><span class="d">----------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">.config/dconf/user</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">.config/nvim/lazy-lock.json</a></td><td> | </td><td class="num">3</td><td><span class="i">+</span><span class="d">--</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">.config/nvim/lua/linus/plugins/mason.lua</a></td><td> | </td><td class="num">105</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++</span><span class="d">--------------------------------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">.config/nvim/lua/linus/plugins/telescope.lua</a></td><td> | </td><td class="num">15</td><td><span class="i">+++++++</span><span class="d">--------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">.config/nvim/lua/linus/plugins/treesitter.lua</a></td><td> | </td><td class="num">5</td><td><span class="i">+++</span><span class="d">--</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h6">.config/openrc/pipewire</a></td><td> | </td><td class="num">2</td><td><span class="i">++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h7">.config/openrc/runlevels/default/pipewire</a></td><td> | </td><td class="num">2</td><td><span class="i">++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h8">.config/openrc/runlevels/default/wireplumber</a></td><td> | </td><td class="num">2</td><td><span class="i">++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h9">.config/openrc/wireplumber</a></td><td> | </td><td class="num">2</td><td><span class="i">++</span><span class="d"></span></td></tr>
+</table></pre><pre>10 files changed, 83 insertions(+), 72 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a> b/<a href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -1,21 +1,15 @@
+</a> ########## WORKSPACE ##########
+ 
+<a href="#h0-0-2" id="h0-0-2" class="d">-alias cn=&#39;cd $HOME/.config/nvim/&#39;
+</a><a href="#h0-0-3" id="h0-0-3" class="d">-alias ct=&#39;cd $HOME/.config/tmux/&#39;
+</a><a href="#h0-0-4" id="h0-0-4" class="d">-
+</a> ########## SETUP ##########
+ 
+ set completion-ignore-case on
+<a href="#h0-0-8" id="h0-0-8" class="d">-# bindkey -v
+</a><a href="#h0-0-9" id="h0-0-9" class="d">-set -o vi
+</a><a href="#h0-0-10" id="h0-0-10" class="i">+# bindkey -v # zsh
+</a><a href="#h0-0-11" id="h0-0-11" class="i">+set -o vi # bash
+</a> 
+ bind &quot;set completion-ignore-case on&quot;
+ bind &quot;set show-all-if-ambiguous on&quot;
+ bind &quot;set mark-symlinked-directories on&quot;
+ 
+<a href="#h0-0-17" id="h0-0-17" class="d">-PS1=&quot;\n\u@\h: \w \$ &quot;
+</a><a href="#h0-0-18" id="h0-0-18" class="d">-# PS1=&#39;\[\e[34m\]\u \[\e[31m\]\w \$\[\e[0m\] &#39;
+</a><a href="#h0-0-19" id="h0-0-19" class="d">-
+</a> ########## ALIAS ##########
+ 
+ alias c=&#39;clear&#39;
+<a href="#h0-1" id="h0-1" class="h">@@ -41,6 +35,8 @@ alias gc=&#39;git commit -m&#39;
+</a> alias gp=&#39;git push&#39;
+ alias gl=&quot;git --no-pager log --oneline --decorate --graph --parents&quot;
+ 
+<a href="#h0-1-3" id="h0-1-3" class="i">+alias tu=&quot;tmux attach&quot;
+</a><a href="#h0-1-4" id="h0-1-4" class="i">+
+</a> alias ghoco=&quot;nvim $HOME/.config/ghostty/config&quot;
+ 
+ alias bashrc=&#39;nvim $HOME/.config/bash/.bashrc&#39;
+<a href="#h0-2" id="h0-2" class="h">@@ -56,7 +52,6 @@ alias ne=&#39;neofetch&#39;
+</a> 
+ ########## PATH ##########
+ 
+<a href="#h0-2-3" id="h0-2-3" class="d">-export GPG_TTY=$(tty)
+</a> export PATH=&quot;$PATH:/opt/homebrew/bin&quot;
+ export PATH=&quot;$HOME/.local/bin:$PATH&quot;
+ export PATH=&quot;$HOME/.cargo/bin:$PATH&quot;
+<a href="#h0-3" id="h0-3" class="h">@@ -64,9 +59,13 @@ export PATH=&quot;$HOME/code/scripts/menu:$PATH&quot;
+</a> export PATH=&quot;$HOME/code/scripts:$PATH&quot;
+ export PLAN9=/Users/linus/.sources/plan9port
+ export PATH=$PATH:$PLAN9/bin
+<a href="#h0-3-3" id="h0-3-3" class="i">+
+</a><a href="#h0-3-4" id="h0-3-4" class="i">+export GPG_TTY=$(tty)
+</a> export XDG_CONFIG_HOME=&quot;$HOME/.config&quot;
+ export MANPAGER=&#39;nvim +Man!&#39;
+<a href="#h0-3-7" id="h0-3-7" class="i">+export EDITOR=vim
+</a> 
+ ########## PS1 ##########
+ 
+<a href="#h0-3-11" id="h0-3-11" class="d">-export EDITOR=vim
+</a><a href="#h0-3-12" id="h0-3-12" class="i">+PS1=&quot;\n\u@\h: \w \$ &quot;
+</a><a href="#h0-3-13" id="h0-3-13" class="i">+# PS1=&#39;\[\e[34m\]\u \[\e[31m\]\w \$\[\e[0m\] &#39;
+</a><b>diff --git a/<a id="h1" href="../file/.config/dconf/user.html">.config/dconf/user</a> b/<a href="../file/.config/dconf/user.html">.config/dconf/user</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h2" href="../file/.config/nvim/lazy-lock.json.html">.config/nvim/lazy-lock.json</a> b/<a href="../file/.config/nvim/lazy-lock.json.html">.config/nvim/lazy-lock.json</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -11,7 +11,7 @@
+</a>   &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;v3.x&quot;, &quot;commit&quot;: &quot;cea666ef965884414b1b71f6b39a537f9238bdb2&quot; },
+   &quot;none-ls.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a5954f00ee88bcdf154e931198ec636a26a1077c&quot; },
+   &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de740991c12411b663994b2860f1a4fd0937c130&quot; },
+<a href="#h2-0-3" id="h2-0-3" class="d">-  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;dbfd8da6206b4ab0e2fe9b72a538f82e2b410102&quot; },
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;d3934000788ab0a8f98ed58bc69e4b73ad26b110&quot; },
+</a>   &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;42fc28ba918343ebfd5565147a42a26580579482&quot; },
+   &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;0422a19d9aa3aad2c7e5cca167e5407b13407a9d&quot; },
+   &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;166a79a55bfa7a4db3e26fc031b4d92af71d0b51&quot; },
+<a href="#h2-1" id="h2-1" class="h">@@ -19,7 +19,6 @@
+</a>   &quot;rustaceanvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;709d35ca3a8e42ec855467de62d43f70f7adc656&quot; },
+   &quot;snacks.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;bc0630e43be5699bb94dadc302c0d21615421d93&quot; },
+   &quot;substitute.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;9db749a880e3dd3b0eb57f698aa8f1e1630e1f25&quot; },
+<a href="#h2-1-3" id="h2-1-3" class="d">-  &quot;telescope.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;a0bbec21143c7bc5f8bb02e0005fa0b982edc026&quot; },
+</a>   &quot;transparent.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8ac59883de84e9cd1850ea25cf087031c5ba7d54&quot; },
+   &quot;trouble.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;85bedb7eb7fa331a2ccbecb9202d8abba64d37b3&quot; },
+   &quot;typst-preview.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;dea4525d5420b7c32eebda7de15a6beb9d6574fa&quot; },
+<b>diff --git a/<a id="h3" href="../file/.config/nvim/lua/linus/plugins/mason.lua.html">.config/nvim/lua/linus/plugins/mason.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/mason.lua.html">.config/nvim/lua/linus/plugins/mason.lua</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -2,59 +2,64 @@
+</a> 
+ -- ~/.config/nvim/lua/plugins/mason.lua
+ return {
+<a href="#h3-0-3" id="h3-0-3" class="d">-  {
+</a><a href="#h3-0-4" id="h3-0-4" class="d">-    &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h3-0-5" id="h3-0-5" class="d">-    config = function()
+</a><a href="#h3-0-6" id="h3-0-6" class="d">-      require(&quot;mason&quot;).setup()
+</a><a href="#h3-0-7" id="h3-0-7" class="d">-    end,
+</a><a href="#h3-0-8" id="h3-0-8" class="d">-  },
+</a><a href="#h3-0-9" id="h3-0-9" class="d">-  {
+</a><a href="#h3-0-10" id="h3-0-10" class="d">-    &quot;williamboman/mason-lspconfig.nvim&quot;,
+</a><a href="#h3-0-11" id="h3-0-11" class="d">-    dependencies = { &quot;williamboman/mason.nvim&quot;, &quot;neovim/nvim-lspconfig&quot; },
+</a><a href="#h3-0-12" id="h3-0-12" class="d">-    config = function()
+</a><a href="#h3-0-13" id="h3-0-13" class="d">-      require(&quot;mason-lspconfig&quot;).setup({
+</a><a href="#h3-0-14" id="h3-0-14" class="d">-        ensure_installed = {
+</a><a href="#h3-0-15" id="h3-0-15" class="d">-          &quot;lua_ls&quot;,
+</a><a href="#h3-0-16" id="h3-0-16" class="d">-          &quot;pyright&quot;,
+</a><a href="#h3-0-17" id="h3-0-17" class="d">-          &quot;tsserver&quot;,
+</a><a href="#h3-0-18" id="h3-0-18" class="d">-        },
+</a><a href="#h3-0-19" id="h3-0-19" class="d">-        automatic_installation = true,
+</a><a href="#h3-0-20" id="h3-0-20" class="d">-      })
+</a><a href="#h3-0-21" id="h3-0-21" class="i">+    {
+</a><a href="#h3-0-22" id="h3-0-22" class="i">+        &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h3-0-23" id="h3-0-23" class="i">+        config = function()
+</a><a href="#h3-0-24" id="h3-0-24" class="i">+            require(&quot;mason&quot;).setup()
+</a><a href="#h3-0-25" id="h3-0-25" class="i">+        end,
+</a><a href="#h3-0-26" id="h3-0-26" class="i">+    },
+</a><a href="#h3-0-27" id="h3-0-27" class="i">+    {
+</a><a href="#h3-0-28" id="h3-0-28" class="i">+        &quot;williamboman/mason-lspconfig.nvim&quot;,
+</a><a href="#h3-0-29" id="h3-0-29" class="i">+        dependencies = { &quot;williamboman/mason.nvim&quot;, &quot;neovim/nvim-lspconfig&quot; },
+</a><a href="#h3-0-30" id="h3-0-30" class="i">+        config = function()
+</a><a href="#h3-0-31" id="h3-0-31" class="i">+            require(&quot;mason-lspconfig&quot;).setup({
+</a><a href="#h3-0-32" id="h3-0-32" class="i">+                ensure_installed = {
+</a><a href="#h3-0-33" id="h3-0-33" class="i">+                    &quot;lua_ls&quot;,
+</a><a href="#h3-0-34" id="h3-0-34" class="i">+
+</a><a href="#h3-0-35" id="h3-0-35" class="i">+                    &quot;pyright&quot;,
+</a><a href="#h3-0-36" id="h3-0-36" class="i">+                },
+</a><a href="#h3-0-37" id="h3-0-37" class="i">+            automatic_installation = true,
+</a><a href="#h3-0-38" id="h3-0-38" class="i">+            })
+</a> 
+<a href="#h3-0-40" id="h3-0-40" class="d">-      local lspconfig = require(&quot;lspconfig&quot;)
+</a><a href="#h3-0-41" id="h3-0-41" class="i">+            local lspconfig = require(&quot;lspconfig&quot;)
+</a> 
+<a href="#h3-0-43" id="h3-0-43" class="d">-      -- Example: configure LSP servers here
+</a><a href="#h3-0-44" id="h3-0-44" class="d">-      local servers = { &quot;lua_ls&quot;, &quot;pyright&quot;, &quot;tsserver&quot; }
+</a><a href="#h3-0-45" id="h3-0-45" class="d">-      for _, server in ipairs(servers) do
+</a><a href="#h3-0-46" id="h3-0-46" class="d">-        lspconfig[server].setup({})
+</a><a href="#h3-0-47" id="h3-0-47" class="d">-      end
+</a><a href="#h3-0-48" id="h3-0-48" class="d">-    end,
+</a><a href="#h3-0-49" id="h3-0-49" class="d">-  },
+</a><a href="#h3-0-50" id="h3-0-50" class="d">-  {
+</a><a href="#h3-0-51" id="h3-0-51" class="d">-    &quot;jay-babu/mason-null-ls.nvim&quot;,
+</a><a href="#h3-0-52" id="h3-0-52" class="d">-    dependencies = {
+</a><a href="#h3-0-53" id="h3-0-53" class="d">-      &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h3-0-54" id="h3-0-54" class="d">-      &quot;nvimtools/none-ls.nvim&quot;, -- formerly &quot;jose-elias-alvarez/null-ls.nvim&quot;
+</a><a href="#h3-0-55" id="h3-0-55" class="i">+            -- Example: configure LSP servers here
+</a><a href="#h3-0-56" id="h3-0-56" class="i">+            local servers = {
+</a><a href="#h3-0-57" id="h3-0-57" class="i">+                &quot;lua_ls&quot;,
+</a><a href="#h3-0-58" id="h3-0-58" class="i">+                &quot;pyright&quot;,
+</a><a href="#h3-0-59" id="h3-0-59" class="i">+                &quot;clangd&quot;,
+</a><a href="#h3-0-60" id="h3-0-60" class="i">+                -- &quot;rust-analyzer&quot;,
+</a><a href="#h3-0-61" id="h3-0-61" class="i">+                &quot;tsserver&quot;
+</a><a href="#h3-0-62" id="h3-0-62" class="i">+            }
+</a><a href="#h3-0-63" id="h3-0-63" class="i">+            for _, server in ipairs(servers) do
+</a><a href="#h3-0-64" id="h3-0-64" class="i">+                lspconfig[server].setup({})
+</a><a href="#h3-0-65" id="h3-0-65" class="i">+            end
+</a><a href="#h3-0-66" id="h3-0-66" class="i">+        end,
+</a>     },
+<a href="#h3-0-68" id="h3-0-68" class="d">-    config = function()
+</a><a href="#h3-0-69" id="h3-0-69" class="d">-      require(&quot;mason-null-ls&quot;).setup({
+</a><a href="#h3-0-70" id="h3-0-70" class="d">-        ensure_installed = {
+</a><a href="#h3-0-71" id="h3-0-71" class="d">-          &quot;prettier&quot;,
+</a><a href="#h3-0-72" id="h3-0-72" class="d">-          &quot;stylua&quot;,
+</a><a href="#h3-0-73" id="h3-0-73" class="d">-          &quot;black&quot;,
+</a><a href="#h3-0-74" id="h3-0-74" class="i">+    {
+</a><a href="#h3-0-75" id="h3-0-75" class="i">+        &quot;jay-babu/mason-null-ls.nvim&quot;,
+</a><a href="#h3-0-76" id="h3-0-76" class="i">+        dependencies = {
+</a><a href="#h3-0-77" id="h3-0-77" class="i">+            &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h3-0-78" id="h3-0-78" class="i">+            &quot;nvimtools/none-ls.nvim&quot;, -- formerly &quot;jose-elias-alvarez/null-ls.nvim&quot;
+</a>         },
+<a href="#h3-0-80" id="h3-0-80" class="d">-        automatic_installation = true,
+</a><a href="#h3-0-81" id="h3-0-81" class="d">-      })
+</a><a href="#h3-0-82" id="h3-0-82" class="i">+        config = function()
+</a><a href="#h3-0-83" id="h3-0-83" class="i">+            require(&quot;mason-null-ls&quot;).setup({
+</a><a href="#h3-0-84" id="h3-0-84" class="i">+                ensure_installed = {
+</a><a href="#h3-0-85" id="h3-0-85" class="i">+                    &quot;prettier&quot;,
+</a><a href="#h3-0-86" id="h3-0-86" class="i">+                    &quot;stylua&quot;,
+</a><a href="#h3-0-87" id="h3-0-87" class="i">+                    &quot;black&quot;,
+</a><a href="#h3-0-88" id="h3-0-88" class="i">+                },
+</a><a href="#h3-0-89" id="h3-0-89" class="i">+                automatic_installation = true,
+</a><a href="#h3-0-90" id="h3-0-90" class="i">+            })
+</a><a href="#h3-0-91" id="h3-0-91" class="i">+            local null_ls = require(&quot;null-ls&quot;)
+</a> 
+<a href="#h3-0-93" id="h3-0-93" class="d">-      local null_ls = require(&quot;null-ls&quot;)
+</a><a href="#h3-0-94" id="h3-0-94" class="d">-
+</a><a href="#h3-0-95" id="h3-0-95" class="d">-      null_ls.setup({
+</a><a href="#h3-0-96" id="h3-0-96" class="d">-        sources = {
+</a><a href="#h3-0-97" id="h3-0-97" class="d">-          null_ls.builtins.formatting.prettier,
+</a><a href="#h3-0-98" id="h3-0-98" class="d">-          null_ls.builtins.formatting.stylua,
+</a><a href="#h3-0-99" id="h3-0-99" class="d">-          null_ls.builtins.formatting.black,
+</a><a href="#h3-0-100" id="h3-0-100" class="d">-        },
+</a><a href="#h3-0-101" id="h3-0-101" class="d">-      })
+</a><a href="#h3-0-102" id="h3-0-102" class="d">-    end,
+</a><a href="#h3-0-103" id="h3-0-103" class="d">-  },
+</a><a href="#h3-0-104" id="h3-0-104" class="i">+            null_ls.setup({
+</a><a href="#h3-0-105" id="h3-0-105" class="i">+                sources = {
+</a><a href="#h3-0-106" id="h3-0-106" class="i">+                    null_ls.builtins.formatting.prettier,
+</a><a href="#h3-0-107" id="h3-0-107" class="i">+                    null_ls.builtins.formatting.stylua,
+</a><a href="#h3-0-108" id="h3-0-108" class="i">+                    null_ls.builtins.formatting.black,
+</a><a href="#h3-0-109" id="h3-0-109" class="i">+                },
+</a><a href="#h3-0-110" id="h3-0-110" class="i">+            })
+</a><a href="#h3-0-111" id="h3-0-111" class="i">+        end,
+</a><a href="#h3-0-112" id="h3-0-112" class="i">+    },
+</a> }
+<b>diff --git a/<a id="h4" href="../file/.config/nvim/lua/linus/plugins/telescope.lua.html">.config/nvim/lua/linus/plugins/telescope.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/telescope.lua.html">.config/nvim/lua/linus/plugins/telescope.lua</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -6,16 +6,15 @@ return {
+</a>     cmd = &quot;Telescope&quot;,
+     dependencies = { &quot;nvim-lua/plenary.nvim&quot; },
+     opts = {
+<a href="#h4-0-3" id="h4-0-3" class="d">-      defaults = {
+</a><a href="#h4-0-4" id="h4-0-4" class="d">-        mappings = {
+</a><a href="#h4-0-5" id="h4-0-5" class="d">-          i = {
+</a><a href="#h4-0-6" id="h4-0-6" class="d">-            -- [&quot;&lt;C-j&gt;&quot;] = require(&quot;telescope.actions&quot;).move_selection_next,
+</a><a href="#h4-0-7" id="h4-0-7" class="d">-            -- [&quot;&lt;C-k&gt;&quot;] = require(&quot;telescope.actions&quot;).move_selection_previous,
+</a><a href="#h4-0-8" id="h4-0-8" class="d">-          },
+</a><a href="#h4-0-9" id="h4-0-9" class="i">+        defaults = {
+</a><a href="#h4-0-10" id="h4-0-10" class="i">+            mappings = {
+</a><a href="#h4-0-11" id="h4-0-11" class="i">+                i = {
+</a><a href="#h4-0-12" id="h4-0-12" class="i">+                    -- [&quot;&lt;C-j&gt;&quot;] = require(&quot;telescope.actions&quot;).move_selection_next,
+</a><a href="#h4-0-13" id="h4-0-13" class="i">+                    -- [&quot;&lt;C-k&gt;&quot;] = require(&quot;telescope.actions&quot;).move_selection_previous,
+</a><a href="#h4-0-14" id="h4-0-14" class="i">+                },
+</a><a href="#h4-0-15" id="h4-0-15" class="i">+            },
+</a>         },
+<a href="#h4-0-17" id="h4-0-17" class="d">-      },
+</a>     },
+<a href="#h4-0-19" id="h4-0-19" class="d">-  },
+</a> }
+ 
+ -- keymaps:
+<b>diff --git a/<a id="h5" href="../file/.config/nvim/lua/linus/plugins/treesitter.lua.html">.config/nvim/lua/linus/plugins/treesitter.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/treesitter.lua.html">.config/nvim/lua/linus/plugins/treesitter.lua</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -4,8 +4,9 @@ return {
+</a>     config = function()
+         require(&quot;nvim-treesitter.configs&quot;).setup({
+             ensure_installed = {
+<a href="#h5-0-3" id="h5-0-3" class="d">-                &quot;c&quot;, &quot;lua&quot;, &quot;rust&quot;, &quot;Markdown&quot;, &quot;python&quot;, &quot;html&quot;, &quot;css&quot;, &quot;typst&quot;, &quot;bash&quot;,
+</a><a href="#h5-0-4" id="h5-0-4" class="d">-                &quot;vimdoc&quot;, &quot;javascript&quot;, &quot;typescript&quot;, 
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+                &quot;c&quot;, &quot;lua&quot;, &quot;rust&quot;, &quot;python&quot;, &quot;bash&quot;,
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+                &quot;html&quot;, &quot;css&quot;, &quot;typst&quot;, &quot;markdown&quot;, &quot;markdown_inline&quot;,
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+                &quot;vimdoc&quot;, &quot;javascript&quot;, &quot;typescript&quot;,
+</a>                 &quot;jsdoc&quot;, &quot;svelte&quot;, &quot;glsl&quot;
+             },
+             sync_install = true,
+<b>diff --git a/<a id="h6" href="../file/.config/openrc/pipewire.html">.config/openrc/pipewire</a> b/<a href="../file/.config/openrc/pipewire.html">.config/openrc/pipewire</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h6-0-0" id="h6-0-0" class="i">+/etc/openrc/conf.d/pipewire
+</a><a href="#h6-0-1" id="h6-0-1" class="i">+\ No newline at end of file
+</a><b>diff --git a/<a id="h7" href="../file/.config/openrc/runlevels/default/pipewire.html">.config/openrc/runlevels/default/pipewire</a> b/<a href="../file/.config/openrc/runlevels/default/pipewire.html">.config/openrc/runlevels/default/pipewire</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h7-0-0" id="h7-0-0" class="i">+../services/pipewire
+</a><a href="#h7-0-1" id="h7-0-1" class="i">+\ No newline at end of file
+</a><b>diff --git a/<a id="h8" href="../file/.config/openrc/runlevels/default/wireplumber.html">.config/openrc/runlevels/default/wireplumber</a> b/<a href="../file/.config/openrc/runlevels/default/wireplumber.html">.config/openrc/runlevels/default/wireplumber</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h8-0-0" id="h8-0-0" class="i">+../services/wireplumber
+</a><a href="#h8-0-1" id="h8-0-1" class="i">+\ No newline at end of file
+</a><b>diff --git a/<a id="h9" href="../file/.config/openrc/wireplumber.html">.config/openrc/wireplumber</a> b/<a href="../file/.config/openrc/wireplumber.html">.config/openrc/wireplumber</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h9-0-0" id="h9-0-0" class="i">+/etc/openrc/conf.d/wireplumber
+</a><a href="#h9-0-1" id="h9-0-1" class="i">+\ No newline at end of file
+</a></pre>
+</div>
+</body>
+</html>

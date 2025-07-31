@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>exec - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/bfdf0f94a83e0ce02ea3e4401e59d17bee7f9e72.html">bfdf0f94a83e0ce02ea3e4401e59d17bee7f9e72</a>
+<b>parent</b> <a href="../commit/f4526c4249a8865fabcfb381c1f5f5213b7f3aad.html">f4526c4249a8865fabcfb381c1f5f5213b7f3aad</a>
+<b>Author:</b> Linus &lt;<a href="mailto:93053722+KoenigLinus@users.noreply.github.com">93053722+KoenigLinus@users.noreply.github.com</a>&gt;
+<b>Date:</b>   Thu, 21 Nov 2024 17:27:45 +0100
+
+exec
+
+<b>Diffstat:</b>
+<table><tr><td class="A">A</td><td><a href="#h0">.scripts/ghsync</a></td><td> | </td><td class="num">55</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">.scripts/hugoserver</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">init.bash</a></td><td> | </td><td class="num">7</td><td><span class="i">+++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>3 files changed, 67 insertions(+), 0 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.scripts/ghsync.html">.scripts/ghsync</a> b/<a href="../file/.scripts/ghsync.html">.scripts/ghsync</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -0,0 +1,55 @@
+</a><a href="#h0-0-0" id="h0-0-0" class="i">+#!/bin/bash
+</a><a href="#h0-0-1" id="h0-0-1" class="i">+
+</a><a href="#h0-0-2" id="h0-0-2" class="i">+# Array mit den Namen der Repositories im Home-Verzeichnis
+</a><a href="#h0-0-3" id="h0-0-3" class="i">+repos=(&quot;school&quot; &quot;writing&quot; &quot;obsidian&quot; &quot;sync&quot; &quot;dotfiles&quot;)
+</a><a href="#h0-0-4" id="h0-0-4" class="i">+
+</a><a href="#h0-0-5" id="h0-0-5" class="i">+# Funktion zum Synchronisieren eines einzelnen Repositories
+</a><a href="#h0-0-6" id="h0-0-6" class="i">+sync_repo() {
+</a><a href="#h0-0-7" id="h0-0-7" class="i">+    local repo_path=&quot;$1&quot;
+</a><a href="#h0-0-8" id="h0-0-8" class="i">+    local commit_message=&quot;$2&quot;
+</a><a href="#h0-0-9" id="h0-0-9" class="i">+
+</a><a href="#h0-0-10" id="h0-0-10" class="i">+    echo &quot;Synchronizing repository: $repo_path&quot;
+</a><a href="#h0-0-11" id="h0-0-11" class="i">+
+</a><a href="#h0-0-12" id="h0-0-12" class="i">+    # Wechsle ins Repository-Verzeichnis
+</a><a href="#h0-0-13" id="h0-0-13" class="i">+    cd &quot;$repo_path&quot; || { echo &quot;Failed to access $repo_path&quot;; return 1; }
+</a><a href="#h0-0-14" id="h0-0-14" class="i">+
+</a><a href="#h0-0-15" id="h0-0-15" class="i">+    # Pull vom Remote-Repository
+</a><a href="#h0-0-16" id="h0-0-16" class="i">+    git pull
+</a><a href="#h0-0-17" id="h0-0-17" class="i">+
+</a><a href="#h0-0-18" id="h0-0-18" class="i">+    # Alle Änderungen hinzufügen
+</a><a href="#h0-0-19" id="h0-0-19" class="i">+    git add -A
+</a><a href="#h0-0-20" id="h0-0-20" class="i">+
+</a><a href="#h0-0-21" id="h0-0-21" class="i">+    # Änderungen committen
+</a><a href="#h0-0-22" id="h0-0-22" class="i">+    git commit -m &quot;$commit_message&quot;
+</a><a href="#h0-0-23" id="h0-0-23" class="i">+
+</a><a href="#h0-0-24" id="h0-0-24" class="i">+    # Änderungen pushen
+</a><a href="#h0-0-25" id="h0-0-25" class="i">+    git push
+</a><a href="#h0-0-26" id="h0-0-26" class="i">+
+</a><a href="#h0-0-27" id="h0-0-27" class="i">+    # Zurück ins ursprüngliche Verzeichnis
+</a><a href="#h0-0-28" id="h0-0-28" class="i">+    cd - &gt; /dev/null
+</a><a href="#h0-0-29" id="h0-0-29" class="i">+}
+</a><a href="#h0-0-30" id="h0-0-30" class="i">+
+</a><a href="#h0-0-31" id="h0-0-31" class="i">+# Standard-Commit-Nachricht
+</a><a href="#h0-0-32" id="h0-0-32" class="i">+commit_message=&quot;exec&quot;
+</a><a href="#h0-0-33" id="h0-0-33" class="i">+
+</a><a href="#h0-0-34" id="h0-0-34" class="i">+# Wenn ein Argument übergeben wurde, verwende es als Commit-Nachricht
+</a><a href="#h0-0-35" id="h0-0-35" class="i">+if [ &quot;$#&quot; -eq 1 ]; then
+</a><a href="#h0-0-36" id="h0-0-36" class="i">+    commit_message=$1
+</a><a href="#h0-0-37" id="h0-0-37" class="i">+fi
+</a><a href="#h0-0-38" id="h0-0-38" class="i">+
+</a><a href="#h0-0-39" id="h0-0-39" class="i">+# Wenn das Skript im Home-Verzeichnis (~) ausgeführt wird
+</a><a href="#h0-0-40" id="h0-0-40" class="i">+if [ &quot;$PWD&quot; == &quot;$HOME&quot; ]; then
+</a><a href="#h0-0-41" id="h0-0-41" class="i">+    # Durchlaufe alle Repositories im Array
+</a><a href="#h0-0-42" id="h0-0-42" class="i">+    for repo in &quot;${repos[@]}&quot;; do
+</a><a href="#h0-0-43" id="h0-0-43" class="i">+        repo_path=&quot;$HOME/$repo&quot;
+</a><a href="#h0-0-44" id="h0-0-44" class="i">+        if [ -d &quot;$repo_path/.git&quot; ]; then
+</a><a href="#h0-0-45" id="h0-0-45" class="i">+            sync_repo &quot;$repo_path&quot; &quot;$commit_message&quot;
+</a><a href="#h0-0-46" id="h0-0-46" class="i">+        else
+</a><a href="#h0-0-47" id="h0-0-47" class="i">+            echo &quot;Directory $repo_path is not a git repository.&quot;
+</a><a href="#h0-0-48" id="h0-0-48" class="i">+        fi
+</a><a href="#h0-0-49" id="h0-0-49" class="i">+    done
+</a><a href="#h0-0-50" id="h0-0-50" class="i">+else
+</a><a href="#h0-0-51" id="h0-0-51" class="i">+    # Wenn das Skript nicht im Home-Verzeichnis ausgeführt wird, synchronisiere nur das aktuelle Verzeichnis
+</a><a href="#h0-0-52" id="h0-0-52" class="i">+    sync_repo &quot;$PWD&quot; &quot;$commit_message&quot;
+</a><a href="#h0-0-53" id="h0-0-53" class="i">+fi
+</a><a href="#h0-0-54" id="h0-0-54" class="i">+
+</a><b>diff --git a/<a id="h1" href="../file/.scripts/hugoserver.html">.scripts/hugoserver</a> b/<a href="../file/.scripts/hugoserver.html">.scripts/hugoserver</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+#!/bin/bash
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+
+</a><a href="#h1-0-2" id="h1-0-2" class="i">+hugo server --bind 192.168.10.195 --baseURL http://192.168.10.195:1313 --port 1313
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+# 192.168.10.195 
+</a><b>diff --git a/<a id="h2" href="../file/init.bash.html">init.bash</a> b/<a href="../file/init.bash.html">init.bash</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -1,4 +1,11 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+rm -rf ~/.config/nvim
+</a> ln -s ~/dotfiles/nvim ~/.config/nvim
+<a href="#h2-0-2" id="h2-0-2" class="i">+
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+rm -rf ~/.config/weechat
+</a> ln -s ~/dotfiles/weechat/ ~/.config/weechat
+<a href="#h2-0-5" id="h2-0-5" class="i">+
+</a><a href="#h2-0-6" id="h2-0-6" class="i">+rm -rf ~/.sources
+</a> ln -s ~/dotfiles/.sources/ ~/.sources
+ 
+<a href="#h2-0-9" id="h2-0-9" class="i">+rm -rf ~/.scripts
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+ln -s ~/dotfiles/.scripts/ ~/.scripts
+</a></pre>
+</div>
+</body>
+</html>

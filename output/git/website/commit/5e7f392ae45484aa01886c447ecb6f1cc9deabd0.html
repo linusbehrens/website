@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>standard css added - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/5e7f392ae45484aa01886c447ecb6f1cc9deabd0.html">5e7f392ae45484aa01886c447ecb6f1cc9deabd0</a>
+<b>parent</b> <a href="../commit/8f23b0d6f9effedc84b4892bda3db4cb285bee34.html">8f23b0d6f9effedc84b4892bda3db4cb285bee34</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Thu, 31 Jul 2025 20:51:37 +0200
+
+standard css added
+
+<b>Diffstat:</b>
+<table><tr><td class="A">A</td><td><a href="#h0">css/print.css</a></td><td> | </td><td class="num">31</td><td><span class="i">+++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">css/style.css</a></td><td> | </td><td class="num">104</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">output/print.css</a></td><td> | </td><td class="num">31</td><td><span class="i">+++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">output/style.css</a></td><td> | </td><td class="num">104</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>4 files changed, 270 insertions(+), 0 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/css/print.css.html">css/print.css</a> b/<a href="../file/css/print.css.html">css/print.css</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -0,0 +1,31 @@
+</a><a href="#h0-0-0" id="h0-0-0" class="i">+a,
+</a><a href="#h0-0-1" id="h0-0-1" class="i">+a:visited {
+</a><a href="#h0-0-2" id="h0-0-2" class="i">+	color: inherit;
+</a><a href="#h0-0-3" id="h0-0-3" class="i">+	text-decoration: none;
+</a><a href="#h0-0-4" id="h0-0-4" class="i">+}
+</a><a href="#h0-0-5" id="h0-0-5" class="i">+/* HTML5 semantic tags: some (older) browsers display this inline by default */
+</a><a href="#h0-0-6" id="h0-0-6" class="i">+article, figcaption, figure, header, main {
+</a><a href="#h0-0-7" id="h0-0-7" class="i">+	display: block;
+</a><a href="#h0-0-8" id="h0-0-8" class="i">+}
+</a><a href="#h0-0-9" id="h0-0-9" class="i">+/* hide navigation menus when printing */
+</a><a href="#h0-0-10" id="h0-0-10" class="i">+nav,
+</a><a href="#h0-0-11" id="h0-0-11" class="i">+#menuwrap,
+</a><a href="#h0-0-12" id="h0-0-12" class="i">+.hidden {
+</a><a href="#h0-0-13" id="h0-0-13" class="i">+	display: none;
+</a><a href="#h0-0-14" id="h0-0-14" class="i">+}
+</a><a href="#h0-0-15" id="h0-0-15" class="i">+table, img {
+</a><a href="#h0-0-16" id="h0-0-16" class="i">+	border: 0;
+</a><a href="#h0-0-17" id="h0-0-17" class="i">+}
+</a><a href="#h0-0-18" id="h0-0-18" class="i">+table tr td {
+</a><a href="#h0-0-19" id="h0-0-19" class="i">+	padding: 2px 10px 2px 0px;
+</a><a href="#h0-0-20" id="h0-0-20" class="i">+}
+</a><a href="#h0-0-21" id="h0-0-21" class="i">+pre {
+</a><a href="#h0-0-22" id="h0-0-22" class="i">+	margin: 0;
+</a><a href="#h0-0-23" id="h0-0-23" class="i">+}
+</a><a href="#h0-0-24" id="h0-0-24" class="i">+code {
+</a><a href="#h0-0-25" id="h0-0-25" class="i">+	border: 3px solid #aaa;
+</a><a href="#h0-0-26" id="h0-0-26" class="i">+	display: block;
+</a><a href="#h0-0-27" id="h0-0-27" class="i">+	overflow-x: auto;
+</a><a href="#h0-0-28" id="h0-0-28" class="i">+	padding: 5px;
+</a><a href="#h0-0-29" id="h0-0-29" class="i">+	word-wrap: normal;
+</a><a href="#h0-0-30" id="h0-0-30" class="i">+}
+</a><b>diff --git a/<a id="h1" href="../file/css/style.css.html">css/style.css</a> b/<a href="../file/css/style.css.html">css/style.css</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1,104 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+html {
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+	overflow-y: scroll;
+</a><a href="#h1-0-2" id="h1-0-2" class="i">+}
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+body {
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+	background-color: #fff;
+</a><a href="#h1-0-5" id="h1-0-5" class="i">+	color: #000;
+</a><a href="#h1-0-6" id="h1-0-6" class="i">+	font-family: sans-serif;
+</a><a href="#h1-0-7" id="h1-0-7" class="i">+	margin: 0;
+</a><a href="#h1-0-8" id="h1-0-8" class="i">+	padding: 1ex;
+</a><a href="#h1-0-9" id="h1-0-9" class="i">+}
+</a><a href="#h1-0-10" id="h1-0-10" class="i">+/* HTML5 semantic tags: some (older) browsers display this inline by default */
+</a><a href="#h1-0-11" id="h1-0-11" class="i">+article, figcaption, figure, header, main, nav {
+</a><a href="#h1-0-12" id="h1-0-12" class="i">+	display: block;
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+}
+</a><a href="#h1-0-14" id="h1-0-14" class="i">+/* center images */
+</a><a href="#h1-0-15" id="h1-0-15" class="i">+img {
+</a><a href="#h1-0-16" id="h1-0-16" class="i">+	display: block;
+</a><a href="#h1-0-17" id="h1-0-17" class="i">+	margin: 0 auto;
+</a><a href="#h1-0-18" id="h1-0-18" class="i">+}
+</a><a href="#h1-0-19" id="h1-0-19" class="i">+table, img {
+</a><a href="#h1-0-20" id="h1-0-20" class="i">+	border: 0;
+</a><a href="#h1-0-21" id="h1-0-21" class="i">+}
+</a><a href="#h1-0-22" id="h1-0-22" class="i">+hr {
+</a><a href="#h1-0-23" id="h1-0-23" class="i">+	border: 0;
+</a><a href="#h1-0-24" id="h1-0-24" class="i">+	border-bottom: 3px solid #aaa;
+</a><a href="#h1-0-25" id="h1-0-25" class="i">+	height: 3px;
+</a><a href="#h1-0-26" id="h1-0-26" class="i">+}
+</a><a href="#h1-0-27" id="h1-0-27" class="i">+h1 {
+</a><a href="#h1-0-28" id="h1-0-28" class="i">+	font-size: 140%;
+</a><a href="#h1-0-29" id="h1-0-29" class="i">+}
+</a><a href="#h1-0-30" id="h1-0-30" class="i">+h2 {
+</a><a href="#h1-0-31" id="h1-0-31" class="i">+	font-size: 120%;
+</a><a href="#h1-0-32" id="h1-0-32" class="i">+}
+</a><a href="#h1-0-33" id="h1-0-33" class="i">+h3 {
+</a><a href="#h1-0-34" id="h1-0-34" class="i">+	font-size: 120%;
+</a><a href="#h1-0-35" id="h1-0-35" class="i">+}
+</a><a href="#h1-0-36" id="h1-0-36" class="i">+h1,
+</a><a href="#h1-0-37" id="h1-0-37" class="i">+h1 a,
+</a><a href="#h1-0-38" id="h1-0-38" class="i">+h1 a:visited,
+</a><a href="#h1-0-39" id="h1-0-39" class="i">+h2,
+</a><a href="#h1-0-40" id="h1-0-40" class="i">+h2 a,
+</a><a href="#h1-0-41" id="h1-0-41" class="i">+h2 a:visited,
+</a><a href="#h1-0-42" id="h1-0-42" class="i">+h3,
+</a><a href="#h1-0-43" id="h1-0-43" class="i">+h3 a,
+</a><a href="#h1-0-44" id="h1-0-44" class="i">+h3 a:visited,
+</a><a href="#h1-0-45" id="h1-0-45" class="i">+h1 a:hover,
+</a><a href="#h1-0-46" id="h1-0-46" class="i">+h2 a:hover,
+</a><a href="#h1-0-47" id="h1-0-47" class="i">+h3 a:hover {
+</a><a href="#h1-0-48" id="h1-0-48" class="i">+	color: inherit;
+</a><a href="#h1-0-49" id="h1-0-49" class="i">+	text-decoration: none;
+</a><a href="#h1-0-50" id="h1-0-50" class="i">+}
+</a><a href="#h1-0-51" id="h1-0-51" class="i">+table tr td {
+</a><a href="#h1-0-52" id="h1-0-52" class="i">+	padding: 2px 10px 2px 0px;
+</a><a href="#h1-0-53" id="h1-0-53" class="i">+}
+</a><a href="#h1-0-54" id="h1-0-54" class="i">+pre {
+</a><a href="#h1-0-55" id="h1-0-55" class="i">+	margin: 0;
+</a><a href="#h1-0-56" id="h1-0-56" class="i">+}
+</a><a href="#h1-0-57" id="h1-0-57" class="i">+code {
+</a><a href="#h1-0-58" id="h1-0-58" class="i">+	background-color: #eee;
+</a><a href="#h1-0-59" id="h1-0-59" class="i">+	border: 3px solid #aaa;
+</a><a href="#h1-0-60" id="h1-0-60" class="i">+	display: block;
+</a><a href="#h1-0-61" id="h1-0-61" class="i">+	font-family: monospace;
+</a><a href="#h1-0-62" id="h1-0-62" class="i">+	overflow-x: auto;
+</a><a href="#h1-0-63" id="h1-0-63" class="i">+	padding: 5px;
+</a><a href="#h1-0-64" id="h1-0-64" class="i">+	word-wrap: normal;
+</a><a href="#h1-0-65" id="h1-0-65" class="i">+}
+</a><a href="#h1-0-66" id="h1-0-66" class="i">+#menu td {
+</a><a href="#h1-0-67" id="h1-0-67" class="i">+	padding: 1ex 0;
+</a><a href="#h1-0-68" id="h1-0-68" class="i">+}
+</a><a href="#h1-0-69" id="h1-0-69" class="i">+#main {
+</a><a href="#h1-0-70" id="h1-0-70" class="i">+	border-top: 3px solid #aaa;
+</a><a href="#h1-0-71" id="h1-0-71" class="i">+}
+</a><a href="#h1-0-72" id="h1-0-72" class="i">+#menuwrap,
+</a><a href="#h1-0-73" id="h1-0-73" class="i">+#menu,
+</a><a href="#h1-0-74" id="h1-0-74" class="i">+#main {
+</a><a href="#h1-0-75" id="h1-0-75" class="i">+	margin: 0px auto;
+</a><a href="#h1-0-76" id="h1-0-76" class="i">+	max-width: 80ex;
+</a><a href="#h1-0-77" id="h1-0-77" class="i">+}
+</a><a href="#h1-0-78" id="h1-0-78" class="i">+#menu a {
+</a><a href="#h1-0-79" id="h1-0-79" class="i">+	font-weight: bold;
+</a><a href="#h1-0-80" id="h1-0-80" class="i">+	vertical-align: middle;
+</a><a href="#h1-0-81" id="h1-0-81" class="i">+}
+</a><a href="#h1-0-82" id="h1-0-82" class="i">+.hidden {
+</a><a href="#h1-0-83" id="h1-0-83" class="i">+	display: none;
+</a><a href="#h1-0-84" id="h1-0-84" class="i">+}
+</a><a href="#h1-0-85" id="h1-0-85" class="i">+@media (prefers-color-scheme: dark) {
+</a><a href="#h1-0-86" id="h1-0-86" class="i">+	body {
+</a><a href="#h1-0-87" id="h1-0-87" class="i">+		background-color: #000;
+</a><a href="#h1-0-88" id="h1-0-88" class="i">+		color: #bdbdbd;
+</a><a href="#h1-0-89" id="h1-0-89" class="i">+	}
+</a><a href="#h1-0-90" id="h1-0-90" class="i">+	code {
+</a><a href="#h1-0-91" id="h1-0-91" class="i">+		background-color: #111;
+</a><a href="#h1-0-92" id="h1-0-92" class="i">+		border-color: #222;
+</a><a href="#h1-0-93" id="h1-0-93" class="i">+	}
+</a><a href="#h1-0-94" id="h1-0-94" class="i">+	hr {
+</a><a href="#h1-0-95" id="h1-0-95" class="i">+		border-color: #222;
+</a><a href="#h1-0-96" id="h1-0-96" class="i">+	}
+</a><a href="#h1-0-97" id="h1-0-97" class="i">+	a {
+</a><a href="#h1-0-98" id="h1-0-98" class="i">+		color: #56c8ff;
+</a><a href="#h1-0-99" id="h1-0-99" class="i">+	}
+</a><a href="#h1-0-100" id="h1-0-100" class="i">+	#main {
+</a><a href="#h1-0-101" id="h1-0-101" class="i">+		border-top: 3px solid #222;
+</a><a href="#h1-0-102" id="h1-0-102" class="i">+	}
+</a><a href="#h1-0-103" id="h1-0-103" class="i">+}
+</a><b>diff --git a/<a id="h2" href="../file/output/print.css.html">output/print.css</a> b/<a href="../file/output/print.css.html">output/print.css</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,31 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+a,
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+a:visited {
+</a><a href="#h2-0-2" id="h2-0-2" class="i">+	color: inherit;
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+	text-decoration: none;
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+}
+</a><a href="#h2-0-5" id="h2-0-5" class="i">+/* HTML5 semantic tags: some (older) browsers display this inline by default */
+</a><a href="#h2-0-6" id="h2-0-6" class="i">+article, figcaption, figure, header, main {
+</a><a href="#h2-0-7" id="h2-0-7" class="i">+	display: block;
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+}
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+/* hide navigation menus when printing */
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+nav,
+</a><a href="#h2-0-11" id="h2-0-11" class="i">+#menuwrap,
+</a><a href="#h2-0-12" id="h2-0-12" class="i">+.hidden {
+</a><a href="#h2-0-13" id="h2-0-13" class="i">+	display: none;
+</a><a href="#h2-0-14" id="h2-0-14" class="i">+}
+</a><a href="#h2-0-15" id="h2-0-15" class="i">+table, img {
+</a><a href="#h2-0-16" id="h2-0-16" class="i">+	border: 0;
+</a><a href="#h2-0-17" id="h2-0-17" class="i">+}
+</a><a href="#h2-0-18" id="h2-0-18" class="i">+table tr td {
+</a><a href="#h2-0-19" id="h2-0-19" class="i">+	padding: 2px 10px 2px 0px;
+</a><a href="#h2-0-20" id="h2-0-20" class="i">+}
+</a><a href="#h2-0-21" id="h2-0-21" class="i">+pre {
+</a><a href="#h2-0-22" id="h2-0-22" class="i">+	margin: 0;
+</a><a href="#h2-0-23" id="h2-0-23" class="i">+}
+</a><a href="#h2-0-24" id="h2-0-24" class="i">+code {
+</a><a href="#h2-0-25" id="h2-0-25" class="i">+	border: 3px solid #aaa;
+</a><a href="#h2-0-26" id="h2-0-26" class="i">+	display: block;
+</a><a href="#h2-0-27" id="h2-0-27" class="i">+	overflow-x: auto;
+</a><a href="#h2-0-28" id="h2-0-28" class="i">+	padding: 5px;
+</a><a href="#h2-0-29" id="h2-0-29" class="i">+	word-wrap: normal;
+</a><a href="#h2-0-30" id="h2-0-30" class="i">+}
+</a><b>diff --git a/<a id="h3" href="../file/output/style.css.html">output/style.css</a> b/<a href="../file/output/style.css.html">output/style.css</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -0,0 +1,104 @@
+</a><a href="#h3-0-0" id="h3-0-0" class="i">+html {
+</a><a href="#h3-0-1" id="h3-0-1" class="i">+	overflow-y: scroll;
+</a><a href="#h3-0-2" id="h3-0-2" class="i">+}
+</a><a href="#h3-0-3" id="h3-0-3" class="i">+body {
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+	background-color: #fff;
+</a><a href="#h3-0-5" id="h3-0-5" class="i">+	color: #000;
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+	font-family: sans-serif;
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+	margin: 0;
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+	padding: 1ex;
+</a><a href="#h3-0-9" id="h3-0-9" class="i">+}
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+/* HTML5 semantic tags: some (older) browsers display this inline by default */
+</a><a href="#h3-0-11" id="h3-0-11" class="i">+article, figcaption, figure, header, main, nav {
+</a><a href="#h3-0-12" id="h3-0-12" class="i">+	display: block;
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+}
+</a><a href="#h3-0-14" id="h3-0-14" class="i">+/* center images */
+</a><a href="#h3-0-15" id="h3-0-15" class="i">+img {
+</a><a href="#h3-0-16" id="h3-0-16" class="i">+	display: block;
+</a><a href="#h3-0-17" id="h3-0-17" class="i">+	margin: 0 auto;
+</a><a href="#h3-0-18" id="h3-0-18" class="i">+}
+</a><a href="#h3-0-19" id="h3-0-19" class="i">+table, img {
+</a><a href="#h3-0-20" id="h3-0-20" class="i">+	border: 0;
+</a><a href="#h3-0-21" id="h3-0-21" class="i">+}
+</a><a href="#h3-0-22" id="h3-0-22" class="i">+hr {
+</a><a href="#h3-0-23" id="h3-0-23" class="i">+	border: 0;
+</a><a href="#h3-0-24" id="h3-0-24" class="i">+	border-bottom: 3px solid #aaa;
+</a><a href="#h3-0-25" id="h3-0-25" class="i">+	height: 3px;
+</a><a href="#h3-0-26" id="h3-0-26" class="i">+}
+</a><a href="#h3-0-27" id="h3-0-27" class="i">+h1 {
+</a><a href="#h3-0-28" id="h3-0-28" class="i">+	font-size: 140%;
+</a><a href="#h3-0-29" id="h3-0-29" class="i">+}
+</a><a href="#h3-0-30" id="h3-0-30" class="i">+h2 {
+</a><a href="#h3-0-31" id="h3-0-31" class="i">+	font-size: 120%;
+</a><a href="#h3-0-32" id="h3-0-32" class="i">+}
+</a><a href="#h3-0-33" id="h3-0-33" class="i">+h3 {
+</a><a href="#h3-0-34" id="h3-0-34" class="i">+	font-size: 120%;
+</a><a href="#h3-0-35" id="h3-0-35" class="i">+}
+</a><a href="#h3-0-36" id="h3-0-36" class="i">+h1,
+</a><a href="#h3-0-37" id="h3-0-37" class="i">+h1 a,
+</a><a href="#h3-0-38" id="h3-0-38" class="i">+h1 a:visited,
+</a><a href="#h3-0-39" id="h3-0-39" class="i">+h2,
+</a><a href="#h3-0-40" id="h3-0-40" class="i">+h2 a,
+</a><a href="#h3-0-41" id="h3-0-41" class="i">+h2 a:visited,
+</a><a href="#h3-0-42" id="h3-0-42" class="i">+h3,
+</a><a href="#h3-0-43" id="h3-0-43" class="i">+h3 a,
+</a><a href="#h3-0-44" id="h3-0-44" class="i">+h3 a:visited,
+</a><a href="#h3-0-45" id="h3-0-45" class="i">+h1 a:hover,
+</a><a href="#h3-0-46" id="h3-0-46" class="i">+h2 a:hover,
+</a><a href="#h3-0-47" id="h3-0-47" class="i">+h3 a:hover {
+</a><a href="#h3-0-48" id="h3-0-48" class="i">+	color: inherit;
+</a><a href="#h3-0-49" id="h3-0-49" class="i">+	text-decoration: none;
+</a><a href="#h3-0-50" id="h3-0-50" class="i">+}
+</a><a href="#h3-0-51" id="h3-0-51" class="i">+table tr td {
+</a><a href="#h3-0-52" id="h3-0-52" class="i">+	padding: 2px 10px 2px 0px;
+</a><a href="#h3-0-53" id="h3-0-53" class="i">+}
+</a><a href="#h3-0-54" id="h3-0-54" class="i">+pre {
+</a><a href="#h3-0-55" id="h3-0-55" class="i">+	margin: 0;
+</a><a href="#h3-0-56" id="h3-0-56" class="i">+}
+</a><a href="#h3-0-57" id="h3-0-57" class="i">+code {
+</a><a href="#h3-0-58" id="h3-0-58" class="i">+	background-color: #eee;
+</a><a href="#h3-0-59" id="h3-0-59" class="i">+	border: 3px solid #aaa;
+</a><a href="#h3-0-60" id="h3-0-60" class="i">+	display: block;
+</a><a href="#h3-0-61" id="h3-0-61" class="i">+	font-family: monospace;
+</a><a href="#h3-0-62" id="h3-0-62" class="i">+	overflow-x: auto;
+</a><a href="#h3-0-63" id="h3-0-63" class="i">+	padding: 5px;
+</a><a href="#h3-0-64" id="h3-0-64" class="i">+	word-wrap: normal;
+</a><a href="#h3-0-65" id="h3-0-65" class="i">+}
+</a><a href="#h3-0-66" id="h3-0-66" class="i">+#menu td {
+</a><a href="#h3-0-67" id="h3-0-67" class="i">+	padding: 1ex 0;
+</a><a href="#h3-0-68" id="h3-0-68" class="i">+}
+</a><a href="#h3-0-69" id="h3-0-69" class="i">+#main {
+</a><a href="#h3-0-70" id="h3-0-70" class="i">+	border-top: 3px solid #aaa;
+</a><a href="#h3-0-71" id="h3-0-71" class="i">+}
+</a><a href="#h3-0-72" id="h3-0-72" class="i">+#menuwrap,
+</a><a href="#h3-0-73" id="h3-0-73" class="i">+#menu,
+</a><a href="#h3-0-74" id="h3-0-74" class="i">+#main {
+</a><a href="#h3-0-75" id="h3-0-75" class="i">+	margin: 0px auto;
+</a><a href="#h3-0-76" id="h3-0-76" class="i">+	max-width: 80ex;
+</a><a href="#h3-0-77" id="h3-0-77" class="i">+}
+</a><a href="#h3-0-78" id="h3-0-78" class="i">+#menu a {
+</a><a href="#h3-0-79" id="h3-0-79" class="i">+	font-weight: bold;
+</a><a href="#h3-0-80" id="h3-0-80" class="i">+	vertical-align: middle;
+</a><a href="#h3-0-81" id="h3-0-81" class="i">+}
+</a><a href="#h3-0-82" id="h3-0-82" class="i">+.hidden {
+</a><a href="#h3-0-83" id="h3-0-83" class="i">+	display: none;
+</a><a href="#h3-0-84" id="h3-0-84" class="i">+}
+</a><a href="#h3-0-85" id="h3-0-85" class="i">+@media (prefers-color-scheme: dark) {
+</a><a href="#h3-0-86" id="h3-0-86" class="i">+	body {
+</a><a href="#h3-0-87" id="h3-0-87" class="i">+		background-color: #000;
+</a><a href="#h3-0-88" id="h3-0-88" class="i">+		color: #bdbdbd;
+</a><a href="#h3-0-89" id="h3-0-89" class="i">+	}
+</a><a href="#h3-0-90" id="h3-0-90" class="i">+	code {
+</a><a href="#h3-0-91" id="h3-0-91" class="i">+		background-color: #111;
+</a><a href="#h3-0-92" id="h3-0-92" class="i">+		border-color: #222;
+</a><a href="#h3-0-93" id="h3-0-93" class="i">+	}
+</a><a href="#h3-0-94" id="h3-0-94" class="i">+	hr {
+</a><a href="#h3-0-95" id="h3-0-95" class="i">+		border-color: #222;
+</a><a href="#h3-0-96" id="h3-0-96" class="i">+	}
+</a><a href="#h3-0-97" id="h3-0-97" class="i">+	a {
+</a><a href="#h3-0-98" id="h3-0-98" class="i">+		color: #56c8ff;
+</a><a href="#h3-0-99" id="h3-0-99" class="i">+	}
+</a><a href="#h3-0-100" id="h3-0-100" class="i">+	#main {
+</a><a href="#h3-0-101" id="h3-0-101" class="i">+		border-top: 3px solid #222;
+</a><a href="#h3-0-102" id="h3-0-102" class="i">+	}
+</a><a href="#h3-0-103" id="h3-0-103" class="i">+}
+</a></pre>
+</div>
+</body>
+</html>

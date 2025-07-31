@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>convert - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/8f23b0d6f9effedc84b4892bda3db4cb285bee34.html">8f23b0d6f9effedc84b4892bda3db4cb285bee34</a>
+<b>parent</b> <a href="../commit/46656807bc204aeedfb9c976c7d5cf76b05c5c42.html">46656807bc204aeedfb9c976c7d5cf76b05c5c42</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Thu, 31 Jul 2025 20:45:40 +0200
+
+convert
+
+<b>Diffstat:</b>
+<table><tr><td class="A">A</td><td><a href="#h0">.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">config.cfg</a></td><td> | </td><td class="num">27</td><td><span class="i">+++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="D">D</td><td><a href="#h2">index.html</a></td><td> | </td><td class="num">15</td><td><span class="i"></span><span class="d">---------------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">markdown/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h4">markdown/dwl.md</a></td><td> | </td><td class="num">87</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h5">markdown/linux.md</a></td><td> | </td><td class="num">60</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h6">markdown/mario-kart.md</a></td><td> | </td><td class="num">102</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h7">markdown/markdown.md</a></td><td> | </td><td class="num">16</td><td><span class="i">++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h8">markdown/pgp-yubikey.md</a></td><td> | </td><td class="num">85</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h9">markdown/typst.md</a></td><td> | </td><td class="num">34</td><td><span class="i">++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h10">output/dwl.html</a></td><td> | </td><td class="num">113</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h11">output/index.html</a></td><td> | </td><td class="num">52</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h12">output/linux.html</a></td><td> | </td><td class="num">128</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h13">output/mario-kart.html</a></td><td> | </td><td class="num">159</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h14">output/markdown.html</a></td><td> | </td><td class="num">72</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h15">output/pgp-yubikey.html</a></td><td> | </td><td class="num">121</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h16">output/typst.html</a></td><td> | </td><td class="num">74</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h17">pages/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h18">pages/dwl.cfg</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h19">pages/dwl.html</a></td><td> | </td><td class="num">60</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h20">pages/linux.cfg</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h21">pages/linux.html</a></td><td> | </td><td class="num">75</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h22">pages/mario-kart.cfg</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h23">pages/mario-kart.html</a></td><td> | </td><td class="num">106</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h24">pages/markdown.cfg</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h25">pages/markdown.html</a></td><td> | </td><td class="num">19</td><td><span class="i">+++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h26">pages/pgp-yubikey.cfg</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h27">pages/pgp-yubikey.html</a></td><td> | </td><td class="num">68</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h28">pages/typst.cfg</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h29">pages/typst.html</a></td><td> | </td><td class="num">21</td><td><span class="i">+++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h30">templates/index.html/footer.html</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h31">templates/index.html/header.html</a></td><td> | </td><td class="num">41</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h32">templates/index.html/item.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h33">templates/page/footer.html</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h34">templates/page/header.html</a></td><td> | </td><td class="num">40</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h35">templates/page/item.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>36 files changed, 1609 insertions(+), 15 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.DS_Store.html">.DS_Store</a> b/<a href="../file/.DS_Store.html">.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h1" href="../file/config.cfg.html">config.cfg</a> b/<a href="../file/config.cfg.html">config.cfg</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1,27 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+# defaults: can be overwritten by any page.
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+
+</a><a href="#h1-0-2" id="h1-0-2" class="i">+# last updated the site.
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+siteupdated = 2025-07-31
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+
+</a><a href="#h1-0-5" id="h1-0-5" class="i">+# site title (part of page ${title} probably).
+</a><a href="#h1-0-6" id="h1-0-6" class="i">+sitetitle = Linus Blog
+</a><a href="#h1-0-7" id="h1-0-7" class="i">+# prefix site url.
+</a><a href="#h1-0-8" id="h1-0-8" class="i">+siteurl = https://linus-behrens.de
+</a><a href="#h1-0-9" id="h1-0-9" class="i">+# site mail used for contact &quot;mail link&quot;.
+</a><a href="#h1-0-10" id="h1-0-10" class="i">+sitemail = mail@linus-behrens.de
+</a><a href="#h1-0-11" id="h1-0-11" class="i">+# site generator.
+</a><a href="#h1-0-12" id="h1-0-12" class="i">+sitegenerator = saait (https://git.codemadness.org/saait/file/README.html)
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+
+</a><a href="#h1-0-14" id="h1-0-14" class="i">+# page
+</a><a href="#h1-0-15" id="h1-0-15" class="i">+
+</a><a href="#h1-0-16" id="h1-0-16" class="i">+# page language.
+</a><a href="#h1-0-17" id="h1-0-17" class="i">+lang = en
+</a><a href="#h1-0-18" id="h1-0-18" class="i">+# author (global default).
+</a><a href="#h1-0-19" id="h1-0-19" class="i">+author = linusbehrens
+</a><a href="#h1-0-20" id="h1-0-20" class="i">+# site keywords (global default), don&#39;t use too many.
+</a><a href="#h1-0-21" id="h1-0-21" class="i">+keywords = blog, git, dev-log, life-log
+</a><a href="#h1-0-22" id="h1-0-22" class="i">+# site description (global default).
+</a><a href="#h1-0-23" id="h1-0-23" class="i">+description = shared thoughts
+</a><a href="#h1-0-24" id="h1-0-24" class="i">+
+</a><a href="#h1-0-25" id="h1-0-25" class="i">+# default title.
+</a><a href="#h1-0-26" id="h1-0-26" class="i">+title =
+</a><b>diff --git a/<a id="h2" href="../file/index.html.html">index.html</a> b/<a href="../file/index.html.html">index.html</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -1,15 +0,0 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="d">-&lt;!DOCTYPE html&gt;
+</a><a href="#h2-0-1" id="h2-0-1" class="d">-&lt;html lang=&quot;en&quot;&gt;
+</a><a href="#h2-0-2" id="h2-0-2" class="d">-&lt;head&gt;
+</a><a href="#h2-0-3" id="h2-0-3" class="d">-	&lt;meta charset=&quot;UTF-8&quot; /&gt;
+</a><a href="#h2-0-4" id="h2-0-4" class="d">-	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+</a><a href="#h2-0-5" id="h2-0-5" class="d">-	&lt;title&gt;linus&lt;/title&gt;
+</a><a href="#h2-0-6" id="h2-0-6" class="d">-	&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt; --&gt;
+</a><a href="#h2-0-7" id="h2-0-7" class="d">-&lt;/head&gt;
+</a><a href="#h2-0-8" id="h2-0-8" class="d">-&lt;body&gt;
+</a><a href="#h2-0-9" id="h2-0-9" class="d">-
+</a><a href="#h2-0-10" id="h2-0-10" class="d">-        &lt;h1&gt;Test 101&lt;/h1&gt;
+</a><a href="#h2-0-11" id="h2-0-11" class="d">-
+</a><a href="#h2-0-12" id="h2-0-12" class="d">-&lt;/body&gt;
+</a><a href="#h2-0-13" id="h2-0-13" class="d">-&lt;/html&gt;
+</a><a href="#h2-0-14" id="h2-0-14" class="d">-
+</a><b>diff --git a/<a id="h3" href="../file/markdown/.DS_Store.html">markdown/.DS_Store</a> b/<a href="../file/markdown/.DS_Store.html">markdown/.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h4" href="../file/markdown/dwl.md.html">markdown/dwl.md</a> b/<a href="../file/markdown/dwl.md.html">markdown/dwl.md</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -0,0 +1,87 @@
+</a><a href="#h4-0-0" id="h4-0-0" class="i">+---
+</a><a href="#h4-0-1" id="h4-0-1" class="i">+title: dwl, ultra minimal tiling window manager
+</a><a href="#h4-0-2" id="h4-0-2" class="i">+author: &quot;Linus Behrens&quot;
+</a><a href="#h4-0-3" id="h4-0-3" class="i">+date: 2025-06-16T14:00:00+02:00
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+tags: [&#39;tech&#39;, &#39;wm&#39;, &#39;suckless&#39;]
+</a><a href="#h4-0-5" id="h4-0-5" class="i">+header: &quot;/header/linux.jpg&quot;
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+---
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+
+</a><a href="#h4-0-8" id="h4-0-8" class="i">+My first rather serious linux system should be built on a Thinkpad x61s in 2023. 
+</a><a href="#h4-0-9" id="h4-0-9" class="i">+Due to a lack in performence I thought about installing only the most minimal software on it.
+</a><a href="#h4-0-10" id="h4-0-10" class="i">+
+</a><a href="#h4-0-11" id="h4-0-11" class="i">+So I came to see the famouse Thinkpad Arch combination. (I know and knew that it was not the most minimal os possible, but I was convinced)
+</a><a href="#h4-0-12" id="h4-0-12" class="i">+When trying to find the most minimal and fast window manager found the perfect fit: `dwm`.
+</a><a href="#h4-0-13" id="h4-0-13" class="i">+
+</a><a href="#h4-0-14" id="h4-0-14" class="i">+`dwm` became my wm that just worked.
+</a><a href="#h4-0-15" id="h4-0-15" class="i">+
+</a><a href="#h4-0-16" id="h4-0-16" class="i">+---
+</a><a href="#h4-0-17" id="h4-0-17" class="i">+
+</a><a href="#h4-0-18" id="h4-0-18" class="i">+However as I continued to gain understanding of how Xorg works and as I understood the bloat in `X`, I found it hard to swich.
+</a><a href="#h4-0-19" id="h4-0-19" class="i">+On YouTube I came across `dwl` a project about translating `dwl` to work with `wlroots`.
+</a><a href="#h4-0-20" id="h4-0-20" class="i">+
+</a><a href="#h4-0-21" id="h4-0-21" class="i">+Even though being familiar with the rather difficult to install `dwm`, I wasn&#39;t able to even compile `dwl`. Now I understand and give you - the reader - a path to follow.
+</a><a href="#h4-0-22" id="h4-0-22" class="i">+
+</a><a href="#h4-0-23" id="h4-0-23" class="i">+```bash
+</a><a href="#h4-0-24" id="h4-0-24" class="i">+sudo dnf install \
+</a><a href="#h4-0-25" id="h4-0-25" class="i">+  libinput libinput-devel \
+</a><a href="#h4-0-26" id="h4-0-26" class="i">+  wayland wayland-devel \
+</a><a href="#h4-0-27" id="h4-0-27" class="i">+  wlroots wlroots-devel \
+</a><a href="#h4-0-28" id="h4-0-28" class="i">+  xkbcommon xkbcommon-devel \
+</a><a href="#h4-0-29" id="h4-0-29" class="i">+  wayland-protocols \
+</a><a href="#h4-0-30" id="h4-0-30" class="i">+  pkgconf-pkg-config
+</a><a href="#h4-0-31" id="h4-0-31" class="i">+```
+</a><a href="#h4-0-32" id="h4-0-32" class="i">+
+</a><a href="#h4-0-33" id="h4-0-33" class="i">+```bash
+</a><a href="#h4-0-34" id="h4-0-34" class="i">+git clone https://codeberg.org/dwl/dwl.git
+</a><a href="#h4-0-35" id="h4-0-35" class="i">+cd dwl
+</a><a href="#h4-0-36" id="h4-0-36" class="i">+git checkout v0.7
+</a><a href="#h4-0-37" id="h4-0-37" class="i">+make
+</a><a href="#h4-0-38" id="h4-0-38" class="i">+sudo make install
+</a><a href="#h4-0-39" id="h4-0-39" class="i">+```
+</a><a href="#h4-0-40" id="h4-0-40" class="i">+
+</a><a href="#h4-0-41" id="h4-0-41" class="i">+```bash
+</a><a href="#h4-0-42" id="h4-0-42" class="i">+sudo dnf install \
+</a><a href="#h4-0-43" id="h4-0-43" class="i">+  libinput libinput-devel \
+</a><a href="#h4-0-44" id="h4-0-44" class="i">+  wayland wayland-devel \
+</a><a href="#h4-0-45" id="h4-0-45" class="i">+  wlroots wlroots-devel \
+</a><a href="#h4-0-46" id="h4-0-46" class="i">+  xkbcommon xkbcommon-devel \
+</a><a href="#h4-0-47" id="h4-0-47" class="i">+  wayland-protocols-devel \
+</a><a href="#h4-0-48" id="h4-0-48" class="i">+  pkgconf-pkg-config \
+</a><a href="#h4-0-49" id="h4-0-49" class="i">+  meson ninja-build \
+</a><a href="#h4-0-50" id="h4-0-50" class="i">+  gcc
+</a><a href="#h4-0-51" id="h4-0-51" class="i">+```
+</a><a href="#h4-0-52" id="h4-0-52" class="i">+```bash
+</a><a href="#h4-0-53" id="h4-0-53" class="i">+git clone https://github.com/waycrate/wmenu.git
+</a><a href="#h4-0-54" id="h4-0-54" class="i">+cd wmenu
+</a><a href="#h4-0-55" id="h4-0-55" class="i">+meson setup build
+</a><a href="#h4-0-56" id="h4-0-56" class="i">+ninja -C build
+</a><a href="#h4-0-57" id="h4-0-57" class="i">+sudo ninja -C build install
+</a><a href="#h4-0-58" id="h4-0-58" class="i">+```
+</a><a href="#h4-0-59" id="h4-0-59" class="i">+
+</a><a href="#h4-0-60" id="h4-0-60" class="i">+---
+</a><a href="#h4-0-61" id="h4-0-61" class="i">+
+</a><a href="#h4-0-62" id="h4-0-62" class="i">+Edits to `sources/dwl/config.h`:
+</a><a href="#h4-0-63" id="h4-0-63" class="i">+
+</a><a href="#h4-0-64" id="h4-0-64" class="i">+```c
+</a><a href="#h4-0-65" id="h4-0-65" class="i">+static const char *termcmd[] = { &quot;ghostty&quot;, NULL };
+</a><a href="#h4-0-66" id="h4-0-66" class="i">+```
+</a><a href="#h4-0-67" id="h4-0-67" class="i">+
+</a><a href="#h4-0-68" id="h4-0-68" class="i">+```c
+</a><a href="#h4-0-69" id="h4-0-69" class="i">+static const MonitorRule monrules[] = {
+</a><a href="#h4-0-70" id="h4-0-70" class="i">+    /* macbook m1 14&quot; */
+</a><a href="#h4-0-71" id="h4-0-71" class="i">+    { &quot;eDP-1&quot;,    0.5f,  1,      2,    &amp;layouts[0], WL_OUTPUT_TRANSFORM_NORMAL,   -1,  -1 },
+</a><a href="#h4-0-72" id="h4-0-72" class="i">+};
+</a><a href="#h4-0-73" id="h4-0-73" class="i">+```
+</a><a href="#h4-0-74" id="h4-0-74" class="i">+
+</a><a href="#h4-0-75" id="h4-0-75" class="i">+```c
+</a><a href="#h4-0-76" id="h4-0-76" class="i">+static const struct xkb_rule_names xkb_rules = {
+</a><a href="#h4-0-77" id="h4-0-77" class="i">+    /* default:
+</a><a href="#h4-0-78" id="h4-0-78" class="i">+    .options = NULL,
+</a><a href="#h4-0-79" id="h4-0-79" class="i">+    */
+</a><a href="#h4-0-80" id="h4-0-80" class="i">+    .layout = &quot;de&quot;,
+</a><a href="#h4-0-81" id="h4-0-81" class="i">+    .variant = &quot;latin1&quot;,
+</a><a href="#h4-0-82" id="h4-0-82" class="i">+};
+</a><a href="#h4-0-83" id="h4-0-83" class="i">+```
+</a><a href="#h4-0-84" id="h4-0-84" class="i">+
+</a><a href="#h4-0-85" id="h4-0-85" class="i">+
+</a><a href="#h4-0-86" id="h4-0-86" class="i">+
+</a><b>diff --git a/<a id="h5" href="../file/markdown/linux.md.html">markdown/linux.md</a> b/<a href="../file/markdown/linux.md.html">markdown/linux.md</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -0,0 +1,60 @@
+</a><a href="#h5-0-0" id="h5-0-0" class="i">+---
+</a><a href="#h5-0-1" id="h5-0-1" class="i">+title: Linux and what it means
+</a><a href="#h5-0-2" id="h5-0-2" class="i">+author: &quot;Linus Behrens&quot;
+</a><a href="#h5-0-3" id="h5-0-3" class="i">+date: 2024-09-05T15:37:19+02:00
+</a><a href="#h5-0-4" id="h5-0-4" class="i">+tags: [&#39;tech&#39;, &#39;os&#39;]
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+header: &quot;/header/linux.jpg&quot;
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+---
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+
+</a><a href="#h5-0-8" id="h5-0-8" class="i">+# Why GNU/Linux
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+
+</a><a href="#h5-0-10" id="h5-0-10" class="i">+
+</a><a href="#h5-0-11" id="h5-0-11" class="i">+&gt; This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a univeRsal interface
+</a><a href="#h5-0-12" id="h5-0-12" class="i">+&gt; 
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+&gt; *- Doug McIlroy, the inventor of Unix pipes and one of the founders of the Unix tradition*
+</a><a href="#h5-0-14" id="h5-0-14" class="i">+
+</a><a href="#h5-0-15" id="h5-0-15" class="i">+
+</a><a href="#h5-0-16" id="h5-0-16" class="i">+Linux at its core is the idea of intercompatability born in the body of a kernel. What I love in Linux is not how fast and free it is. Not how amazingly many people contribute to one goal. It is the way I use it and how it allowed me to fit the most bare bones software to my needs.
+</a><a href="#h5-0-17" id="h5-0-17" class="i">+
+</a><a href="#h5-0-18" id="h5-0-18" class="i">+## Examples for the perfect fit
+</a><a href="#h5-0-19" id="h5-0-19" class="i">+
+</a><a href="#h5-0-20" id="h5-0-20" class="i">+My senior high note taking setup is pretty complex. However it does fit my workflow perfectly.
+</a><a href="#h5-0-21" id="h5-0-21" class="i">+
+</a><a href="#h5-0-22" id="h5-0-22" class="i">+- [neovim](/posts/neovim) note taking
+</a><a href="#h5-0-23" id="h5-0-23" class="i">+- [\tex](posts/tex) for long-term sheets
+</a><a href="#h5-0-24" id="h5-0-24" class="i">+- [markdown](posts/markdown) for short-term notes in lessons
+</a><a href="#h5-0-25" id="h5-0-25" class="i">+- pandoc turns markdown into `\tex`
+</a><a href="#h5-0-26" id="h5-0-26" class="i">+- telescope and todo-comments for todo lists
+</a><a href="#h5-0-27" id="h5-0-27" class="i">+- [anki](posts/anki) for everyday learning
+</a><a href="#h5-0-28" id="h5-0-28" class="i">+- github for backing up and syncing my data (homelab in the future)
+</a><a href="#h5-0-29" id="h5-0-29" class="i">+
+</a><a href="#h5-0-30" id="h5-0-30" class="i">+
+</a><a href="#h5-0-31" id="h5-0-31" class="i">+With that setup I am albe to quickly make notes in my lessons as well as clearly structure my long-term sheets. With having anki on any of my devices I am able to learn everywhere.
+</a><a href="#h5-0-32" id="h5-0-32" class="i">+
+</a><a href="#h5-0-33" id="h5-0-33" class="i">+If I want I could even run all of that over ssh from a homelab of server at school.
+</a><a href="#h5-0-34" id="h5-0-34" class="i">+
+</a><a href="#h5-0-35" id="h5-0-35" class="i">+## Intercompatability 
+</a><a href="#h5-0-36" id="h5-0-36" class="i">+
+</a><a href="#h5-0-37" id="h5-0-37" class="i">+My shell runs in [alacritty](https://github.com/alacritty/alacritty) (macOS) and [st](https://st.suckless.org/) (arch and void). My most used and centered tool is [neovim](/posts/neovim). With my configuration it is beautiful and works seemlesly. With telescope I quickly open my `&lt;subject&gt;.refile.md` note and later the week I convert it to `&lt;subject.refile.tex` with pandoc. The important information gets refiled into `&lt;subject&gt;.tex` and tagged as `ANKI: &lt;subject&gt;`. 
+</a><a href="#h5-0-38" id="h5-0-38" class="i">+So if I open telescope to see my todos the anki sign reminds me of entering the information to my `anki deck`.
+</a><a href="#h5-0-39" id="h5-0-39" class="i">+Every evening I push my files to github to be safe for a data loss.
+</a><a href="#h5-0-40" id="h5-0-40" class="i">+
+</a><a href="#h5-0-41" id="h5-0-41" class="i">+## Options (example distributions)
+</a><a href="#h5-0-42" id="h5-0-42" class="i">+
+</a><a href="#h5-0-43" id="h5-0-43" class="i">+The following are distros I have used.
+</a><a href="#h5-0-44" id="h5-0-44" class="i">+
+</a><a href="#h5-0-45" id="h5-0-45" class="i">+- Manjaro (Why does it exists exactly)
+</a><a href="#h5-0-46" id="h5-0-46" class="i">+- Mint (If you would want to cheat)
+</a><a href="#h5-0-47" id="h5-0-47" class="i">+- [Arch](/content/arch.md) (Amazing documentation, pacman, AUR)
+</a><a href="#h5-0-48" id="h5-0-48" class="i">+- Arco (No systemd arch)
+</a><a href="#h5-0-49" id="h5-0-49" class="i">+- Gentoo (If you want it you know it)
+</a><a href="#h5-0-50" id="h5-0-50" class="i">+- Void (small, but no systemd!)
+</a><a href="#h5-0-51" id="h5-0-51" class="i">+
+</a><a href="#h5-0-52" id="h5-0-52" class="i">+On my **x61s ThinkPad** I run Arch Linux. It is light weight and has amazing documentary. The arch wiki is one of the best documents and I even refer to it to non specific arch users.
+</a><a href="#h5-0-53" id="h5-0-53" class="i">+
+</a><a href="#h5-0-54" id="h5-0-54" class="i">+The **2013 Mac mini** runs void linux. Not because I don&#39;t like arch as much, but because after inserting a bootable usb and entering grubs &quot;install arch for x86_64&quot; I got a black screen for days. I choose void because I liked the neofetch batch and because it has no `systemd` elevating the performence and reducing drama. I mainly use that mashine as a ssh server.
+</a><a href="#h5-0-55" id="h5-0-55" class="i">+
+</a><a href="#h5-0-56" id="h5-0-56" class="i">+Both mashines run [suckless software](https://www.suckless.org). Namely `dwm`, `dmenu`, and `st`. I am really happy with how good it works, but I do not feel well using `X`.
+</a><a href="#h5-0-57" id="h5-0-57" class="i">+
+</a><a href="#h5-0-58" id="h5-0-58" class="i">+My **MacBook** runs macOS because Asahi sucks at the moment. However I use the tiling window manager `yabaii` and [alacritty](https://github.com/alacritty/alacritty) to come closer to a linux experience.
+</a><a href="#h5-0-59" id="h5-0-59" class="i">+
+</a><b>diff --git a/<a id="h6" href="../file/markdown/mario-kart.md.html">markdown/mario-kart.md</a> b/<a href="../file/markdown/mario-kart.md.html">markdown/mario-kart.md</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -0,0 +1,102 @@
+</a><a href="#h6-0-0" id="h6-0-0" class="i">+---
+</a><a href="#h6-0-1" id="h6-0-1" class="i">+title: Mario Kart Wii 
+</a><a href="#h6-0-2" id="h6-0-2" class="i">+author: &quot;Linus Behrens&quot;
+</a><a href="#h6-0-3" id="h6-0-3" class="i">+date: 2025-04-11T14:00:00+02:00
+</a><a href="#h6-0-4" id="h6-0-4" class="i">+tags: [&#39;mod&#39;, &#39;game&#39;]
+</a><a href="#h6-0-5" id="h6-0-5" class="i">+header: &quot;/header/mariokart.jpg&quot;
+</a><a href="#h6-0-6" id="h6-0-6" class="i">+---
+</a><a href="#h6-0-7" id="h6-0-7" class="i">+## Standard game on Emulator
+</a><a href="#h6-0-8" id="h6-0-8" class="i">+
+</a><a href="#h6-0-9" id="h6-0-9" class="i">+1. Get you Mario Kart Wiis Disc `.iso`. If you burner is broken like mine [download it](https://romsfun.com/roms/nintendo-wii/mario-kart-wii.html).
+</a><a href="#h6-0-10" id="h6-0-10" class="i">+2. Get the [Dolphin Emulator](https://de.dolphin-emu.org/download/?ref=btn)
+</a><a href="#h6-0-11" id="h6-0-11" class="i">+3. Choose your game directory with dolphin
+</a><a href="#h6-0-12" id="h6-0-12" class="i">+4. Copy the [code](https://newwfc.xyz/codes/) in Mario Kart Wii `right click` &gt; Properties &gt; Gecko Codes &gt; Add Codes. Give it a name
+</a><a href="#h6-0-13" id="h6-0-13" class="i">+5. Settings &gt; generell &gt; activate cheats `checked`
+</a><a href="#h6-0-14" id="h6-0-14" class="i">+
+</a><a href="#h6-0-15" id="h6-0-15" class="i">+### The *code*
+</a><a href="#h6-0-16" id="h6-0-16" class="i">+
+</a><a href="#h6-0-17" id="h6-0-17" class="i">+```plain
+</a><a href="#h6-0-18" id="h6-0-18" class="i">+C0000000 00000029
+</a><a href="#h6-0-19" id="h6-0-19" class="i">+3C004E80 60000020
+</a><a href="#h6-0-20" id="h6-0-20" class="i">+900F0000 7D8802A6
+</a><a href="#h6-0-21" id="h6-0-21" class="i">+9421FF80 BC610008
+</a><a href="#h6-0-22" id="h6-0-22" class="i">+48000019 6e657777
+</a><a href="#h6-0-23" id="h6-0-23" class="i">+66632e78 797a0000
+</a><a href="#h6-0-24" id="h6-0-24" class="i">+00000000 00000000
+</a><a href="#h6-0-25" id="h6-0-25" class="i">+7F2802A6 3AC0FFFF
+</a><a href="#h6-0-26" id="h6-0-26" class="i">+3B19FFFF 8EF80001
+</a><a href="#h6-0-27" id="h6-0-27" class="i">+2C170000 3AD60001
+</a><a href="#h6-0-28" id="h6-0-28" class="i">+4082FFF4 3E208000
+</a><a href="#h6-0-29" id="h6-0-29" class="i">+8B9F5F27 623E2FFF
+</a><a href="#h6-0-30" id="h6-0-30" class="i">+2C1C00EC 623FF1F0
+</a><a href="#h6-0-31" id="h6-0-31" class="i">+41820020 2C1C0010
+</a><a href="#h6-0-32" id="h6-0-32" class="i">+623FF114 41820014
+</a><a href="#h6-0-33" id="h6-0-33" class="i">+2C1C0054 623FF258
+</a><a href="#h6-0-34" id="h6-0-34" class="i">+41820008 623FE690
+</a><a href="#h6-0-35" id="h6-0-35" class="i">+3E202E6E 6231696E
+</a><a href="#h6-0-36" id="h6-0-36" class="i">+3F80017F 639CCFFC
+</a><a href="#h6-0-37" id="h6-0-37" class="i">+87BE0001 7C1D8800
+</a><a href="#h6-0-38" id="h6-0-38" class="i">+4182001D 379CFFFF
+</a><a href="#h6-0-39" id="h6-0-39" class="i">+4082FFF0 B8610008
+</a><a href="#h6-0-40" id="h6-0-40" class="i">+38210080 7D8803A6
+</a><a href="#h6-0-41" id="h6-0-41" class="i">+4E800020 7F4802A6
+</a><a href="#h6-0-42" id="h6-0-42" class="i">+7FDBF378 3B19FFFF
+</a><a href="#h6-0-43" id="h6-0-43" class="i">+7ED0B378 8EF80001
+</a><a href="#h6-0-44" id="h6-0-44" class="i">+9EFB0001 3610FFFF
+</a><a href="#h6-0-45" id="h6-0-45" class="i">+4082FFF4 3A800010
+</a><a href="#h6-0-46" id="h6-0-46" class="i">+7E96A051 41820064
+</a><a href="#h6-0-47" id="h6-0-47" class="i">+7E54DA14 8A720001
+</a><a href="#h6-0-48" id="h6-0-48" class="i">+2C13002F 41A20014
+</a><a href="#h6-0-49" id="h6-0-49" class="i">+9E7B0001 3694FFFF
+</a><a href="#h6-0-50" id="h6-0-50" class="i">+4082FFF8 48000044
+</a><a href="#h6-0-51" id="h6-0-51" class="i">+38920001 387B0001
+</a><a href="#h6-0-52" id="h6-0-52" class="i">+38C4FFFF 38A00000
+</a><a href="#h6-0-53" id="h6-0-53" class="i">+8CE60001 2C070000
+</a><a href="#h6-0-54" id="h6-0-54" class="i">+38A50001 4082FFF4
+</a><a href="#h6-0-55" id="h6-0-55" class="i">+3A05FFFE 7FE803A6
+</a><a href="#h6-0-56" id="h6-0-56" class="i">+4E800021 7E101A14
+</a><a href="#h6-0-57" id="h6-0-57" class="i">+39E00000 9DF00001
+</a><a href="#h6-0-58" id="h6-0-58" class="i">+3694FFFF 4082FFF8
+</a><a href="#h6-0-59" id="h6-0-59" class="i">+7F4803A6 4E800020
+</a><a href="#h6-0-60" id="h6-0-60" class="i">+C0000000 0000000E
+</a><a href="#h6-0-61" id="h6-0-61" class="i">+3C004E80 60000020
+</a><a href="#h6-0-62" id="h6-0-62" class="i">+900F0000 3D808000
+</a><a href="#h6-0-63" id="h6-0-63" class="i">+618C3000 3C00017F
+</a><a href="#h6-0-64" id="h6-0-64" class="i">+6000CFFC 7C0903A6
+</a><a href="#h6-0-65" id="h6-0-65" class="i">+3D607474 616B7073
+</a><a href="#h6-0-66" id="h6-0-66" class="i">+800C0000 7C005800
+</a><a href="#h6-0-67" id="h6-0-67" class="i">+40A20034 394C0003
+</a><a href="#h6-0-68" id="h6-0-68" class="i">+392C0002 7D455378
+</a><a href="#h6-0-69" id="h6-0-69" class="i">+38600000 8C050001
+</a><a href="#h6-0-70" id="h6-0-70" class="i">+2C000000 38630001
+</a><a href="#h6-0-71" id="h6-0-71" class="i">+4082FFF4 8C0A0001
+</a><a href="#h6-0-72" id="h6-0-72" class="i">+9C090001 3463FFFF
+</a><a href="#h6-0-73" id="h6-0-73" class="i">+4082FFF4 398C0001
+</a><a href="#h6-0-74" id="h6-0-74" class="i">+4200FFC0 4E800020
+</a><a href="#h6-0-75" id="h6-0-75" class="i">+```
+</a><a href="#h6-0-76" id="h6-0-76" class="i">+
+</a><a href="#h6-0-77" id="h6-0-77" class="i">+## Modded game on a Wii
+</a><a href="#h6-0-78" id="h6-0-78" class="i">+
+</a><a href="#h6-0-79" id="h6-0-79" class="i">+### What you Need
+</a><a href="#h6-0-80" id="h6-0-80" class="i">+
+</a><a href="#h6-0-81" id="h6-0-81" class="i">+- Wii (OS on version 4.3)
+</a><a href="#h6-0-82" id="h6-0-82" class="i">+- SD-Card (`&gt;=8GB` I suggest)
+</a><a href="#h6-0-83" id="h6-0-83" class="i">+- Computer with SD-Slot (or adapter)
+</a><a href="#h6-0-84" id="h6-0-84" class="i">+- Internet connection (computer and Wii)
+</a><a href="#h6-0-85" id="h6-0-85" class="i">+
+</a><a href="#h6-0-86" id="h6-0-86" class="i">+### Steps
+</a><a href="#h6-0-87" id="h6-0-87" class="i">+
+</a><a href="#h6-0-88" id="h6-0-88" class="i">+1. Get you Wiis MAC-adress (Settings &gt; Internet &gt; console information)
+</a><a href="#h6-0-89" id="h6-0-89" class="i">+2. [Letterbomb download](https://please.hackmii.com/)
+</a><a href="#h6-0-90" id="h6-0-90" class="i">+3. Put the `.zip`s content in the root of the SD-card 
+</a><a href="#h6-0-91" id="h6-0-91" class="i">+4. Put the SD-card in the Wii
+</a><a href="#h6-0-92" id="h6-0-92" class="i">+5. Open mail on Wii and open the Letterbomb (you will see)
+</a><a href="#h6-0-93" id="h6-0-93" class="i">+6. Follow the instructions to install the homebrew channel and BootMii
+</a><a href="#h6-0-94" id="h6-0-94" class="i">+7. If asked choose &quot;Install BootMii as boot2&quot;. If it failed choose &quot;Install BootMii as IOS&quot;
+</a><a href="#h6-0-95" id="h6-0-95" class="i">+8. If you want to back up [follow those instructions](http://monkeydesk.at/f19-anleitungen/anleitung-nand-backup-eurer-wii-erstellen-178/)
+</a><a href="#h6-0-96" id="h6-0-96" class="i">+
+</a><a href="#h6-0-97" id="h6-0-97" class="i">+9. Get the [CTGP-R](https://www.chadsoft.co.uk/) `.zip`. 
+</a><a href="#h6-0-98" id="h6-0-98" class="i">+10. Copy the folder content in the root oft the SD card.
+</a><a href="#h6-0-99" id="h6-0-99" class="i">+11. Open CTGP-R on the homebrew channel and follow the instructions
+</a><a href="#h6-0-100" id="h6-0-100" class="i">+
+</a><a href="#h6-0-101" id="h6-0-101" class="i">+## 
+</a><b>diff --git a/<a id="h7" href="../file/markdown/markdown.md.html">markdown/markdown.md</a> b/<a href="../file/markdown/markdown.md.html">markdown/markdown.md</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -0,0 +1,16 @@
+</a><a href="#h7-0-0" id="h7-0-0" class="i">+---
+</a><a href="#h7-0-1" id="h7-0-1" class="i">+title: &quot;Markdown, what else do you want?&quot;
+</a><a href="#h7-0-2" id="h7-0-2" class="i">+author: &quot;Linus Behrens&quot;
+</a><a href="#h7-0-3" id="h7-0-3" class="i">+date: 2025-04-12T14:00:00+02:00
+</a><a href="#h7-0-4" id="h7-0-4" class="i">+tags: [&#39;software&#39;, &#39;texteditor&#39;]
+</a><a href="#h7-0-5" id="h7-0-5" class="i">+header: &quot;/header/text2.jpg&quot;
+</a><a href="#h7-0-6" id="h7-0-6" class="i">+---
+</a><a href="#h7-0-7" id="h7-0-7" class="i">+
+</a><a href="#h7-0-8" id="h7-0-8" class="i">+- **Free plain text:** With plain text you enter the world of unbordered choosing of you editor. You are not forced to use a proprietary editor like Microsoft Word or Apple Pages.
+</a><a href="#h7-0-9" id="h7-0-9" class="i">+- **Light weight:** A empty file has: `0 Bit` and this `.md`-based file has
+</a><a href="#h7-0-10" id="h7-0-10" class="i">+- **Simple formatting:** With the formatting characters of Markdown files you are able to simply change your paragraph to a title, (sub-) heading or list. No more searching of the setting in your editor – just put a `#` (title) in front of you paragraph.
+</a><a href="#h7-0-11" id="h7-0-11" class="i">+- **Conversion:** With tools like `pandoc` you can easily change your `.md` files to a `.tex` version with the same formatting.
+</a><a href="#h7-0-12" id="h7-0-12" class="i">+- **Flavours:** Fully compatible versions of Markdown with for example wiki-link functionality.
+</a><a href="#h7-0-13" id="h7-0-13" class="i">+- **Backups:** Easy versioning with git
+</a><a href="#h7-0-14" id="h7-0-14" class="i">+
+</a><a href="#h7-0-15" id="h7-0-15" class="i">+Tell me, what else do you want?
+</a><b>diff --git a/<a id="h8" href="../file/markdown/pgp-yubikey.md.html">markdown/pgp-yubikey.md</a> b/<a href="../file/markdown/pgp-yubikey.md.html">markdown/pgp-yubikey.md</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -0,0 +1,85 @@
+</a><a href="#h8-0-0" id="h8-0-0" class="i">+---
+</a><a href="#h8-0-1" id="h8-0-1" class="i">+title: PGP with 2fa usb sticks
+</a><a href="#h8-0-2" id="h8-0-2" class="i">+author: &quot;Linus Behrens&quot;
+</a><a href="#h8-0-3" id="h8-0-3" class="i">+date: 2025-07-05T16:00:00+02:00
+</a><a href="#h8-0-4" id="h8-0-4" class="i">+tags: [&#39;tech&#39;, &#39;security&#39;]
+</a><a href="#h8-0-5" id="h8-0-5" class="i">+header: &quot;/header/linux.jpg&quot;
+</a><a href="#h8-0-6" id="h8-0-6" class="i">+draft: true
+</a><a href="#h8-0-7" id="h8-0-7" class="i">+---
+</a><a href="#h8-0-8" id="h8-0-8" class="i">+
+</a><a href="#h8-0-9" id="h8-0-9" class="i">+```sh
+</a><a href="#h8-0-10" id="h8-0-10" class="i">+gpg --expert --full-gen-key
+</a><a href="#h8-0-11" id="h8-0-11" class="i">+```
+</a><a href="#h8-0-12" id="h8-0-12" class="i">+
+</a><a href="#h8-0-13" id="h8-0-13" class="i">+- Enter `RSA`
+</a><a href="#h8-0-14" id="h8-0-14" class="i">+- Enter `4096`
+</a><a href="#h8-0-15" id="h8-0-15" class="i">+- Enter expiration date
+</a><a href="#h8-0-16" id="h8-0-16" class="i">+- Enter user information and email
+</a><a href="#h8-0-17" id="h8-0-17" class="i">+- Enter random input (mouse, keyboard) to gain entropy
+</a><a href="#h8-0-18" id="h8-0-18" class="i">+
+</a><a href="#h8-0-19" id="h8-0-19" class="i">+Output:
+</a><a href="#h8-0-20" id="h8-0-20" class="i">+```
+</a><a href="#h8-0-21" id="h8-0-21" class="i">+gpg: key &lt;keyID&gt; marked as ultimately trusted
+</a><a href="#h8-0-22" id="h8-0-22" class="i">+```
+</a><a href="#h8-0-23" id="h8-0-23" class="i">+
+</a><a href="#h8-0-24" id="h8-0-24" class="i">+## Add authentication key (if not default)
+</a><a href="#h8-0-25" id="h8-0-25" class="i">+
+</a><a href="#h8-0-26" id="h8-0-26" class="i">+```sh
+</a><a href="#h8-0-27" id="h8-0-27" class="i">+gpg --expert --edit-key &lt;keyID&gt;
+</a><a href="#h8-0-28" id="h8-0-28" class="i">+```
+</a><a href="#h8-0-29" id="h8-0-29" class="i">+
+</a><a href="#h8-0-30" id="h8-0-30" class="i">+```sh
+</a><a href="#h8-0-31" id="h8-0-31" class="i">+addkey
+</a><a href="#h8-0-32" id="h8-0-32" class="i">+```
+</a><a href="#h8-0-33" id="h8-0-33" class="i">+
+</a><a href="#h8-0-34" id="h8-0-34" class="i">+- Enter the `passphrase`
+</a><a href="#h8-0-35" id="h8-0-35" class="i">+- Enter `8` for RSA
+</a><a href="#h8-0-36" id="h8-0-36" class="i">+- Enter `S` for disabling &quot;sign&quot;
+</a><a href="#h8-0-37" id="h8-0-37" class="i">+- Enter `E` for disabling &quot;encrypt&quot;
+</a><a href="#h8-0-38" id="h8-0-38" class="i">+- Enter `A` for enabling &quot;authentication&quot;
+</a><a href="#h8-0-39" id="h8-0-39" class="i">+- Enter `Q` for leaving dialoge
+</a><a href="#h8-0-40" id="h8-0-40" class="i">+- Enter key size
+</a><a href="#h8-0-41" id="h8-0-41" class="i">+- Enter same expiration date as before
+</a><a href="#h8-0-42" id="h8-0-42" class="i">+- Enter `Y` to safe the changes
+</a><a href="#h8-0-43" id="h8-0-43" class="i">+
+</a><a href="#h8-0-44" id="h8-0-44" class="i">+## Back pgp-Key up
+</a><a href="#h8-0-45" id="h8-0-45" class="i">+
+</a><a href="#h8-0-46" id="h8-0-46" class="i">+```sh
+</a><a href="#h8-0-47" id="h8-0-47" class="i">+gpg --export-secret-key --armor &lt;KeyID&gt;
+</a><a href="#h8-0-48" id="h8-0-48" class="i">+```
+</a><a href="#h8-0-49" id="h8-0-49" class="i">+
+</a><a href="#h8-0-50" id="h8-0-50" class="i">+- Store output safe
+</a><a href="#h8-0-51" id="h8-0-51" class="i">+
+</a><a href="#h8-0-52" id="h8-0-52" class="i">+## Add pgp-keys to the YubiKey
+</a><a href="#h8-0-53" id="h8-0-53" class="i">+
+</a><a href="#h8-0-54" id="h8-0-54" class="i">+- Insert YubiKey into a USB port
+</a><a href="#h8-0-55" id="h8-0-55" class="i">+
+</a><a href="#h8-0-56" id="h8-0-56" class="i">+```sh
+</a><a href="#h8-0-57" id="h8-0-57" class="i">+gpg --edit-key &lt;KeyID&gt;
+</a><a href="#h8-0-58" id="h8-0-58" class="i">+```
+</a><a href="#h8-0-59" id="h8-0-59" class="i">+
+</a><a href="#h8-0-60" id="h8-0-60" class="i">+```sh
+</a><a href="#h8-0-61" id="h8-0-61" class="i">+keytocard
+</a><a href="#h8-0-62" id="h8-0-62" class="i">+```
+</a><a href="#h8-0-63" id="h8-0-63" class="i">+
+</a><a href="#h8-0-64" id="h8-0-64" class="i">+- Signature subkey:
+</a><a href="#h8-0-65" id="h8-0-65" class="i">+    - Enter `keytocard`
+</a><a href="#h8-0-66" id="h8-0-66" class="i">+    - Enter `Y` to continue
+</a><a href="#h8-0-67" id="h8-0-67" class="i">+    - Enter `1` to move the signature subkey to a slot in the yubikey
+</a><a href="#h8-0-68" id="h8-0-68" class="i">+    - Enter `key 1`
+</a><a href="#h8-0-69" id="h8-0-69" class="i">+- Encryption subkey:
+</a><a href="#h8-0-70" id="h8-0-70" class="i">+    - Enter `keytocard`
+</a><a href="#h8-0-71" id="h8-0-71" class="i">+    - Enter `Y` to continue
+</a><a href="#h8-0-72" id="h8-0-72" class="i">+    - Enter `2` to move the encryption subkey to a slot in the yubikey
+</a><a href="#h8-0-73" id="h8-0-73" class="i">+    - Enter `key 1`
+</a><a href="#h8-0-74" id="h8-0-74" class="i">+    - Enter `key 2`
+</a><a href="#h8-0-75" id="h8-0-75" class="i">+- Authentication subkey
+</a><a href="#h8-0-76" id="h8-0-76" class="i">+    - Enter `keytocard`
+</a><a href="#h8-0-77" id="h8-0-77" class="i">+    - Enter `3` to move the authentication subkey to a slot in the yubikey
+</a><a href="#h8-0-78" id="h8-0-78" class="i">+- Enter `quit` to leave
+</a><a href="#h8-0-79" id="h8-0-79" class="i">+
+</a><a href="#h8-0-80" id="h8-0-80" class="i">+When asked **do not safe** your changes enabling you to copy the key to another Yubikey.
+</a><a href="#h8-0-81" id="h8-0-81" class="i">+
+</a><a href="#h8-0-82" id="h8-0-82" class="i">+---
+</a><a href="#h8-0-83" id="h8-0-83" class="i">+
+</a><a href="#h8-0-84" id="h8-0-84" class="i">+[article by yubikey](https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP)
+</a><b>diff --git a/<a id="h9" href="../file/markdown/typst.md.html">markdown/typst.md</a> b/<a href="../file/markdown/typst.md.html">markdown/typst.md</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -0,0 +1,34 @@
+</a><a href="#h9-0-0" id="h9-0-0" class="i">+---
+</a><a href="#h9-0-1" id="h9-0-1" class="i">+title: Typst, the smart tex alternative
+</a><a href="#h9-0-2" id="h9-0-2" class="i">+author: &quot;Linus Behrens&quot;
+</a><a href="#h9-0-3" id="h9-0-3" class="i">+date: 2025-06-01T15:00:00+02:00
+</a><a href="#h9-0-4" id="h9-0-4" class="i">+tags: [&#39;software&#39;, &#39;texteditor&#39;]
+</a><a href="#h9-0-5" id="h9-0-5" class="i">+header: &quot;/header/math.invert.png&quot;
+</a><a href="#h9-0-6" id="h9-0-6" class="i">+---
+</a><a href="#h9-0-7" id="h9-0-7" class="i">+
+</a><a href="#h9-0-8" id="h9-0-8" class="i">+When ever editing big text projects I used $\LaTeX$. Just because Latex is the right tool for the job.
+</a><a href="#h9-0-9" id="h9-0-9" class="i">+
+</a><a href="#h9-0-10" id="h9-0-10" class="i">+&lt;!-- ![Latex &gt; Word Meme](/Images/latex-word.png) --&gt;
+</a><a href="#h9-0-11" id="h9-0-11" class="i">+
+</a><a href="#h9-0-12" id="h9-0-12" class="i">+&lt;!-- https://www.reddit.com/r/LaTeX/comments/b9549s/i_dont_know_if_memes_are_allowed_but_here_is_a/ --&gt;
+</a><a href="#h9-0-13" id="h9-0-13" class="i">+
+</a><a href="#h9-0-14" id="h9-0-14" class="i">+But as it turned out there has been a simpler tool for the job. And it is called Typst.
+</a><a href="#h9-0-15" id="h9-0-15" class="i">+
+</a><a href="#h9-0-16" id="h9-0-16" class="i">+Why it is simpler:
+</a><a href="#h9-0-17" id="h9-0-17" class="i">+
+</a><a href="#h9-0-18" id="h9-0-18" class="i">+- It is FOSS
+</a><a href="#h9-0-19" id="h9-0-19" class="i">+- Ready to write: no `\document{begin}`
+</a><a href="#h9-0-20" id="h9-0-20" class="i">+- Markdown based syntax where it can: eg. headings with `=`
+</a><a href="#h9-0-21" id="h9-0-21" class="i">+- Easy math syntax
+</a><a href="#h9-0-22" id="h9-0-22" class="i">+- Simple coding constructs instead of single use case based macros
+</a><a href="#h9-0-23" id="h9-0-23" class="i">+- FOSS templates ready to clone
+</a><a href="#h9-0-24" id="h9-0-24" class="i">+- Renders preview from buffer: instant update without having to safe
+</a><a href="#h9-0-25" id="h9-0-25" class="i">+
+</a><a href="#h9-0-26" id="h9-0-26" class="i">+```typ
+</a><a href="#h9-0-27" id="h9-0-27" class="i">+lim_(x-&gt;oo) 1/x = 0
+</a><a href="#h9-0-28" id="h9-0-28" class="i">+```
+</a><a href="#h9-0-29" id="h9-0-29" class="i">+
+</a><a href="#h9-0-30" id="h9-0-30" class="i">+Their [GitHub Page](https://github.com/typst)
+</a><a href="#h9-0-31" id="h9-0-31" class="i">+ 
+</a><a href="#h9-0-32" id="h9-0-32" class="i">+
+</a><a href="#h9-0-33" id="h9-0-33" class="i">+
+</a><b>diff --git a/<a id="h10" href="../file/output/dwl.html.html">output/dwl.html</a> b/<a href="../file/output/dwl.html.html">output/dwl.html</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -0,0 +1,113 @@
+</a><a href="#h10-0-0" id="h10-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h10-0-1" id="h10-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h10-0-2" id="h10-0-2" class="i">+&lt;head&gt;
+</a><a href="#h10-0-3" id="h10-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h10-0-4" id="h10-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h10-0-5" id="h10-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h10-0-6" id="h10-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h10-0-7" id="h10-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;Perfect high DPI window manager&quot; /&gt;
+</a><a href="#h10-0-8" id="h10-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h10-0-9" id="h10-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h10-0-10" id="h10-0-10" class="i">+	&lt;title&gt;dwl config - Linus Blog&lt;/title&gt;
+</a><a href="#h10-0-11" id="h10-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h10-0-12" id="h10-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h10-0-13" id="h10-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h10-0-14" id="h10-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h10-0-15" id="h10-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h10-0-16" id="h10-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h10-0-17" id="h10-0-17" class="i">+&lt;body&gt;
+</a><a href="#h10-0-18" id="h10-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h10-0-19" id="h10-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h10-0-20" id="h10-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h10-0-21" id="h10-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h10-0-22" id="h10-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h10-0-23" id="h10-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h10-0-24" id="h10-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h10-0-25" id="h10-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h10-0-26" id="h10-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h10-0-27" id="h10-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h10-0-28" id="h10-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h10-0-29" id="h10-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h10-0-30" id="h10-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h10-0-31" id="h10-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h10-0-32" id="h10-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h10-0-33" id="h10-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h10-0-34" id="h10-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h10-0-35" id="h10-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h10-0-36" id="h10-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h10-0-37" id="h10-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h10-0-38" id="h10-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h10-0-39" id="h10-0-39" class="i">+			&lt;article&gt;
+</a><a href="#h10-0-40" id="h10-0-40" class="i">+&lt;header&gt;
+</a><a href="#h10-0-41" id="h10-0-41" class="i">+	&lt;h1&gt;dwl config&lt;/h1&gt;
+</a><a href="#h10-0-42" id="h10-0-42" class="i">+	&lt;p&gt;
+</a><a href="#h10-0-43" id="h10-0-43" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2025-06-16&lt;/time&gt;
+</a><a href="#h10-0-44" id="h10-0-44" class="i">+	&lt;/p&gt;
+</a><a href="#h10-0-45" id="h10-0-45" class="i">+&lt;/header&gt;
+</a><a href="#h10-0-46" id="h10-0-46" class="i">+
+</a><a href="#h10-0-47" id="h10-0-47" class="i">+&lt;p&gt;My first rather serious linux system should be built on a Thinkpad
+</a><a href="#h10-0-48" id="h10-0-48" class="i">+x61s in 2023. Due to a lack in performence I thought about installing
+</a><a href="#h10-0-49" id="h10-0-49" class="i">+only the most minimal software on it.&lt;/p&gt;
+</a><a href="#h10-0-50" id="h10-0-50" class="i">+&lt;p&gt;So I came to see the famouse Thinkpad Arch combination. (I know and
+</a><a href="#h10-0-51" id="h10-0-51" class="i">+knew that it was not the most minimal os possible, but I was convinced)
+</a><a href="#h10-0-52" id="h10-0-52" class="i">+When trying to find the most minimal and fast window manager found the
+</a><a href="#h10-0-53" id="h10-0-53" class="i">+perfect fit: &lt;code&gt;dwm&lt;/code&gt;.&lt;/p&gt;
+</a><a href="#h10-0-54" id="h10-0-54" class="i">+&lt;p&gt;&lt;code&gt;dwm&lt;/code&gt; became my wm that just worked.&lt;/p&gt;
+</a><a href="#h10-0-55" id="h10-0-55" class="i">+&lt;hr /&gt;
+</a><a href="#h10-0-56" id="h10-0-56" class="i">+&lt;p&gt;However as I continued to gain understanding of how Xorg works and as
+</a><a href="#h10-0-57" id="h10-0-57" class="i">+I understood the bloat in &lt;code&gt;X&lt;/code&gt;, I found it hard to swich. On
+</a><a href="#h10-0-58" id="h10-0-58" class="i">+YouTube I came across &lt;code&gt;dwl&lt;/code&gt; a project about translating
+</a><a href="#h10-0-59" id="h10-0-59" class="i">+&lt;code&gt;dwl&lt;/code&gt; to work with &lt;code&gt;wlroots&lt;/code&gt;.&lt;/p&gt;
+</a><a href="#h10-0-60" id="h10-0-60" class="i">+&lt;p&gt;Even though being familiar with the rather difficult to install
+</a><a href="#h10-0-61" id="h10-0-61" class="i">+&lt;code&gt;dwm&lt;/code&gt;, I wasn’t able to even compile &lt;code&gt;dwl&lt;/code&gt;. Now I
+</a><a href="#h10-0-62" id="h10-0-62" class="i">+understand and give you - the reader - a path to follow.&lt;/p&gt;
+</a><a href="#h10-0-63" id="h10-0-63" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre
+</a><a href="#h10-0-64" id="h10-0-64" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; dnf install &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-65" id="h10-0-65" class="i">+&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  libinput libinput-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-66" id="h10-0-66" class="i">+&lt;span id=&quot;cb1-3&quot;&gt;&lt;a href=&quot;#cb1-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland wayland-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-67" id="h10-0-67" class="i">+&lt;span id=&quot;cb1-4&quot;&gt;&lt;a href=&quot;#cb1-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wlroots wlroots-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-68" id="h10-0-68" class="i">+&lt;span id=&quot;cb1-5&quot;&gt;&lt;a href=&quot;#cb1-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  xkbcommon xkbcommon-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-69" id="h10-0-69" class="i">+&lt;span id=&quot;cb1-6&quot;&gt;&lt;a href=&quot;#cb1-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland-protocols &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-70" id="h10-0-70" class="i">+&lt;span id=&quot;cb1-7&quot;&gt;&lt;a href=&quot;#cb1-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  pkgconf-pkg-config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-71" id="h10-0-71" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb2&quot;&gt;&lt;pre
+</a><a href="#h10-0-72" id="h10-0-72" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb2-1&quot;&gt;&lt;a href=&quot;#cb2-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;git&lt;/span&gt; clone https://codeberg.org/dwl/dwl.git&lt;/span&gt;
+</a><a href="#h10-0-73" id="h10-0-73" class="i">+&lt;span id=&quot;cb2-2&quot;&gt;&lt;a href=&quot;#cb2-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;bu&quot;&gt;cd&lt;/span&gt; dwl&lt;/span&gt;
+</a><a href="#h10-0-74" id="h10-0-74" class="i">+&lt;span id=&quot;cb2-3&quot;&gt;&lt;a href=&quot;#cb2-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;git&lt;/span&gt; checkout v0.7&lt;/span&gt;
+</a><a href="#h10-0-75" id="h10-0-75" class="i">+&lt;span id=&quot;cb2-4&quot;&gt;&lt;a href=&quot;#cb2-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;make&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-76" id="h10-0-76" class="i">+&lt;span id=&quot;cb2-5&quot;&gt;&lt;a href=&quot;#cb2-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-77" id="h10-0-77" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb3&quot;&gt;&lt;pre
+</a><a href="#h10-0-78" id="h10-0-78" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb3-1&quot;&gt;&lt;a href=&quot;#cb3-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; dnf install &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-79" id="h10-0-79" class="i">+&lt;span id=&quot;cb3-2&quot;&gt;&lt;a href=&quot;#cb3-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  libinput libinput-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-80" id="h10-0-80" class="i">+&lt;span id=&quot;cb3-3&quot;&gt;&lt;a href=&quot;#cb3-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland wayland-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-81" id="h10-0-81" class="i">+&lt;span id=&quot;cb3-4&quot;&gt;&lt;a href=&quot;#cb3-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wlroots wlroots-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-82" id="h10-0-82" class="i">+&lt;span id=&quot;cb3-5&quot;&gt;&lt;a href=&quot;#cb3-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  xkbcommon xkbcommon-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-83" id="h10-0-83" class="i">+&lt;span id=&quot;cb3-6&quot;&gt;&lt;a href=&quot;#cb3-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland-protocols-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-84" id="h10-0-84" class="i">+&lt;span id=&quot;cb3-7&quot;&gt;&lt;a href=&quot;#cb3-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  pkgconf-pkg-config &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-85" id="h10-0-85" class="i">+&lt;span id=&quot;cb3-8&quot;&gt;&lt;a href=&quot;#cb3-8&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  meson ninja-build &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-86" id="h10-0-86" class="i">+&lt;span id=&quot;cb3-9&quot;&gt;&lt;a href=&quot;#cb3-9&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  gcc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-87" id="h10-0-87" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb4&quot;&gt;&lt;pre
+</a><a href="#h10-0-88" id="h10-0-88" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb4-1&quot;&gt;&lt;a href=&quot;#cb4-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;git&lt;/span&gt; clone https://github.com/waycrate/wmenu.git&lt;/span&gt;
+</a><a href="#h10-0-89" id="h10-0-89" class="i">+&lt;span id=&quot;cb4-2&quot;&gt;&lt;a href=&quot;#cb4-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;bu&quot;&gt;cd&lt;/span&gt; wmenu&lt;/span&gt;
+</a><a href="#h10-0-90" id="h10-0-90" class="i">+&lt;span id=&quot;cb4-3&quot;&gt;&lt;a href=&quot;#cb4-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;meson&lt;/span&gt; setup build&lt;/span&gt;
+</a><a href="#h10-0-91" id="h10-0-91" class="i">+&lt;span id=&quot;cb4-4&quot;&gt;&lt;a href=&quot;#cb4-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;ninja&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;-C&lt;/span&gt; build&lt;/span&gt;
+</a><a href="#h10-0-92" id="h10-0-92" class="i">+&lt;span id=&quot;cb4-5&quot;&gt;&lt;a href=&quot;#cb4-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; ninja &lt;span class=&quot;at&quot;&gt;-C&lt;/span&gt; build install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-93" id="h10-0-93" class="i">+&lt;hr /&gt;
+</a><a href="#h10-0-94" id="h10-0-94" class="i">+&lt;p&gt;Edits to &lt;code&gt;sources/dwl/config.h&lt;/code&gt;:&lt;/p&gt;
+</a><a href="#h10-0-95" id="h10-0-95" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb5&quot;&gt;&lt;pre class=&quot;sourceCode c&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;span id=&quot;cb5-1&quot;&gt;&lt;a href=&quot;#cb5-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;dt&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;*&lt;/span&gt;termcmd&lt;span class=&quot;op&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;ghostty&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; NULL &lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-96" id="h10-0-96" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb6&quot;&gt;&lt;pre class=&quot;sourceCode c&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;span id=&quot;cb6-1&quot;&gt;&lt;a href=&quot;#cb6-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;dt&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;const&lt;/span&gt; MonitorRule monrules&lt;span class=&quot;op&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-97" id="h10-0-97" class="i">+&lt;span id=&quot;cb6-2&quot;&gt;&lt;a href=&quot;#cb6-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;co&quot;&gt;/* macbook m1 14&amp;quot; */&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-98" id="h10-0-98" class="i">+&lt;span id=&quot;cb6-3&quot;&gt;&lt;a href=&quot;#cb6-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;eDP-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;bu&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;op&quot;&gt;&amp;amp;&lt;/span&gt;layouts&lt;span class=&quot;op&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;],&lt;/span&gt; WL_OUTPUT_TRANSFORM_NORMAL&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;op&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;op&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;},&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-99" id="h10-0-99" class="i">+&lt;span id=&quot;cb6-4&quot;&gt;&lt;a href=&quot;#cb6-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-100" id="h10-0-100" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb7&quot;&gt;&lt;pre class=&quot;sourceCode c&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;span id=&quot;cb7-1&quot;&gt;&lt;a href=&quot;#cb7-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;dt&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;struct&lt;/span&gt; xkb_rule_names xkb_rules &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-101" id="h10-0-101" class="i">+&lt;span id=&quot;cb7-2&quot;&gt;&lt;a href=&quot;#cb7-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;co&quot;&gt;/* default:&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-102" id="h10-0-102" class="i">+&lt;span id=&quot;cb7-3&quot;&gt;&lt;a href=&quot;#cb7-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;    .options = NULL,&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-103" id="h10-0-103" class="i">+&lt;span id=&quot;cb7-4&quot;&gt;&lt;a href=&quot;#cb7-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;    */&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-104" id="h10-0-104" class="i">+&lt;span id=&quot;cb7-5&quot;&gt;&lt;a href=&quot;#cb7-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;layout &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;de&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-105" id="h10-0-105" class="i">+&lt;span id=&quot;cb7-6&quot;&gt;&lt;a href=&quot;#cb7-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;variant &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;latin1&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h10-0-106" id="h10-0-106" class="i">+&lt;span id=&quot;cb7-7&quot;&gt;&lt;a href=&quot;#cb7-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h10-0-107" id="h10-0-107" class="i">+
+</a><a href="#h10-0-108" id="h10-0-108" class="i">+			&lt;/article&gt;
+</a><a href="#h10-0-109" id="h10-0-109" class="i">+		&lt;/div&gt;
+</a><a href="#h10-0-110" id="h10-0-110" class="i">+	&lt;/main&gt;
+</a><a href="#h10-0-111" id="h10-0-111" class="i">+&lt;/body&gt;
+</a><a href="#h10-0-112" id="h10-0-112" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h11" href="../file/output/index.html.html">output/index.html</a> b/<a href="../file/output/index.html.html">output/index.html</a></b>
+<a href="#h11-0" id="h11-0" class="h">@@ -0,0 +1,52 @@
+</a><a href="#h11-0-0" id="h11-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h11-0-1" id="h11-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h11-0-2" id="h11-0-2" class="i">+&lt;head&gt;
+</a><a href="#h11-0-3" id="h11-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h11-0-4" id="h11-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h11-0-5" id="h11-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h11-0-6" id="h11-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h11-0-7" id="h11-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;shared thoughts&quot; /&gt;
+</a><a href="#h11-0-8" id="h11-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h11-0-9" id="h11-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h11-0-10" id="h11-0-10" class="i">+	&lt;title&gt;Posts - Linus Blog&lt;/title&gt;
+</a><a href="#h11-0-11" id="h11-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h11-0-12" id="h11-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h11-0-13" id="h11-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h11-0-14" id="h11-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h11-0-15" id="h11-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h11-0-16" id="h11-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h11-0-17" id="h11-0-17" class="i">+&lt;body&gt;
+</a><a href="#h11-0-18" id="h11-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h11-0-19" id="h11-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h11-0-20" id="h11-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h11-0-21" id="h11-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h11-0-22" id="h11-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h11-0-23" id="h11-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h11-0-24" id="h11-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h11-0-25" id="h11-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h11-0-26" id="h11-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h11-0-27" id="h11-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h11-0-28" id="h11-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h11-0-29" id="h11-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h11-0-30" id="h11-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h11-0-31" id="h11-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h11-0-32" id="h11-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h11-0-33" id="h11-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h11-0-34" id="h11-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h11-0-35" id="h11-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h11-0-36" id="h11-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h11-0-37" id="h11-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h11-0-38" id="h11-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h11-0-39" id="h11-0-39" class="i">+			&lt;h1&gt;Posts&lt;/h1&gt;
+</a><a href="#h11-0-40" id="h11-0-40" class="i">+			&lt;table&gt;
+</a><a href="#h11-0-41" id="h11-0-41" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;2025-06-01&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;typst.html&quot;&gt;Typst&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h11-0-42" id="h11-0-42" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;2025-07-05&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;pgp-yubikey.html&quot;&gt;yubikey pgp config&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h11-0-43" id="h11-0-43" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;2025-04-12&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;markdown.html&quot;&gt;Markdown&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h11-0-44" id="h11-0-44" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;2025-04-11&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;mario-kart.html&quot;&gt;Mario Kart Emulator Setup&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h11-0-45" id="h11-0-45" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;2024-09-05&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;linux.html&quot;&gt;Why Linux&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h11-0-46" id="h11-0-46" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;2025-06-16&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;dwl.html&quot;&gt;dwl config&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h11-0-47" id="h11-0-47" class="i">+			&lt;/table&gt;
+</a><a href="#h11-0-48" id="h11-0-48" class="i">+		&lt;/div&gt;
+</a><a href="#h11-0-49" id="h11-0-49" class="i">+	&lt;/main&gt;
+</a><a href="#h11-0-50" id="h11-0-50" class="i">+&lt;/body&gt;
+</a><a href="#h11-0-51" id="h11-0-51" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h12" href="../file/output/linux.html.html">output/linux.html</a> b/<a href="../file/output/linux.html.html">output/linux.html</a></b>
+<a href="#h12-0" id="h12-0" class="h">@@ -0,0 +1,128 @@
+</a><a href="#h12-0-0" id="h12-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h12-0-1" id="h12-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h12-0-2" id="h12-0-2" class="i">+&lt;head&gt;
+</a><a href="#h12-0-3" id="h12-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h12-0-4" id="h12-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h12-0-5" id="h12-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h12-0-6" id="h12-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h12-0-7" id="h12-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;Why linux is superior&quot; /&gt;
+</a><a href="#h12-0-8" id="h12-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h12-0-9" id="h12-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h12-0-10" id="h12-0-10" class="i">+	&lt;title&gt;Why Linux - Linus Blog&lt;/title&gt;
+</a><a href="#h12-0-11" id="h12-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h12-0-12" id="h12-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h12-0-13" id="h12-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h12-0-14" id="h12-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h12-0-15" id="h12-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h12-0-16" id="h12-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h12-0-17" id="h12-0-17" class="i">+&lt;body&gt;
+</a><a href="#h12-0-18" id="h12-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h12-0-19" id="h12-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h12-0-20" id="h12-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h12-0-21" id="h12-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h12-0-22" id="h12-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h12-0-23" id="h12-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h12-0-24" id="h12-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h12-0-25" id="h12-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h12-0-26" id="h12-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h12-0-27" id="h12-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h12-0-28" id="h12-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h12-0-29" id="h12-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h12-0-30" id="h12-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h12-0-31" id="h12-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h12-0-32" id="h12-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h12-0-33" id="h12-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h12-0-34" id="h12-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h12-0-35" id="h12-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h12-0-36" id="h12-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h12-0-37" id="h12-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h12-0-38" id="h12-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h12-0-39" id="h12-0-39" class="i">+			&lt;article&gt;
+</a><a href="#h12-0-40" id="h12-0-40" class="i">+&lt;header&gt;
+</a><a href="#h12-0-41" id="h12-0-41" class="i">+	&lt;h1&gt;Why Linux&lt;/h1&gt;
+</a><a href="#h12-0-42" id="h12-0-42" class="i">+	&lt;p&gt;
+</a><a href="#h12-0-43" id="h12-0-43" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2024-09-05&lt;/time&gt;
+</a><a href="#h12-0-44" id="h12-0-44" class="i">+	&lt;/p&gt;
+</a><a href="#h12-0-45" id="h12-0-45" class="i">+&lt;/header&gt;
+</a><a href="#h12-0-46" id="h12-0-46" class="i">+
+</a><a href="#h12-0-47" id="h12-0-47" class="i">+&lt;h1 id=&quot;why-gnulinux&quot;&gt;Why GNU/Linux&lt;/h1&gt;
+</a><a href="#h12-0-48" id="h12-0-48" class="i">+&lt;blockquote&gt;
+</a><a href="#h12-0-49" id="h12-0-49" class="i">+&lt;p&gt;This is the Unix philosophy: Write programs that do one thing and do
+</a><a href="#h12-0-50" id="h12-0-50" class="i">+it well. Write programs to work together. Write programs to handle text
+</a><a href="#h12-0-51" id="h12-0-51" class="i">+streams, because that is a univeRsal interface&lt;/p&gt;
+</a><a href="#h12-0-52" id="h12-0-52" class="i">+&lt;p&gt;&lt;em&gt;- Doug McIlroy, the inventor of Unix pipes and one of the
+</a><a href="#h12-0-53" id="h12-0-53" class="i">+founders of the Unix tradition&lt;/em&gt;&lt;/p&gt;
+</a><a href="#h12-0-54" id="h12-0-54" class="i">+&lt;/blockquote&gt;
+</a><a href="#h12-0-55" id="h12-0-55" class="i">+&lt;p&gt;Linux at its core is the idea of intercompatability born in the body
+</a><a href="#h12-0-56" id="h12-0-56" class="i">+of a kernel. What I love in Linux is not how fast and free it is. Not
+</a><a href="#h12-0-57" id="h12-0-57" class="i">+how amazingly many people contribute to one goal. It is the way I use it
+</a><a href="#h12-0-58" id="h12-0-58" class="i">+and how it allowed me to fit the most bare bones software to my
+</a><a href="#h12-0-59" id="h12-0-59" class="i">+needs.&lt;/p&gt;
+</a><a href="#h12-0-60" id="h12-0-60" class="i">+&lt;h2 id=&quot;examples-for-the-perfect-fit&quot;&gt;Examples for the perfect fit&lt;/h2&gt;
+</a><a href="#h12-0-61" id="h12-0-61" class="i">+&lt;p&gt;My senior high note taking setup is pretty complex. However it does
+</a><a href="#h12-0-62" id="h12-0-62" class="i">+fit my workflow perfectly.&lt;/p&gt;
+</a><a href="#h12-0-63" id="h12-0-63" class="i">+&lt;ul&gt;
+</a><a href="#h12-0-64" id="h12-0-64" class="i">+&lt;li&gt;&lt;a href=&quot;/posts/neovim&quot;&gt;neovim&lt;/a&gt; note taking&lt;/li&gt;
+</a><a href="#h12-0-65" id="h12-0-65" class="i">+&lt;li&gt;&lt;a href=&quot;posts/tex&quot;&gt;&lt;/a&gt; for long-term sheets&lt;/li&gt;
+</a><a href="#h12-0-66" id="h12-0-66" class="i">+&lt;li&gt;&lt;a href=&quot;posts/markdown&quot;&gt;markdown&lt;/a&gt; for short-term notes in
+</a><a href="#h12-0-67" id="h12-0-67" class="i">+lessons&lt;/li&gt;
+</a><a href="#h12-0-68" id="h12-0-68" class="i">+&lt;li&gt;pandoc turns markdown into &lt;code&gt;\tex&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h12-0-69" id="h12-0-69" class="i">+&lt;li&gt;telescope and todo-comments for todo lists&lt;/li&gt;
+</a><a href="#h12-0-70" id="h12-0-70" class="i">+&lt;li&gt;&lt;a href=&quot;posts/anki&quot;&gt;anki&lt;/a&gt; for everyday learning&lt;/li&gt;
+</a><a href="#h12-0-71" id="h12-0-71" class="i">+&lt;li&gt;github for backing up and syncing my data (homelab in the
+</a><a href="#h12-0-72" id="h12-0-72" class="i">+future)&lt;/li&gt;
+</a><a href="#h12-0-73" id="h12-0-73" class="i">+&lt;/ul&gt;
+</a><a href="#h12-0-74" id="h12-0-74" class="i">+&lt;p&gt;With that setup I am albe to quickly make notes in my lessons as well
+</a><a href="#h12-0-75" id="h12-0-75" class="i">+as clearly structure my long-term sheets. With having anki on any of my
+</a><a href="#h12-0-76" id="h12-0-76" class="i">+devices I am able to learn everywhere.&lt;/p&gt;
+</a><a href="#h12-0-77" id="h12-0-77" class="i">+&lt;p&gt;If I want I could even run all of that over ssh from a homelab of
+</a><a href="#h12-0-78" id="h12-0-78" class="i">+server at school.&lt;/p&gt;
+</a><a href="#h12-0-79" id="h12-0-79" class="i">+&lt;h2 id=&quot;intercompatability&quot;&gt;Intercompatability&lt;/h2&gt;
+</a><a href="#h12-0-80" id="h12-0-80" class="i">+&lt;p&gt;My shell runs in &lt;a
+</a><a href="#h12-0-81" id="h12-0-81" class="i">+href=&quot;https://github.com/alacritty/alacritty&quot;&gt;alacritty&lt;/a&gt; (macOS) and
+</a><a href="#h12-0-82" id="h12-0-82" class="i">+&lt;a href=&quot;https://st.suckless.org/&quot;&gt;st&lt;/a&gt; (arch and void). My most used
+</a><a href="#h12-0-83" id="h12-0-83" class="i">+and centered tool is &lt;a href=&quot;/posts/neovim&quot;&gt;neovim&lt;/a&gt;. With my
+</a><a href="#h12-0-84" id="h12-0-84" class="i">+configuration it is beautiful and works seemlesly. With telescope I
+</a><a href="#h12-0-85" id="h12-0-85" class="i">+quickly open my &lt;code&gt;&amp;lt;subject&amp;gt;.refile.md&lt;/code&gt; note and later
+</a><a href="#h12-0-86" id="h12-0-86" class="i">+the week I convert it to &lt;code&gt;&amp;lt;subject.refile.tex&lt;/code&gt; with
+</a><a href="#h12-0-87" id="h12-0-87" class="i">+pandoc. The important information gets refiled into
+</a><a href="#h12-0-88" id="h12-0-88" class="i">+&lt;code&gt;&amp;lt;subject&amp;gt;.tex&lt;/code&gt; and tagged as
+</a><a href="#h12-0-89" id="h12-0-89" class="i">+&lt;code&gt;ANKI: &amp;lt;subject&amp;gt;&lt;/code&gt;. So if I open telescope to see my
+</a><a href="#h12-0-90" id="h12-0-90" class="i">+todos the anki sign reminds me of entering the information to my
+</a><a href="#h12-0-91" id="h12-0-91" class="i">+&lt;code&gt;anki deck&lt;/code&gt;. Every evening I push my files to github to be
+</a><a href="#h12-0-92" id="h12-0-92" class="i">+safe for a data loss.&lt;/p&gt;
+</a><a href="#h12-0-93" id="h12-0-93" class="i">+&lt;h2 id=&quot;options-example-distributions&quot;&gt;Options (example
+</a><a href="#h12-0-94" id="h12-0-94" class="i">+distributions)&lt;/h2&gt;
+</a><a href="#h12-0-95" id="h12-0-95" class="i">+&lt;p&gt;The following are distros I have used.&lt;/p&gt;
+</a><a href="#h12-0-96" id="h12-0-96" class="i">+&lt;ul&gt;
+</a><a href="#h12-0-97" id="h12-0-97" class="i">+&lt;li&gt;Manjaro (Why does it exists exactly)&lt;/li&gt;
+</a><a href="#h12-0-98" id="h12-0-98" class="i">+&lt;li&gt;Mint (If you would want to cheat)&lt;/li&gt;
+</a><a href="#h12-0-99" id="h12-0-99" class="i">+&lt;li&gt;&lt;a href=&quot;/content/arch.md&quot;&gt;Arch&lt;/a&gt; (Amazing documentation, pacman,
+</a><a href="#h12-0-100" id="h12-0-100" class="i">+AUR)&lt;/li&gt;
+</a><a href="#h12-0-101" id="h12-0-101" class="i">+&lt;li&gt;Arco (No systemd arch)&lt;/li&gt;
+</a><a href="#h12-0-102" id="h12-0-102" class="i">+&lt;li&gt;Gentoo (If you want it you know it)&lt;/li&gt;
+</a><a href="#h12-0-103" id="h12-0-103" class="i">+&lt;li&gt;Void (small, but no systemd!)&lt;/li&gt;
+</a><a href="#h12-0-104" id="h12-0-104" class="i">+&lt;/ul&gt;
+</a><a href="#h12-0-105" id="h12-0-105" class="i">+&lt;p&gt;On my &lt;strong&gt;x61s ThinkPad&lt;/strong&gt; I run Arch Linux. It is light
+</a><a href="#h12-0-106" id="h12-0-106" class="i">+weight and has amazing documentary. The arch wiki is one of the best
+</a><a href="#h12-0-107" id="h12-0-107" class="i">+documents and I even refer to it to non specific arch users.&lt;/p&gt;
+</a><a href="#h12-0-108" id="h12-0-108" class="i">+&lt;p&gt;The &lt;strong&gt;2013 Mac mini&lt;/strong&gt; runs void linux. Not because I
+</a><a href="#h12-0-109" id="h12-0-109" class="i">+don’t like arch as much, but because after inserting a bootable usb and
+</a><a href="#h12-0-110" id="h12-0-110" class="i">+entering grubs “install arch for x86_64” I got a black screen for days.
+</a><a href="#h12-0-111" id="h12-0-111" class="i">+I choose void because I liked the neofetch batch and because it has no
+</a><a href="#h12-0-112" id="h12-0-112" class="i">+&lt;code&gt;systemd&lt;/code&gt; elevating the performence and reducing drama. I
+</a><a href="#h12-0-113" id="h12-0-113" class="i">+mainly use that mashine as a ssh server.&lt;/p&gt;
+</a><a href="#h12-0-114" id="h12-0-114" class="i">+&lt;p&gt;Both mashines run &lt;a href=&quot;https://www.suckless.org&quot;&gt;suckless
+</a><a href="#h12-0-115" id="h12-0-115" class="i">+software&lt;/a&gt;. Namely &lt;code&gt;dwm&lt;/code&gt;, &lt;code&gt;dmenu&lt;/code&gt;, and
+</a><a href="#h12-0-116" id="h12-0-116" class="i">+&lt;code&gt;st&lt;/code&gt;. I am really happy with how good it works, but I do not
+</a><a href="#h12-0-117" id="h12-0-117" class="i">+feel well using &lt;code&gt;X&lt;/code&gt;.&lt;/p&gt;
+</a><a href="#h12-0-118" id="h12-0-118" class="i">+&lt;p&gt;My &lt;strong&gt;MacBook&lt;/strong&gt; runs macOS because Asahi sucks at the
+</a><a href="#h12-0-119" id="h12-0-119" class="i">+moment. However I use the tiling window manager &lt;code&gt;yabaii&lt;/code&gt; and
+</a><a href="#h12-0-120" id="h12-0-120" class="i">+&lt;a href=&quot;https://github.com/alacritty/alacritty&quot;&gt;alacritty&lt;/a&gt; to come
+</a><a href="#h12-0-121" id="h12-0-121" class="i">+closer to a linux experience.&lt;/p&gt;
+</a><a href="#h12-0-122" id="h12-0-122" class="i">+
+</a><a href="#h12-0-123" id="h12-0-123" class="i">+			&lt;/article&gt;
+</a><a href="#h12-0-124" id="h12-0-124" class="i">+		&lt;/div&gt;
+</a><a href="#h12-0-125" id="h12-0-125" class="i">+	&lt;/main&gt;
+</a><a href="#h12-0-126" id="h12-0-126" class="i">+&lt;/body&gt;
+</a><a href="#h12-0-127" id="h12-0-127" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h13" href="../file/output/mario-kart.html.html">output/mario-kart.html</a> b/<a href="../file/output/mario-kart.html.html">output/mario-kart.html</a></b>
+<a href="#h13-0" id="h13-0" class="h">@@ -0,0 +1,159 @@
+</a><a href="#h13-0-0" id="h13-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h13-0-1" id="h13-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h13-0-2" id="h13-0-2" class="i">+&lt;head&gt;
+</a><a href="#h13-0-3" id="h13-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h13-0-4" id="h13-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h13-0-5" id="h13-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h13-0-6" id="h13-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h13-0-7" id="h13-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;How to setup Mario Kart Wii on a dolphin Emulator&quot; /&gt;
+</a><a href="#h13-0-8" id="h13-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h13-0-9" id="h13-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h13-0-10" id="h13-0-10" class="i">+	&lt;title&gt;Mario Kart Emulator Setup - Linus Blog&lt;/title&gt;
+</a><a href="#h13-0-11" id="h13-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h13-0-12" id="h13-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h13-0-13" id="h13-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h13-0-14" id="h13-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h13-0-15" id="h13-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h13-0-16" id="h13-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h13-0-17" id="h13-0-17" class="i">+&lt;body&gt;
+</a><a href="#h13-0-18" id="h13-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h13-0-19" id="h13-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h13-0-20" id="h13-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h13-0-21" id="h13-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h13-0-22" id="h13-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h13-0-23" id="h13-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h13-0-24" id="h13-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h13-0-25" id="h13-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h13-0-26" id="h13-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h13-0-27" id="h13-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h13-0-28" id="h13-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h13-0-29" id="h13-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h13-0-30" id="h13-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h13-0-31" id="h13-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h13-0-32" id="h13-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h13-0-33" id="h13-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h13-0-34" id="h13-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h13-0-35" id="h13-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h13-0-36" id="h13-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h13-0-37" id="h13-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h13-0-38" id="h13-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h13-0-39" id="h13-0-39" class="i">+			&lt;article&gt;
+</a><a href="#h13-0-40" id="h13-0-40" class="i">+&lt;header&gt;
+</a><a href="#h13-0-41" id="h13-0-41" class="i">+	&lt;h1&gt;Mario Kart Emulator Setup&lt;/h1&gt;
+</a><a href="#h13-0-42" id="h13-0-42" class="i">+	&lt;p&gt;
+</a><a href="#h13-0-43" id="h13-0-43" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2025-04-11&lt;/time&gt;
+</a><a href="#h13-0-44" id="h13-0-44" class="i">+	&lt;/p&gt;
+</a><a href="#h13-0-45" id="h13-0-45" class="i">+&lt;/header&gt;
+</a><a href="#h13-0-46" id="h13-0-46" class="i">+
+</a><a href="#h13-0-47" id="h13-0-47" class="i">+&lt;h2 id=&quot;standard-game-on-emulator&quot;&gt;Standard game on Emulator&lt;/h2&gt;
+</a><a href="#h13-0-48" id="h13-0-48" class="i">+&lt;ol type=&quot;1&quot;&gt;
+</a><a href="#h13-0-49" id="h13-0-49" class="i">+&lt;li&gt;Get you Mario Kart Wiis Disc &lt;code&gt;.iso&lt;/code&gt;. If you burner is
+</a><a href="#h13-0-50" id="h13-0-50" class="i">+broken like mine &lt;a
+</a><a href="#h13-0-51" id="h13-0-51" class="i">+href=&quot;https://romsfun.com/roms/nintendo-wii/mario-kart-wii.html&quot;&gt;download
+</a><a href="#h13-0-52" id="h13-0-52" class="i">+it&lt;/a&gt;.&lt;/li&gt;
+</a><a href="#h13-0-53" id="h13-0-53" class="i">+&lt;li&gt;Get the &lt;a
+</a><a href="#h13-0-54" id="h13-0-54" class="i">+href=&quot;https://de.dolphin-emu.org/download/?ref=btn&quot;&gt;Dolphin
+</a><a href="#h13-0-55" id="h13-0-55" class="i">+Emulator&lt;/a&gt;&lt;/li&gt;
+</a><a href="#h13-0-56" id="h13-0-56" class="i">+&lt;li&gt;Choose your game directory with dolphin&lt;/li&gt;
+</a><a href="#h13-0-57" id="h13-0-57" class="i">+&lt;li&gt;Copy the &lt;a href=&quot;https://newwfc.xyz/codes/&quot;&gt;code&lt;/a&gt; in Mario Kart
+</a><a href="#h13-0-58" id="h13-0-58" class="i">+Wii &lt;code&gt;right click&lt;/code&gt; &amp;gt; Properties &amp;gt; Gecko Codes &amp;gt; Add
+</a><a href="#h13-0-59" id="h13-0-59" class="i">+Codes. Give it a name&lt;/li&gt;
+</a><a href="#h13-0-60" id="h13-0-60" class="i">+&lt;li&gt;Settings &amp;gt; generell &amp;gt; activate cheats
+</a><a href="#h13-0-61" id="h13-0-61" class="i">+&lt;code&gt;checked&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h13-0-62" id="h13-0-62" class="i">+&lt;/ol&gt;
+</a><a href="#h13-0-63" id="h13-0-63" class="i">+&lt;h3 id=&quot;the-code&quot;&gt;The &lt;em&gt;code&lt;/em&gt;&lt;/h3&gt;
+</a><a href="#h13-0-64" id="h13-0-64" class="i">+&lt;pre class=&quot;plain&quot;&gt;&lt;code&gt;C0000000 00000029
+</a><a href="#h13-0-65" id="h13-0-65" class="i">+3C004E80 60000020
+</a><a href="#h13-0-66" id="h13-0-66" class="i">+900F0000 7D8802A6
+</a><a href="#h13-0-67" id="h13-0-67" class="i">+9421FF80 BC610008
+</a><a href="#h13-0-68" id="h13-0-68" class="i">+48000019 6e657777
+</a><a href="#h13-0-69" id="h13-0-69" class="i">+66632e78 797a0000
+</a><a href="#h13-0-70" id="h13-0-70" class="i">+00000000 00000000
+</a><a href="#h13-0-71" id="h13-0-71" class="i">+7F2802A6 3AC0FFFF
+</a><a href="#h13-0-72" id="h13-0-72" class="i">+3B19FFFF 8EF80001
+</a><a href="#h13-0-73" id="h13-0-73" class="i">+2C170000 3AD60001
+</a><a href="#h13-0-74" id="h13-0-74" class="i">+4082FFF4 3E208000
+</a><a href="#h13-0-75" id="h13-0-75" class="i">+8B9F5F27 623E2FFF
+</a><a href="#h13-0-76" id="h13-0-76" class="i">+2C1C00EC 623FF1F0
+</a><a href="#h13-0-77" id="h13-0-77" class="i">+41820020 2C1C0010
+</a><a href="#h13-0-78" id="h13-0-78" class="i">+623FF114 41820014
+</a><a href="#h13-0-79" id="h13-0-79" class="i">+2C1C0054 623FF258
+</a><a href="#h13-0-80" id="h13-0-80" class="i">+41820008 623FE690
+</a><a href="#h13-0-81" id="h13-0-81" class="i">+3E202E6E 6231696E
+</a><a href="#h13-0-82" id="h13-0-82" class="i">+3F80017F 639CCFFC
+</a><a href="#h13-0-83" id="h13-0-83" class="i">+87BE0001 7C1D8800
+</a><a href="#h13-0-84" id="h13-0-84" class="i">+4182001D 379CFFFF
+</a><a href="#h13-0-85" id="h13-0-85" class="i">+4082FFF0 B8610008
+</a><a href="#h13-0-86" id="h13-0-86" class="i">+38210080 7D8803A6
+</a><a href="#h13-0-87" id="h13-0-87" class="i">+4E800020 7F4802A6
+</a><a href="#h13-0-88" id="h13-0-88" class="i">+7FDBF378 3B19FFFF
+</a><a href="#h13-0-89" id="h13-0-89" class="i">+7ED0B378 8EF80001
+</a><a href="#h13-0-90" id="h13-0-90" class="i">+9EFB0001 3610FFFF
+</a><a href="#h13-0-91" id="h13-0-91" class="i">+4082FFF4 3A800010
+</a><a href="#h13-0-92" id="h13-0-92" class="i">+7E96A051 41820064
+</a><a href="#h13-0-93" id="h13-0-93" class="i">+7E54DA14 8A720001
+</a><a href="#h13-0-94" id="h13-0-94" class="i">+2C13002F 41A20014
+</a><a href="#h13-0-95" id="h13-0-95" class="i">+9E7B0001 3694FFFF
+</a><a href="#h13-0-96" id="h13-0-96" class="i">+4082FFF8 48000044
+</a><a href="#h13-0-97" id="h13-0-97" class="i">+38920001 387B0001
+</a><a href="#h13-0-98" id="h13-0-98" class="i">+38C4FFFF 38A00000
+</a><a href="#h13-0-99" id="h13-0-99" class="i">+8CE60001 2C070000
+</a><a href="#h13-0-100" id="h13-0-100" class="i">+38A50001 4082FFF4
+</a><a href="#h13-0-101" id="h13-0-101" class="i">+3A05FFFE 7FE803A6
+</a><a href="#h13-0-102" id="h13-0-102" class="i">+4E800021 7E101A14
+</a><a href="#h13-0-103" id="h13-0-103" class="i">+39E00000 9DF00001
+</a><a href="#h13-0-104" id="h13-0-104" class="i">+3694FFFF 4082FFF8
+</a><a href="#h13-0-105" id="h13-0-105" class="i">+7F4803A6 4E800020
+</a><a href="#h13-0-106" id="h13-0-106" class="i">+C0000000 0000000E
+</a><a href="#h13-0-107" id="h13-0-107" class="i">+3C004E80 60000020
+</a><a href="#h13-0-108" id="h13-0-108" class="i">+900F0000 3D808000
+</a><a href="#h13-0-109" id="h13-0-109" class="i">+618C3000 3C00017F
+</a><a href="#h13-0-110" id="h13-0-110" class="i">+6000CFFC 7C0903A6
+</a><a href="#h13-0-111" id="h13-0-111" class="i">+3D607474 616B7073
+</a><a href="#h13-0-112" id="h13-0-112" class="i">+800C0000 7C005800
+</a><a href="#h13-0-113" id="h13-0-113" class="i">+40A20034 394C0003
+</a><a href="#h13-0-114" id="h13-0-114" class="i">+392C0002 7D455378
+</a><a href="#h13-0-115" id="h13-0-115" class="i">+38600000 8C050001
+</a><a href="#h13-0-116" id="h13-0-116" class="i">+2C000000 38630001
+</a><a href="#h13-0-117" id="h13-0-117" class="i">+4082FFF4 8C0A0001
+</a><a href="#h13-0-118" id="h13-0-118" class="i">+9C090001 3463FFFF
+</a><a href="#h13-0-119" id="h13-0-119" class="i">+4082FFF4 398C0001
+</a><a href="#h13-0-120" id="h13-0-120" class="i">+4200FFC0 4E800020&lt;/code&gt;&lt;/pre&gt;
+</a><a href="#h13-0-121" id="h13-0-121" class="i">+&lt;h2 id=&quot;modded-game-on-a-wii&quot;&gt;Modded game on a Wii&lt;/h2&gt;
+</a><a href="#h13-0-122" id="h13-0-122" class="i">+&lt;h3 id=&quot;what-you-need&quot;&gt;What you Need&lt;/h3&gt;
+</a><a href="#h13-0-123" id="h13-0-123" class="i">+&lt;ul&gt;
+</a><a href="#h13-0-124" id="h13-0-124" class="i">+&lt;li&gt;Wii (OS on version 4.3)&lt;/li&gt;
+</a><a href="#h13-0-125" id="h13-0-125" class="i">+&lt;li&gt;SD-Card (&lt;code&gt;&amp;gt;=8GB&lt;/code&gt; I suggest)&lt;/li&gt;
+</a><a href="#h13-0-126" id="h13-0-126" class="i">+&lt;li&gt;Computer with SD-Slot (or adapter)&lt;/li&gt;
+</a><a href="#h13-0-127" id="h13-0-127" class="i">+&lt;li&gt;Internet connection (computer and Wii)&lt;/li&gt;
+</a><a href="#h13-0-128" id="h13-0-128" class="i">+&lt;/ul&gt;
+</a><a href="#h13-0-129" id="h13-0-129" class="i">+&lt;h3 id=&quot;steps&quot;&gt;Steps&lt;/h3&gt;
+</a><a href="#h13-0-130" id="h13-0-130" class="i">+&lt;ol type=&quot;1&quot;&gt;
+</a><a href="#h13-0-131" id="h13-0-131" class="i">+&lt;li&gt;&lt;p&gt;Get you Wiis MAC-adress (Settings &amp;gt; Internet &amp;gt; console
+</a><a href="#h13-0-132" id="h13-0-132" class="i">+information)&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-133" id="h13-0-133" class="i">+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://please.hackmii.com/&quot;&gt;Letterbomb
+</a><a href="#h13-0-134" id="h13-0-134" class="i">+download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-135" id="h13-0-135" class="i">+&lt;li&gt;&lt;p&gt;Put the &lt;code&gt;.zip&lt;/code&gt;s content in the root of the
+</a><a href="#h13-0-136" id="h13-0-136" class="i">+SD-card&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-137" id="h13-0-137" class="i">+&lt;li&gt;&lt;p&gt;Put the SD-card in the Wii&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-138" id="h13-0-138" class="i">+&lt;li&gt;&lt;p&gt;Open mail on Wii and open the Letterbomb (you will see)&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-139" id="h13-0-139" class="i">+&lt;li&gt;&lt;p&gt;Follow the instructions to install the homebrew channel and
+</a><a href="#h13-0-140" id="h13-0-140" class="i">+BootMii&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-141" id="h13-0-141" class="i">+&lt;li&gt;&lt;p&gt;If asked choose “Install BootMii as boot2”. If it failed choose
+</a><a href="#h13-0-142" id="h13-0-142" class="i">+“Install BootMii as IOS”&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-143" id="h13-0-143" class="i">+&lt;li&gt;&lt;p&gt;If you want to back up &lt;a
+</a><a href="#h13-0-144" id="h13-0-144" class="i">+href=&quot;http://monkeydesk.at/f19-anleitungen/anleitung-nand-backup-eurer-wii-erstellen-178/&quot;&gt;follow
+</a><a href="#h13-0-145" id="h13-0-145" class="i">+those instructions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-146" id="h13-0-146" class="i">+&lt;li&gt;&lt;p&gt;Get the &lt;a href=&quot;https://www.chadsoft.co.uk/&quot;&gt;CTGP-R&lt;/a&gt;
+</a><a href="#h13-0-147" id="h13-0-147" class="i">+&lt;code&gt;.zip&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-148" id="h13-0-148" class="i">+&lt;li&gt;&lt;p&gt;Copy the folder content in the root oft the SD card.&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-149" id="h13-0-149" class="i">+&lt;li&gt;&lt;p&gt;Open CTGP-R on the homebrew channel and follow the
+</a><a href="#h13-0-150" id="h13-0-150" class="i">+instructions&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h13-0-151" id="h13-0-151" class="i">+&lt;/ol&gt;
+</a><a href="#h13-0-152" id="h13-0-152" class="i">+&lt;h2 id=&quot;section&quot;&gt;&lt;/h2&gt;
+</a><a href="#h13-0-153" id="h13-0-153" class="i">+
+</a><a href="#h13-0-154" id="h13-0-154" class="i">+			&lt;/article&gt;
+</a><a href="#h13-0-155" id="h13-0-155" class="i">+		&lt;/div&gt;
+</a><a href="#h13-0-156" id="h13-0-156" class="i">+	&lt;/main&gt;
+</a><a href="#h13-0-157" id="h13-0-157" class="i">+&lt;/body&gt;
+</a><a href="#h13-0-158" id="h13-0-158" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h14" href="../file/output/markdown.html.html">output/markdown.html</a> b/<a href="../file/output/markdown.html.html">output/markdown.html</a></b>
+<a href="#h14-0" id="h14-0" class="h">@@ -0,0 +1,72 @@
+</a><a href="#h14-0-0" id="h14-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h14-0-1" id="h14-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h14-0-2" id="h14-0-2" class="i">+&lt;head&gt;
+</a><a href="#h14-0-3" id="h14-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h14-0-4" id="h14-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h14-0-5" id="h14-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h14-0-6" id="h14-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h14-0-7" id="h14-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;What Markdown is and why it is superior&quot; /&gt;
+</a><a href="#h14-0-8" id="h14-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h14-0-9" id="h14-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h14-0-10" id="h14-0-10" class="i">+	&lt;title&gt;Markdown - Linus Blog&lt;/title&gt;
+</a><a href="#h14-0-11" id="h14-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h14-0-12" id="h14-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h14-0-13" id="h14-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h14-0-14" id="h14-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h14-0-15" id="h14-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h14-0-16" id="h14-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h14-0-17" id="h14-0-17" class="i">+&lt;body&gt;
+</a><a href="#h14-0-18" id="h14-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h14-0-19" id="h14-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h14-0-20" id="h14-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h14-0-21" id="h14-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h14-0-22" id="h14-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h14-0-23" id="h14-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h14-0-24" id="h14-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h14-0-25" id="h14-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h14-0-26" id="h14-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h14-0-27" id="h14-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h14-0-28" id="h14-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h14-0-29" id="h14-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h14-0-30" id="h14-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h14-0-31" id="h14-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h14-0-32" id="h14-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h14-0-33" id="h14-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h14-0-34" id="h14-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h14-0-35" id="h14-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h14-0-36" id="h14-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h14-0-37" id="h14-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h14-0-38" id="h14-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h14-0-39" id="h14-0-39" class="i">+			&lt;article&gt;
+</a><a href="#h14-0-40" id="h14-0-40" class="i">+&lt;header&gt;
+</a><a href="#h14-0-41" id="h14-0-41" class="i">+	&lt;h1&gt;Markdown&lt;/h1&gt;
+</a><a href="#h14-0-42" id="h14-0-42" class="i">+	&lt;p&gt;
+</a><a href="#h14-0-43" id="h14-0-43" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2025-04-12&lt;/time&gt;
+</a><a href="#h14-0-44" id="h14-0-44" class="i">+	&lt;/p&gt;
+</a><a href="#h14-0-45" id="h14-0-45" class="i">+&lt;/header&gt;
+</a><a href="#h14-0-46" id="h14-0-46" class="i">+
+</a><a href="#h14-0-47" id="h14-0-47" class="i">+&lt;ul&gt;
+</a><a href="#h14-0-48" id="h14-0-48" class="i">+&lt;li&gt;&lt;strong&gt;Free plain text:&lt;/strong&gt; With plain text you enter the
+</a><a href="#h14-0-49" id="h14-0-49" class="i">+world of unbordered choosing of you editor. You are not forced to use a
+</a><a href="#h14-0-50" id="h14-0-50" class="i">+proprietary editor like Microsoft Word or Apple Pages.&lt;/li&gt;
+</a><a href="#h14-0-51" id="h14-0-51" class="i">+&lt;li&gt;&lt;strong&gt;Light weight:&lt;/strong&gt; A empty file has: &lt;code&gt;0 Bit&lt;/code&gt;
+</a><a href="#h14-0-52" id="h14-0-52" class="i">+and this &lt;code&gt;.md&lt;/code&gt;-based file has&lt;/li&gt;
+</a><a href="#h14-0-53" id="h14-0-53" class="i">+&lt;li&gt;&lt;strong&gt;Simple formatting:&lt;/strong&gt; With the formatting characters
+</a><a href="#h14-0-54" id="h14-0-54" class="i">+of Markdown files you are able to simply change your paragraph to a
+</a><a href="#h14-0-55" id="h14-0-55" class="i">+title, (sub-) heading or list. No more searching of the setting in your
+</a><a href="#h14-0-56" id="h14-0-56" class="i">+editor – just put a &lt;code&gt;#&lt;/code&gt; (title) in front of you
+</a><a href="#h14-0-57" id="h14-0-57" class="i">+paragraph.&lt;/li&gt;
+</a><a href="#h14-0-58" id="h14-0-58" class="i">+&lt;li&gt;&lt;strong&gt;Conversion:&lt;/strong&gt; With tools like &lt;code&gt;pandoc&lt;/code&gt; you
+</a><a href="#h14-0-59" id="h14-0-59" class="i">+can easily change your &lt;code&gt;.md&lt;/code&gt; files to a &lt;code&gt;.tex&lt;/code&gt;
+</a><a href="#h14-0-60" id="h14-0-60" class="i">+version with the same formatting.&lt;/li&gt;
+</a><a href="#h14-0-61" id="h14-0-61" class="i">+&lt;li&gt;&lt;strong&gt;Flavours:&lt;/strong&gt; Fully compatible versions of Markdown
+</a><a href="#h14-0-62" id="h14-0-62" class="i">+with for example wiki-link functionality.&lt;/li&gt;
+</a><a href="#h14-0-63" id="h14-0-63" class="i">+&lt;li&gt;&lt;strong&gt;Backups:&lt;/strong&gt; Easy versioning with git&lt;/li&gt;
+</a><a href="#h14-0-64" id="h14-0-64" class="i">+&lt;/ul&gt;
+</a><a href="#h14-0-65" id="h14-0-65" class="i">+&lt;p&gt;Tell me, what else do you want?&lt;/p&gt;
+</a><a href="#h14-0-66" id="h14-0-66" class="i">+
+</a><a href="#h14-0-67" id="h14-0-67" class="i">+			&lt;/article&gt;
+</a><a href="#h14-0-68" id="h14-0-68" class="i">+		&lt;/div&gt;
+</a><a href="#h14-0-69" id="h14-0-69" class="i">+	&lt;/main&gt;
+</a><a href="#h14-0-70" id="h14-0-70" class="i">+&lt;/body&gt;
+</a><a href="#h14-0-71" id="h14-0-71" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h15" href="../file/output/pgp-yubikey.html.html">output/pgp-yubikey.html</a> b/<a href="../file/output/pgp-yubikey.html.html">output/pgp-yubikey.html</a></b>
+<a href="#h15-0" id="h15-0" class="h">@@ -0,0 +1,121 @@
+</a><a href="#h15-0-0" id="h15-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h15-0-1" id="h15-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h15-0-2" id="h15-0-2" class="i">+&lt;head&gt;
+</a><a href="#h15-0-3" id="h15-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h15-0-4" id="h15-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h15-0-5" id="h15-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h15-0-6" id="h15-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h15-0-7" id="h15-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;Setup for pgp supported by a yubikey&quot; /&gt;
+</a><a href="#h15-0-8" id="h15-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h15-0-9" id="h15-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h15-0-10" id="h15-0-10" class="i">+	&lt;title&gt;yubikey pgp config - Linus Blog&lt;/title&gt;
+</a><a href="#h15-0-11" id="h15-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h15-0-12" id="h15-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h15-0-13" id="h15-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h15-0-14" id="h15-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h15-0-15" id="h15-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h15-0-16" id="h15-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h15-0-17" id="h15-0-17" class="i">+&lt;body&gt;
+</a><a href="#h15-0-18" id="h15-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h15-0-19" id="h15-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h15-0-20" id="h15-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h15-0-21" id="h15-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h15-0-22" id="h15-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h15-0-23" id="h15-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h15-0-24" id="h15-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h15-0-25" id="h15-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h15-0-26" id="h15-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h15-0-27" id="h15-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h15-0-28" id="h15-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h15-0-29" id="h15-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h15-0-30" id="h15-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h15-0-31" id="h15-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h15-0-32" id="h15-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h15-0-33" id="h15-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h15-0-34" id="h15-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h15-0-35" id="h15-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h15-0-36" id="h15-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h15-0-37" id="h15-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h15-0-38" id="h15-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h15-0-39" id="h15-0-39" class="i">+			&lt;article&gt;
+</a><a href="#h15-0-40" id="h15-0-40" class="i">+&lt;header&gt;
+</a><a href="#h15-0-41" id="h15-0-41" class="i">+	&lt;h1&gt;yubikey pgp config&lt;/h1&gt;
+</a><a href="#h15-0-42" id="h15-0-42" class="i">+	&lt;p&gt;
+</a><a href="#h15-0-43" id="h15-0-43" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2025-07-05&lt;/time&gt;
+</a><a href="#h15-0-44" id="h15-0-44" class="i">+	&lt;/p&gt;
+</a><a href="#h15-0-45" id="h15-0-45" class="i">+&lt;/header&gt;
+</a><a href="#h15-0-46" id="h15-0-46" class="i">+
+</a><a href="#h15-0-47" id="h15-0-47" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--expert&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--full-gen-key&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h15-0-48" id="h15-0-48" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-49" id="h15-0-49" class="i">+&lt;li&gt;Enter &lt;code&gt;RSA&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-50" id="h15-0-50" class="i">+&lt;li&gt;Enter &lt;code&gt;4096&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-51" id="h15-0-51" class="i">+&lt;li&gt;Enter expiration date&lt;/li&gt;
+</a><a href="#h15-0-52" id="h15-0-52" class="i">+&lt;li&gt;Enter user information and email&lt;/li&gt;
+</a><a href="#h15-0-53" id="h15-0-53" class="i">+&lt;li&gt;Enter random input (mouse, keyboard) to gain entropy&lt;/li&gt;
+</a><a href="#h15-0-54" id="h15-0-54" class="i">+&lt;/ul&gt;
+</a><a href="#h15-0-55" id="h15-0-55" class="i">+&lt;p&gt;Output:&lt;/p&gt;
+</a><a href="#h15-0-56" id="h15-0-56" class="i">+&lt;pre&gt;&lt;code&gt;gpg: key &amp;lt;keyID&amp;gt; marked as ultimately trusted&lt;/code&gt;&lt;/pre&gt;
+</a><a href="#h15-0-57" id="h15-0-57" class="i">+&lt;h2 id=&quot;add-authentication-key-if-not-default&quot;&gt;Add authentication key
+</a><a href="#h15-0-58" id="h15-0-58" class="i">+(if not default)&lt;/h2&gt;
+</a><a href="#h15-0-59" id="h15-0-59" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb3&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb3-1&quot;&gt;&lt;a href=&quot;#cb3-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--expert&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--edit-key&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;keyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h15-0-60" id="h15-0-60" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb4&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb4-1&quot;&gt;&lt;a href=&quot;#cb4-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;addkey&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h15-0-61" id="h15-0-61" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-62" id="h15-0-62" class="i">+&lt;li&gt;Enter the &lt;code&gt;passphrase&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-63" id="h15-0-63" class="i">+&lt;li&gt;Enter &lt;code&gt;8&lt;/code&gt; for RSA&lt;/li&gt;
+</a><a href="#h15-0-64" id="h15-0-64" class="i">+&lt;li&gt;Enter &lt;code&gt;S&lt;/code&gt; for disabling “sign”&lt;/li&gt;
+</a><a href="#h15-0-65" id="h15-0-65" class="i">+&lt;li&gt;Enter &lt;code&gt;E&lt;/code&gt; for disabling “encrypt”&lt;/li&gt;
+</a><a href="#h15-0-66" id="h15-0-66" class="i">+&lt;li&gt;Enter &lt;code&gt;A&lt;/code&gt; for enabling “authentication”&lt;/li&gt;
+</a><a href="#h15-0-67" id="h15-0-67" class="i">+&lt;li&gt;Enter &lt;code&gt;Q&lt;/code&gt; for leaving dialoge&lt;/li&gt;
+</a><a href="#h15-0-68" id="h15-0-68" class="i">+&lt;li&gt;Enter key size&lt;/li&gt;
+</a><a href="#h15-0-69" id="h15-0-69" class="i">+&lt;li&gt;Enter same expiration date as before&lt;/li&gt;
+</a><a href="#h15-0-70" id="h15-0-70" class="i">+&lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to safe the changes&lt;/li&gt;
+</a><a href="#h15-0-71" id="h15-0-71" class="i">+&lt;/ul&gt;
+</a><a href="#h15-0-72" id="h15-0-72" class="i">+&lt;h2 id=&quot;back-pgp-key-up&quot;&gt;Back pgp-Key up&lt;/h2&gt;
+</a><a href="#h15-0-73" id="h15-0-73" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb5&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb5-1&quot;&gt;&lt;a href=&quot;#cb5-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--export-secret-key&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--armor&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;KeyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h15-0-74" id="h15-0-74" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-75" id="h15-0-75" class="i">+&lt;li&gt;Store output safe&lt;/li&gt;
+</a><a href="#h15-0-76" id="h15-0-76" class="i">+&lt;/ul&gt;
+</a><a href="#h15-0-77" id="h15-0-77" class="i">+&lt;h2 id=&quot;add-pgp-keys-to-the-yubikey&quot;&gt;Add pgp-keys to the YubiKey&lt;/h2&gt;
+</a><a href="#h15-0-78" id="h15-0-78" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-79" id="h15-0-79" class="i">+&lt;li&gt;Insert YubiKey into a USB port&lt;/li&gt;
+</a><a href="#h15-0-80" id="h15-0-80" class="i">+&lt;/ul&gt;
+</a><a href="#h15-0-81" id="h15-0-81" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb6&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb6-1&quot;&gt;&lt;a href=&quot;#cb6-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--edit-key&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;KeyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h15-0-82" id="h15-0-82" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb7&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb7-1&quot;&gt;&lt;a href=&quot;#cb7-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;keytocard&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h15-0-83" id="h15-0-83" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-84" id="h15-0-84" class="i">+&lt;li&gt;Signature subkey:
+</a><a href="#h15-0-85" id="h15-0-85" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-86" id="h15-0-86" class="i">+&lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-87" id="h15-0-87" class="i">+&lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to continue&lt;/li&gt;
+</a><a href="#h15-0-88" id="h15-0-88" class="i">+&lt;li&gt;Enter &lt;code&gt;1&lt;/code&gt; to move the signature subkey to a slot in the
+</a><a href="#h15-0-89" id="h15-0-89" class="i">+yubikey&lt;/li&gt;
+</a><a href="#h15-0-90" id="h15-0-90" class="i">+&lt;li&gt;Enter &lt;code&gt;key 1&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-91" id="h15-0-91" class="i">+&lt;/ul&gt;&lt;/li&gt;
+</a><a href="#h15-0-92" id="h15-0-92" class="i">+&lt;li&gt;Encryption subkey:
+</a><a href="#h15-0-93" id="h15-0-93" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-94" id="h15-0-94" class="i">+&lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-95" id="h15-0-95" class="i">+&lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to continue&lt;/li&gt;
+</a><a href="#h15-0-96" id="h15-0-96" class="i">+&lt;li&gt;Enter &lt;code&gt;2&lt;/code&gt; to move the encryption subkey to a slot in the
+</a><a href="#h15-0-97" id="h15-0-97" class="i">+yubikey&lt;/li&gt;
+</a><a href="#h15-0-98" id="h15-0-98" class="i">+&lt;li&gt;Enter &lt;code&gt;key 1&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-99" id="h15-0-99" class="i">+&lt;li&gt;Enter &lt;code&gt;key 2&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-100" id="h15-0-100" class="i">+&lt;/ul&gt;&lt;/li&gt;
+</a><a href="#h15-0-101" id="h15-0-101" class="i">+&lt;li&gt;Authentication subkey
+</a><a href="#h15-0-102" id="h15-0-102" class="i">+&lt;ul&gt;
+</a><a href="#h15-0-103" id="h15-0-103" class="i">+&lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h15-0-104" id="h15-0-104" class="i">+&lt;li&gt;Enter &lt;code&gt;3&lt;/code&gt; to move the authentication subkey to a slot in
+</a><a href="#h15-0-105" id="h15-0-105" class="i">+the yubikey&lt;/li&gt;
+</a><a href="#h15-0-106" id="h15-0-106" class="i">+&lt;/ul&gt;&lt;/li&gt;
+</a><a href="#h15-0-107" id="h15-0-107" class="i">+&lt;li&gt;Enter &lt;code&gt;quit&lt;/code&gt; to leave&lt;/li&gt;
+</a><a href="#h15-0-108" id="h15-0-108" class="i">+&lt;/ul&gt;
+</a><a href="#h15-0-109" id="h15-0-109" class="i">+&lt;p&gt;When asked &lt;strong&gt;do not safe&lt;/strong&gt; your changes enabling you to
+</a><a href="#h15-0-110" id="h15-0-110" class="i">+copy the key to another Yubikey.&lt;/p&gt;
+</a><a href="#h15-0-111" id="h15-0-111" class="i">+&lt;hr /&gt;
+</a><a href="#h15-0-112" id="h15-0-112" class="i">+&lt;p&gt;&lt;a
+</a><a href="#h15-0-113" id="h15-0-113" class="i">+href=&quot;https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP&quot;&gt;article
+</a><a href="#h15-0-114" id="h15-0-114" class="i">+by yubikey&lt;/a&gt;&lt;/p&gt;
+</a><a href="#h15-0-115" id="h15-0-115" class="i">+
+</a><a href="#h15-0-116" id="h15-0-116" class="i">+			&lt;/article&gt;
+</a><a href="#h15-0-117" id="h15-0-117" class="i">+		&lt;/div&gt;
+</a><a href="#h15-0-118" id="h15-0-118" class="i">+	&lt;/main&gt;
+</a><a href="#h15-0-119" id="h15-0-119" class="i">+&lt;/body&gt;
+</a><a href="#h15-0-120" id="h15-0-120" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h16" href="../file/output/typst.html.html">output/typst.html</a> b/<a href="../file/output/typst.html.html">output/typst.html</a></b>
+<a href="#h16-0" id="h16-0" class="h">@@ -0,0 +1,74 @@
+</a><a href="#h16-0-0" id="h16-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h16-0-1" id="h16-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+</a><a href="#h16-0-2" id="h16-0-2" class="i">+&lt;head&gt;
+</a><a href="#h16-0-3" id="h16-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h16-0-4" id="h16-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+</a><a href="#h16-0-5" id="h16-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h16-0-6" id="h16-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+</a><a href="#h16-0-7" id="h16-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;The smart Latex alternative&quot; /&gt;
+</a><a href="#h16-0-8" id="h16-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+</a><a href="#h16-0-9" id="h16-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+</a><a href="#h16-0-10" id="h16-0-10" class="i">+	&lt;title&gt;Typst - Linus Blog&lt;/title&gt;
+</a><a href="#h16-0-11" id="h16-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h16-0-12" id="h16-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h16-0-13" id="h16-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+</a><a href="#h16-0-14" id="h16-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+</a><a href="#h16-0-15" id="h16-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h16-0-16" id="h16-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h16-0-17" id="h16-0-17" class="i">+&lt;body&gt;
+</a><a href="#h16-0-18" id="h16-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h16-0-19" id="h16-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h16-0-20" id="h16-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h16-0-21" id="h16-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h16-0-22" id="h16-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h16-0-23" id="h16-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h16-0-24" id="h16-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h16-0-25" id="h16-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h16-0-26" id="h16-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h16-0-27" id="h16-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h16-0-28" id="h16-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h16-0-29" id="h16-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h16-0-30" id="h16-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h16-0-31" id="h16-0-31" class="i">+				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h16-0-32" id="h16-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h16-0-33" id="h16-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h16-0-34" id="h16-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h16-0-35" id="h16-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h16-0-36" id="h16-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h16-0-37" id="h16-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h16-0-38" id="h16-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h16-0-39" id="h16-0-39" class="i">+			&lt;article&gt;
+</a><a href="#h16-0-40" id="h16-0-40" class="i">+&lt;header&gt;
+</a><a href="#h16-0-41" id="h16-0-41" class="i">+	&lt;h1&gt;Typst&lt;/h1&gt;
+</a><a href="#h16-0-42" id="h16-0-42" class="i">+	&lt;p&gt;
+</a><a href="#h16-0-43" id="h16-0-43" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2025-06-01&lt;/time&gt;
+</a><a href="#h16-0-44" id="h16-0-44" class="i">+	&lt;/p&gt;
+</a><a href="#h16-0-45" id="h16-0-45" class="i">+&lt;/header&gt;
+</a><a href="#h16-0-46" id="h16-0-46" class="i">+
+</a><a href="#h16-0-47" id="h16-0-47" class="i">+&lt;p&gt;When ever editing big text projects I used &lt;span
+</a><a href="#h16-0-48" id="h16-0-48" class="i">+class=&quot;math inline&quot;&gt;$\LaTeX$&lt;/span&gt;. Just because Latex is the right
+</a><a href="#h16-0-49" id="h16-0-49" class="i">+tool for the job.&lt;/p&gt;
+</a><a href="#h16-0-50" id="h16-0-50" class="i">+&lt;p&gt;But as it turned out there has been a simpler tool for the job. And
+</a><a href="#h16-0-51" id="h16-0-51" class="i">+it is called Typst.&lt;/p&gt;
+</a><a href="#h16-0-52" id="h16-0-52" class="i">+&lt;p&gt;Why it is simpler:&lt;/p&gt;
+</a><a href="#h16-0-53" id="h16-0-53" class="i">+&lt;ul&gt;
+</a><a href="#h16-0-54" id="h16-0-54" class="i">+&lt;li&gt;It is FOSS&lt;/li&gt;
+</a><a href="#h16-0-55" id="h16-0-55" class="i">+&lt;li&gt;Ready to write: no &lt;code&gt;\document{begin}&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h16-0-56" id="h16-0-56" class="i">+&lt;li&gt;Markdown based syntax where it can: eg. headings with
+</a><a href="#h16-0-57" id="h16-0-57" class="i">+&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h16-0-58" id="h16-0-58" class="i">+&lt;li&gt;Easy math syntax&lt;/li&gt;
+</a><a href="#h16-0-59" id="h16-0-59" class="i">+&lt;li&gt;Simple coding constructs instead of single use case based
+</a><a href="#h16-0-60" id="h16-0-60" class="i">+macros&lt;/li&gt;
+</a><a href="#h16-0-61" id="h16-0-61" class="i">+&lt;li&gt;FOSS templates ready to clone&lt;/li&gt;
+</a><a href="#h16-0-62" id="h16-0-62" class="i">+&lt;li&gt;Renders preview from buffer: instant update without having to
+</a><a href="#h16-0-63" id="h16-0-63" class="i">+safe&lt;/li&gt;
+</a><a href="#h16-0-64" id="h16-0-64" class="i">+&lt;/ul&gt;
+</a><a href="#h16-0-65" id="h16-0-65" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre
+</a><a href="#h16-0-66" id="h16-0-66" class="i">+class=&quot;sourceCode typ&quot;&gt;&lt;code class=&quot;sourceCode typst&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;lim_(x-&amp;gt;oo) 1/x = 0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h16-0-67" id="h16-0-67" class="i">+&lt;p&gt;Their &lt;a href=&quot;https://github.com/typst&quot;&gt;GitHub Page&lt;/a&gt;&lt;/p&gt;
+</a><a href="#h16-0-68" id="h16-0-68" class="i">+
+</a><a href="#h16-0-69" id="h16-0-69" class="i">+			&lt;/article&gt;
+</a><a href="#h16-0-70" id="h16-0-70" class="i">+		&lt;/div&gt;
+</a><a href="#h16-0-71" id="h16-0-71" class="i">+	&lt;/main&gt;
+</a><a href="#h16-0-72" id="h16-0-72" class="i">+&lt;/body&gt;
+</a><a href="#h16-0-73" id="h16-0-73" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h17" href="../file/pages/.DS_Store.html">pages/.DS_Store</a> b/<a href="../file/pages/.DS_Store.html">pages/.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h18" href="../file/pages/dwl.cfg.html">pages/dwl.cfg</a> b/<a href="../file/pages/dwl.cfg.html">pages/dwl.cfg</a></b>
+<a href="#h18-0" id="h18-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h18-0-0" id="h18-0-0" class="i">+filename = dwl.html
+</a><a href="#h18-0-1" id="h18-0-1" class="i">+title = dwl config
+</a><a href="#h18-0-2" id="h18-0-2" class="i">+description = Perfect high DPI window manager
+</a><a href="#h18-0-3" id="h18-0-3" class="i">+created = 2025-06-16
+</a><a href="#h18-0-4" id="h18-0-4" class="i">+updated = 2025-06-16
+</a><b>diff --git a/<a id="h19" href="../file/pages/dwl.html.html">pages/dwl.html</a> b/<a href="../file/pages/dwl.html.html">pages/dwl.html</a></b>
+<a href="#h19-0" id="h19-0" class="h">@@ -0,0 +1,60 @@
+</a><a href="#h19-0-0" id="h19-0-0" class="i">+&lt;p&gt;My first rather serious linux system should be built on a Thinkpad
+</a><a href="#h19-0-1" id="h19-0-1" class="i">+x61s in 2023. Due to a lack in performence I thought about installing
+</a><a href="#h19-0-2" id="h19-0-2" class="i">+only the most minimal software on it.&lt;/p&gt;
+</a><a href="#h19-0-3" id="h19-0-3" class="i">+&lt;p&gt;So I came to see the famouse Thinkpad Arch combination. (I know and
+</a><a href="#h19-0-4" id="h19-0-4" class="i">+knew that it was not the most minimal os possible, but I was convinced)
+</a><a href="#h19-0-5" id="h19-0-5" class="i">+When trying to find the most minimal and fast window manager found the
+</a><a href="#h19-0-6" id="h19-0-6" class="i">+perfect fit: &lt;code&gt;dwm&lt;/code&gt;.&lt;/p&gt;
+</a><a href="#h19-0-7" id="h19-0-7" class="i">+&lt;p&gt;&lt;code&gt;dwm&lt;/code&gt; became my wm that just worked.&lt;/p&gt;
+</a><a href="#h19-0-8" id="h19-0-8" class="i">+&lt;hr /&gt;
+</a><a href="#h19-0-9" id="h19-0-9" class="i">+&lt;p&gt;However as I continued to gain understanding of how Xorg works and as
+</a><a href="#h19-0-10" id="h19-0-10" class="i">+I understood the bloat in &lt;code&gt;X&lt;/code&gt;, I found it hard to swich. On
+</a><a href="#h19-0-11" id="h19-0-11" class="i">+YouTube I came across &lt;code&gt;dwl&lt;/code&gt; a project about translating
+</a><a href="#h19-0-12" id="h19-0-12" class="i">+&lt;code&gt;dwl&lt;/code&gt; to work with &lt;code&gt;wlroots&lt;/code&gt;.&lt;/p&gt;
+</a><a href="#h19-0-13" id="h19-0-13" class="i">+&lt;p&gt;Even though being familiar with the rather difficult to install
+</a><a href="#h19-0-14" id="h19-0-14" class="i">+&lt;code&gt;dwm&lt;/code&gt;, I wasn’t able to even compile &lt;code&gt;dwl&lt;/code&gt;. Now I
+</a><a href="#h19-0-15" id="h19-0-15" class="i">+understand and give you - the reader - a path to follow.&lt;/p&gt;
+</a><a href="#h19-0-16" id="h19-0-16" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre
+</a><a href="#h19-0-17" id="h19-0-17" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; dnf install &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-18" id="h19-0-18" class="i">+&lt;span id=&quot;cb1-2&quot;&gt;&lt;a href=&quot;#cb1-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  libinput libinput-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-19" id="h19-0-19" class="i">+&lt;span id=&quot;cb1-3&quot;&gt;&lt;a href=&quot;#cb1-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland wayland-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-20" id="h19-0-20" class="i">+&lt;span id=&quot;cb1-4&quot;&gt;&lt;a href=&quot;#cb1-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wlroots wlroots-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-21" id="h19-0-21" class="i">+&lt;span id=&quot;cb1-5&quot;&gt;&lt;a href=&quot;#cb1-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  xkbcommon xkbcommon-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-22" id="h19-0-22" class="i">+&lt;span id=&quot;cb1-6&quot;&gt;&lt;a href=&quot;#cb1-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland-protocols &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-23" id="h19-0-23" class="i">+&lt;span id=&quot;cb1-7&quot;&gt;&lt;a href=&quot;#cb1-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  pkgconf-pkg-config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h19-0-24" id="h19-0-24" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb2&quot;&gt;&lt;pre
+</a><a href="#h19-0-25" id="h19-0-25" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb2-1&quot;&gt;&lt;a href=&quot;#cb2-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;git&lt;/span&gt; clone https://codeberg.org/dwl/dwl.git&lt;/span&gt;
+</a><a href="#h19-0-26" id="h19-0-26" class="i">+&lt;span id=&quot;cb2-2&quot;&gt;&lt;a href=&quot;#cb2-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;bu&quot;&gt;cd&lt;/span&gt; dwl&lt;/span&gt;
+</a><a href="#h19-0-27" id="h19-0-27" class="i">+&lt;span id=&quot;cb2-3&quot;&gt;&lt;a href=&quot;#cb2-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;git&lt;/span&gt; checkout v0.7&lt;/span&gt;
+</a><a href="#h19-0-28" id="h19-0-28" class="i">+&lt;span id=&quot;cb2-4&quot;&gt;&lt;a href=&quot;#cb2-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;make&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-29" id="h19-0-29" class="i">+&lt;span id=&quot;cb2-5&quot;&gt;&lt;a href=&quot;#cb2-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h19-0-30" id="h19-0-30" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb3&quot;&gt;&lt;pre
+</a><a href="#h19-0-31" id="h19-0-31" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb3-1&quot;&gt;&lt;a href=&quot;#cb3-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; dnf install &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-32" id="h19-0-32" class="i">+&lt;span id=&quot;cb3-2&quot;&gt;&lt;a href=&quot;#cb3-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  libinput libinput-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-33" id="h19-0-33" class="i">+&lt;span id=&quot;cb3-3&quot;&gt;&lt;a href=&quot;#cb3-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland wayland-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-34" id="h19-0-34" class="i">+&lt;span id=&quot;cb3-4&quot;&gt;&lt;a href=&quot;#cb3-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wlroots wlroots-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-35" id="h19-0-35" class="i">+&lt;span id=&quot;cb3-5&quot;&gt;&lt;a href=&quot;#cb3-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  xkbcommon xkbcommon-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-36" id="h19-0-36" class="i">+&lt;span id=&quot;cb3-6&quot;&gt;&lt;a href=&quot;#cb3-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  wayland-protocols-devel &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-37" id="h19-0-37" class="i">+&lt;span id=&quot;cb3-7&quot;&gt;&lt;a href=&quot;#cb3-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  pkgconf-pkg-config &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-38" id="h19-0-38" class="i">+&lt;span id=&quot;cb3-8&quot;&gt;&lt;a href=&quot;#cb3-8&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  meson ninja-build &lt;span class=&quot;dt&quot;&gt;\&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-39" id="h19-0-39" class="i">+&lt;span id=&quot;cb3-9&quot;&gt;&lt;a href=&quot;#cb3-9&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;  gcc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h19-0-40" id="h19-0-40" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb4&quot;&gt;&lt;pre
+</a><a href="#h19-0-41" id="h19-0-41" class="i">+class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb4-1&quot;&gt;&lt;a href=&quot;#cb4-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;git&lt;/span&gt; clone https://github.com/waycrate/wmenu.git&lt;/span&gt;
+</a><a href="#h19-0-42" id="h19-0-42" class="i">+&lt;span id=&quot;cb4-2&quot;&gt;&lt;a href=&quot;#cb4-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;bu&quot;&gt;cd&lt;/span&gt; wmenu&lt;/span&gt;
+</a><a href="#h19-0-43" id="h19-0-43" class="i">+&lt;span id=&quot;cb4-3&quot;&gt;&lt;a href=&quot;#cb4-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;meson&lt;/span&gt; setup build&lt;/span&gt;
+</a><a href="#h19-0-44" id="h19-0-44" class="i">+&lt;span id=&quot;cb4-4&quot;&gt;&lt;a href=&quot;#cb4-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;ninja&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;-C&lt;/span&gt; build&lt;/span&gt;
+</a><a href="#h19-0-45" id="h19-0-45" class="i">+&lt;span id=&quot;cb4-5&quot;&gt;&lt;a href=&quot;#cb4-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;fu&quot;&gt;sudo&lt;/span&gt; ninja &lt;span class=&quot;at&quot;&gt;-C&lt;/span&gt; build install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h19-0-46" id="h19-0-46" class="i">+&lt;hr /&gt;
+</a><a href="#h19-0-47" id="h19-0-47" class="i">+&lt;p&gt;Edits to &lt;code&gt;sources/dwl/config.h&lt;/code&gt;:&lt;/p&gt;
+</a><a href="#h19-0-48" id="h19-0-48" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb5&quot;&gt;&lt;pre class=&quot;sourceCode c&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;span id=&quot;cb5-1&quot;&gt;&lt;a href=&quot;#cb5-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;dt&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;*&lt;/span&gt;termcmd&lt;span class=&quot;op&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;ghostty&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; NULL &lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h19-0-49" id="h19-0-49" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb6&quot;&gt;&lt;pre class=&quot;sourceCode c&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;span id=&quot;cb6-1&quot;&gt;&lt;a href=&quot;#cb6-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;dt&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;const&lt;/span&gt; MonitorRule monrules&lt;span class=&quot;op&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-50" id="h19-0-50" class="i">+&lt;span id=&quot;cb6-2&quot;&gt;&lt;a href=&quot;#cb6-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;co&quot;&gt;/* macbook m1 14&amp;quot; */&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-51" id="h19-0-51" class="i">+&lt;span id=&quot;cb6-3&quot;&gt;&lt;a href=&quot;#cb6-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;eDP-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;bu&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;op&quot;&gt;&amp;amp;&lt;/span&gt;layouts&lt;span class=&quot;op&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;],&lt;/span&gt; WL_OUTPUT_TRANSFORM_NORMAL&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;op&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;op&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;},&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-52" id="h19-0-52" class="i">+&lt;span id=&quot;cb6-4&quot;&gt;&lt;a href=&quot;#cb6-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h19-0-53" id="h19-0-53" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb7&quot;&gt;&lt;pre class=&quot;sourceCode c&quot;&gt;&lt;code class=&quot;sourceCode c&quot;&gt;&lt;span id=&quot;cb7-1&quot;&gt;&lt;a href=&quot;#cb7-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;dt&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;dt&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;struct&lt;/span&gt; xkb_rule_names xkb_rules &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-54" id="h19-0-54" class="i">+&lt;span id=&quot;cb7-2&quot;&gt;&lt;a href=&quot;#cb7-2&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;co&quot;&gt;/* default:&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-55" id="h19-0-55" class="i">+&lt;span id=&quot;cb7-3&quot;&gt;&lt;a href=&quot;#cb7-3&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;    .options = NULL,&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-56" id="h19-0-56" class="i">+&lt;span id=&quot;cb7-4&quot;&gt;&lt;a href=&quot;#cb7-4&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;co&quot;&gt;    */&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-57" id="h19-0-57" class="i">+&lt;span id=&quot;cb7-5&quot;&gt;&lt;a href=&quot;#cb7-5&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;layout &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;de&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-58" id="h19-0-58" class="i">+&lt;span id=&quot;cb7-6&quot;&gt;&lt;a href=&quot;#cb7-6&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;    &lt;span class=&quot;op&quot;&gt;.&lt;/span&gt;variant &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;latin1&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+</a><a href="#h19-0-59" id="h19-0-59" class="i">+&lt;span id=&quot;cb7-7&quot;&gt;&lt;a href=&quot;#cb7-7&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;op&quot;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><b>diff --git a/<a id="h20" href="../file/pages/linux.cfg.html">pages/linux.cfg</a> b/<a href="../file/pages/linux.cfg.html">pages/linux.cfg</a></b>
+<a href="#h20-0" id="h20-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h20-0-0" id="h20-0-0" class="i">+filename = linux.html
+</a><a href="#h20-0-1" id="h20-0-1" class="i">+title = Why Linux
+</a><a href="#h20-0-2" id="h20-0-2" class="i">+description = Why linux is superior
+</a><a href="#h20-0-3" id="h20-0-3" class="i">+created = 2024-09-05
+</a><a href="#h20-0-4" id="h20-0-4" class="i">+updated = 2024-09-05
+</a><b>diff --git a/<a id="h21" href="../file/pages/linux.html.html">pages/linux.html</a> b/<a href="../file/pages/linux.html.html">pages/linux.html</a></b>
+<a href="#h21-0" id="h21-0" class="h">@@ -0,0 +1,75 @@
+</a><a href="#h21-0-0" id="h21-0-0" class="i">+&lt;h1 id=&quot;why-gnulinux&quot;&gt;Why GNU/Linux&lt;/h1&gt;
+</a><a href="#h21-0-1" id="h21-0-1" class="i">+&lt;blockquote&gt;
+</a><a href="#h21-0-2" id="h21-0-2" class="i">+&lt;p&gt;This is the Unix philosophy: Write programs that do one thing and do
+</a><a href="#h21-0-3" id="h21-0-3" class="i">+it well. Write programs to work together. Write programs to handle text
+</a><a href="#h21-0-4" id="h21-0-4" class="i">+streams, because that is a univeRsal interface&lt;/p&gt;
+</a><a href="#h21-0-5" id="h21-0-5" class="i">+&lt;p&gt;&lt;em&gt;- Doug McIlroy, the inventor of Unix pipes and one of the
+</a><a href="#h21-0-6" id="h21-0-6" class="i">+founders of the Unix tradition&lt;/em&gt;&lt;/p&gt;
+</a><a href="#h21-0-7" id="h21-0-7" class="i">+&lt;/blockquote&gt;
+</a><a href="#h21-0-8" id="h21-0-8" class="i">+&lt;p&gt;Linux at its core is the idea of intercompatability born in the body
+</a><a href="#h21-0-9" id="h21-0-9" class="i">+of a kernel. What I love in Linux is not how fast and free it is. Not
+</a><a href="#h21-0-10" id="h21-0-10" class="i">+how amazingly many people contribute to one goal. It is the way I use it
+</a><a href="#h21-0-11" id="h21-0-11" class="i">+and how it allowed me to fit the most bare bones software to my
+</a><a href="#h21-0-12" id="h21-0-12" class="i">+needs.&lt;/p&gt;
+</a><a href="#h21-0-13" id="h21-0-13" class="i">+&lt;h2 id=&quot;examples-for-the-perfect-fit&quot;&gt;Examples for the perfect fit&lt;/h2&gt;
+</a><a href="#h21-0-14" id="h21-0-14" class="i">+&lt;p&gt;My senior high note taking setup is pretty complex. However it does
+</a><a href="#h21-0-15" id="h21-0-15" class="i">+fit my workflow perfectly.&lt;/p&gt;
+</a><a href="#h21-0-16" id="h21-0-16" class="i">+&lt;ul&gt;
+</a><a href="#h21-0-17" id="h21-0-17" class="i">+&lt;li&gt;&lt;a href=&quot;/posts/neovim&quot;&gt;neovim&lt;/a&gt; note taking&lt;/li&gt;
+</a><a href="#h21-0-18" id="h21-0-18" class="i">+&lt;li&gt;&lt;a href=&quot;posts/tex&quot;&gt;&lt;/a&gt; for long-term sheets&lt;/li&gt;
+</a><a href="#h21-0-19" id="h21-0-19" class="i">+&lt;li&gt;&lt;a href=&quot;posts/markdown&quot;&gt;markdown&lt;/a&gt; for short-term notes in
+</a><a href="#h21-0-20" id="h21-0-20" class="i">+lessons&lt;/li&gt;
+</a><a href="#h21-0-21" id="h21-0-21" class="i">+&lt;li&gt;pandoc turns markdown into &lt;code&gt;\tex&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h21-0-22" id="h21-0-22" class="i">+&lt;li&gt;telescope and todo-comments for todo lists&lt;/li&gt;
+</a><a href="#h21-0-23" id="h21-0-23" class="i">+&lt;li&gt;&lt;a href=&quot;posts/anki&quot;&gt;anki&lt;/a&gt; for everyday learning&lt;/li&gt;
+</a><a href="#h21-0-24" id="h21-0-24" class="i">+&lt;li&gt;github for backing up and syncing my data (homelab in the
+</a><a href="#h21-0-25" id="h21-0-25" class="i">+future)&lt;/li&gt;
+</a><a href="#h21-0-26" id="h21-0-26" class="i">+&lt;/ul&gt;
+</a><a href="#h21-0-27" id="h21-0-27" class="i">+&lt;p&gt;With that setup I am albe to quickly make notes in my lessons as well
+</a><a href="#h21-0-28" id="h21-0-28" class="i">+as clearly structure my long-term sheets. With having anki on any of my
+</a><a href="#h21-0-29" id="h21-0-29" class="i">+devices I am able to learn everywhere.&lt;/p&gt;
+</a><a href="#h21-0-30" id="h21-0-30" class="i">+&lt;p&gt;If I want I could even run all of that over ssh from a homelab of
+</a><a href="#h21-0-31" id="h21-0-31" class="i">+server at school.&lt;/p&gt;
+</a><a href="#h21-0-32" id="h21-0-32" class="i">+&lt;h2 id=&quot;intercompatability&quot;&gt;Intercompatability&lt;/h2&gt;
+</a><a href="#h21-0-33" id="h21-0-33" class="i">+&lt;p&gt;My shell runs in &lt;a
+</a><a href="#h21-0-34" id="h21-0-34" class="i">+href=&quot;https://github.com/alacritty/alacritty&quot;&gt;alacritty&lt;/a&gt; (macOS) and
+</a><a href="#h21-0-35" id="h21-0-35" class="i">+&lt;a href=&quot;https://st.suckless.org/&quot;&gt;st&lt;/a&gt; (arch and void). My most used
+</a><a href="#h21-0-36" id="h21-0-36" class="i">+and centered tool is &lt;a href=&quot;/posts/neovim&quot;&gt;neovim&lt;/a&gt;. With my
+</a><a href="#h21-0-37" id="h21-0-37" class="i">+configuration it is beautiful and works seemlesly. With telescope I
+</a><a href="#h21-0-38" id="h21-0-38" class="i">+quickly open my &lt;code&gt;&amp;lt;subject&amp;gt;.refile.md&lt;/code&gt; note and later
+</a><a href="#h21-0-39" id="h21-0-39" class="i">+the week I convert it to &lt;code&gt;&amp;lt;subject.refile.tex&lt;/code&gt; with
+</a><a href="#h21-0-40" id="h21-0-40" class="i">+pandoc. The important information gets refiled into
+</a><a href="#h21-0-41" id="h21-0-41" class="i">+&lt;code&gt;&amp;lt;subject&amp;gt;.tex&lt;/code&gt; and tagged as
+</a><a href="#h21-0-42" id="h21-0-42" class="i">+&lt;code&gt;ANKI: &amp;lt;subject&amp;gt;&lt;/code&gt;. So if I open telescope to see my
+</a><a href="#h21-0-43" id="h21-0-43" class="i">+todos the anki sign reminds me of entering the information to my
+</a><a href="#h21-0-44" id="h21-0-44" class="i">+&lt;code&gt;anki deck&lt;/code&gt;. Every evening I push my files to github to be
+</a><a href="#h21-0-45" id="h21-0-45" class="i">+safe for a data loss.&lt;/p&gt;
+</a><a href="#h21-0-46" id="h21-0-46" class="i">+&lt;h2 id=&quot;options-example-distributions&quot;&gt;Options (example
+</a><a href="#h21-0-47" id="h21-0-47" class="i">+distributions)&lt;/h2&gt;
+</a><a href="#h21-0-48" id="h21-0-48" class="i">+&lt;p&gt;The following are distros I have used.&lt;/p&gt;
+</a><a href="#h21-0-49" id="h21-0-49" class="i">+&lt;ul&gt;
+</a><a href="#h21-0-50" id="h21-0-50" class="i">+&lt;li&gt;Manjaro (Why does it exists exactly)&lt;/li&gt;
+</a><a href="#h21-0-51" id="h21-0-51" class="i">+&lt;li&gt;Mint (If you would want to cheat)&lt;/li&gt;
+</a><a href="#h21-0-52" id="h21-0-52" class="i">+&lt;li&gt;&lt;a href=&quot;/content/arch.md&quot;&gt;Arch&lt;/a&gt; (Amazing documentation, pacman,
+</a><a href="#h21-0-53" id="h21-0-53" class="i">+AUR)&lt;/li&gt;
+</a><a href="#h21-0-54" id="h21-0-54" class="i">+&lt;li&gt;Arco (No systemd arch)&lt;/li&gt;
+</a><a href="#h21-0-55" id="h21-0-55" class="i">+&lt;li&gt;Gentoo (If you want it you know it)&lt;/li&gt;
+</a><a href="#h21-0-56" id="h21-0-56" class="i">+&lt;li&gt;Void (small, but no systemd!)&lt;/li&gt;
+</a><a href="#h21-0-57" id="h21-0-57" class="i">+&lt;/ul&gt;
+</a><a href="#h21-0-58" id="h21-0-58" class="i">+&lt;p&gt;On my &lt;strong&gt;x61s ThinkPad&lt;/strong&gt; I run Arch Linux. It is light
+</a><a href="#h21-0-59" id="h21-0-59" class="i">+weight and has amazing documentary. The arch wiki is one of the best
+</a><a href="#h21-0-60" id="h21-0-60" class="i">+documents and I even refer to it to non specific arch users.&lt;/p&gt;
+</a><a href="#h21-0-61" id="h21-0-61" class="i">+&lt;p&gt;The &lt;strong&gt;2013 Mac mini&lt;/strong&gt; runs void linux. Not because I
+</a><a href="#h21-0-62" id="h21-0-62" class="i">+don’t like arch as much, but because after inserting a bootable usb and
+</a><a href="#h21-0-63" id="h21-0-63" class="i">+entering grubs “install arch for x86_64” I got a black screen for days.
+</a><a href="#h21-0-64" id="h21-0-64" class="i">+I choose void because I liked the neofetch batch and because it has no
+</a><a href="#h21-0-65" id="h21-0-65" class="i">+&lt;code&gt;systemd&lt;/code&gt; elevating the performence and reducing drama. I
+</a><a href="#h21-0-66" id="h21-0-66" class="i">+mainly use that mashine as a ssh server.&lt;/p&gt;
+</a><a href="#h21-0-67" id="h21-0-67" class="i">+&lt;p&gt;Both mashines run &lt;a href=&quot;https://www.suckless.org&quot;&gt;suckless
+</a><a href="#h21-0-68" id="h21-0-68" class="i">+software&lt;/a&gt;. Namely &lt;code&gt;dwm&lt;/code&gt;, &lt;code&gt;dmenu&lt;/code&gt;, and
+</a><a href="#h21-0-69" id="h21-0-69" class="i">+&lt;code&gt;st&lt;/code&gt;. I am really happy with how good it works, but I do not
+</a><a href="#h21-0-70" id="h21-0-70" class="i">+feel well using &lt;code&gt;X&lt;/code&gt;.&lt;/p&gt;
+</a><a href="#h21-0-71" id="h21-0-71" class="i">+&lt;p&gt;My &lt;strong&gt;MacBook&lt;/strong&gt; runs macOS because Asahi sucks at the
+</a><a href="#h21-0-72" id="h21-0-72" class="i">+moment. However I use the tiling window manager &lt;code&gt;yabaii&lt;/code&gt; and
+</a><a href="#h21-0-73" id="h21-0-73" class="i">+&lt;a href=&quot;https://github.com/alacritty/alacritty&quot;&gt;alacritty&lt;/a&gt; to come
+</a><a href="#h21-0-74" id="h21-0-74" class="i">+closer to a linux experience.&lt;/p&gt;
+</a><b>diff --git a/<a id="h22" href="../file/pages/mario-kart.cfg.html">pages/mario-kart.cfg</a> b/<a href="../file/pages/mario-kart.cfg.html">pages/mario-kart.cfg</a></b>
+<a href="#h22-0" id="h22-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h22-0-0" id="h22-0-0" class="i">+filename = mario-kart.html
+</a><a href="#h22-0-1" id="h22-0-1" class="i">+title = Mario Kart Emulator Setup
+</a><a href="#h22-0-2" id="h22-0-2" class="i">+description = How to setup Mario Kart Wii on a dolphin Emulator
+</a><a href="#h22-0-3" id="h22-0-3" class="i">+created = 2025-04-11
+</a><a href="#h22-0-4" id="h22-0-4" class="i">+updated = 2025-04-11
+</a><b>diff --git a/<a id="h23" href="../file/pages/mario-kart.html.html">pages/mario-kart.html</a> b/<a href="../file/pages/mario-kart.html.html">pages/mario-kart.html</a></b>
+<a href="#h23-0" id="h23-0" class="h">@@ -0,0 +1,106 @@
+</a><a href="#h23-0-0" id="h23-0-0" class="i">+&lt;h2 id=&quot;standard-game-on-emulator&quot;&gt;Standard game on Emulator&lt;/h2&gt;
+</a><a href="#h23-0-1" id="h23-0-1" class="i">+&lt;ol type=&quot;1&quot;&gt;
+</a><a href="#h23-0-2" id="h23-0-2" class="i">+&lt;li&gt;Get you Mario Kart Wiis Disc &lt;code&gt;.iso&lt;/code&gt;. If you burner is
+</a><a href="#h23-0-3" id="h23-0-3" class="i">+broken like mine &lt;a
+</a><a href="#h23-0-4" id="h23-0-4" class="i">+href=&quot;https://romsfun.com/roms/nintendo-wii/mario-kart-wii.html&quot;&gt;download
+</a><a href="#h23-0-5" id="h23-0-5" class="i">+it&lt;/a&gt;.&lt;/li&gt;
+</a><a href="#h23-0-6" id="h23-0-6" class="i">+&lt;li&gt;Get the &lt;a
+</a><a href="#h23-0-7" id="h23-0-7" class="i">+href=&quot;https://de.dolphin-emu.org/download/?ref=btn&quot;&gt;Dolphin
+</a><a href="#h23-0-8" id="h23-0-8" class="i">+Emulator&lt;/a&gt;&lt;/li&gt;
+</a><a href="#h23-0-9" id="h23-0-9" class="i">+&lt;li&gt;Choose your game directory with dolphin&lt;/li&gt;
+</a><a href="#h23-0-10" id="h23-0-10" class="i">+&lt;li&gt;Copy the &lt;a href=&quot;https://newwfc.xyz/codes/&quot;&gt;code&lt;/a&gt; in Mario Kart
+</a><a href="#h23-0-11" id="h23-0-11" class="i">+Wii &lt;code&gt;right click&lt;/code&gt; &amp;gt; Properties &amp;gt; Gecko Codes &amp;gt; Add
+</a><a href="#h23-0-12" id="h23-0-12" class="i">+Codes. Give it a name&lt;/li&gt;
+</a><a href="#h23-0-13" id="h23-0-13" class="i">+&lt;li&gt;Settings &amp;gt; generell &amp;gt; activate cheats
+</a><a href="#h23-0-14" id="h23-0-14" class="i">+&lt;code&gt;checked&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h23-0-15" id="h23-0-15" class="i">+&lt;/ol&gt;
+</a><a href="#h23-0-16" id="h23-0-16" class="i">+&lt;h3 id=&quot;the-code&quot;&gt;The &lt;em&gt;code&lt;/em&gt;&lt;/h3&gt;
+</a><a href="#h23-0-17" id="h23-0-17" class="i">+&lt;pre class=&quot;plain&quot;&gt;&lt;code&gt;C0000000 00000029
+</a><a href="#h23-0-18" id="h23-0-18" class="i">+3C004E80 60000020
+</a><a href="#h23-0-19" id="h23-0-19" class="i">+900F0000 7D8802A6
+</a><a href="#h23-0-20" id="h23-0-20" class="i">+9421FF80 BC610008
+</a><a href="#h23-0-21" id="h23-0-21" class="i">+48000019 6e657777
+</a><a href="#h23-0-22" id="h23-0-22" class="i">+66632e78 797a0000
+</a><a href="#h23-0-23" id="h23-0-23" class="i">+00000000 00000000
+</a><a href="#h23-0-24" id="h23-0-24" class="i">+7F2802A6 3AC0FFFF
+</a><a href="#h23-0-25" id="h23-0-25" class="i">+3B19FFFF 8EF80001
+</a><a href="#h23-0-26" id="h23-0-26" class="i">+2C170000 3AD60001
+</a><a href="#h23-0-27" id="h23-0-27" class="i">+4082FFF4 3E208000
+</a><a href="#h23-0-28" id="h23-0-28" class="i">+8B9F5F27 623E2FFF
+</a><a href="#h23-0-29" id="h23-0-29" class="i">+2C1C00EC 623FF1F0
+</a><a href="#h23-0-30" id="h23-0-30" class="i">+41820020 2C1C0010
+</a><a href="#h23-0-31" id="h23-0-31" class="i">+623FF114 41820014
+</a><a href="#h23-0-32" id="h23-0-32" class="i">+2C1C0054 623FF258
+</a><a href="#h23-0-33" id="h23-0-33" class="i">+41820008 623FE690
+</a><a href="#h23-0-34" id="h23-0-34" class="i">+3E202E6E 6231696E
+</a><a href="#h23-0-35" id="h23-0-35" class="i">+3F80017F 639CCFFC
+</a><a href="#h23-0-36" id="h23-0-36" class="i">+87BE0001 7C1D8800
+</a><a href="#h23-0-37" id="h23-0-37" class="i">+4182001D 379CFFFF
+</a><a href="#h23-0-38" id="h23-0-38" class="i">+4082FFF0 B8610008
+</a><a href="#h23-0-39" id="h23-0-39" class="i">+38210080 7D8803A6
+</a><a href="#h23-0-40" id="h23-0-40" class="i">+4E800020 7F4802A6
+</a><a href="#h23-0-41" id="h23-0-41" class="i">+7FDBF378 3B19FFFF
+</a><a href="#h23-0-42" id="h23-0-42" class="i">+7ED0B378 8EF80001
+</a><a href="#h23-0-43" id="h23-0-43" class="i">+9EFB0001 3610FFFF
+</a><a href="#h23-0-44" id="h23-0-44" class="i">+4082FFF4 3A800010
+</a><a href="#h23-0-45" id="h23-0-45" class="i">+7E96A051 41820064
+</a><a href="#h23-0-46" id="h23-0-46" class="i">+7E54DA14 8A720001
+</a><a href="#h23-0-47" id="h23-0-47" class="i">+2C13002F 41A20014
+</a><a href="#h23-0-48" id="h23-0-48" class="i">+9E7B0001 3694FFFF
+</a><a href="#h23-0-49" id="h23-0-49" class="i">+4082FFF8 48000044
+</a><a href="#h23-0-50" id="h23-0-50" class="i">+38920001 387B0001
+</a><a href="#h23-0-51" id="h23-0-51" class="i">+38C4FFFF 38A00000
+</a><a href="#h23-0-52" id="h23-0-52" class="i">+8CE60001 2C070000
+</a><a href="#h23-0-53" id="h23-0-53" class="i">+38A50001 4082FFF4
+</a><a href="#h23-0-54" id="h23-0-54" class="i">+3A05FFFE 7FE803A6
+</a><a href="#h23-0-55" id="h23-0-55" class="i">+4E800021 7E101A14
+</a><a href="#h23-0-56" id="h23-0-56" class="i">+39E00000 9DF00001
+</a><a href="#h23-0-57" id="h23-0-57" class="i">+3694FFFF 4082FFF8
+</a><a href="#h23-0-58" id="h23-0-58" class="i">+7F4803A6 4E800020
+</a><a href="#h23-0-59" id="h23-0-59" class="i">+C0000000 0000000E
+</a><a href="#h23-0-60" id="h23-0-60" class="i">+3C004E80 60000020
+</a><a href="#h23-0-61" id="h23-0-61" class="i">+900F0000 3D808000
+</a><a href="#h23-0-62" id="h23-0-62" class="i">+618C3000 3C00017F
+</a><a href="#h23-0-63" id="h23-0-63" class="i">+6000CFFC 7C0903A6
+</a><a href="#h23-0-64" id="h23-0-64" class="i">+3D607474 616B7073
+</a><a href="#h23-0-65" id="h23-0-65" class="i">+800C0000 7C005800
+</a><a href="#h23-0-66" id="h23-0-66" class="i">+40A20034 394C0003
+</a><a href="#h23-0-67" id="h23-0-67" class="i">+392C0002 7D455378
+</a><a href="#h23-0-68" id="h23-0-68" class="i">+38600000 8C050001
+</a><a href="#h23-0-69" id="h23-0-69" class="i">+2C000000 38630001
+</a><a href="#h23-0-70" id="h23-0-70" class="i">+4082FFF4 8C0A0001
+</a><a href="#h23-0-71" id="h23-0-71" class="i">+9C090001 3463FFFF
+</a><a href="#h23-0-72" id="h23-0-72" class="i">+4082FFF4 398C0001
+</a><a href="#h23-0-73" id="h23-0-73" class="i">+4200FFC0 4E800020&lt;/code&gt;&lt;/pre&gt;
+</a><a href="#h23-0-74" id="h23-0-74" class="i">+&lt;h2 id=&quot;modded-game-on-a-wii&quot;&gt;Modded game on a Wii&lt;/h2&gt;
+</a><a href="#h23-0-75" id="h23-0-75" class="i">+&lt;h3 id=&quot;what-you-need&quot;&gt;What you Need&lt;/h3&gt;
+</a><a href="#h23-0-76" id="h23-0-76" class="i">+&lt;ul&gt;
+</a><a href="#h23-0-77" id="h23-0-77" class="i">+&lt;li&gt;Wii (OS on version 4.3)&lt;/li&gt;
+</a><a href="#h23-0-78" id="h23-0-78" class="i">+&lt;li&gt;SD-Card (&lt;code&gt;&amp;gt;=8GB&lt;/code&gt; I suggest)&lt;/li&gt;
+</a><a href="#h23-0-79" id="h23-0-79" class="i">+&lt;li&gt;Computer with SD-Slot (or adapter)&lt;/li&gt;
+</a><a href="#h23-0-80" id="h23-0-80" class="i">+&lt;li&gt;Internet connection (computer and Wii)&lt;/li&gt;
+</a><a href="#h23-0-81" id="h23-0-81" class="i">+&lt;/ul&gt;
+</a><a href="#h23-0-82" id="h23-0-82" class="i">+&lt;h3 id=&quot;steps&quot;&gt;Steps&lt;/h3&gt;
+</a><a href="#h23-0-83" id="h23-0-83" class="i">+&lt;ol type=&quot;1&quot;&gt;
+</a><a href="#h23-0-84" id="h23-0-84" class="i">+&lt;li&gt;&lt;p&gt;Get you Wiis MAC-adress (Settings &amp;gt; Internet &amp;gt; console
+</a><a href="#h23-0-85" id="h23-0-85" class="i">+information)&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-86" id="h23-0-86" class="i">+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://please.hackmii.com/&quot;&gt;Letterbomb
+</a><a href="#h23-0-87" id="h23-0-87" class="i">+download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-88" id="h23-0-88" class="i">+&lt;li&gt;&lt;p&gt;Put the &lt;code&gt;.zip&lt;/code&gt;s content in the root of the
+</a><a href="#h23-0-89" id="h23-0-89" class="i">+SD-card&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-90" id="h23-0-90" class="i">+&lt;li&gt;&lt;p&gt;Put the SD-card in the Wii&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-91" id="h23-0-91" class="i">+&lt;li&gt;&lt;p&gt;Open mail on Wii and open the Letterbomb (you will see)&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-92" id="h23-0-92" class="i">+&lt;li&gt;&lt;p&gt;Follow the instructions to install the homebrew channel and
+</a><a href="#h23-0-93" id="h23-0-93" class="i">+BootMii&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-94" id="h23-0-94" class="i">+&lt;li&gt;&lt;p&gt;If asked choose “Install BootMii as boot2”. If it failed choose
+</a><a href="#h23-0-95" id="h23-0-95" class="i">+“Install BootMii as IOS”&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-96" id="h23-0-96" class="i">+&lt;li&gt;&lt;p&gt;If you want to back up &lt;a
+</a><a href="#h23-0-97" id="h23-0-97" class="i">+href=&quot;http://monkeydesk.at/f19-anleitungen/anleitung-nand-backup-eurer-wii-erstellen-178/&quot;&gt;follow
+</a><a href="#h23-0-98" id="h23-0-98" class="i">+those instructions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-99" id="h23-0-99" class="i">+&lt;li&gt;&lt;p&gt;Get the &lt;a href=&quot;https://www.chadsoft.co.uk/&quot;&gt;CTGP-R&lt;/a&gt;
+</a><a href="#h23-0-100" id="h23-0-100" class="i">+&lt;code&gt;.zip&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-101" id="h23-0-101" class="i">+&lt;li&gt;&lt;p&gt;Copy the folder content in the root oft the SD card.&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-102" id="h23-0-102" class="i">+&lt;li&gt;&lt;p&gt;Open CTGP-R on the homebrew channel and follow the
+</a><a href="#h23-0-103" id="h23-0-103" class="i">+instructions&lt;/p&gt;&lt;/li&gt;
+</a><a href="#h23-0-104" id="h23-0-104" class="i">+&lt;/ol&gt;
+</a><a href="#h23-0-105" id="h23-0-105" class="i">+&lt;h2 id=&quot;section&quot;&gt;&lt;/h2&gt;
+</a><b>diff --git a/<a id="h24" href="../file/pages/markdown.cfg.html">pages/markdown.cfg</a> b/<a href="../file/pages/markdown.cfg.html">pages/markdown.cfg</a></b>
+<a href="#h24-0" id="h24-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h24-0-0" id="h24-0-0" class="i">+filename = markdown.html
+</a><a href="#h24-0-1" id="h24-0-1" class="i">+title = Markdown
+</a><a href="#h24-0-2" id="h24-0-2" class="i">+description = What Markdown is and why it is superior
+</a><a href="#h24-0-3" id="h24-0-3" class="i">+created = 2025-04-12
+</a><a href="#h24-0-4" id="h24-0-4" class="i">+updated = 2025-04-12
+</a><b>diff --git a/<a id="h25" href="../file/pages/markdown.html.html">pages/markdown.html</a> b/<a href="../file/pages/markdown.html.html">pages/markdown.html</a></b>
+<a href="#h25-0" id="h25-0" class="h">@@ -0,0 +1,19 @@
+</a><a href="#h25-0-0" id="h25-0-0" class="i">+&lt;ul&gt;
+</a><a href="#h25-0-1" id="h25-0-1" class="i">+&lt;li&gt;&lt;strong&gt;Free plain text:&lt;/strong&gt; With plain text you enter the
+</a><a href="#h25-0-2" id="h25-0-2" class="i">+world of unbordered choosing of you editor. You are not forced to use a
+</a><a href="#h25-0-3" id="h25-0-3" class="i">+proprietary editor like Microsoft Word or Apple Pages.&lt;/li&gt;
+</a><a href="#h25-0-4" id="h25-0-4" class="i">+&lt;li&gt;&lt;strong&gt;Light weight:&lt;/strong&gt; A empty file has: &lt;code&gt;0 Bit&lt;/code&gt;
+</a><a href="#h25-0-5" id="h25-0-5" class="i">+and this &lt;code&gt;.md&lt;/code&gt;-based file has&lt;/li&gt;
+</a><a href="#h25-0-6" id="h25-0-6" class="i">+&lt;li&gt;&lt;strong&gt;Simple formatting:&lt;/strong&gt; With the formatting characters
+</a><a href="#h25-0-7" id="h25-0-7" class="i">+of Markdown files you are able to simply change your paragraph to a
+</a><a href="#h25-0-8" id="h25-0-8" class="i">+title, (sub-) heading or list. No more searching of the setting in your
+</a><a href="#h25-0-9" id="h25-0-9" class="i">+editor – just put a &lt;code&gt;#&lt;/code&gt; (title) in front of you
+</a><a href="#h25-0-10" id="h25-0-10" class="i">+paragraph.&lt;/li&gt;
+</a><a href="#h25-0-11" id="h25-0-11" class="i">+&lt;li&gt;&lt;strong&gt;Conversion:&lt;/strong&gt; With tools like &lt;code&gt;pandoc&lt;/code&gt; you
+</a><a href="#h25-0-12" id="h25-0-12" class="i">+can easily change your &lt;code&gt;.md&lt;/code&gt; files to a &lt;code&gt;.tex&lt;/code&gt;
+</a><a href="#h25-0-13" id="h25-0-13" class="i">+version with the same formatting.&lt;/li&gt;
+</a><a href="#h25-0-14" id="h25-0-14" class="i">+&lt;li&gt;&lt;strong&gt;Flavours:&lt;/strong&gt; Fully compatible versions of Markdown
+</a><a href="#h25-0-15" id="h25-0-15" class="i">+with for example wiki-link functionality.&lt;/li&gt;
+</a><a href="#h25-0-16" id="h25-0-16" class="i">+&lt;li&gt;&lt;strong&gt;Backups:&lt;/strong&gt; Easy versioning with git&lt;/li&gt;
+</a><a href="#h25-0-17" id="h25-0-17" class="i">+&lt;/ul&gt;
+</a><a href="#h25-0-18" id="h25-0-18" class="i">+&lt;p&gt;Tell me, what else do you want?&lt;/p&gt;
+</a><b>diff --git a/<a id="h26" href="../file/pages/pgp-yubikey.cfg.html">pages/pgp-yubikey.cfg</a> b/<a href="../file/pages/pgp-yubikey.cfg.html">pages/pgp-yubikey.cfg</a></b>
+<a href="#h26-0" id="h26-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h26-0-0" id="h26-0-0" class="i">+filename = pgp-yubikey.html
+</a><a href="#h26-0-1" id="h26-0-1" class="i">+title = yubikey pgp config
+</a><a href="#h26-0-2" id="h26-0-2" class="i">+description = Setup for pgp supported by a yubikey
+</a><a href="#h26-0-3" id="h26-0-3" class="i">+created = 2025-07-05
+</a><a href="#h26-0-4" id="h26-0-4" class="i">+updated = 2025-07-05
+</a><b>diff --git a/<a id="h27" href="../file/pages/pgp-yubikey.html.html">pages/pgp-yubikey.html</a> b/<a href="../file/pages/pgp-yubikey.html.html">pages/pgp-yubikey.html</a></b>
+<a href="#h27-0" id="h27-0" class="h">@@ -0,0 +1,68 @@
+</a><a href="#h27-0-0" id="h27-0-0" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--expert&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--full-gen-key&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h27-0-1" id="h27-0-1" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-2" id="h27-0-2" class="i">+&lt;li&gt;Enter &lt;code&gt;RSA&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-3" id="h27-0-3" class="i">+&lt;li&gt;Enter &lt;code&gt;4096&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-4" id="h27-0-4" class="i">+&lt;li&gt;Enter expiration date&lt;/li&gt;
+</a><a href="#h27-0-5" id="h27-0-5" class="i">+&lt;li&gt;Enter user information and email&lt;/li&gt;
+</a><a href="#h27-0-6" id="h27-0-6" class="i">+&lt;li&gt;Enter random input (mouse, keyboard) to gain entropy&lt;/li&gt;
+</a><a href="#h27-0-7" id="h27-0-7" class="i">+&lt;/ul&gt;
+</a><a href="#h27-0-8" id="h27-0-8" class="i">+&lt;p&gt;Output:&lt;/p&gt;
+</a><a href="#h27-0-9" id="h27-0-9" class="i">+&lt;pre&gt;&lt;code&gt;gpg: key &amp;lt;keyID&amp;gt; marked as ultimately trusted&lt;/code&gt;&lt;/pre&gt;
+</a><a href="#h27-0-10" id="h27-0-10" class="i">+&lt;h2 id=&quot;add-authentication-key-if-not-default&quot;&gt;Add authentication key
+</a><a href="#h27-0-11" id="h27-0-11" class="i">+(if not default)&lt;/h2&gt;
+</a><a href="#h27-0-12" id="h27-0-12" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb3&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb3-1&quot;&gt;&lt;a href=&quot;#cb3-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--expert&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--edit-key&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;keyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h27-0-13" id="h27-0-13" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb4&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb4-1&quot;&gt;&lt;a href=&quot;#cb4-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;addkey&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h27-0-14" id="h27-0-14" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-15" id="h27-0-15" class="i">+&lt;li&gt;Enter the &lt;code&gt;passphrase&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-16" id="h27-0-16" class="i">+&lt;li&gt;Enter &lt;code&gt;8&lt;/code&gt; for RSA&lt;/li&gt;
+</a><a href="#h27-0-17" id="h27-0-17" class="i">+&lt;li&gt;Enter &lt;code&gt;S&lt;/code&gt; for disabling “sign”&lt;/li&gt;
+</a><a href="#h27-0-18" id="h27-0-18" class="i">+&lt;li&gt;Enter &lt;code&gt;E&lt;/code&gt; for disabling “encrypt”&lt;/li&gt;
+</a><a href="#h27-0-19" id="h27-0-19" class="i">+&lt;li&gt;Enter &lt;code&gt;A&lt;/code&gt; for enabling “authentication”&lt;/li&gt;
+</a><a href="#h27-0-20" id="h27-0-20" class="i">+&lt;li&gt;Enter &lt;code&gt;Q&lt;/code&gt; for leaving dialoge&lt;/li&gt;
+</a><a href="#h27-0-21" id="h27-0-21" class="i">+&lt;li&gt;Enter key size&lt;/li&gt;
+</a><a href="#h27-0-22" id="h27-0-22" class="i">+&lt;li&gt;Enter same expiration date as before&lt;/li&gt;
+</a><a href="#h27-0-23" id="h27-0-23" class="i">+&lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to safe the changes&lt;/li&gt;
+</a><a href="#h27-0-24" id="h27-0-24" class="i">+&lt;/ul&gt;
+</a><a href="#h27-0-25" id="h27-0-25" class="i">+&lt;h2 id=&quot;back-pgp-key-up&quot;&gt;Back pgp-Key up&lt;/h2&gt;
+</a><a href="#h27-0-26" id="h27-0-26" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb5&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb5-1&quot;&gt;&lt;a href=&quot;#cb5-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--export-secret-key&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--armor&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;KeyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h27-0-27" id="h27-0-27" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-28" id="h27-0-28" class="i">+&lt;li&gt;Store output safe&lt;/li&gt;
+</a><a href="#h27-0-29" id="h27-0-29" class="i">+&lt;/ul&gt;
+</a><a href="#h27-0-30" id="h27-0-30" class="i">+&lt;h2 id=&quot;add-pgp-keys-to-the-yubikey&quot;&gt;Add pgp-keys to the YubiKey&lt;/h2&gt;
+</a><a href="#h27-0-31" id="h27-0-31" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-32" id="h27-0-32" class="i">+&lt;li&gt;Insert YubiKey into a USB port&lt;/li&gt;
+</a><a href="#h27-0-33" id="h27-0-33" class="i">+&lt;/ul&gt;
+</a><a href="#h27-0-34" id="h27-0-34" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb6&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb6-1&quot;&gt;&lt;a href=&quot;#cb6-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--edit-key&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;KeyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h27-0-35" id="h27-0-35" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb7&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb7-1&quot;&gt;&lt;a href=&quot;#cb7-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;keytocard&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h27-0-36" id="h27-0-36" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-37" id="h27-0-37" class="i">+&lt;li&gt;Signature subkey:
+</a><a href="#h27-0-38" id="h27-0-38" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-39" id="h27-0-39" class="i">+&lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-40" id="h27-0-40" class="i">+&lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to continue&lt;/li&gt;
+</a><a href="#h27-0-41" id="h27-0-41" class="i">+&lt;li&gt;Enter &lt;code&gt;1&lt;/code&gt; to move the signature subkey to a slot in the
+</a><a href="#h27-0-42" id="h27-0-42" class="i">+yubikey&lt;/li&gt;
+</a><a href="#h27-0-43" id="h27-0-43" class="i">+&lt;li&gt;Enter &lt;code&gt;key 1&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-44" id="h27-0-44" class="i">+&lt;/ul&gt;&lt;/li&gt;
+</a><a href="#h27-0-45" id="h27-0-45" class="i">+&lt;li&gt;Encryption subkey:
+</a><a href="#h27-0-46" id="h27-0-46" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-47" id="h27-0-47" class="i">+&lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-48" id="h27-0-48" class="i">+&lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to continue&lt;/li&gt;
+</a><a href="#h27-0-49" id="h27-0-49" class="i">+&lt;li&gt;Enter &lt;code&gt;2&lt;/code&gt; to move the encryption subkey to a slot in the
+</a><a href="#h27-0-50" id="h27-0-50" class="i">+yubikey&lt;/li&gt;
+</a><a href="#h27-0-51" id="h27-0-51" class="i">+&lt;li&gt;Enter &lt;code&gt;key 1&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-52" id="h27-0-52" class="i">+&lt;li&gt;Enter &lt;code&gt;key 2&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-53" id="h27-0-53" class="i">+&lt;/ul&gt;&lt;/li&gt;
+</a><a href="#h27-0-54" id="h27-0-54" class="i">+&lt;li&gt;Authentication subkey
+</a><a href="#h27-0-55" id="h27-0-55" class="i">+&lt;ul&gt;
+</a><a href="#h27-0-56" id="h27-0-56" class="i">+&lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h27-0-57" id="h27-0-57" class="i">+&lt;li&gt;Enter &lt;code&gt;3&lt;/code&gt; to move the authentication subkey to a slot in
+</a><a href="#h27-0-58" id="h27-0-58" class="i">+the yubikey&lt;/li&gt;
+</a><a href="#h27-0-59" id="h27-0-59" class="i">+&lt;/ul&gt;&lt;/li&gt;
+</a><a href="#h27-0-60" id="h27-0-60" class="i">+&lt;li&gt;Enter &lt;code&gt;quit&lt;/code&gt; to leave&lt;/li&gt;
+</a><a href="#h27-0-61" id="h27-0-61" class="i">+&lt;/ul&gt;
+</a><a href="#h27-0-62" id="h27-0-62" class="i">+&lt;p&gt;When asked &lt;strong&gt;do not safe&lt;/strong&gt; your changes enabling you to
+</a><a href="#h27-0-63" id="h27-0-63" class="i">+copy the key to another Yubikey.&lt;/p&gt;
+</a><a href="#h27-0-64" id="h27-0-64" class="i">+&lt;hr /&gt;
+</a><a href="#h27-0-65" id="h27-0-65" class="i">+&lt;p&gt;&lt;a
+</a><a href="#h27-0-66" id="h27-0-66" class="i">+href=&quot;https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP&quot;&gt;article
+</a><a href="#h27-0-67" id="h27-0-67" class="i">+by yubikey&lt;/a&gt;&lt;/p&gt;
+</a><b>diff --git a/<a id="h28" href="../file/pages/typst.cfg.html">pages/typst.cfg</a> b/<a href="../file/pages/typst.cfg.html">pages/typst.cfg</a></b>
+<a href="#h28-0" id="h28-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h28-0-0" id="h28-0-0" class="i">+filename = typst.html
+</a><a href="#h28-0-1" id="h28-0-1" class="i">+title = Typst
+</a><a href="#h28-0-2" id="h28-0-2" class="i">+description = The smart Latex alternative
+</a><a href="#h28-0-3" id="h28-0-3" class="i">+created = 2025-06-01
+</a><a href="#h28-0-4" id="h28-0-4" class="i">+updated = 2025-06-01
+</a><b>diff --git a/<a id="h29" href="../file/pages/typst.html.html">pages/typst.html</a> b/<a href="../file/pages/typst.html.html">pages/typst.html</a></b>
+<a href="#h29-0" id="h29-0" class="h">@@ -0,0 +1,21 @@
+</a><a href="#h29-0-0" id="h29-0-0" class="i">+&lt;p&gt;When ever editing big text projects I used &lt;span
+</a><a href="#h29-0-1" id="h29-0-1" class="i">+class=&quot;math inline&quot;&gt;$\LaTeX$&lt;/span&gt;. Just because Latex is the right
+</a><a href="#h29-0-2" id="h29-0-2" class="i">+tool for the job.&lt;/p&gt;
+</a><a href="#h29-0-3" id="h29-0-3" class="i">+&lt;p&gt;But as it turned out there has been a simpler tool for the job. And
+</a><a href="#h29-0-4" id="h29-0-4" class="i">+it is called Typst.&lt;/p&gt;
+</a><a href="#h29-0-5" id="h29-0-5" class="i">+&lt;p&gt;Why it is simpler:&lt;/p&gt;
+</a><a href="#h29-0-6" id="h29-0-6" class="i">+&lt;ul&gt;
+</a><a href="#h29-0-7" id="h29-0-7" class="i">+&lt;li&gt;It is FOSS&lt;/li&gt;
+</a><a href="#h29-0-8" id="h29-0-8" class="i">+&lt;li&gt;Ready to write: no &lt;code&gt;\document{begin}&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h29-0-9" id="h29-0-9" class="i">+&lt;li&gt;Markdown based syntax where it can: eg. headings with
+</a><a href="#h29-0-10" id="h29-0-10" class="i">+&lt;code&gt;=&lt;/code&gt;&lt;/li&gt;
+</a><a href="#h29-0-11" id="h29-0-11" class="i">+&lt;li&gt;Easy math syntax&lt;/li&gt;
+</a><a href="#h29-0-12" id="h29-0-12" class="i">+&lt;li&gt;Simple coding constructs instead of single use case based
+</a><a href="#h29-0-13" id="h29-0-13" class="i">+macros&lt;/li&gt;
+</a><a href="#h29-0-14" id="h29-0-14" class="i">+&lt;li&gt;FOSS templates ready to clone&lt;/li&gt;
+</a><a href="#h29-0-15" id="h29-0-15" class="i">+&lt;li&gt;Renders preview from buffer: instant update without having to
+</a><a href="#h29-0-16" id="h29-0-16" class="i">+safe&lt;/li&gt;
+</a><a href="#h29-0-17" id="h29-0-17" class="i">+&lt;/ul&gt;
+</a><a href="#h29-0-18" id="h29-0-18" class="i">+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre
+</a><a href="#h29-0-19" id="h29-0-19" class="i">+class=&quot;sourceCode typ&quot;&gt;&lt;code class=&quot;sourceCode typst&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;lim_(x-&amp;gt;oo) 1/x = 0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</a><a href="#h29-0-20" id="h29-0-20" class="i">+&lt;p&gt;Their &lt;a href=&quot;https://github.com/typst&quot;&gt;GitHub Page&lt;/a&gt;&lt;/p&gt;
+</a><b>diff --git a/<a id="h30" href="../file/templates/index.html/footer.html.html">templates/index.html/footer.html</a> b/<a href="../file/templates/index.html/footer.html.html">templates/index.html/footer.html</a></b>
+<a href="#h30-0" id="h30-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h30-0-0" id="h30-0-0" class="i">+			&lt;/table&gt;
+</a><a href="#h30-0-1" id="h30-0-1" class="i">+		&lt;/div&gt;
+</a><a href="#h30-0-2" id="h30-0-2" class="i">+	&lt;/main&gt;
+</a><a href="#h30-0-3" id="h30-0-3" class="i">+&lt;/body&gt;
+</a><a href="#h30-0-4" id="h30-0-4" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h31" href="../file/templates/index.html/header.html.html">templates/index.html/header.html</a> b/<a href="../file/templates/index.html/header.html.html">templates/index.html/header.html</a></b>
+<a href="#h31-0" id="h31-0" class="h">@@ -0,0 +1,41 @@
+</a><a href="#h31-0-0" id="h31-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h31-0-1" id="h31-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;${lang}&quot;&gt;
+</a><a href="#h31-0-2" id="h31-0-2" class="i">+&lt;head&gt;
+</a><a href="#h31-0-3" id="h31-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h31-0-4" id="h31-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;${lang}&quot; /&gt;
+</a><a href="#h31-0-5" id="h31-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h31-0-6" id="h31-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;${keywords}&quot; /&gt;
+</a><a href="#h31-0-7" id="h31-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;${description}&quot; /&gt;
+</a><a href="#h31-0-8" id="h31-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;${author}&quot; /&gt;
+</a><a href="#h31-0-9" id="h31-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;${sitegenerator}&quot; /&gt;
+</a><a href="#h31-0-10" id="h31-0-10" class="i">+	&lt;title&gt;Posts - ${sitetitle}&lt;/title&gt;
+</a><a href="#h31-0-11" id="h31-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h31-0-12" id="h31-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h31-0-13" id="h31-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed&quot; /&gt;
+</a><a href="#h31-0-14" id="h31-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed with content&quot; /&gt;
+</a><a href="#h31-0-15" id="h31-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h31-0-16" id="h31-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h31-0-17" id="h31-0-17" class="i">+&lt;body&gt;
+</a><a href="#h31-0-18" id="h31-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h31-0-19" id="h31-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h31-0-20" id="h31-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h31-0-21" id="h31-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h31-0-22" id="h31-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h31-0-23" id="h31-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h31-0-24" id="h31-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h31-0-25" id="h31-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h31-0-26" id="h31-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h31-0-27" id="h31-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h31-0-28" id="h31-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h31-0-29" id="h31-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h31-0-30" id="h31-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h31-0-31" id="h31-0-31" class="i">+				&lt;a href=&quot;mailto:${sitemail}&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h31-0-32" id="h31-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h31-0-33" id="h31-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h31-0-34" id="h31-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h31-0-35" id="h31-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h31-0-36" id="h31-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h31-0-37" id="h31-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h31-0-38" id="h31-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h31-0-39" id="h31-0-39" class="i">+			&lt;h1&gt;Posts&lt;/h1&gt;
+</a><a href="#h31-0-40" id="h31-0-40" class="i">+			&lt;table&gt;
+</a><b>diff --git a/<a id="h32" href="../file/templates/index.html/item.html.html">templates/index.html/item.html</a> b/<a href="../file/templates/index.html/item.html.html">templates/index.html/item.html</a></b>
+<a href="#h32-0" id="h32-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h32-0-0" id="h32-0-0" class="i">+&lt;tr&gt;&lt;td&gt;&lt;time&gt;${created}&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;${filename}&quot;&gt;${title}&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><b>diff --git a/<a id="h33" href="../file/templates/page/footer.html.html">templates/page/footer.html</a> b/<a href="../file/templates/page/footer.html.html">templates/page/footer.html</a></b>
+<a href="#h33-0" id="h33-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h33-0-0" id="h33-0-0" class="i">+			&lt;/article&gt;
+</a><a href="#h33-0-1" id="h33-0-1" class="i">+		&lt;/div&gt;
+</a><a href="#h33-0-2" id="h33-0-2" class="i">+	&lt;/main&gt;
+</a><a href="#h33-0-3" id="h33-0-3" class="i">+&lt;/body&gt;
+</a><a href="#h33-0-4" id="h33-0-4" class="i">+&lt;/html&gt;
+</a><b>diff --git a/<a id="h34" href="../file/templates/page/header.html.html">templates/page/header.html</a> b/<a href="../file/templates/page/header.html.html">templates/page/header.html</a></b>
+<a href="#h34-0" id="h34-0" class="h">@@ -0,0 +1,40 @@
+</a><a href="#h34-0-0" id="h34-0-0" class="i">+&lt;!DOCTYPE html&gt;
+</a><a href="#h34-0-1" id="h34-0-1" class="i">+&lt;html dir=&quot;ltr&quot; lang=&quot;${lang}&quot;&gt;
+</a><a href="#h34-0-2" id="h34-0-2" class="i">+&lt;head&gt;
+</a><a href="#h34-0-3" id="h34-0-3" class="i">+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+</a><a href="#h34-0-4" id="h34-0-4" class="i">+	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;${lang}&quot; /&gt;
+</a><a href="#h34-0-5" id="h34-0-5" class="i">+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</a><a href="#h34-0-6" id="h34-0-6" class="i">+	&lt;meta name=&quot;keywords&quot; content=&quot;${keywords}&quot; /&gt;
+</a><a href="#h34-0-7" id="h34-0-7" class="i">+	&lt;meta name=&quot;description&quot; content=&quot;${description}&quot; /&gt;
+</a><a href="#h34-0-8" id="h34-0-8" class="i">+	&lt;meta name=&quot;author&quot; content=&quot;${author}&quot; /&gt;
+</a><a href="#h34-0-9" id="h34-0-9" class="i">+	&lt;meta name=&quot;generator&quot; content=&quot;${sitegenerator}&quot; /&gt;
+</a><a href="#h34-0-10" id="h34-0-10" class="i">+	&lt;title&gt;${title} - ${sitetitle}&lt;/title&gt;
+</a><a href="#h34-0-11" id="h34-0-11" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a><a href="#h34-0-12" id="h34-0-12" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+</a><a href="#h34-0-13" id="h34-0-13" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed&quot; /&gt;
+</a><a href="#h34-0-14" id="h34-0-14" class="i">+	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed with content&quot; /&gt;
+</a><a href="#h34-0-15" id="h34-0-15" class="i">+	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+</a><a href="#h34-0-16" id="h34-0-16" class="i">+&lt;/head&gt;
+</a><a href="#h34-0-17" id="h34-0-17" class="i">+&lt;body&gt;
+</a><a href="#h34-0-18" id="h34-0-18" class="i">+	&lt;nav id=&quot;menuwrap&quot;&gt;
+</a><a href="#h34-0-19" id="h34-0-19" class="i">+		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+</a><a href="#h34-0-20" id="h34-0-20" class="i">+		&lt;tr&gt;
+</a><a href="#h34-0-21" id="h34-0-21" class="i">+			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+</a><a href="#h34-0-22" id="h34-0-22" class="i">+				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+</a><a href="#h34-0-23" id="h34-0-23" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h34-0-24" id="h34-0-24" class="i">+				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h34-0-25" id="h34-0-25" class="i">+				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h34-0-26" id="h34-0-26" class="i">+			&lt;/td&gt;
+</a><a href="#h34-0-27" id="h34-0-27" class="i">+			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+</a><a href="#h34-0-28" id="h34-0-28" class="i">+				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+</a><a href="#h34-0-29" id="h34-0-29" class="i">+				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h34-0-30" id="h34-0-30" class="i">+				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+</a><a href="#h34-0-31" id="h34-0-31" class="i">+				&lt;a href=&quot;mailto:${sitemail}&quot;&gt;Mail&lt;/a&gt;
+</a><a href="#h34-0-32" id="h34-0-32" class="i">+			&lt;/td&gt;
+</a><a href="#h34-0-33" id="h34-0-33" class="i">+		&lt;/tr&gt;
+</a><a href="#h34-0-34" id="h34-0-34" class="i">+		&lt;/table&gt;
+</a><a href="#h34-0-35" id="h34-0-35" class="i">+	&lt;/nav&gt;
+</a><a href="#h34-0-36" id="h34-0-36" class="i">+	&lt;hr class=&quot;hidden&quot; /&gt;
+</a><a href="#h34-0-37" id="h34-0-37" class="i">+	&lt;main id=&quot;mainwrap&quot;&gt;
+</a><a href="#h34-0-38" id="h34-0-38" class="i">+		&lt;div id=&quot;main&quot;&gt;
+</a><a href="#h34-0-39" id="h34-0-39" class="i">+			&lt;article&gt;
+</a><b>diff --git a/<a id="h35" href="../file/templates/page/item.html.html">templates/page/item.html</a> b/<a href="../file/templates/page/item.html.html">templates/page/item.html</a></b>
+<a href="#h35-0" id="h35-0" class="h">@@ -0,0 +1,8 @@
+</a><a href="#h35-0-0" id="h35-0-0" class="i">+&lt;header&gt;
+</a><a href="#h35-0-1" id="h35-0-1" class="i">+	&lt;h1&gt;${title}&lt;/h1&gt;
+</a><a href="#h35-0-2" id="h35-0-2" class="i">+	&lt;p&gt;
+</a><a href="#h35-0-3" id="h35-0-3" class="i">+	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;${updated}&lt;/time&gt;
+</a><a href="#h35-0-4" id="h35-0-4" class="i">+	&lt;/p&gt;
+</a><a href="#h35-0-5" id="h35-0-5" class="i">+&lt;/header&gt;
+</a><a href="#h35-0-6" id="h35-0-6" class="i">+
+</a><a href="#h35-0-7" id="h35-0-7" class="i">+%{contentfile}
+</a></pre>
+</div>
+</body>
+</html>

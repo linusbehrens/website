@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>kill-process.js.map - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../../../../"><img src="../../../../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../../../../log.html">Log</a> | <a href="../../../../../../files.html">Files</a> | <a href="../../../../../../refs.html">Refs</a> | <a href="../../../../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> kill-process.js.map (2422B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> {
+<a href="#l2" class="line" id="l2">      2</a>   &quot;version&quot;: 3,
+<a href="#l3" class="line" id="l3">      3</a>   &quot;sources&quot;: [&quot;../../src/tools/kill-process.ts&quot;],
+<a href="#l4" class="line" id="l4">      4</a>   &quot;sourcesContent&quot;: [&quot;import { exec } from \&quot;child_process\&quot;;\nimport { Tool } from \&quot;@raycast/api\&quot;;\n\n/**\n * Input type for killing a process\n */\ntype Input = {\n  /**\n   * App name to kill\n   */\n  processName?: string;\n\n  /**\n   * Process ID to kill\n   */\n  id: number;\n\n  /**\n   * Path to the process to kill\n   */\n  path?: string;\n};\n\n/**\n * Kill a process.\n * Provide the process ID to kill.\n * If the process is not found, the tool will return an error.\n */\nexport default async function killProcess(input: Input) {\n  return new Promise((resolve, reject) =&gt; {\n    exec(`kill -9 ${input.id}`, (killErr) =&gt; {\n      if (killErr) {\n        reject(killErr);\n        return;\n      }\n      resolve(`Killed process: ${input.processName ? input.processName + \&quot; \&quot; : \&quot;\&quot;}(PID: ${input.id})`);\n    });\n  });\n}\n\n/**\n * Because forcibly killing a process can cause data loss or undesired system changes,\n * let&#39;s ask for user confirmation before proceeding.\n */\nexport const confirmation: Tool.Confirmation&lt;Input&gt; = async (input: Input) =&gt; {\n  const info: { name: string; value: string }[] = [];\n\n  // Only add Process Name if it&#39;s provided and non-empty\n  if (input.processName) {\n    info.push({ name: \&quot;Process Name\&quot;, value: input.processName });\n  }\n\n  // Always add PID as it&#39;s required\n  info.push({ name: \&quot;PID\&quot;, value: String(input.id) });\n\n  // Only add Path if it&#39;s provided and non-empty\n  if (input.path) {\n    info.push({ name: \&quot;Path\&quot;, value: input.path });\n  }\n\n  return { info };\n};\n&quot;],
+<a href="#l5" class="line" id="l5">      5</a>   &quot;mappings&quot;: &quot;yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,kBAAAE,EAAA,YAAAC,IAAA,eAAAC,EAAAJ,GAAA,IAAAK,EAAqB,yBA4BrB,eAAOF,EAAmCG,EAAc,CACtD,OAAO,IAAI,QAAQ,CAACC,EAASC,IAAW,IACtC,QAAK,WAAWF,EAAM,EAAE,GAAKG,GAAY,CACvC,GAAIA,EAAS,CACXD,EAAOC,CAAO,EACd,MACF,CACAF,EAAQ,mBAAmBD,EAAM,YAAcA,EAAM,YAAc,IAAM,EAAE,SAASA,EAAM,EAAE,GAAG,CACjG,CAAC,CACH,CAAC,CACH,CAMO,IAAMJ,EAAyC,MAAOI,GAAiB,CAC5E,IAAMI,EAA0C,CAAC,EAGjD,OAAIJ,EAAM,aACRI,EAAK,KAAK,CAAE,KAAM,eAAgB,MAAOJ,EAAM,WAAY,CAAC,EAI9DI,EAAK,KAAK,CAAE,KAAM,MAAO,MAAO,OAAOJ,EAAM,EAAE,CAAE,CAAC,EAG9CA,EAAM,MACRI,EAAK,KAAK,CAAE,KAAM,OAAQ,MAAOJ,EAAM,IAAK,CAAC,EAGxC,CAAE,KAAAI,CAAK,CAChB&quot;,
+<a href="#l6" class="line" id="l6">      6</a>   &quot;names&quot;: [&quot;kill_process_exports&quot;, &quot;__export&quot;, &quot;confirmation&quot;, &quot;killProcess&quot;, &quot;__toCommonJS&quot;, &quot;import_child_process&quot;, &quot;input&quot;, &quot;resolve&quot;, &quot;reject&quot;, &quot;killErr&quot;, &quot;info&quot;]
+<a href="#l7" class="line" id="l7">      7</a> }
+</pre>
+</div>
+</body>
+</html>

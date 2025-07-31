@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>new css (code) - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963.html">30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963</a>
+<b>parent</b> <a href="../commit/5e7f392ae45484aa01886c447ecb6f1cc9deabd0.html">5e7f392ae45484aa01886c447ecb6f1cc9deabd0</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Thu, 31 Jul 2025 21:09:58 +0200
+
+new css (code)
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">css/print.css</a></td><td> | </td><td class="num">14</td><td><span class="i">+++++++</span><span class="d">-------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">css/style.css</a></td><td> | </td><td class="num">18</td><td><span class="i">+++++++++</span><span class="d">---------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">css/typeface.css</a></td><td> | </td><td class="num">63</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">output/dwl.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">output/linux.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">output/mario-kart.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h6">output/markdown.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h7">output/pgp-yubikey.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h8">output/print.css</a></td><td> | </td><td class="num">14</td><td><span class="i">+++++++</span><span class="d">-------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h9">output/style.css</a></td><td> | </td><td class="num">18</td><td><span class="i">+++++++++</span><span class="d">---------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h10">output/typeface.css</a></td><td> | </td><td class="num">63</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h11">output/typst.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h12">templates/page/header.html</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+</table></pre><pre>13 files changed, 186 insertions(+), 60 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/css/print.css.html">css/print.css</a> b/<a href="../file/css/print.css.html">css/print.css</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -22,10 +22,10 @@ table tr td {
+</a> pre {
+ 	margin: 0;
+ }
+<a href="#h0-0-3" id="h0-0-3" class="d">-code {
+</a><a href="#h0-0-4" id="h0-0-4" class="d">-	border: 3px solid #aaa;
+</a><a href="#h0-0-5" id="h0-0-5" class="d">-	display: block;
+</a><a href="#h0-0-6" id="h0-0-6" class="d">-	overflow-x: auto;
+</a><a href="#h0-0-7" id="h0-0-7" class="d">-	padding: 5px;
+</a><a href="#h0-0-8" id="h0-0-8" class="d">-	word-wrap: normal;
+</a><a href="#h0-0-9" id="h0-0-9" class="d">-}
+</a><a href="#h0-0-10" id="h0-0-10" class="i">+/* code { */
+</a><a href="#h0-0-11" id="h0-0-11" class="i">+/* 	border: 3px solid #aaa; */
+</a><a href="#h0-0-12" id="h0-0-12" class="i">+/* 	display: block; */
+</a><a href="#h0-0-13" id="h0-0-13" class="i">+/* 	overflow-x: auto; */
+</a><a href="#h0-0-14" id="h0-0-14" class="i">+/* 	padding: 5px; */
+</a><a href="#h0-0-15" id="h0-0-15" class="i">+/* 	word-wrap: normal; */
+</a><a href="#h0-0-16" id="h0-0-16" class="i">+/* } */
+</a><b>diff --git a/<a id="h1" href="../file/css/style.css.html">css/style.css</a> b/<a href="../file/css/style.css.html">css/style.css</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -55,15 +55,15 @@ table tr td {
+</a> pre {
+ 	margin: 0;
+ }
+<a href="#h1-0-3" id="h1-0-3" class="d">-code {
+</a><a href="#h1-0-4" id="h1-0-4" class="d">-	background-color: #eee;
+</a><a href="#h1-0-5" id="h1-0-5" class="d">-	border: 3px solid #aaa;
+</a><a href="#h1-0-6" id="h1-0-6" class="d">-	display: block;
+</a><a href="#h1-0-7" id="h1-0-7" class="d">-	font-family: monospace;
+</a><a href="#h1-0-8" id="h1-0-8" class="d">-	overflow-x: auto;
+</a><a href="#h1-0-9" id="h1-0-9" class="d">-	padding: 5px;
+</a><a href="#h1-0-10" id="h1-0-10" class="d">-	word-wrap: normal;
+</a><a href="#h1-0-11" id="h1-0-11" class="d">-}
+</a><a href="#h1-0-12" id="h1-0-12" class="i">+/* code { */
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+/* 	background-color: #eee; */
+</a><a href="#h1-0-14" id="h1-0-14" class="i">+/* 	border: 3px solid #aaa; */
+</a><a href="#h1-0-15" id="h1-0-15" class="i">+/* 	display: block; */
+</a><a href="#h1-0-16" id="h1-0-16" class="i">+/* 	font-family: monospace; */
+</a><a href="#h1-0-17" id="h1-0-17" class="i">+/* 	overflow-x: auto; */
+</a><a href="#h1-0-18" id="h1-0-18" class="i">+/* 	padding: 5px; */
+</a><a href="#h1-0-19" id="h1-0-19" class="i">+/* 	word-wrap: normal; */
+</a><a href="#h1-0-20" id="h1-0-20" class="i">+/* } */
+</a> #menu td {
+ 	padding: 1ex 0;
+ }
+<b>diff --git a/<a id="h2" href="../file/css/typeface.css.html">css/typeface.css</a> b/<a href="../file/css/typeface.css.html">css/typeface.css</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,63 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+:root {
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+  font-family: Inter, sans-serif;
+</a><a href="#h2-0-2" id="h2-0-2" class="i">+  font-feature-settings: &#39;liga&#39; 1, &#39;calt&#39; 1; /* fix for Chrome */
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+}
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+@supports (font-variation-settings: normal) {
+</a><a href="#h2-0-5" id="h2-0-5" class="i">+  :root { font-family: InterVariable, sans-serif; }
+</a><a href="#h2-0-6" id="h2-0-6" class="i">+}
+</a><a href="#h2-0-7" id="h2-0-7" class="i">+
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+.noto-sans-mono-&lt;uniquifier&gt; {
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+  font-family: &quot;Noto Sans Mono&quot;, monospace;
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+  font-optical-sizing: auto;
+</a><a href="#h2-0-11" id="h2-0-11" class="i">+  font-weight: &lt;weight&gt;;
+</a><a href="#h2-0-12" id="h2-0-12" class="i">+  font-style: normal;
+</a><a href="#h2-0-13" id="h2-0-13" class="i">+  font-variation-settings:
+</a><a href="#h2-0-14" id="h2-0-14" class="i">+    &quot;wdth&quot; 100;
+</a><a href="#h2-0-15" id="h2-0-15" class="i">+}
+</a><a href="#h2-0-16" id="h2-0-16" class="i">+
+</a><a href="#h2-0-17" id="h2-0-17" class="i">+* {
+</a><a href="#h2-0-18" id="h2-0-18" class="i">+    font-family: &#39;Inter&#39;, &#39;Helvetica&#39;, sans-serif;
+</a><a href="#h2-0-19" id="h2-0-19" class="i">+    color: #ddd;
+</a><a href="#h2-0-20" id="h2-0-20" class="i">+    overflow: visible;
+</a><a href="#h2-0-21" id="h2-0-21" class="i">+}
+</a><a href="#h2-0-22" id="h2-0-22" class="i">+
+</a><a href="#h2-0-23" id="h2-0-23" class="i">+
+</a><a href="#h2-0-24" id="h2-0-24" class="i">+a {
+</a><a href="#h2-0-25" id="h2-0-25" class="i">+    text-decoration-style: dotted;
+</a><a href="#h2-0-26" id="h2-0-26" class="i">+}
+</a><a href="#h2-0-27" id="h2-0-27" class="i">+.mastodon {
+</a><a href="#h2-0-28" id="h2-0-28" class="i">+    display: none;
+</a><a href="#h2-0-29" id="h2-0-29" class="i">+}
+</a><a href="#h2-0-30" id="h2-0-30" class="i">+
+</a><a href="#h2-0-31" id="h2-0-31" class="i">+code &gt; span &gt; span &gt; * , code &gt; span &gt; * , code &gt; * {
+</a><a href="#h2-0-32" id="h2-0-32" class="i">+  background: #ffffff00;
+</a><a href="#h2-0-33" id="h2-0-33" class="i">+  font-family: &#39;Noto Sans Mono&#39;;
+</a><a href="#h2-0-34" id="h2-0-34" class="i">+  font-size: 14px;
+</a><a href="#h2-0-35" id="h2-0-35" class="i">+}
+</a><a href="#h2-0-36" id="h2-0-36" class="i">+code {
+</a><a href="#h2-0-37" id="h2-0-37" class="i">+  background: #ffffff55;
+</a><a href="#h2-0-38" id="h2-0-38" class="i">+  font-family: &#39;Noto Sans Mono&#39;;
+</a><a href="#h2-0-39" id="h2-0-39" class="i">+  font-size: 14px;
+</a><a href="#h2-0-40" id="h2-0-40" class="i">+}
+</a><a href="#h2-0-41" id="h2-0-41" class="i">+
+</a><a href="#h2-0-42" id="h2-0-42" class="i">+/* body { */
+</a><a href="#h2-0-43" id="h2-0-43" class="i">+/*   background-color: #111; */
+</a><a href="#h2-0-44" id="h2-0-44" class="i">+/*   color: #333; */
+</a><a href="#h2-0-45" id="h2-0-45" class="i">+/*   line-height: 1.5; */
+</a><a href="#h2-0-46" id="h2-0-46" class="i">+/*   max-width: 45rem; */
+</a><a href="#h2-0-47" id="h2-0-47" class="i">+/*   padding: 1rem; */
+</a><a href="#h2-0-48" id="h2-0-48" class="i">+/*   margin: 0 auto; */
+</a><a href="#h2-0-49" id="h2-0-49" class="i">+/*   overflow: visible; */
+</a><a href="#h2-0-50" id="h2-0-50" class="i">+/* } */
+</a><a href="#h2-0-51" id="h2-0-51" class="i">+
+</a><a href="#h2-0-52" id="h2-0-52" class="i">+/* .content { */
+</a><a href="#h2-0-53" id="h2-0-53" class="i">+/*   margin-bottom: 2rem; */
+</a><a href="#h2-0-54" id="h2-0-54" class="i">+/* } */
+</a><a href="#h2-0-55" id="h2-0-55" class="i">+
+</a><a href="#h2-0-56" id="h2-0-56" class="i">+img {
+</a><a href="#h2-0-57" id="h2-0-57" class="i">+    width: 100%;
+</a><a href="#h2-0-58" id="h2-0-58" class="i">+}
+</a><a href="#h2-0-59" id="h2-0-59" class="i">+img.rss {
+</a><a href="#h2-0-60" id="h2-0-60" class="i">+    width: 16px;
+</a><a href="#h2-0-61" id="h2-0-61" class="i">+    height: 16px;
+</a><a href="#h2-0-62" id="h2-0-62" class="i">+}
+</a><b>diff --git a/<a id="h3" href="../file/output/dwl.html.html">output/dwl.html</a> b/<a href="../file/output/dwl.html.html">output/dwl.html</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h3-0-3" id="h3-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h3-0-4" id="h3-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h3-0-5" id="h3-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h3-0-12" id="h3-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h4" href="../file/output/linux.html.html">output/linux.html</a> b/<a href="../file/output/linux.html.html">output/linux.html</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h4-0-3" id="h4-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h4-0-4" id="h4-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h4-0-5" id="h4-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h4-0-8" id="h4-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h4-0-12" id="h4-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h4-0-13" id="h4-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h5" href="../file/output/mario-kart.html.html">output/mario-kart.html</a> b/<a href="../file/output/mario-kart.html.html">output/mario-kart.html</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h5-0-3" id="h5-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h5-0-4" id="h5-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h5-0-5" id="h5-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h5-0-8" id="h5-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h5-0-12" id="h5-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h6" href="../file/output/markdown.html.html">output/markdown.html</a> b/<a href="../file/output/markdown.html.html">output/markdown.html</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h6-0-3" id="h6-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h6-0-4" id="h6-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h6-0-5" id="h6-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h6-0-6" id="h6-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h6-0-7" id="h6-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h6-0-8" id="h6-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h6-0-12" id="h6-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h6-0-13" id="h6-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h7" href="../file/output/pgp-yubikey.html.html">output/pgp-yubikey.html</a> b/<a href="../file/output/pgp-yubikey.html.html">output/pgp-yubikey.html</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h7-0-3" id="h7-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h7-0-4" id="h7-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h7-0-5" id="h7-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h7-0-6" id="h7-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h7-0-7" id="h7-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h7-0-8" id="h7-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h7-0-12" id="h7-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h7-0-13" id="h7-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h8" href="../file/output/print.css.html">output/print.css</a> b/<a href="../file/output/print.css.html">output/print.css</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -22,10 +22,10 @@ table tr td {
+</a> pre {
+ 	margin: 0;
+ }
+<a href="#h8-0-3" id="h8-0-3" class="d">-code {
+</a><a href="#h8-0-4" id="h8-0-4" class="d">-	border: 3px solid #aaa;
+</a><a href="#h8-0-5" id="h8-0-5" class="d">-	display: block;
+</a><a href="#h8-0-6" id="h8-0-6" class="d">-	overflow-x: auto;
+</a><a href="#h8-0-7" id="h8-0-7" class="d">-	padding: 5px;
+</a><a href="#h8-0-8" id="h8-0-8" class="d">-	word-wrap: normal;
+</a><a href="#h8-0-9" id="h8-0-9" class="d">-}
+</a><a href="#h8-0-10" id="h8-0-10" class="i">+/* code { */
+</a><a href="#h8-0-11" id="h8-0-11" class="i">+/* 	border: 3px solid #aaa; */
+</a><a href="#h8-0-12" id="h8-0-12" class="i">+/* 	display: block; */
+</a><a href="#h8-0-13" id="h8-0-13" class="i">+/* 	overflow-x: auto; */
+</a><a href="#h8-0-14" id="h8-0-14" class="i">+/* 	padding: 5px; */
+</a><a href="#h8-0-15" id="h8-0-15" class="i">+/* 	word-wrap: normal; */
+</a><a href="#h8-0-16" id="h8-0-16" class="i">+/* } */
+</a><b>diff --git a/<a id="h9" href="../file/output/style.css.html">output/style.css</a> b/<a href="../file/output/style.css.html">output/style.css</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -55,15 +55,15 @@ table tr td {
+</a> pre {
+ 	margin: 0;
+ }
+<a href="#h9-0-3" id="h9-0-3" class="d">-code {
+</a><a href="#h9-0-4" id="h9-0-4" class="d">-	background-color: #eee;
+</a><a href="#h9-0-5" id="h9-0-5" class="d">-	border: 3px solid #aaa;
+</a><a href="#h9-0-6" id="h9-0-6" class="d">-	display: block;
+</a><a href="#h9-0-7" id="h9-0-7" class="d">-	font-family: monospace;
+</a><a href="#h9-0-8" id="h9-0-8" class="d">-	overflow-x: auto;
+</a><a href="#h9-0-9" id="h9-0-9" class="d">-	padding: 5px;
+</a><a href="#h9-0-10" id="h9-0-10" class="d">-	word-wrap: normal;
+</a><a href="#h9-0-11" id="h9-0-11" class="d">-}
+</a><a href="#h9-0-12" id="h9-0-12" class="i">+/* code { */
+</a><a href="#h9-0-13" id="h9-0-13" class="i">+/* 	background-color: #eee; */
+</a><a href="#h9-0-14" id="h9-0-14" class="i">+/* 	border: 3px solid #aaa; */
+</a><a href="#h9-0-15" id="h9-0-15" class="i">+/* 	display: block; */
+</a><a href="#h9-0-16" id="h9-0-16" class="i">+/* 	font-family: monospace; */
+</a><a href="#h9-0-17" id="h9-0-17" class="i">+/* 	overflow-x: auto; */
+</a><a href="#h9-0-18" id="h9-0-18" class="i">+/* 	padding: 5px; */
+</a><a href="#h9-0-19" id="h9-0-19" class="i">+/* 	word-wrap: normal; */
+</a><a href="#h9-0-20" id="h9-0-20" class="i">+/* } */
+</a> #menu td {
+ 	padding: 1ex 0;
+ }
+<b>diff --git a/<a id="h10" href="../file/output/typeface.css.html">output/typeface.css</a> b/<a href="../file/output/typeface.css.html">output/typeface.css</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -0,0 +1,63 @@
+</a><a href="#h10-0-0" id="h10-0-0" class="i">+:root {
+</a><a href="#h10-0-1" id="h10-0-1" class="i">+  font-family: Inter, sans-serif;
+</a><a href="#h10-0-2" id="h10-0-2" class="i">+  font-feature-settings: &#39;liga&#39; 1, &#39;calt&#39; 1; /* fix for Chrome */
+</a><a href="#h10-0-3" id="h10-0-3" class="i">+}
+</a><a href="#h10-0-4" id="h10-0-4" class="i">+@supports (font-variation-settings: normal) {
+</a><a href="#h10-0-5" id="h10-0-5" class="i">+  :root { font-family: InterVariable, sans-serif; }
+</a><a href="#h10-0-6" id="h10-0-6" class="i">+}
+</a><a href="#h10-0-7" id="h10-0-7" class="i">+
+</a><a href="#h10-0-8" id="h10-0-8" class="i">+.noto-sans-mono-&lt;uniquifier&gt; {
+</a><a href="#h10-0-9" id="h10-0-9" class="i">+  font-family: &quot;Noto Sans Mono&quot;, monospace;
+</a><a href="#h10-0-10" id="h10-0-10" class="i">+  font-optical-sizing: auto;
+</a><a href="#h10-0-11" id="h10-0-11" class="i">+  font-weight: &lt;weight&gt;;
+</a><a href="#h10-0-12" id="h10-0-12" class="i">+  font-style: normal;
+</a><a href="#h10-0-13" id="h10-0-13" class="i">+  font-variation-settings:
+</a><a href="#h10-0-14" id="h10-0-14" class="i">+    &quot;wdth&quot; 100;
+</a><a href="#h10-0-15" id="h10-0-15" class="i">+}
+</a><a href="#h10-0-16" id="h10-0-16" class="i">+
+</a><a href="#h10-0-17" id="h10-0-17" class="i">+* {
+</a><a href="#h10-0-18" id="h10-0-18" class="i">+    font-family: &#39;Inter&#39;, &#39;Helvetica&#39;, sans-serif;
+</a><a href="#h10-0-19" id="h10-0-19" class="i">+    color: #ddd;
+</a><a href="#h10-0-20" id="h10-0-20" class="i">+    overflow: visible;
+</a><a href="#h10-0-21" id="h10-0-21" class="i">+}
+</a><a href="#h10-0-22" id="h10-0-22" class="i">+
+</a><a href="#h10-0-23" id="h10-0-23" class="i">+
+</a><a href="#h10-0-24" id="h10-0-24" class="i">+a {
+</a><a href="#h10-0-25" id="h10-0-25" class="i">+    text-decoration-style: dotted;
+</a><a href="#h10-0-26" id="h10-0-26" class="i">+}
+</a><a href="#h10-0-27" id="h10-0-27" class="i">+.mastodon {
+</a><a href="#h10-0-28" id="h10-0-28" class="i">+    display: none;
+</a><a href="#h10-0-29" id="h10-0-29" class="i">+}
+</a><a href="#h10-0-30" id="h10-0-30" class="i">+
+</a><a href="#h10-0-31" id="h10-0-31" class="i">+code &gt; span &gt; span &gt; * , code &gt; span &gt; * , code &gt; * {
+</a><a href="#h10-0-32" id="h10-0-32" class="i">+  background: #ffffff00;
+</a><a href="#h10-0-33" id="h10-0-33" class="i">+  font-family: &#39;Noto Sans Mono&#39;;
+</a><a href="#h10-0-34" id="h10-0-34" class="i">+  font-size: 14px;
+</a><a href="#h10-0-35" id="h10-0-35" class="i">+}
+</a><a href="#h10-0-36" id="h10-0-36" class="i">+code {
+</a><a href="#h10-0-37" id="h10-0-37" class="i">+  background: #ffffff55;
+</a><a href="#h10-0-38" id="h10-0-38" class="i">+  font-family: &#39;Noto Sans Mono&#39;;
+</a><a href="#h10-0-39" id="h10-0-39" class="i">+  font-size: 14px;
+</a><a href="#h10-0-40" id="h10-0-40" class="i">+}
+</a><a href="#h10-0-41" id="h10-0-41" class="i">+
+</a><a href="#h10-0-42" id="h10-0-42" class="i">+/* body { */
+</a><a href="#h10-0-43" id="h10-0-43" class="i">+/*   background-color: #111; */
+</a><a href="#h10-0-44" id="h10-0-44" class="i">+/*   color: #333; */
+</a><a href="#h10-0-45" id="h10-0-45" class="i">+/*   line-height: 1.5; */
+</a><a href="#h10-0-46" id="h10-0-46" class="i">+/*   max-width: 45rem; */
+</a><a href="#h10-0-47" id="h10-0-47" class="i">+/*   padding: 1rem; */
+</a><a href="#h10-0-48" id="h10-0-48" class="i">+/*   margin: 0 auto; */
+</a><a href="#h10-0-49" id="h10-0-49" class="i">+/*   overflow: visible; */
+</a><a href="#h10-0-50" id="h10-0-50" class="i">+/* } */
+</a><a href="#h10-0-51" id="h10-0-51" class="i">+
+</a><a href="#h10-0-52" id="h10-0-52" class="i">+/* .content { */
+</a><a href="#h10-0-53" id="h10-0-53" class="i">+/*   margin-bottom: 2rem; */
+</a><a href="#h10-0-54" id="h10-0-54" class="i">+/* } */
+</a><a href="#h10-0-55" id="h10-0-55" class="i">+
+</a><a href="#h10-0-56" id="h10-0-56" class="i">+img {
+</a><a href="#h10-0-57" id="h10-0-57" class="i">+    width: 100%;
+</a><a href="#h10-0-58" id="h10-0-58" class="i">+}
+</a><a href="#h10-0-59" id="h10-0-59" class="i">+img.rss {
+</a><a href="#h10-0-60" id="h10-0-60" class="i">+    width: 16px;
+</a><a href="#h10-0-61" id="h10-0-61" class="i">+    height: 16px;
+</a><a href="#h10-0-62" id="h10-0-62" class="i">+}
+</a><b>diff --git a/<a id="h11" href="../file/output/typst.html.html">output/typst.html</a> b/<a href="../file/output/typst.html.html">output/typst.html</a></b>
+<a href="#h11-0" id="h11-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h11-0-3" id="h11-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h11-0-4" id="h11-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h11-0-5" id="h11-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h11-0-6" id="h11-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h11-0-7" id="h11-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h11-0-8" id="h11-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h11-0-12" id="h11-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h11-0-13" id="h11-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+<b>diff --git a/<a id="h12" href="../file/templates/page/header.html.html">templates/page/header.html</a> b/<a href="../file/templates/page/header.html.html">templates/page/header.html</a></b>
+<a href="#h12-0" id="h12-0" class="h">@@ -21,13 +21,13 @@
+</a> 		&lt;tr&gt;
+ 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+ 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#h12-0-3" id="h12-0-3" class="d">-				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; |
+</a><a href="#h12-0-4" id="h12-0-4" class="d">-				&lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; |
+</a><a href="#h12-0-5" id="h12-0-5" class="d">-				&lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt;
+</a><a href="#h12-0-6" id="h12-0-6" class="i">+				&lt;a href=&quot;/git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+</a><a href="#h12-0-7" id="h12-0-7" class="i">+				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+</a><a href="#h12-0-8" id="h12-0-8" class="i">+				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+</a> 			&lt;/td&gt;
+ 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+ 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#h12-0-12" id="h12-0-12" class="d">-				&lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; |
+</a><a href="#h12-0-13" id="h12-0-13" class="i">+				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+ 				&lt;a href=&quot;mailto:${sitemail}&quot;&gt;Mail&lt;/a&gt;
+ 			&lt;/td&gt;
+</pre>
+</div>
+</body>
+</html>

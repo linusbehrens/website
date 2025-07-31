@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>email client mblaze - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/7b4a956f28c038487018610bfd60a4d707b1c0ee.html">7b4a956f28c038487018610bfd60a4d707b1c0ee</a>
+<b>parent</b> <a href="../commit/22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108.html">22dc72e8f4789d6a3e19ed3cc7ac2952c1bb9108</a>
+<b>Author:</b> linusbehrens &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Sat, 19 Jul 2025 22:38:37 +0200
+
+email client mblaze
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.config/bash/.bashrc</a></td><td> | </td><td class="num">2</td><td><span class="i">++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">.config/isyncrc</a></td><td> | </td><td class="num">24</td><td><span class="i">++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">.config/mblaze/profile</a></td><td> | </td><td class="num">5</td><td><span class="i">+++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">.config/msmtp/config</a></td><td> | </td><td class="num">14</td><td><span class="i">++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h4">.mbsyncrc</a></td><td> | </td><td class="num">24</td><td><span class="i">++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>5 files changed, 69 insertions(+), 0 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a> b/<a href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -64,6 +64,8 @@ export GPG_TTY=$(tty)
+</a> export XDG_CONFIG_HOME=&quot;$HOME/.config&quot;
+ export MANPAGER=&#39;nvim +Man!&#39;
+ export EDITOR=vim
+<a href="#h0-0-3" id="h0-0-3" class="i">+export MAIL=&quot;/home/linus/Mail/mail@linus-behrens.de/&quot;
+</a><a href="#h0-0-4" id="h0-0-4" class="i">+# export ISYNCRC=&quot;$HOME/Mail/mail@linus-behrens.de/.mbsyncrc&quot;
+</a> 
+ ########## PS1 ##########
+ 
+<b>diff --git a/<a id="h1" href="../file/.config/isyncrc.html">.config/isyncrc</a> b/<a href="../file/.config/isyncrc.html">.config/isyncrc</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1,24 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+IMAPAccount mail@linus-behrens.de
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+Host        imap.strato.de
+</a><a href="#h1-0-2" id="h1-0-2" class="i">+Port        993
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+User        mail@linus-behrens.de
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+PassCmd     &quot;pass show email/mail@linus-behrens.de&quot;
+</a><a href="#h1-0-5" id="h1-0-5" class="i">+TLSType     IMAPS
+</a><a href="#h1-0-6" id="h1-0-6" class="i">+AuthMechs   LOGIN
+</a><a href="#h1-0-7" id="h1-0-7" class="i">+CertificateFile /etc/ssl/certs/ca-certificates.crt
+</a><a href="#h1-0-8" id="h1-0-8" class="i">+
+</a><a href="#h1-0-9" id="h1-0-9" class="i">+IMAPStore   strato-remote
+</a><a href="#h1-0-10" id="h1-0-10" class="i">+Account     mail@linus-behrens.de
+</a><a href="#h1-0-11" id="h1-0-11" class="i">+
+</a><a href="#h1-0-12" id="h1-0-12" class="i">+MaildirStore strato-local
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+Path         ~/Mail/mail@linus-behrens.de/
+</a><a href="#h1-0-14" id="h1-0-14" class="i">+Inbox        ~/Mail/mail@linus-behrens.de/
+</a><a href="#h1-0-15" id="h1-0-15" class="i">+SubFolders   Verbatim
+</a><a href="#h1-0-16" id="h1-0-16" class="i">+
+</a><a href="#h1-0-17" id="h1-0-17" class="i">+Channel mail@linus-behrens.de
+</a><a href="#h1-0-18" id="h1-0-18" class="i">+Far   :strato-remote:
+</a><a href="#h1-0-19" id="h1-0-19" class="i">+Near  :strato-local:
+</a><a href="#h1-0-20" id="h1-0-20" class="i">+Create      Both
+</a><a href="#h1-0-21" id="h1-0-21" class="i">+SyncState   *
+</a><a href="#h1-0-22" id="h1-0-22" class="i">+Expunge     Both
+</a><a href="#h1-0-23" id="h1-0-23" class="i">+Patterns    *
+</a><b>diff --git a/<a id="h2" href="../file/.config/mblaze/profile.html">.config/mblaze/profile</a> b/<a href="../file/.config/mblaze/profile.html">.config/mblaze/profile</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,5 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+from: Linus Behrens &lt;mail@linus-behrens.de&gt;
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+sendmail: /usr/bin/msmtp
+</a><a href="#h2-0-2" id="h2-0-2" class="i">+auto-from: -f           # let msmtp pick the right account
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+editor: nvim            # or $EDITOR of choice
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+pager:  less -R
+</a><b>diff --git a/<a id="h3" href="../file/.config/msmtp/config.html">.config/msmtp/config</a> b/<a href="../file/.config/msmtp/config.html">.config/msmtp/config</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -0,0 +1,14 @@
+</a><a href="#h3-0-0" id="h3-0-0" class="i">+defaults
+</a><a href="#h3-0-1" id="h3-0-1" class="i">+auth           on
+</a><a href="#h3-0-2" id="h3-0-2" class="i">+tls            on
+</a><a href="#h3-0-3" id="h3-0-3" class="i">+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+logfile        ~/.local/share/msmtp.log
+</a><a href="#h3-0-5" id="h3-0-5" class="i">+
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+account mail@linus-behrens.de
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+host           smtp.strato.de
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+port           465
+</a><a href="#h3-0-9" id="h3-0-9" class="i">+from           mail@linus-behrens.de
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+user           mail@linus-behrens.de
+</a><a href="#h3-0-11" id="h3-0-11" class="i">+passwordeval   &quot;pass show email/mail@linus-behrens.de&quot;
+</a><a href="#h3-0-12" id="h3-0-12" class="i">+
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+account default : mail@linus-behrens.de
+</a><b>diff --git a/<a id="h4" href="../file/.mbsyncrc.html">.mbsyncrc</a> b/<a href="../file/.mbsyncrc.html">.mbsyncrc</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -0,0 +1,24 @@
+</a><a href="#h4-0-0" id="h4-0-0" class="i">+IMAPAccount mail@linus-behrens.de
+</a><a href="#h4-0-1" id="h4-0-1" class="i">+Host        imap.strato.de
+</a><a href="#h4-0-2" id="h4-0-2" class="i">+Port        993
+</a><a href="#h4-0-3" id="h4-0-3" class="i">+User        mail@linus-behrens.de
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+PassCmd     &quot;pass show email/mail@linus-behrens.de&quot;
+</a><a href="#h4-0-5" id="h4-0-5" class="i">+TLSType     IMAPS
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+AuthMechs   LOGIN
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+CertificateFile /etc/ssl/certs/ca-certificates.crt
+</a><a href="#h4-0-8" id="h4-0-8" class="i">+
+</a><a href="#h4-0-9" id="h4-0-9" class="i">+IMAPStore   strato-remote
+</a><a href="#h4-0-10" id="h4-0-10" class="i">+Account     mail@linus-behrens.de
+</a><a href="#h4-0-11" id="h4-0-11" class="i">+
+</a><a href="#h4-0-12" id="h4-0-12" class="i">+MaildirStore strato-local
+</a><a href="#h4-0-13" id="h4-0-13" class="i">+Path         ~/Mail/mail@linus-behrens.de/
+</a><a href="#h4-0-14" id="h4-0-14" class="i">+Inbox        ~/Mail/mail@linus-behrens.de/
+</a><a href="#h4-0-15" id="h4-0-15" class="i">+SubFolders   Verbatim
+</a><a href="#h4-0-16" id="h4-0-16" class="i">+
+</a><a href="#h4-0-17" id="h4-0-17" class="i">+Channel strato
+</a><a href="#h4-0-18" id="h4-0-18" class="i">+Far   :strato-remote:
+</a><a href="#h4-0-19" id="h4-0-19" class="i">+Near  :strato-local:
+</a><a href="#h4-0-20" id="h4-0-20" class="i">+Create      Both
+</a><a href="#h4-0-21" id="h4-0-21" class="i">+SyncState   *
+</a><a href="#h4-0-22" id="h4-0-22" class="i">+Expunge     Both
+</a><a href="#h4-0-23" id="h4-0-23" class="i">+Patterns    *
+</a></pre>
+</div>
+</body>
+</html>
