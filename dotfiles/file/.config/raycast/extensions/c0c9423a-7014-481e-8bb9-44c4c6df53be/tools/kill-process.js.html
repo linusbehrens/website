@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>kill-process.js - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../../../../"><img src="../../../../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../../../../log.html">Log</a> | <a href="../../../../../../files.html">Files</a> | <a href="../../../../../../refs.html">Refs</a> | <a href="../../../../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> kill-process.js (926B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> &quot;use strict&quot;;var n=Object.defineProperty;var i=Object.getOwnPropertyDescriptor;var c=Object.getOwnPropertyNames;var p=Object.prototype.hasOwnProperty;var l=(e,s)=&gt;{for(var o in s)n(e,o,{get:s[o],enumerable:!0})},f=(e,s,o,r)=&gt;{if(s&amp;&amp;typeof s==&quot;object&quot;||typeof s==&quot;function&quot;)for(let a of c(s))!p.call(e,a)&amp;&amp;a!==o&amp;&amp;n(e,a,{get:()=&gt;s[a],enumerable:!(r=i(s,a))||r.enumerable});return e};var u=e=&gt;f(n({},&quot;__esModule&quot;,{value:!0}),e);var d={};l(d,{confirmation:()=&gt;h,default:()=&gt;m});module.exports=u(d);var t=require(&quot;child_process&quot;);async function m(e){return new Promise((s,o)=&gt;{(0,t.exec)(`kill -9 ${e.id}`,r=&gt;{if(r){o(r);return}s(`Killed process: ${e.processName?e.processName+&quot; &quot;:&quot;&quot;}(PID: ${e.id})`)})})}var h=async e=&gt;{let s=[];return e.processName&amp;&amp;s.push({name:&quot;Process Name&quot;,value:e.processName}),s.push({name:&quot;PID&quot;,value:String(e.id)}),e.path&amp;&amp;s.push({name:&quot;Path&quot;,value:e.path}),{info:s}};0&amp;&amp;(module.exports={confirmation});
+</pre>
+</div>
+</body>
+</html>

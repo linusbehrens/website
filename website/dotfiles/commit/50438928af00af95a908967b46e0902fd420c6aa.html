@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>linux device, wmenu, etc. - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/50438928af00af95a908967b46e0902fd420c6aa.html">50438928af00af95a908967b46e0902fd420c6aa</a>
+<b>parent</b> <a href="../commit/d3f431f8c0397b3766dce37439c5f7d599d012d6.html">d3f431f8c0397b3766dce37439c5f7d599d012d6</a>
+<b>Author:</b> Linus Behrens &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Wed,  2 Jul 2025 09:14:18 +0200
+
+linux device, wmenu, etc.
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.config/nvim/init.lua</a></td><td> | </td><td class="num">13</td><td><span class="i">+++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">.scripts/directories.csv</a></td><td> | </td><td class="num">6</td><td><span class="i">++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">.scripts/wBrightness</a></td><td> | </td><td class="num">19</td><td><span class="i">+++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">.scripts/wDir</a></td><td> | </td><td class="num">21</td><td><span class="i">+++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h4">.scripts/wSys</a></td><td> | </td><td class="num">9</td><td><span class="i">+++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h5">.scripts/wVolume</a></td><td> | </td><td class="num">18</td><td><span class="i">++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h6">.scripts/wWallpaper</a></td><td> | </td><td class="num">7</td><td><span class="i">+++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h7">.scripts/wWebsites</a></td><td> | </td><td class="num">21</td><td><span class="i">+++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h8">.scripts/wWifi</a></td><td> | </td><td class="num">35</td><td><span class="i">+++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h9">.scripts/websites.csv</a></td><td> | </td><td class="num">13</td><td><span class="i">+++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h10">.scripts/wifi.csv</a></td><td> | </td><td class="num">3</td><td><span class="i">+++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h11">.vimrc</a></td><td> | </td><td class="num">6</td><td><span class="i">++++++</span><span class="d"></span></td></tr>
+</table></pre><pre>12 files changed, 171 insertions(+), 0 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/nvim/init.lua.html">.config/nvim/init.lua</a> b/<a href="../file/.config/nvim/init.lua.html">.config/nvim/init.lua</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -1,3 +1,16 @@
+</a><a href="#h0-0-0" id="h0-0-0" class="i">+local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;
+</a><a href="#h0-0-1" id="h0-0-1" class="i">+if not vim.loop.fs_stat(lazypath) then
+</a><a href="#h0-0-2" id="h0-0-2" class="i">+  vim.fn.system({
+</a><a href="#h0-0-3" id="h0-0-3" class="i">+    &quot;git&quot;,
+</a><a href="#h0-0-4" id="h0-0-4" class="i">+    &quot;clone&quot;,
+</a><a href="#h0-0-5" id="h0-0-5" class="i">+    &quot;--filter=blob:none&quot;,
+</a><a href="#h0-0-6" id="h0-0-6" class="i">+    &quot;https://github.com/folke/lazy.nvim.git&quot;,
+</a><a href="#h0-0-7" id="h0-0-7" class="i">+    lazypath,
+</a><a href="#h0-0-8" id="h0-0-8" class="i">+  })
+</a><a href="#h0-0-9" id="h0-0-9" class="i">+end
+</a><a href="#h0-0-10" id="h0-0-10" class="i">+--vim.opt.rtp:prepend(lazypath)
+</a><a href="#h0-0-11" id="h0-0-11" class="i">+
+</a> require(&quot;linus&quot;)
+ 
+ 
+<a href="#h0-0-15" id="h0-0-15" class="i">+
+</a><b>diff --git a/<a id="h1" href="../file/.scripts/directories.csv.html">.scripts/directories.csv</a> b/<a href="../file/.scripts/directories.csv.html">.scripts/directories.csv</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -0,0 +1,6 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="i">+/home/linus/.config/bash/,bashrc
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+/home/linus/obsidian,obsidian
+</a><a href="#h1-0-2" id="h1-0-2" class="i">+$HOME/Documents/vw,Volkswagen
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+$HOME/Documents/studium,Studium
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+$HOME/Documents,documents
+</a><a href="#h1-0-5" id="h1-0-5" class="i">+$HOME/scripts,scripts
+</a><b>diff --git a/<a id="h2" href="../file/.scripts/wBrightness.html">.scripts/wBrightness</a> b/<a href="../file/.scripts/wBrightness.html">.scripts/wBrightness</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,19 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+#!/bin/bash
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+
+</a><a href="#h2-0-2" id="h2-0-2" class="i">+(
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+  echo &quot;$(brightnessctl g) (current brightness)&quot;
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+  for b in 500 400 300 200 100 49 29 9 off; do
+</a><a href="#h2-0-5" id="h2-0-5" class="i">+    echo &quot;$b&quot;
+</a><a href="#h2-0-6" id="h2-0-6" class="i">+  done
+</a><a href="#h2-0-7" id="h2-0-7" class="i">+) | wmenu -i -l 9 | awk &#39;{print $1}&#39; | while read bri; do
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+  if [ &quot;$bri&quot; = &quot;off&quot; ]; then
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+    brightnessctl s 0
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+  else
+</a><a href="#h2-0-11" id="h2-0-11" class="i">+    brightnessctl s &quot;$bri&quot;
+</a><a href="#h2-0-12" id="h2-0-12" class="i">+  fi
+</a><a href="#h2-0-13" id="h2-0-13" class="i">+done
+</a><a href="#h2-0-14" id="h2-0-14" class="i">+
+</a><a href="#h2-0-15" id="h2-0-15" class="i">+
+</a><a href="#h2-0-16" id="h2-0-16" class="i">+
+</a><a href="#h2-0-17" id="h2-0-17" class="i">+
+</a><a href="#h2-0-18" id="h2-0-18" class="i">+
+</a><b>diff --git a/<a id="h3" href="../file/.scripts/wDir.html">.scripts/wDir</a> b/<a href="../file/.scripts/wDir.html">.scripts/wDir</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -0,0 +1,21 @@
+</a><a href="#h3-0-0" id="h3-0-0" class="i">+#!/bin/bash
+</a><a href="#h3-0-1" id="h3-0-1" class="i">+
+</a><a href="#h3-0-2" id="h3-0-2" class="i">+awk -F, &#39;{
+</a><a href="#h3-0-3" id="h3-0-3" class="i">+  if ($2 != &quot;&quot;) {
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+    print $2
+</a><a href="#h3-0-5" id="h3-0-5" class="i">+  } else {
+</a><a href="#h3-0-6" id="h3-0-6" class="i">+    print $1
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+  }
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+}&#39; /home/linus/scripts/directories.csv | wmenu -i -l 5 -p $(pwd)| while read selection; do
+</a><a href="#h3-0-9" id="h3-0-9" class="i">+  if [ -z &quot;$selection&quot; ]; then
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+    exit 0
+</a><a href="#h3-0-11" id="h3-0-11" class="i">+  fi
+</a><a href="#h3-0-12" id="h3-0-12" class="i">+  awk -F, -v sel=&quot;$selection&quot; &#39;
+</a><a href="#h3-0-13" id="h3-0-13" class="i">+    $2 == sel { print $1; found=1 }
+</a><a href="#h3-0-14" id="h3-0-14" class="i">+    $2 == &quot;&quot; &amp;&amp; $1 == sel { print $1; found=1 }
+</a><a href="#h3-0-15" id="h3-0-15" class="i">+    END { if (!found) exit 1 }
+</a><a href="#h3-0-16" id="h3-0-16" class="i">+    &#39; /home/linus/scripts/directories.csv | while read dir; do
+</a><a href="#h3-0-17" id="h3-0-17" class="i">+    cd &quot;$dir&quot; &gt;/dev/null 2&gt;&amp;1 &amp;
+</a><a href="#h3-0-18" id="h3-0-18" class="i">+  done
+</a><a href="#h3-0-19" id="h3-0-19" class="i">+done
+</a><a href="#h3-0-20" id="h3-0-20" class="i">+
+</a><b>diff --git a/<a id="h4" href="../file/.scripts/wSys.html">.scripts/wSys</a> b/<a href="../file/.scripts/wSys.html">.scripts/wSys</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -0,0 +1,9 @@
+</a><a href="#h4-0-0" id="h4-0-0" class="i">+#!/bin/bash
+</a><a href="#h4-0-1" id="h4-0-1" class="i">+
+</a><a href="#h4-0-2" id="h4-0-2" class="i">+case &quot;$(printf &quot;kill\nzzz\nreboot\nshutdown&quot; | wmenu -i -l 4)&quot; in
+</a><a href="#h4-0-3" id="h4-0-3" class="i">+	kill) ps -u $USER -o pid,comm,%cpu,%mem | wmenu -i -l 10 -p Kill: | awk &#39;{print $1}&#39; | xargs -r kill ;;
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+	zzz) slock systemctl suspend -i ;;
+</a><a href="#h4-0-5" id="h4-0-5" class="i">+	reboot) systemctl reboot -i ;;
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+	shutdown) shutdown now ;;
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+	*) exit 1 ;;
+</a><a href="#h4-0-8" id="h4-0-8" class="i">+esac
+</a><b>diff --git a/<a id="h5" href="../file/.scripts/wVolume.html">.scripts/wVolume</a> b/<a href="../file/.scripts/wVolume.html">.scripts/wVolume</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -0,0 +1,18 @@
+</a><a href="#h5-0-0" id="h5-0-0" class="i">+#!/bin/bash
+</a><a href="#h5-0-1" id="h5-0-1" class="i">+
+</a><a href="#h5-0-2" id="h5-0-2" class="i">+(
+</a><a href="#h5-0-3" id="h5-0-3" class="i">+  #echo &quot;$(pamixer --get-volume) (current volume)&quot;
+</a><a href="#h5-0-4" id="h5-0-4" class="i">+  for v in 100 80 60 40 20 mute; do
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+    echo &quot;$v&quot;
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+  done
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+  ) | wmenu -i -l 6 -p $(pamixer --get-volume) | awk &#39;{print $1}&#39; | while read vol; do
+</a><a href="#h5-0-8" id="h5-0-8" class="i">+  if [ &quot;$vol&quot; = &quot;mute&quot; ]; then
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+    pamixer --mute
+</a><a href="#h5-0-10" id="h5-0-10" class="i">+  else
+</a><a href="#h5-0-11" id="h5-0-11" class="i">+    pamixer --set-volume &quot;$vol&quot;
+</a><a href="#h5-0-12" id="h5-0-12" class="i">+  fi
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+done
+</a><a href="#h5-0-14" id="h5-0-14" class="i">+
+</a><a href="#h5-0-15" id="h5-0-15" class="i">+
+</a><a href="#h5-0-16" id="h5-0-16" class="i">+
+</a><a href="#h5-0-17" id="h5-0-17" class="i">+
+</a><b>diff --git a/<a id="h6" href="../file/.scripts/wWallpaper.html">.scripts/wWallpaper</a> b/<a href="../file/.scripts/wWallpaper.html">.scripts/wWallpaper</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -0,0 +1,7 @@
+</a><a href="#h6-0-0" id="h6-0-0" class="i">+#!/bin/bash
+</a><a href="#h6-0-1" id="h6-0-1" class="i">+
+</a><a href="#h6-0-2" id="h6-0-2" class="i">+
+</a><a href="#h6-0-3" id="h6-0-3" class="i">+# $(ls -1 $HOME/dotfiles/wallpaper | wmenu -i)
+</a><a href="#h6-0-4" id="h6-0-4" class="i">+ls -1 -R $HOME/dotfiles/wallpaper | wmenu -i -l 10
+</a><a href="#h6-0-5" id="h6-0-5" class="i">+
+</a><a href="#h6-0-6" id="h6-0-6" class="i">+
+</a><b>diff --git a/<a id="h7" href="../file/.scripts/wWebsites.html">.scripts/wWebsites</a> b/<a href="../file/.scripts/wWebsites.html">.scripts/wWebsites</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -0,0 +1,21 @@
+</a><a href="#h7-0-0" id="h7-0-0" class="i">+#!/bin/bash
+</a><a href="#h7-0-1" id="h7-0-1" class="i">+
+</a><a href="#h7-0-2" id="h7-0-2" class="i">+awk -F, &#39;{
+</a><a href="#h7-0-3" id="h7-0-3" class="i">+  if ($2 != &quot;&quot;) {
+</a><a href="#h7-0-4" id="h7-0-4" class="i">+    print $2
+</a><a href="#h7-0-5" id="h7-0-5" class="i">+  } else {
+</a><a href="#h7-0-6" id="h7-0-6" class="i">+    print $1
+</a><a href="#h7-0-7" id="h7-0-7" class="i">+  }
+</a><a href="#h7-0-8" id="h7-0-8" class="i">+}&#39; $HOME/scripts/websites.csv | wmenu -i -l 10 | while read selection; do
+</a><a href="#h7-0-9" id="h7-0-9" class="i">+  if [ -z &quot;$selection&quot; ]; then
+</a><a href="#h7-0-10" id="h7-0-10" class="i">+    exit 0
+</a><a href="#h7-0-11" id="h7-0-11" class="i">+  fi
+</a><a href="#h7-0-12" id="h7-0-12" class="i">+  awk -F, -v sel=&quot;$selection&quot; &#39;
+</a><a href="#h7-0-13" id="h7-0-13" class="i">+    $2 == sel { print $1; found=1 }
+</a><a href="#h7-0-14" id="h7-0-14" class="i">+    $2 == &quot;&quot; &amp;&amp; $1 == sel { print $1; found=1 }
+</a><a href="#h7-0-15" id="h7-0-15" class="i">+    END { if (!found) exit 1 }
+</a><a href="#h7-0-16" id="h7-0-16" class="i">+  &#39; $HOME/scripts/websites.csv | while read url; do
+</a><a href="#h7-0-17" id="h7-0-17" class="i">+    xdg-open &quot;$url&quot; &gt;/dev/null 2&gt;&amp;1 &amp;
+</a><a href="#h7-0-18" id="h7-0-18" class="i">+  done
+</a><a href="#h7-0-19" id="h7-0-19" class="i">+done
+</a><a href="#h7-0-20" id="h7-0-20" class="i">+
+</a><b>diff --git a/<a id="h8" href="../file/.scripts/wWifi.html">.scripts/wWifi</a> b/<a href="../file/.scripts/wWifi.html">.scripts/wWifi</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -0,0 +1,35 @@
+</a><a href="#h8-0-0" id="h8-0-0" class="i">+#!/bin/bash 
+</a><a href="#h8-0-1" id="h8-0-1" class="i">+
+</a><a href="#h8-0-2" id="h8-0-2" class="i">+awk -F, &#39;{
+</a><a href="#h8-0-3" id="h8-0-3" class="i">+  if ($1 ~ /^nmcli/) {
+</a><a href="#h8-0-4" id="h8-0-4" class="i">+    # custom command + description
+</a><a href="#h8-0-5" id="h8-0-5" class="i">+    print $2
+</a><a href="#h8-0-6" id="h8-0-6" class="i">+  } else {
+</a><a href="#h8-0-7" id="h8-0-7" class="i">+    # regular SSID
+</a><a href="#h8-0-8" id="h8-0-8" class="i">+    print $1
+</a><a href="#h8-0-9" id="h8-0-9" class="i">+  }
+</a><a href="#h8-0-10" id="h8-0-10" class="i">+}&#39; $HOME/scripts/wifi.csv | wmenu -i | while read selection; do
+</a><a href="#h8-0-11" id="h8-0-11" class="i">+  if [ -z &quot;$selection&quot; ]; then
+</a><a href="#h8-0-12" id="h8-0-12" class="i">+    exit 0
+</a><a href="#h8-0-13" id="h8-0-13" class="i">+  fi
+</a><a href="#h8-0-14" id="h8-0-14" class="i">+
+</a><a href="#h8-0-15" id="h8-0-15" class="i">+  # search for the selection
+</a><a href="#h8-0-16" id="h8-0-16" class="i">+  awk -F, -v sel=&quot;$selection&quot; &#39;
+</a><a href="#h8-0-17" id="h8-0-17" class="i">+  {
+</a><a href="#h8-0-18" id="h8-0-18" class="i">+    if ($1 ~ /^nmcli/ &amp;&amp; $2 == sel) {
+</a><a href="#h8-0-19" id="h8-0-19" class="i">+	  # custom command + description
+</a><a href="#h8-0-20" id="h8-0-20" class="i">+      cmd = $1
+</a><a href="#h8-0-21" id="h8-0-21" class="i">+      found = 1
+</a><a href="#h8-0-22" id="h8-0-22" class="i">+    } else if ($1 == sel) {
+</a><a href="#h8-0-23" id="h8-0-23" class="i">+      cmd = sprintf(&quot;nmcli device wifi connect \&quot;%s\&quot; password \&quot;%s\&quot;&quot;, $1, $2)
+</a><a href="#h8-0-24" id="h8-0-24" class="i">+      found = 1
+</a><a href="#h8-0-25" id="h8-0-25" class="i">+    }
+</a><a href="#h8-0-26" id="h8-0-26" class="i">+  }
+</a><a href="#h8-0-27" id="h8-0-27" class="i">+  END {
+</a><a href="#h8-0-28" id="h8-0-28" class="i">+    if (found) {
+</a><a href="#h8-0-29" id="h8-0-29" class="i">+      print cmd
+</a><a href="#h8-0-30" id="h8-0-30" class="i">+    }
+</a><a href="#h8-0-31" id="h8-0-31" class="i">+  }&#39; $HOME/scripts/wifi.csv | while read cmd; do
+</a><a href="#h8-0-32" id="h8-0-32" class="i">+    eval &quot;$cmd&quot;
+</a><a href="#h8-0-33" id="h8-0-33" class="i">+  done
+</a><a href="#h8-0-34" id="h8-0-34" class="i">+done
+</a><b>diff --git a/<a id="h9" href="../file/.scripts/websites.csv.html">.scripts/websites.csv</a> b/<a href="../file/.scripts/websites.csv.html">.scripts/websites.csv</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -0,0 +1,13 @@
+</a><a href="#h9-0-0" id="h9-0-0" class="i">+https://youtube.com,youtube home
+</a><a href="#h9-0-1" id="h9-0-1" class="i">+https://linus-behrens.de,linus behrens home
+</a><a href="#h9-0-2" id="h9-0-2" class="i">+https://chatgpt.com,ChatGPT
+</a><a href="#h9-0-3" id="h9-0-3" class="i">+https://sr.ht/,SourceHut
+</a><a href="#h9-0-4" id="h9-0-4" class="i">+https://github.com,GitHub
+</a><a href="#h9-0-5" id="h9-0-5" class="i">+https://codeberg.org,CodeBerg
+</a><a href="#h9-0-6" id="h9-0-6" class="i">+
+</a><a href="#h9-0-7" id="h9-0-7" class="i">+https://github.com/BreadOnPenguins/scripts,dmenu scripts
+</a><a href="#h9-0-8" id="h9-0-8" class="i">+https://www.youtube.com/watch?v=4JWeU78A95c,dmenu example
+</a><a href="#h9-0-9" id="h9-0-9" class="i">+https://www.terminal.shop/api,terminal shop api
+</a><a href="#h9-0-10" id="h9-0-10" class="i">+https://github.com/qutebrowser/qutebrowser/releases,qutebrowser
+</a><a href="#h9-0-11" id="h9-0-11" class="i">+
+</a><a href="#h9-0-12" id="h9-0-12" class="i">+https://www.bee-link.com/en-de/products/beelink-me-mini-n150?variant=47599172976882,nas bee link
+</a><b>diff --git a/<a id="h10" href="../file/.scripts/wifi.csv.html">.scripts/wifi.csv</a> b/<a href="../file/.scripts/wifi.csv.html">.scripts/wifi.csv</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -0,0 +1,3 @@
+</a><a href="#h10-0-0" id="h10-0-0" class="i">+Starlink-Wohn,starLink#1419
+</a><a href="#h10-0-1" id="h10-0-1" class="i">+iPhone Linus,lulatsch
+</a><a href="#h10-0-2" id="h10-0-2" class="i">+nmcli connection add type wifi con-name &quot;SchuleGYM&quot; ssid &quot;SchuleGYM&quot; autoconnect yes wifi-sec.key-mgmt wpa-eap 802-1x.eap peap 802-1x.identity &quot;linus.behre&quot; 802-1x.password &quot;DTH76: )WLAN&quot; 802-1x.phase2-autheap mschapv2,SchuleGYM
+</a><b>diff --git a/<a id="h11" href="../file/.vimrc.html">.vimrc</a> b/<a href="../file/.vimrc.html">.vimrc</a></b>
+<a href="#h11-0" id="h11-0" class="h">@@ -18,11 +18,17 @@ set shiftwidth=4
+</a> &quot; Leader
+ 
+ let mapleader=&quot; &quot;
+<a href="#h11-0-3" id="h11-0-3" class="i">+
+</a> nnoremap &lt;leader&gt;s :w&lt;CR&gt;		
+<a href="#h11-0-5" id="h11-0-5" class="i">+
+</a> &quot;write
+<a href="#h11-0-7" id="h11-0-7" class="i">+
+</a> nnoremap &lt;leader&gt;q :q&lt;CR&gt;		
+<a href="#h11-0-9" id="h11-0-9" class="i">+
+</a> &quot;quit
+<a href="#h11-0-11" id="h11-0-11" class="i">+
+</a> nnoremap &lt;leader&gt;g :wq&lt;CR&gt;	
+<a href="#h11-0-13" id="h11-0-13" class="i">+
+</a> &quot;write and quit
+ 
+ autocmd vimenter * colorscheme vague	&quot;color theme
+</pre>
+</div>
+</body>
+</html>

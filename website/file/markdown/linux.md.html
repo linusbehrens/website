@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>linux.md - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../"><img src="../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../log.html">Log</a> | <a href="../../files.html">Files</a> | <a href="../../refs.html">Refs</a> | <a href="../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> linux.md (3384B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> ---
+<a href="#l2" class="line" id="l2">      2</a> title: Linux and what it means
+<a href="#l3" class="line" id="l3">      3</a> author: &quot;Linus Behrens&quot;
+<a href="#l4" class="line" id="l4">      4</a> date: 2024-09-05T15:37:19+02:00
+<a href="#l5" class="line" id="l5">      5</a> tags: [&#39;tech&#39;, &#39;os&#39;]
+<a href="#l6" class="line" id="l6">      6</a> header: &quot;/header/linux.jpg&quot;
+<a href="#l7" class="line" id="l7">      7</a> ---
+<a href="#l8" class="line" id="l8">      8</a> 
+<a href="#l9" class="line" id="l9">      9</a> # Why GNU/Linux
+<a href="#l10" class="line" id="l10">     10</a> 
+<a href="#l11" class="line" id="l11">     11</a> 
+<a href="#l12" class="line" id="l12">     12</a> &gt; This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a univeRsal interface
+<a href="#l13" class="line" id="l13">     13</a> &gt; 
+<a href="#l14" class="line" id="l14">     14</a> &gt; *- Doug McIlroy, the inventor of Unix pipes and one of the founders of the Unix tradition*
+<a href="#l15" class="line" id="l15">     15</a> 
+<a href="#l16" class="line" id="l16">     16</a> 
+<a href="#l17" class="line" id="l17">     17</a> Linux at its core is the idea of intercompatability born in the body of a kernel. What I love in Linux is not how fast and free it is. Not how amazingly many people contribute to one goal. It is the way I use it and how it allowed me to fit the most bare bones software to my needs.
+<a href="#l18" class="line" id="l18">     18</a> 
+<a href="#l19" class="line" id="l19">     19</a> ## Examples for the perfect fit
+<a href="#l20" class="line" id="l20">     20</a> 
+<a href="#l21" class="line" id="l21">     21</a> My senior high note taking setup is pretty complex. However it does fit my workflow perfectly.
+<a href="#l22" class="line" id="l22">     22</a> 
+<a href="#l23" class="line" id="l23">     23</a> - [neovim](/posts/neovim) note taking
+<a href="#l24" class="line" id="l24">     24</a> - [\tex](posts/tex) for long-term sheets
+<a href="#l25" class="line" id="l25">     25</a> - [markdown](posts/markdown) for short-term notes in lessons
+<a href="#l26" class="line" id="l26">     26</a> - pandoc turns markdown into `\tex`
+<a href="#l27" class="line" id="l27">     27</a> - telescope and todo-comments for todo lists
+<a href="#l28" class="line" id="l28">     28</a> - [anki](posts/anki) for everyday learning
+<a href="#l29" class="line" id="l29">     29</a> - github for backing up and syncing my data (homelab in the future)
+<a href="#l30" class="line" id="l30">     30</a> 
+<a href="#l31" class="line" id="l31">     31</a> 
+<a href="#l32" class="line" id="l32">     32</a> With that setup I am albe to quickly make notes in my lessons as well as clearly structure my long-term sheets. With having anki on any of my devices I am able to learn everywhere.
+<a href="#l33" class="line" id="l33">     33</a> 
+<a href="#l34" class="line" id="l34">     34</a> If I want I could even run all of that over ssh from a homelab of server at school.
+<a href="#l35" class="line" id="l35">     35</a> 
+<a href="#l36" class="line" id="l36">     36</a> ## Intercompatability 
+<a href="#l37" class="line" id="l37">     37</a> 
+<a href="#l38" class="line" id="l38">     38</a> My shell runs in [alacritty](https://github.com/alacritty/alacritty) (macOS) and [st](https://st.suckless.org/) (arch and void). My most used and centered tool is [neovim](/posts/neovim). With my configuration it is beautiful and works seemlesly. With telescope I quickly open my `&lt;subject&gt;.refile.md` note and later the week I convert it to `&lt;subject.refile.tex` with pandoc. The important information gets refiled into `&lt;subject&gt;.tex` and tagged as `ANKI: &lt;subject&gt;`. 
+<a href="#l39" class="line" id="l39">     39</a> So if I open telescope to see my todos the anki sign reminds me of entering the information to my `anki deck`.
+<a href="#l40" class="line" id="l40">     40</a> Every evening I push my files to github to be safe for a data loss.
+<a href="#l41" class="line" id="l41">     41</a> 
+<a href="#l42" class="line" id="l42">     42</a> ## Options (example distributions)
+<a href="#l43" class="line" id="l43">     43</a> 
+<a href="#l44" class="line" id="l44">     44</a> The following are distros I have used.
+<a href="#l45" class="line" id="l45">     45</a> 
+<a href="#l46" class="line" id="l46">     46</a> - Manjaro (Why does it exists exactly)
+<a href="#l47" class="line" id="l47">     47</a> - Mint (If you would want to cheat)
+<a href="#l48" class="line" id="l48">     48</a> - [Arch](/content/arch.md) (Amazing documentation, pacman, AUR)
+<a href="#l49" class="line" id="l49">     49</a> - Arco (No systemd arch)
+<a href="#l50" class="line" id="l50">     50</a> - Gentoo (If you want it you know it)
+<a href="#l51" class="line" id="l51">     51</a> - Void (small, but no systemd!)
+<a href="#l52" class="line" id="l52">     52</a> 
+<a href="#l53" class="line" id="l53">     53</a> On my **x61s ThinkPad** I run Arch Linux. It is light weight and has amazing documentary. The arch wiki is one of the best documents and I even refer to it to non specific arch users.
+<a href="#l54" class="line" id="l54">     54</a> 
+<a href="#l55" class="line" id="l55">     55</a> The **2013 Mac mini** runs void linux. Not because I don&#39;t like arch as much, but because after inserting a bootable usb and entering grubs &quot;install arch for x86_64&quot; I got a black screen for days. I choose void because I liked the neofetch batch and because it has no `systemd` elevating the performence and reducing drama. I mainly use that mashine as a ssh server.
+<a href="#l56" class="line" id="l56">     56</a> 
+<a href="#l57" class="line" id="l57">     57</a> Both mashines run [suckless software](https://www.suckless.org). Namely `dwm`, `dmenu`, and `st`. I am really happy with how good it works, but I do not feel well using `X`.
+<a href="#l58" class="line" id="l58">     58</a> 
+<a href="#l59" class="line" id="l59">     59</a> My **MacBook** runs macOS because Asahi sucks at the moment. However I use the tiling window manager `yabaii` and [alacritty](https://github.com/alacritty/alacritty) to come closer to a linux experience.
+<a href="#l60" class="line" id="l60">     60</a> 
+</pre>
+</div>
+</body>
+</html>

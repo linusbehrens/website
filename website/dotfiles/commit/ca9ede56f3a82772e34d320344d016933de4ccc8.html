@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>exec - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/ca9ede56f3a82772e34d320344d016933de4ccc8.html">ca9ede56f3a82772e34d320344d016933de4ccc8</a>
+<b>parent</b> <a href="../commit/3cf164e711d14df5fe5fdd29d93c3eb085e40dd1.html">3cf164e711d14df5fe5fdd29d93c3eb085e40dd1</a>
+<b>Author:</b> Linus &lt;<a href="mailto:93053722+KoenigLinus@users.noreply.github.com">93053722+KoenigLinus@users.noreply.github.com</a>&gt;
+<b>Date:</b>   Sat,  7 Dec 2024 13:24:54 +0100
+
+exec
+
+<b>Diffstat:</b>
+<table><tr><td class="A">A</td><td><a href="#h0">nvim/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="D">D</td><td><a href="#h1">nvim/after/ftplugin/c.lua</a></td><td> | </td><td class="num">6</td><td><span class="i"></span><span class="d">------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h2">nvim/lazy-lock.json</a></td><td> | </td><td class="num">51</td><td><span class="i"></span><span class="d">---------------------------------------------------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">nvim/lua/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">nvim/lua/config/keymaps.lua</a></td><td> | </td><td class="num">11</td><td><span class="i"></span><span class="d">-----------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">nvim/lua/config/lazy.lua</a></td><td> | </td><td class="num">91</td><td><span class="i">+++++++++++++++++++++++++++++++++++++++</span><span class="d">----------------------------------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h6">nvim/lua/config/options.lua</a></td><td> | </td><td class="num">12</td><td><span class="i"></span><span class="d">------------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h7">nvim/lua/plugins/alpha.lua</a></td><td> | </td><td class="num">6</td><td><span class="i"></span><span class="d">------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h8">nvim/lua/plugins/dap.lua</a></td><td> | </td><td class="num">35</td><td><span class="i"></span><span class="d">-----------------------------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h9">nvim/lua/plugins/example.lua</a></td><td> | </td><td class="num">345</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++</span><span class="d">---------------------------------------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h10">nvim/lua/plugins/lsp.lua</a></td><td> | </td><td class="num">108</td><td><span class="i"></span><span class="d">-------------------------------------------------------------------------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h11">nvim/lua/plugins/lualine.lua</a></td><td> | </td><td class="num">50</td><td><span class="i">+++++++++++++++++++++++++</span><span class="d">-------------------------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h12">nvim/lua/plugins/null-ls.lua</a></td><td> | </td><td class="num">13</td><td><span class="i"></span><span class="d">-------------</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h13">nvim/lua/plugins/project.lua</a></td><td> | </td><td class="num">9</td><td><span class="i"></span><span class="d">---------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h14">nvim/lua/plugins/snacks.lua</a></td><td> | </td><td class="num">14</td><td><span class="i">++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="D">D</td><td><a href="#h15">nvim/lua/plugins/tetris.lua</a></td><td> | </td><td class="num">4</td><td><span class="i"></span><span class="d">----</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h16">nvim/lua/plugins/tokyonight.lua</a></td><td> | </td><td class="num">4</td><td><span class="i"></span><span class="d">----</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h17">nvim/stylua.toml</a></td><td> | </td><td class="num">5</td><td><span class="i">++++</span><span class="d">-</span></td></tr>
+</table></pre><pre>18 files changed, 264 insertions(+), 500 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/nvim/.DS_Store.html">nvim/.DS_Store</a> b/<a href="../file/nvim/.DS_Store.html">nvim/.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h1" href="../file/nvim/after/ftplugin/c.lua.html">nvim/after/ftplugin/c.lua</a> b/<a href="../file/nvim/after/ftplugin/c.lua.html">nvim/after/ftplugin/c.lua</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -1,6 +0,0 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="d">--- ~/.config/nvim/after/ftplugin/c.lua
+</a><a href="#h1-0-1" id="h1-0-1" class="d">-
+</a><a href="#h1-0-2" id="h1-0-2" class="d">-vim.opt_local.tabstop = 4
+</a><a href="#h1-0-3" id="h1-0-3" class="d">-vim.opt_local.shiftwidth = 4
+</a><a href="#h1-0-4" id="h1-0-4" class="d">-vim.opt_local.expandtab = true
+</a><a href="#h1-0-5" id="h1-0-5" class="d">-vim.opt_local.softtabstop = 4
+</a><b>diff --git a/<a id="h2" href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a> b/<a href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -1,51 +0,0 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="d">-{
+</a><a href="#h2-0-1" id="h2-0-1" class="d">-  &quot;LazyVim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;4d596cf4b4dcb369b2aef7e4d09635416b6c5a3f&quot; },
+</a><a href="#h2-0-2" id="h2-0-2" class="d">-  &quot;alpha-nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de72250e054e5e691b9736ee30db72c65d560771&quot; },
+</a><a href="#h2-0-3" id="h2-0-3" class="d">-  &quot;bufferline.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;5cc447cb2b463cb499c82eaeabbed4f5fa6a0a44&quot; },
+</a><a href="#h2-0-4" id="h2-0-4" class="d">-  &quot;catppuccin&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;637d99e638bc6f1efedac582f6ccab08badac0c6&quot; },
+</a><a href="#h2-0-5" id="h2-0-5" class="d">-  &quot;cmp-buffer&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;3022dbc9166796b644a841a02de8dd1cc1d311fa&quot; },
+</a><a href="#h2-0-6" id="h2-0-6" class="d">-  &quot;cmp-nvim-lsp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;39e2eda76828d88b773cc27a3f61d2ad782c922d&quot; },
+</a><a href="#h2-0-7" id="h2-0-7" class="d">-  &quot;cmp-path&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;91ff86cd9c29299a64f968ebb45846c485725f23&quot; },
+</a><a href="#h2-0-8" id="h2-0-8" class="d">-  &quot;conform.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;62d5accad8b29d6ba9b58d3dff90c43a55621c60&quot; },
+</a><a href="#h2-0-9" id="h2-0-9" class="d">-  &quot;dressing.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;fc78a3ca96f4db9f8893bb7e2fd9823e0780451b&quot; },
+</a><a href="#h2-0-10" id="h2-0-10" class="d">-  &quot;flash.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;34c7be146a91fec3555c33fe89c7d643f6ef5cf1&quot; },
+</a><a href="#h2-0-11" id="h2-0-11" class="d">-  &quot;friendly-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de8fce94985873666bd9712ea3e49ee17aadb1ed&quot; },
+</a><a href="#h2-0-12" id="h2-0-12" class="d">-  &quot;gitsigns.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;ac5aba6dce8c06ea22bea2c9016f51a2dbf90dc7&quot; },
+</a><a href="#h2-0-13" id="h2-0-13" class="d">-  &quot;grug-far.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;9a2f78219390b47d67795ab09390d7f092e23976&quot; },
+</a><a href="#h2-0-14" id="h2-0-14" class="d">-  &quot;gruvbox.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;49d9c0b150ba70efcd831ec7b3cb8ee740067045&quot; },
+</a><a href="#h2-0-15" id="h2-0-15" class="d">-  &quot;indent-blankline.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;7871a88056f7144defca9c931e311a3134c5d509&quot; },
+</a><a href="#h2-0-16" id="h2-0-16" class="d">-  &quot;lazy.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;7967abe55752aa90532e6bb4bd4663fe27a264cb&quot; },
+</a><a href="#h2-0-17" id="h2-0-17" class="d">-  &quot;lazydev.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d5800897d9180cea800023f2429bce0a94ed6064&quot; },
+</a><a href="#h2-0-18" id="h2-0-18" class="d">-  &quot;lualine.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;2a5bae925481f999263d6f5ed8361baef8df4f83&quot; },
+</a><a href="#h2-0-19" id="h2-0-19" class="d">-  &quot;luvit-meta&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;57d464c4acb5c2e66bd4145060f5dc9e96a7bbb7&quot; },
+</a><a href="#h2-0-20" id="h2-0-20" class="d">-  &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;43894adcf10bb1190c2184bd7c1750e8ea2b3dce&quot; },
+</a><a href="#h2-0-21" id="h2-0-21" class="d">-  &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;e2f7f9044ec30067bc11800a9e266664b88cda22&quot; },
+</a><a href="#h2-0-22" id="h2-0-22" class="d">-  &quot;mini.ai&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;31c149067d38b97720d2a179619f7745a0006ecc&quot; },
+</a><a href="#h2-0-23" id="h2-0-23" class="d">-  &quot;mini.icons&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;54686be7d58807906cb2c8c2216e0bf9c044f19a&quot; },
+</a><a href="#h2-0-24" id="h2-0-24" class="d">-  &quot;mini.pairs&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;7e834c5937d95364cc1740e20d673afe2d034cdb&quot; },
+</a><a href="#h2-0-25" id="h2-0-25" class="d">-  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a77af2e764c5ed4038d27d1c463fa49cd4794e07&quot; },
+</a><a href="#h2-0-26" id="h2-0-26" class="d">-  &quot;noice.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;203f74adaae11d47440a667555b4af9156be807b&quot; },
+</a><a href="#h2-0-27" id="h2-0-27" class="d">-  &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b58e2bfda5cea347c9d58b7f11cf3012c7b3953f&quot; },
+</a><a href="#h2-0-28" id="h2-0-28" class="d">-  &quot;null-ls.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7&quot; },
+</a><a href="#h2-0-29" id="h2-0-29" class="d">-  &quot;nvim-cmp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;be7bd4c5f860c79da97af3a26d489af50babfd4b&quot; },
+</a><a href="#h2-0-30" id="h2-0-30" class="d">-  &quot;nvim-lint&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;8e9562de7261e5b862c631958df616e1a65552cd&quot; },
+</a><a href="#h2-0-31" id="h2-0-31" class="d">-  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;291a8f1a319dc712db85bcc174b0cf406f0a5b69&quot; },
+</a><a href="#h2-0-32" id="h2-0-32" class="d">-  &quot;nvim-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;56b4052f71220144689caaa2e5b66222ba5661eb&quot; },
+</a><a href="#h2-0-33" id="h2-0-33" class="d">-  &quot;nvim-tetris&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;d17c99fb527ada98ffb0212ffc87ccda6fd4f7d9&quot; },
+</a><a href="#h2-0-34" id="h2-0-34" class="d">-  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;8a74ac9aead72ef7a870908f1517b48f2bb25ac7&quot; },
+</a><a href="#h2-0-35" id="h2-0-35" class="d">-  &quot;nvim-treesitter-textobjects&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;3e450cd85243da99dc23ebbf14f9c70e9a0c26a4&quot; },
+</a><a href="#h2-0-36" id="h2-0-36" class="d">-  &quot;nvim-ts-autotag&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;e239a560f338be31337e7abc3ee42515daf23f5e&quot; },
+</a><a href="#h2-0-37" id="h2-0-37" class="d">-  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;e87554285f581047b1bf236794b0eb812b444b87&quot; },
+</a><a href="#h2-0-38" id="h2-0-38" class="d">-  &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;f6aad7dde7fcf54148ccfc5f622c6d5badd0cc3d&quot; },
+</a><a href="#h2-0-39" id="h2-0-39" class="d">-  &quot;plenary.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;2d9b06177a975543726ce5c73fca176cedbffe9d&quot; },
+</a><a href="#h2-0-40" id="h2-0-40" class="d">-  &quot;project.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8c6bad7d22eef1b71144b401c9f74ed01526a4fb&quot; },
+</a><a href="#h2-0-41" id="h2-0-41" class="d">-  &quot;snacks.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;aa38175c002555aded511b6787380ad887665680&quot; },
+</a><a href="#h2-0-42" id="h2-0-42" class="d">-  &quot;substitute.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;97f49d16f8eea7967d41db4f657dd63af53eeba1&quot; },
+</a><a href="#h2-0-43" id="h2-0-43" class="d">-  &quot;telescope-fzf-native.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b&quot; },
+</a><a href="#h2-0-44" id="h2-0-44" class="d">-  &quot;telescope.nvim&quot;: { &quot;branch&quot;: &quot;0.1.x&quot;, &quot;commit&quot;: &quot;a0bbec21143c7bc5f8bb02e0005fa0b982edc026&quot; },
+</a><a href="#h2-0-45" id="h2-0-45" class="d">-  &quot;todo-comments.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0&quot; },
+</a><a href="#h2-0-46" id="h2-0-46" class="d">-  &quot;tokyonight.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;c2725eb6d086c8c9624456d734bd365194660017&quot; },
+</a><a href="#h2-0-47" id="h2-0-47" class="d">-  &quot;trouble.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;3dc00c0447c016cd43e03054c3d49436a1f2076d&quot; },
+</a><a href="#h2-0-48" id="h2-0-48" class="d">-  &quot;ts-comments.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;2002692ad1d3f6518d016550c20c2a890f0cbf0e&quot; },
+</a><a href="#h2-0-49" id="h2-0-49" class="d">-  &quot;which-key.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;68e37e12913a66b60073906f5d3f14dee0de19f2&quot; }
+</a><a href="#h2-0-50" id="h2-0-50" class="d">-}
+</a><b>diff --git a/<a id="h3" href="../file/nvim/lua/.DS_Store.html">nvim/lua/.DS_Store</a> b/<a href="../file/nvim/lua/.DS_Store.html">nvim/lua/.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h4" href="../file/nvim/lua/config/keymaps.lua.html">nvim/lua/config/keymaps.lua</a> b/<a href="../file/nvim/lua/config/keymaps.lua.html">nvim/lua/config/keymaps.lua</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -1,14 +1,3 @@
+</a> -- Keymaps are automatically loaded on the VeryLazy event
+ -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+ -- Add any additional keymaps here
+<a href="#h4-0-3" id="h4-0-3" class="d">-
+</a><a href="#h4-0-4" id="h4-0-4" class="d">-local keymap = vim.keymap -- for conciseness
+</a><a href="#h4-0-5" id="h4-0-5" class="d">-
+</a><a href="#h4-0-6" id="h4-0-6" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ff&quot;, &quot;&lt;cmd&gt;Telescope find_files&lt;cr&gt;&quot;, { desc = &quot;Fuzzy find files in cwd&quot; })
+</a><a href="#h4-0-7" id="h4-0-7" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;fr&quot;, &quot;&lt;cmd&gt;Telescope oldfiles&lt;cr&gt;&quot;, { desc = &quot;Fuzzy find recent files&quot; })
+</a><a href="#h4-0-8" id="h4-0-8" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;fs&quot;, &quot;&lt;cmd&gt;Telescope live_grep&lt;cr&gt;&quot;, { desc = &quot;Find string in cwd&quot; })
+</a><a href="#h4-0-9" id="h4-0-9" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;fc&quot;, &quot;&lt;cmd&gt;Telescope grep_string&lt;cr&gt;&quot;, { desc = &quot;Find string under cursor in cwd&quot; })
+</a><a href="#h4-0-10" id="h4-0-10" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;ft&quot;, &quot;&lt;cmd&gt;TodoTelescope&lt;cr&gt;&quot;, { desc = &quot;Find todos&quot; })
+</a><a href="#h4-0-11" id="h4-0-11" class="d">-
+</a><a href="#h4-0-12" id="h4-0-12" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;db&quot;, &quot;&lt;cmd&gt;DapToggleBreakpoint&lt;cr&gt;&quot;, { desc = &quot;Add breakpoint at line&quot; })
+</a><a href="#h4-0-13" id="h4-0-13" class="d">-keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;dr&quot;, &quot;&lt;cmd&gt;DapContinue &lt;cr&gt;&quot;, { desc = &quot;Start or continue the debugger&quot; })
+</a><b>diff --git a/<a id="h5" href="../file/nvim/lua/config/lazy.lua.html">nvim/lua/config/lazy.lua</a> b/<a href="../file/nvim/lua/config/lazy.lua.html">nvim/lua/config/lazy.lua</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -1,54 +1,53 @@
+</a> local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;
+ if not (vim.uv or vim.loop).fs_stat(lazypath) then
+<a href="#h5-0-2" id="h5-0-2" class="d">-    local lazyrepo = &quot;https://github.com/folke/lazy.nvim.git&quot;
+</a><a href="#h5-0-3" id="h5-0-3" class="d">-    local out = vim.fn.system({ &quot;git&quot;, &quot;clone&quot;, &quot;--filter=blob:none&quot;, &quot;--branch=stable&quot;, lazyrepo, lazypath })
+</a><a href="#h5-0-4" id="h5-0-4" class="d">-    if vim.v.shell_error ~= 0 then
+</a><a href="#h5-0-5" id="h5-0-5" class="d">-        vim.api.nvim_echo({
+</a><a href="#h5-0-6" id="h5-0-6" class="d">-            { &quot;Failed to clone lazy.nvim:\n&quot;, &quot;ErrorMsg&quot; },
+</a><a href="#h5-0-7" id="h5-0-7" class="d">-            { out, &quot;WarningMsg&quot; },
+</a><a href="#h5-0-8" id="h5-0-8" class="d">-            { &quot;\nPress any key to exit...&quot; },
+</a><a href="#h5-0-9" id="h5-0-9" class="d">-        }, true, {})
+</a><a href="#h5-0-10" id="h5-0-10" class="d">-        vim.fn.getchar()
+</a><a href="#h5-0-11" id="h5-0-11" class="d">-        os.exit(1)
+</a><a href="#h5-0-12" id="h5-0-12" class="d">-    end
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+  local lazyrepo = &quot;https://github.com/folke/lazy.nvim.git&quot;
+</a><a href="#h5-0-14" id="h5-0-14" class="i">+  local out = vim.fn.system({ &quot;git&quot;, &quot;clone&quot;, &quot;--filter=blob:none&quot;, &quot;--branch=stable&quot;, lazyrepo, lazypath })
+</a><a href="#h5-0-15" id="h5-0-15" class="i">+  if vim.v.shell_error ~= 0 then
+</a><a href="#h5-0-16" id="h5-0-16" class="i">+    vim.api.nvim_echo({
+</a><a href="#h5-0-17" id="h5-0-17" class="i">+      { &quot;Failed to clone lazy.nvim:\n&quot;, &quot;ErrorMsg&quot; },
+</a><a href="#h5-0-18" id="h5-0-18" class="i">+      { out, &quot;WarningMsg&quot; },
+</a><a href="#h5-0-19" id="h5-0-19" class="i">+      { &quot;\nPress any key to exit...&quot; },
+</a><a href="#h5-0-20" id="h5-0-20" class="i">+    }, true, {})
+</a><a href="#h5-0-21" id="h5-0-21" class="i">+    vim.fn.getchar()
+</a><a href="#h5-0-22" id="h5-0-22" class="i">+    os.exit(1)
+</a><a href="#h5-0-23" id="h5-0-23" class="i">+  end
+</a> end
+ vim.opt.rtp:prepend(lazypath)
+ 
+ require(&quot;lazy&quot;).setup({
+<a href="#h5-0-28" id="h5-0-28" class="d">-    spec = {
+</a><a href="#h5-0-29" id="h5-0-29" class="d">-        -- add LazyVim and import its plugins
+</a><a href="#h5-0-30" id="h5-0-30" class="d">-        { &quot;LazyVim/LazyVim&quot;, import = &quot;lazyvim.plugins&quot; },
+</a><a href="#h5-0-31" id="h5-0-31" class="d">-        -- import/override with your plugins
+</a><a href="#h5-0-32" id="h5-0-32" class="d">-        { import = &quot;plugins&quot; },
+</a><a href="#h5-0-33" id="h5-0-33" class="d">-    },
+</a><a href="#h5-0-34" id="h5-0-34" class="d">-    defaults = {
+</a><a href="#h5-0-35" id="h5-0-35" class="d">-        -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
+</a><a href="#h5-0-36" id="h5-0-36" class="d">-        -- If you know what you&#39;re doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
+</a><a href="#h5-0-37" id="h5-0-37" class="d">-        lazy = false,
+</a><a href="#h5-0-38" id="h5-0-38" class="d">-        -- It&#39;s recommended to leave version=false for now, since a lot the plugin that support versioning,
+</a><a href="#h5-0-39" id="h5-0-39" class="d">-        -- have outdated releases, which may break your Neovim install.
+</a><a href="#h5-0-40" id="h5-0-40" class="d">-        version = false, -- always use the latest git commit
+</a><a href="#h5-0-41" id="h5-0-41" class="d">-        -- version = &quot;*&quot;, -- try installing the latest stable version for plugins that support semver
+</a><a href="#h5-0-42" id="h5-0-42" class="d">-    },
+</a><a href="#h5-0-43" id="h5-0-43" class="d">-    install = { colorscheme = { &quot;gruvbox&quot;} },
+</a><a href="#h5-0-44" id="h5-0-44" class="d">-    checker = {
+</a><a href="#h5-0-45" id="h5-0-45" class="d">-        enabled = true, -- check for plugin updates periodically
+</a><a href="#h5-0-46" id="h5-0-46" class="d">-        notify = false, -- notify on update
+</a><a href="#h5-0-47" id="h5-0-47" class="d">-    }, -- automatically check for plugin updates
+</a><a href="#h5-0-48" id="h5-0-48" class="d">-    performance = {
+</a><a href="#h5-0-49" id="h5-0-49" class="d">-        rtp = {
+</a><a href="#h5-0-50" id="h5-0-50" class="d">-            -- disable some rtp plugins
+</a><a href="#h5-0-51" id="h5-0-51" class="d">-            disabled_plugins = {
+</a><a href="#h5-0-52" id="h5-0-52" class="d">-                &quot;gzip&quot;,
+</a><a href="#h5-0-53" id="h5-0-53" class="d">-                -- &quot;matchit&quot;,
+</a><a href="#h5-0-54" id="h5-0-54" class="d">-                -- &quot;matchparen&quot;,
+</a><a href="#h5-0-55" id="h5-0-55" class="d">-                -- &quot;netrwPlugin&quot;,
+</a><a href="#h5-0-56" id="h5-0-56" class="d">-                &quot;tarPlugin&quot;,
+</a><a href="#h5-0-57" id="h5-0-57" class="d">-                &quot;tohtml&quot;,
+</a><a href="#h5-0-58" id="h5-0-58" class="d">-                &quot;tutor&quot;,
+</a><a href="#h5-0-59" id="h5-0-59" class="d">-                &quot;zipPlugin&quot;,
+</a><a href="#h5-0-60" id="h5-0-60" class="d">-            },
+</a><a href="#h5-0-61" id="h5-0-61" class="d">-        },
+</a><a href="#h5-0-62" id="h5-0-62" class="i">+  spec = {
+</a><a href="#h5-0-63" id="h5-0-63" class="i">+    -- add LazyVim and import its plugins
+</a><a href="#h5-0-64" id="h5-0-64" class="i">+    { &quot;LazyVim/LazyVim&quot;, import = &quot;lazyvim.plugins&quot; },
+</a><a href="#h5-0-65" id="h5-0-65" class="i">+    -- import/override with your plugins
+</a><a href="#h5-0-66" id="h5-0-66" class="i">+    { import = &quot;plugins&quot; },
+</a><a href="#h5-0-67" id="h5-0-67" class="i">+  },
+</a><a href="#h5-0-68" id="h5-0-68" class="i">+  defaults = {
+</a><a href="#h5-0-69" id="h5-0-69" class="i">+    -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
+</a><a href="#h5-0-70" id="h5-0-70" class="i">+    -- If you know what you&#39;re doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
+</a><a href="#h5-0-71" id="h5-0-71" class="i">+    lazy = false,
+</a><a href="#h5-0-72" id="h5-0-72" class="i">+    -- It&#39;s recommended to leave version=false for now, since a lot the plugin that support versioning,
+</a><a href="#h5-0-73" id="h5-0-73" class="i">+    -- have outdated releases, which may break your Neovim install.
+</a><a href="#h5-0-74" id="h5-0-74" class="i">+    version = false, -- always use the latest git commit
+</a><a href="#h5-0-75" id="h5-0-75" class="i">+    -- version = &quot;*&quot;, -- try installing the latest stable version for plugins that support semver
+</a><a href="#h5-0-76" id="h5-0-76" class="i">+  },
+</a><a href="#h5-0-77" id="h5-0-77" class="i">+  install = { colorscheme = { &quot;tokyonight&quot;, &quot;habamax&quot; } },
+</a><a href="#h5-0-78" id="h5-0-78" class="i">+  checker = {
+</a><a href="#h5-0-79" id="h5-0-79" class="i">+    enabled = true, -- check for plugin updates periodically
+</a><a href="#h5-0-80" id="h5-0-80" class="i">+    notify = false, -- notify on update
+</a><a href="#h5-0-81" id="h5-0-81" class="i">+  }, -- automatically check for plugin updates
+</a><a href="#h5-0-82" id="h5-0-82" class="i">+  performance = {
+</a><a href="#h5-0-83" id="h5-0-83" class="i">+    rtp = {
+</a><a href="#h5-0-84" id="h5-0-84" class="i">+      -- disable some rtp plugins
+</a><a href="#h5-0-85" id="h5-0-85" class="i">+      disabled_plugins = {
+</a><a href="#h5-0-86" id="h5-0-86" class="i">+        &quot;gzip&quot;,
+</a><a href="#h5-0-87" id="h5-0-87" class="i">+        -- &quot;matchit&quot;,
+</a><a href="#h5-0-88" id="h5-0-88" class="i">+        -- &quot;matchparen&quot;,
+</a><a href="#h5-0-89" id="h5-0-89" class="i">+        -- &quot;netrwPlugin&quot;,
+</a><a href="#h5-0-90" id="h5-0-90" class="i">+        &quot;tarPlugin&quot;,
+</a><a href="#h5-0-91" id="h5-0-91" class="i">+        &quot;tohtml&quot;,
+</a><a href="#h5-0-92" id="h5-0-92" class="i">+        &quot;tutor&quot;,
+</a><a href="#h5-0-93" id="h5-0-93" class="i">+        &quot;zipPlugin&quot;,
+</a><a href="#h5-0-94" id="h5-0-94" class="i">+      },
+</a>     },
+<a href="#h5-0-96" id="h5-0-96" class="i">+  },
+</a> })
+<a href="#h5-0-98" id="h5-0-98" class="d">-
+</a><b>diff --git a/<a id="h6" href="../file/nvim/lua/config/options.lua.html">nvim/lua/config/options.lua</a> b/<a href="../file/nvim/lua/config/options.lua.html">nvim/lua/config/options.lua</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -1,15 +1,3 @@
+</a> -- Options are automatically loaded before lazy.nvim startup
+ -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+ -- Add any additional options here
+<a href="#h6-0-3" id="h6-0-3" class="d">-
+</a><a href="#h6-0-4" id="h6-0-4" class="d">-local opt = vim.opt
+</a><a href="#h6-0-5" id="h6-0-5" class="d">-
+</a><a href="#h6-0-6" id="h6-0-6" class="d">--- Set 4-space tabs
+</a><a href="#h6-0-7" id="h6-0-7" class="d">-opt.tabstop = 4 -- Number of visual spaces per TAB
+</a><a href="#h6-0-8" id="h6-0-8" class="d">-opt.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent
+</a><a href="#h6-0-9" id="h6-0-9" class="d">-opt.expandtab = true -- Convert tabs to spaces
+</a><a href="#h6-0-10" id="h6-0-10" class="d">-opt.softtabstop = 4 -- Makes editing feel like 4-space tabs
+</a><a href="#h6-0-11" id="h6-0-11" class="d">-
+</a><a href="#h6-0-12" id="h6-0-12" class="d">--- Optionally, enable auto-indentation:
+</a><a href="#h6-0-13" id="h6-0-13" class="d">-opt.smartindent = false
+</a><a href="#h6-0-14" id="h6-0-14" class="d">-vim.g.autoformat = false
+</a><b>diff --git a/<a id="h7" href="../file/nvim/lua/plugins/alpha.lua.html">nvim/lua/plugins/alpha.lua</a> b/<a href="../file/nvim/lua/plugins/alpha.lua.html">nvim/lua/plugins/alpha.lua</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -1,6 +0,0 @@
+</a><a href="#h7-0-0" id="h7-0-0" class="d">-return {
+</a><a href="#h7-0-1" id="h7-0-1" class="d">-    &quot;goolord/alpha-nvim&quot;,
+</a><a href="#h7-0-2" id="h7-0-2" class="d">-    config = function()
+</a><a href="#h7-0-3" id="h7-0-3" class="d">-        require(&quot;alpha&quot;).setup(require(&quot;alpha.themes.dashboard&quot;).config)
+</a><a href="#h7-0-4" id="h7-0-4" class="d">-    end,
+</a><a href="#h7-0-5" id="h7-0-5" class="d">-}
+</a><b>diff --git a/<a id="h8" href="../file/nvim/lua/plugins/dap.lua.html">nvim/lua/plugins/dap.lua</a> b/<a href="../file/nvim/lua/plugins/dap.lua.html">nvim/lua/plugins/dap.lua</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -1,35 +0,0 @@
+</a><a href="#h8-0-0" id="h8-0-0" class="d">-return {}
+</a><a href="#h8-0-1" id="h8-0-1" class="d">--- return {
+</a><a href="#h8-0-2" id="h8-0-2" class="d">--- 	&quot;rcarriga/nvim-dap-ui&quot;,
+</a><a href="#h8-0-3" id="h8-0-3" class="d">--- 	event = &quot;VeryLazy&quot;,
+</a><a href="#h8-0-4" id="h8-0-4" class="d">--- 	dependencies = &quot;mfussenegger/nvim-dap&quot;,
+</a><a href="#h8-0-5" id="h8-0-5" class="d">--- 	config = function()
+</a><a href="#h8-0-6" id="h8-0-6" class="d">--- 		local dap = require(&quot;dap&quot;)
+</a><a href="#h8-0-7" id="h8-0-7" class="d">--- 		local dapui = require(&quot;dapui&quot;)
+</a><a href="#h8-0-8" id="h8-0-8" class="d">--- 		dapui.setup()
+</a><a href="#h8-0-9" id="h8-0-9" class="d">--- 		dap.listeners.after.event_initialized[&quot;dapui_config&quot;] = function()
+</a><a href="#h8-0-10" id="h8-0-10" class="d">--- 			dapui.open()
+</a><a href="#h8-0-11" id="h8-0-11" class="d">--- 		end
+</a><a href="#h8-0-12" id="h8-0-12" class="d">--- 		dap.listeners.before.event_terminated[&quot;dapui_config&quot;] = function()
+</a><a href="#h8-0-13" id="h8-0-13" class="d">--- 			dapui.close()
+</a><a href="#h8-0-14" id="h8-0-14" class="d">--- 		end
+</a><a href="#h8-0-15" id="h8-0-15" class="d">--- 		dap.listeners.before.event_exited[&quot;dapui_config&quot;] = function()
+</a><a href="#h8-0-16" id="h8-0-16" class="d">--- 			dapui.close()
+</a><a href="#h8-0-17" id="h8-0-17" class="d">--- 		end
+</a><a href="#h8-0-18" id="h8-0-18" class="d">--- 	end,
+</a><a href="#h8-0-19" id="h8-0-19" class="d">--- }, {
+</a><a href="#h8-0-20" id="h8-0-20" class="d">--- 	&quot;jay-babu/mason-nvim-dap.nvim&quot;,
+</a><a href="#h8-0-21" id="h8-0-21" class="d">--- 	event = &quot;VeryLazy&quot;,
+</a><a href="#h8-0-22" id="h8-0-22" class="d">--- 	dependencies = {
+</a><a href="#h8-0-23" id="h8-0-23" class="d">--- 		&quot;williamboman/mason.nvim&quot;,
+</a><a href="#h8-0-24" id="h8-0-24" class="d">--- 		&quot;mfussenegger/nvim-dap&quot;,
+</a><a href="#h8-0-25" id="h8-0-25" class="d">--- 	},
+</a><a href="#h8-0-26" id="h8-0-26" class="d">--- 	opts = {
+</a><a href="#h8-0-27" id="h8-0-27" class="d">--- 		handlers = {},
+</a><a href="#h8-0-28" id="h8-0-28" class="d">--- 	},
+</a><a href="#h8-0-29" id="h8-0-29" class="d">--- }, {
+</a><a href="#h8-0-30" id="h8-0-30" class="d">--- 	&quot;mfussenegger/nvim-dap&quot;,
+</a><a href="#h8-0-31" id="h8-0-31" class="d">--- 	config = function(_, _)
+</a><a href="#h8-0-32" id="h8-0-32" class="d">--- 		require(&quot;core.utils&quot;).load_mappings(&quot;dap&quot;)
+</a><a href="#h8-0-33" id="h8-0-33" class="d">--- 	end,
+</a><a href="#h8-0-34" id="h8-0-34" class="d">--- }
+</a><b>diff --git a/<a id="h9" href="../file/nvim/lua/plugins/example.lua.html">nvim/lua/plugins/example.lua</a> b/<a href="../file/nvim/lua/plugins/example.lua.html">nvim/lua/plugins/example.lua</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -9,38 +9,41 @@ if true then return {} end
+</a> -- * disable/enabled LazyVim plugins
+ -- * override the configuration of LazyVim plugins
+ return {
+<a href="#h9-0-3" id="h9-0-3" class="d">-	-- Configure LazyVim to load gruvbox
+</a><a href="#h9-0-4" id="h9-0-4" class="d">-	{
+</a><a href="#h9-0-5" id="h9-0-5" class="d">-		&quot;LazyVim/LazyVim&quot;,
+</a><a href="#h9-0-6" id="h9-0-6" class="d">-		opts = {
+</a><a href="#h9-0-7" id="h9-0-7" class="d">-			colorscheme = &quot;gruvbox&quot;,
+</a><a href="#h9-0-8" id="h9-0-8" class="d">-		},
+</a><a href="#h9-0-9" id="h9-0-9" class="d">-	},
+</a><a href="#h9-0-10" id="h9-0-10" class="d">-
+</a><a href="#h9-0-11" id="h9-0-11" class="d">-	-- change trouble config
+</a><a href="#h9-0-12" id="h9-0-12" class="d">-	{
+</a><a href="#h9-0-13" id="h9-0-13" class="d">-		&quot;folke/trouble.nvim&quot;,
+</a><a href="#h9-0-14" id="h9-0-14" class="d">-		-- opts will be merged with the parent spec
+</a><a href="#h9-0-15" id="h9-0-15" class="d">-		opts = { use_diagnostic_signs = true },
+</a><a href="#h9-0-16" id="h9-0-16" class="d">-	},
+</a><a href="#h9-0-17" id="h9-0-17" class="d">-
+</a><a href="#h9-0-18" id="h9-0-18" class="d">-	-- disable trouble
+</a><a href="#h9-0-19" id="h9-0-19" class="d">-	{ &quot;folke/trouble.nvim&quot;, enabled = false },
+</a><a href="#h9-0-20" id="h9-0-20" class="d">-
+</a><a href="#h9-0-21" id="h9-0-21" class="d">-	-- override nvim-cmp and add cmp-emoji
+</a><a href="#h9-0-22" id="h9-0-22" class="d">-	{
+</a><a href="#h9-0-23" id="h9-0-23" class="d">-		&quot;hrsh7th/nvim-cmp&quot;,
+</a><a href="#h9-0-24" id="h9-0-24" class="d">-		dependencies = { &quot;hrsh7th/cmp-emoji&quot; },
+</a><a href="#h9-0-25" id="h9-0-25" class="d">-		---@param opts cmp.ConfigSchema
+</a><a href="#h9-0-26" id="h9-0-26" class="d">-		opts = function(_, opts)
+</a><a href="#h9-0-27" id="h9-0-27" class="d">-			table.insert(opts.sources, { name = &quot;emoji&quot; })
+</a><a href="#h9-0-28" id="h9-0-28" class="d">-		end,
+</a><a href="#h9-0-29" id="h9-0-29" class="d">-	},
+</a><a href="#h9-0-30" id="h9-0-30" class="d">-
+</a><a href="#h9-0-31" id="h9-0-31" class="d">-	-- change some telescope options and a keymap to browse plugin files
+</a><a href="#h9-0-32" id="h9-0-32" class="d">-	{
+</a><a href="#h9-0-33" id="h9-0-33" class="d">-		&quot;nvim-telescope/telescope.nvim&quot;,
+</a><a href="#h9-0-34" id="h9-0-34" class="d">-		keys = {
+</a><a href="#h9-0-35" id="h9-0-35" class="i">+  -- add gruvbox
+</a><a href="#h9-0-36" id="h9-0-36" class="i">+  { &quot;ellisonleao/gruvbox.nvim&quot; },
+</a><a href="#h9-0-37" id="h9-0-37" class="i">+
+</a><a href="#h9-0-38" id="h9-0-38" class="i">+  -- Configure LazyVim to load gruvbox
+</a><a href="#h9-0-39" id="h9-0-39" class="i">+  {
+</a><a href="#h9-0-40" id="h9-0-40" class="i">+    &quot;LazyVim/LazyVim&quot;,
+</a><a href="#h9-0-41" id="h9-0-41" class="i">+    opts = {
+</a><a href="#h9-0-42" id="h9-0-42" class="i">+      colorscheme = &quot;gruvbox&quot;,
+</a><a href="#h9-0-43" id="h9-0-43" class="i">+    },
+</a><a href="#h9-0-44" id="h9-0-44" class="i">+  },
+</a><a href="#h9-0-45" id="h9-0-45" class="i">+
+</a><a href="#h9-0-46" id="h9-0-46" class="i">+  -- change trouble config
+</a><a href="#h9-0-47" id="h9-0-47" class="i">+  {
+</a><a href="#h9-0-48" id="h9-0-48" class="i">+    &quot;folke/trouble.nvim&quot;,
+</a><a href="#h9-0-49" id="h9-0-49" class="i">+    -- opts will be merged with the parent spec
+</a><a href="#h9-0-50" id="h9-0-50" class="i">+    opts = { use_diagnostic_signs = true },
+</a><a href="#h9-0-51" id="h9-0-51" class="i">+  },
+</a><a href="#h9-0-52" id="h9-0-52" class="i">+
+</a><a href="#h9-0-53" id="h9-0-53" class="i">+  -- disable trouble
+</a><a href="#h9-0-54" id="h9-0-54" class="i">+  { &quot;folke/trouble.nvim&quot;, enabled = false },
+</a><a href="#h9-0-55" id="h9-0-55" class="i">+
+</a><a href="#h9-0-56" id="h9-0-56" class="i">+  -- override nvim-cmp and add cmp-emoji
+</a><a href="#h9-0-57" id="h9-0-57" class="i">+  {
+</a><a href="#h9-0-58" id="h9-0-58" class="i">+    &quot;hrsh7th/nvim-cmp&quot;,
+</a><a href="#h9-0-59" id="h9-0-59" class="i">+    dependencies = { &quot;hrsh7th/cmp-emoji&quot; },
+</a><a href="#h9-0-60" id="h9-0-60" class="i">+    ---@param opts cmp.ConfigSchema
+</a><a href="#h9-0-61" id="h9-0-61" class="i">+    opts = function(_, opts)
+</a><a href="#h9-0-62" id="h9-0-62" class="i">+      table.insert(opts.sources, { name = &quot;emoji&quot; })
+</a><a href="#h9-0-63" id="h9-0-63" class="i">+    end,
+</a><a href="#h9-0-64" id="h9-0-64" class="i">+  },
+</a><a href="#h9-0-65" id="h9-0-65" class="i">+
+</a><a href="#h9-0-66" id="h9-0-66" class="i">+  -- change some telescope options and a keymap to browse plugin files
+</a><a href="#h9-0-67" id="h9-0-67" class="i">+  {
+</a><a href="#h9-0-68" id="h9-0-68" class="i">+    &quot;nvim-telescope/telescope.nvim&quot;,
+</a><a href="#h9-0-69" id="h9-0-69" class="i">+    keys = {
+</a>       -- add a keymap to browse plugin files
+       -- stylua: ignore
+       {
+<a href="#h9-1" id="h9-1" class="h">@@ -48,143 +51,147 @@ return {
+</a>         function() require(&quot;telescope.builtin&quot;).find_files({ cwd = require(&quot;lazy.core.config&quot;).options.root }) end,
+         desc = &quot;Find Plugin File&quot;,
+       },
+<a href="#h9-1-3" id="h9-1-3" class="d">-		},
+</a><a href="#h9-1-4" id="h9-1-4" class="d">-		-- change some options
+</a><a href="#h9-1-5" id="h9-1-5" class="d">-		opts = {
+</a><a href="#h9-1-6" id="h9-1-6" class="d">-			defaults = {
+</a><a href="#h9-1-7" id="h9-1-7" class="d">-				layout_strategy = &quot;horizontal&quot;,
+</a><a href="#h9-1-8" id="h9-1-8" class="d">-				layout_config = { prompt_position = &quot;top&quot; },
+</a><a href="#h9-1-9" id="h9-1-9" class="d">-				sorting_strategy = &quot;ascending&quot;,
+</a><a href="#h9-1-10" id="h9-1-10" class="d">-				--winblend = 0,
+</a><a href="#h9-1-11" id="h9-1-11" class="d">-			},
+</a><a href="#h9-1-12" id="h9-1-12" class="d">-		},
+</a><a href="#h9-1-13" id="h9-1-13" class="d">-	},
+</a><a href="#h9-1-14" id="h9-1-14" class="d">-
+</a><a href="#h9-1-15" id="h9-1-15" class="d">-	-- add pyright to lspconfig
+</a><a href="#h9-1-16" id="h9-1-16" class="d">-	{
+</a><a href="#h9-1-17" id="h9-1-17" class="d">-		&quot;neovim/nvim-lspconfig&quot;,
+</a><a href="#h9-1-18" id="h9-1-18" class="d">-		---@class PluginLspOpts
+</a><a href="#h9-1-19" id="h9-1-19" class="d">-		opts = {
+</a><a href="#h9-1-20" id="h9-1-20" class="d">-			---@type lspconfig.options
+</a><a href="#h9-1-21" id="h9-1-21" class="d">-			servers = {
+</a><a href="#h9-1-22" id="h9-1-22" class="d">-				-- pyright will be automatically installed with mason and loaded with lspconfig
+</a><a href="#h9-1-23" id="h9-1-23" class="d">-				pyright = {},
+</a><a href="#h9-1-24" id="h9-1-24" class="d">-			},
+</a><a href="#h9-1-25" id="h9-1-25" class="d">-		},
+</a><a href="#h9-1-26" id="h9-1-26" class="d">-	},
+</a><a href="#h9-1-27" id="h9-1-27" class="d">-
+</a><a href="#h9-1-28" id="h9-1-28" class="d">-	-- add tsserver and setup with typescript.nvim instead of lspconfig
+</a><a href="#h9-1-29" id="h9-1-29" class="d">-	{
+</a><a href="#h9-1-30" id="h9-1-30" class="d">-		&quot;neovim/nvim-lspconfig&quot;,
+</a><a href="#h9-1-31" id="h9-1-31" class="d">-		dependencies = {
+</a><a href="#h9-1-32" id="h9-1-32" class="d">-			&quot;jose-elias-alvarez/typescript.nvim&quot;,
+</a><a href="#h9-1-33" id="h9-1-33" class="d">-			init = function()
+</a><a href="#h9-1-34" id="h9-1-34" class="d">-				require(&quot;lazyvim.util&quot;).lsp.on_attach(function(_, buffer)
+</a><a href="#h9-1-35" id="h9-1-35" class="i">+    },
+</a><a href="#h9-1-36" id="h9-1-36" class="i">+    -- change some options
+</a><a href="#h9-1-37" id="h9-1-37" class="i">+    opts = {
+</a><a href="#h9-1-38" id="h9-1-38" class="i">+      defaults = {
+</a><a href="#h9-1-39" id="h9-1-39" class="i">+        layout_strategy = &quot;horizontal&quot;,
+</a><a href="#h9-1-40" id="h9-1-40" class="i">+        layout_config = { prompt_position = &quot;top&quot; },
+</a><a href="#h9-1-41" id="h9-1-41" class="i">+        sorting_strategy = &quot;ascending&quot;,
+</a><a href="#h9-1-42" id="h9-1-42" class="i">+        winblend = 0,
+</a><a href="#h9-1-43" id="h9-1-43" class="i">+      },
+</a><a href="#h9-1-44" id="h9-1-44" class="i">+    },
+</a><a href="#h9-1-45" id="h9-1-45" class="i">+  },
+</a><a href="#h9-1-46" id="h9-1-46" class="i">+
+</a><a href="#h9-1-47" id="h9-1-47" class="i">+  -- add pyright to lspconfig
+</a><a href="#h9-1-48" id="h9-1-48" class="i">+  {
+</a><a href="#h9-1-49" id="h9-1-49" class="i">+    &quot;neovim/nvim-lspconfig&quot;,
+</a><a href="#h9-1-50" id="h9-1-50" class="i">+    ---@class PluginLspOpts
+</a><a href="#h9-1-51" id="h9-1-51" class="i">+    opts = {
+</a><a href="#h9-1-52" id="h9-1-52" class="i">+      ---@type lspconfig.options
+</a><a href="#h9-1-53" id="h9-1-53" class="i">+      servers = {
+</a><a href="#h9-1-54" id="h9-1-54" class="i">+        -- pyright will be automatically installed with mason and loaded with lspconfig
+</a><a href="#h9-1-55" id="h9-1-55" class="i">+        pyright = {},
+</a><a href="#h9-1-56" id="h9-1-56" class="i">+      },
+</a><a href="#h9-1-57" id="h9-1-57" class="i">+    },
+</a><a href="#h9-1-58" id="h9-1-58" class="i">+  },
+</a><a href="#h9-1-59" id="h9-1-59" class="i">+
+</a><a href="#h9-1-60" id="h9-1-60" class="i">+  -- add tsserver and setup with typescript.nvim instead of lspconfig
+</a><a href="#h9-1-61" id="h9-1-61" class="i">+  {
+</a><a href="#h9-1-62" id="h9-1-62" class="i">+    &quot;neovim/nvim-lspconfig&quot;,
+</a><a href="#h9-1-63" id="h9-1-63" class="i">+    dependencies = {
+</a><a href="#h9-1-64" id="h9-1-64" class="i">+      &quot;jose-elias-alvarez/typescript.nvim&quot;,
+</a><a href="#h9-1-65" id="h9-1-65" class="i">+      init = function()
+</a><a href="#h9-1-66" id="h9-1-66" class="i">+        require(&quot;lazyvim.util&quot;).lsp.on_attach(function(_, buffer)
+</a>           -- stylua: ignore
+           vim.keymap.set( &quot;n&quot;, &quot;&lt;leader&gt;co&quot;, &quot;TypescriptOrganizeImports&quot;, { buffer = buffer, desc = &quot;Organize Imports&quot; })
+<a href="#h9-1-69" id="h9-1-69" class="d">-					vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;cR&quot;, &quot;TypescriptRenameFile&quot;, { desc = &quot;Rename File&quot;, buffer = buffer })
+</a><a href="#h9-1-70" id="h9-1-70" class="d">-				end)
+</a><a href="#h9-1-71" id="h9-1-71" class="d">-			end,
+</a><a href="#h9-1-72" id="h9-1-72" class="d">-		},
+</a><a href="#h9-1-73" id="h9-1-73" class="d">-		---@class PluginLspOpts
+</a><a href="#h9-1-74" id="h9-1-74" class="d">-		opts = {
+</a><a href="#h9-1-75" id="h9-1-75" class="d">-			---@type lspconfig.options
+</a><a href="#h9-1-76" id="h9-1-76" class="d">-			servers = {
+</a><a href="#h9-1-77" id="h9-1-77" class="d">-				-- tsserver will be automatically installed with mason and loaded with lspconfig
+</a><a href="#h9-1-78" id="h9-1-78" class="d">-				tsserver = {},
+</a><a href="#h9-1-79" id="h9-1-79" class="d">-			},
+</a><a href="#h9-1-80" id="h9-1-80" class="d">-			-- you can do any additional lsp server setup here
+</a><a href="#h9-1-81" id="h9-1-81" class="d">-			-- return true if you don&#39;t want this server to be setup with lspconfig
+</a><a href="#h9-1-82" id="h9-1-82" class="d">-			---@type table&lt;string, fun(server:string, opts:_.lspconfig.options):boolean?&gt;
+</a><a href="#h9-1-83" id="h9-1-83" class="d">-			setup = {
+</a><a href="#h9-1-84" id="h9-1-84" class="d">-				-- example to setup with typescript.nvim
+</a><a href="#h9-1-85" id="h9-1-85" class="d">-				tsserver = function(_, opts)
+</a><a href="#h9-1-86" id="h9-1-86" class="d">-					require(&quot;typescript&quot;).setup({ server = opts })
+</a><a href="#h9-1-87" id="h9-1-87" class="d">-					return true
+</a><a href="#h9-1-88" id="h9-1-88" class="d">-				end,
+</a><a href="#h9-1-89" id="h9-1-89" class="d">-				-- Specify * to use this function as a fallback for any server
+</a><a href="#h9-1-90" id="h9-1-90" class="d">-				-- [&quot;*&quot;] = function(server, opts) end,
+</a><a href="#h9-1-91" id="h9-1-91" class="d">-			},
+</a><a href="#h9-1-92" id="h9-1-92" class="d">-		},
+</a><a href="#h9-1-93" id="h9-1-93" class="d">-	},
+</a><a href="#h9-1-94" id="h9-1-94" class="d">-
+</a><a href="#h9-1-95" id="h9-1-95" class="d">-	-- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
+</a><a href="#h9-1-96" id="h9-1-96" class="d">-	-- treesitter, mason and typescript.nvim. So instead of the above, you can use:
+</a><a href="#h9-1-97" id="h9-1-97" class="d">-	{ import = &quot;lazyvim.plugins.extras.lang.typescript&quot; },
+</a><a href="#h9-1-98" id="h9-1-98" class="d">-
+</a><a href="#h9-1-99" id="h9-1-99" class="d">-	-- add more treesitter parsers
+</a><a href="#h9-1-100" id="h9-1-100" class="d">-	{
+</a><a href="#h9-1-101" id="h9-1-101" class="d">-		&quot;nvim-treesitter/nvim-treesitter&quot;,
+</a><a href="#h9-1-102" id="h9-1-102" class="d">-		opts = {
+</a><a href="#h9-1-103" id="h9-1-103" class="d">-			ensure_installed = {
+</a><a href="#h9-1-104" id="h9-1-104" class="d">-				&quot;bash&quot;,
+</a><a href="#h9-1-105" id="h9-1-105" class="d">-				&quot;html&quot;,
+</a><a href="#h9-1-106" id="h9-1-106" class="d">-				&quot;javascript&quot;,
+</a><a href="#h9-1-107" id="h9-1-107" class="d">-				&quot;json&quot;,
+</a><a href="#h9-1-108" id="h9-1-108" class="d">-				&quot;lua&quot;,
+</a><a href="#h9-1-109" id="h9-1-109" class="d">-				&quot;markdown&quot;,
+</a><a href="#h9-1-110" id="h9-1-110" class="d">-				&quot;markdown_inline&quot;,
+</a><a href="#h9-1-111" id="h9-1-111" class="d">-				&quot;python&quot;,
+</a><a href="#h9-1-112" id="h9-1-112" class="d">-				&quot;query&quot;,
+</a><a href="#h9-1-113" id="h9-1-113" class="d">-				&quot;regex&quot;,
+</a><a href="#h9-1-114" id="h9-1-114" class="d">-				&quot;tsx&quot;,
+</a><a href="#h9-1-115" id="h9-1-115" class="d">-				&quot;typescript&quot;,
+</a><a href="#h9-1-116" id="h9-1-116" class="d">-				&quot;vim&quot;,
+</a><a href="#h9-1-117" id="h9-1-117" class="d">-				&quot;yaml&quot;,
+</a><a href="#h9-1-118" id="h9-1-118" class="d">-			},
+</a><a href="#h9-1-119" id="h9-1-119" class="d">-		},
+</a><a href="#h9-1-120" id="h9-1-120" class="d">-	},
+</a><a href="#h9-1-121" id="h9-1-121" class="d">-
+</a><a href="#h9-1-122" id="h9-1-122" class="d">-	-- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
+</a><a href="#h9-1-123" id="h9-1-123" class="d">-	-- would overwrite `ensure_installed` with the new value.
+</a><a href="#h9-1-124" id="h9-1-124" class="d">-	-- If you&#39;d rather extend the default config, use the code below instead:
+</a><a href="#h9-1-125" id="h9-1-125" class="d">-	{
+</a><a href="#h9-1-126" id="h9-1-126" class="d">-		&quot;nvim-treesitter/nvim-treesitter&quot;,
+</a><a href="#h9-1-127" id="h9-1-127" class="d">-		opts = function(_, opts)
+</a><a href="#h9-1-128" id="h9-1-128" class="d">-			-- add tsx and treesitter
+</a><a href="#h9-1-129" id="h9-1-129" class="d">-			vim.list_extend(opts.ensure_installed, {
+</a><a href="#h9-1-130" id="h9-1-130" class="d">-				&quot;tsx&quot;,
+</a><a href="#h9-1-131" id="h9-1-131" class="d">-				&quot;typescript&quot;,
+</a><a href="#h9-1-132" id="h9-1-132" class="d">-			})
+</a><a href="#h9-1-133" id="h9-1-133" class="d">-		end,
+</a><a href="#h9-1-134" id="h9-1-134" class="d">-	},
+</a><a href="#h9-1-135" id="h9-1-135" class="d">-
+</a><a href="#h9-1-136" id="h9-1-136" class="d">-	-- the opts function can also be used to change the default opts:
+</a><a href="#h9-1-137" id="h9-1-137" class="d">-	{
+</a><a href="#h9-1-138" id="h9-1-138" class="d">-		&quot;nvim-lualine/lualine.nvim&quot;,
+</a><a href="#h9-1-139" id="h9-1-139" class="d">-		event = &quot;VeryLazy&quot;,
+</a><a href="#h9-1-140" id="h9-1-140" class="d">-		opts = function(_, opts)
+</a><a href="#h9-1-141" id="h9-1-141" class="d">-			table.insert(opts.sections.lualine_x, &quot;😄&quot;)
+</a><a href="#h9-1-142" id="h9-1-142" class="d">-		end,
+</a><a href="#h9-1-143" id="h9-1-143" class="d">-	},
+</a><a href="#h9-1-144" id="h9-1-144" class="d">-
+</a><a href="#h9-1-145" id="h9-1-145" class="d">-	-- or you can return new options to override all the defaults
+</a><a href="#h9-1-146" id="h9-1-146" class="d">-	{
+</a><a href="#h9-1-147" id="h9-1-147" class="d">-		&quot;nvim-lualine/lualine.nvim&quot;,
+</a><a href="#h9-1-148" id="h9-1-148" class="d">-		event = &quot;VeryLazy&quot;,
+</a><a href="#h9-1-149" id="h9-1-149" class="d">-		opts = function()
+</a><a href="#h9-1-150" id="h9-1-150" class="d">-			return {
+</a><a href="#h9-1-151" id="h9-1-151" class="d">-				--[[add your custom lualine config here]]
+</a><a href="#h9-1-152" id="h9-1-152" class="d">-			}
+</a><a href="#h9-1-153" id="h9-1-153" class="d">-		end,
+</a><a href="#h9-1-154" id="h9-1-154" class="d">-	},
+</a><a href="#h9-1-155" id="h9-1-155" class="d">-
+</a><a href="#h9-1-156" id="h9-1-156" class="d">-	-- use mini.starter instead of alpha
+</a><a href="#h9-1-157" id="h9-1-157" class="d">-	{ import = &quot;lazyvim.plugins.extras.ui.mini-starter&quot; },
+</a><a href="#h9-1-158" id="h9-1-158" class="d">-
+</a><a href="#h9-1-159" id="h9-1-159" class="d">-	-- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
+</a><a href="#h9-1-160" id="h9-1-160" class="d">-	{ import = &quot;lazyvim.plugins.extras.lang.json&quot; },
+</a><a href="#h9-1-161" id="h9-1-161" class="d">-
+</a><a href="#h9-1-162" id="h9-1-162" class="d">-	-- add any tools you want to have installed below
+</a><a href="#h9-1-163" id="h9-1-163" class="d">-	{
+</a><a href="#h9-1-164" id="h9-1-164" class="d">-		&quot;williamboman/mason.nvim&quot;,
+</a><a href="#h9-1-165" id="h9-1-165" class="d">-		opts = {
+</a><a href="#h9-1-166" id="h9-1-166" class="d">-			ensure_installed = {
+</a><a href="#h9-1-167" id="h9-1-167" class="d">-				&quot;stylua&quot;,
+</a><a href="#h9-1-168" id="h9-1-168" class="d">-				&quot;shellcheck&quot;,
+</a><a href="#h9-1-169" id="h9-1-169" class="d">-				&quot;shfmt&quot;,
+</a><a href="#h9-1-170" id="h9-1-170" class="d">-				&quot;flake8&quot;,
+</a><a href="#h9-1-171" id="h9-1-171" class="d">-			},
+</a><a href="#h9-1-172" id="h9-1-172" class="d">-		},
+</a><a href="#h9-1-173" id="h9-1-173" class="d">-	},
+</a><a href="#h9-1-174" id="h9-1-174" class="i">+          vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;cR&quot;, &quot;TypescriptRenameFile&quot;, { desc = &quot;Rename File&quot;, buffer = buffer })
+</a><a href="#h9-1-175" id="h9-1-175" class="i">+        end)
+</a><a href="#h9-1-176" id="h9-1-176" class="i">+      end,
+</a><a href="#h9-1-177" id="h9-1-177" class="i">+    },
+</a><a href="#h9-1-178" id="h9-1-178" class="i">+    ---@class PluginLspOpts
+</a><a href="#h9-1-179" id="h9-1-179" class="i">+    opts = {
+</a><a href="#h9-1-180" id="h9-1-180" class="i">+      ---@type lspconfig.options
+</a><a href="#h9-1-181" id="h9-1-181" class="i">+      servers = {
+</a><a href="#h9-1-182" id="h9-1-182" class="i">+        -- tsserver will be automatically installed with mason and loaded with lspconfig
+</a><a href="#h9-1-183" id="h9-1-183" class="i">+        tsserver = {},
+</a><a href="#h9-1-184" id="h9-1-184" class="i">+      },
+</a><a href="#h9-1-185" id="h9-1-185" class="i">+      -- you can do any additional lsp server setup here
+</a><a href="#h9-1-186" id="h9-1-186" class="i">+      -- return true if you don&#39;t want this server to be setup with lspconfig
+</a><a href="#h9-1-187" id="h9-1-187" class="i">+      ---@type table&lt;string, fun(server:string, opts:_.lspconfig.options):boolean?&gt;
+</a><a href="#h9-1-188" id="h9-1-188" class="i">+      setup = {
+</a><a href="#h9-1-189" id="h9-1-189" class="i">+        -- example to setup with typescript.nvim
+</a><a href="#h9-1-190" id="h9-1-190" class="i">+        tsserver = function(_, opts)
+</a><a href="#h9-1-191" id="h9-1-191" class="i">+          require(&quot;typescript&quot;).setup({ server = opts })
+</a><a href="#h9-1-192" id="h9-1-192" class="i">+          return true
+</a><a href="#h9-1-193" id="h9-1-193" class="i">+        end,
+</a><a href="#h9-1-194" id="h9-1-194" class="i">+        -- Specify * to use this function as a fallback for any server
+</a><a href="#h9-1-195" id="h9-1-195" class="i">+        -- [&quot;*&quot;] = function(server, opts) end,
+</a><a href="#h9-1-196" id="h9-1-196" class="i">+      },
+</a><a href="#h9-1-197" id="h9-1-197" class="i">+    },
+</a><a href="#h9-1-198" id="h9-1-198" class="i">+  },
+</a><a href="#h9-1-199" id="h9-1-199" class="i">+
+</a><a href="#h9-1-200" id="h9-1-200" class="i">+  -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
+</a><a href="#h9-1-201" id="h9-1-201" class="i">+  -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
+</a><a href="#h9-1-202" id="h9-1-202" class="i">+  { import = &quot;lazyvim.plugins.extras.lang.typescript&quot; },
+</a><a href="#h9-1-203" id="h9-1-203" class="i">+
+</a><a href="#h9-1-204" id="h9-1-204" class="i">+  -- add more treesitter parsers
+</a><a href="#h9-1-205" id="h9-1-205" class="i">+  {
+</a><a href="#h9-1-206" id="h9-1-206" class="i">+    &quot;nvim-treesitter/nvim-treesitter&quot;,
+</a><a href="#h9-1-207" id="h9-1-207" class="i">+    opts = {
+</a><a href="#h9-1-208" id="h9-1-208" class="i">+      ensure_installed = {
+</a><a href="#h9-1-209" id="h9-1-209" class="i">+        &quot;bash&quot;,
+</a><a href="#h9-1-210" id="h9-1-210" class="i">+        &quot;html&quot;,
+</a><a href="#h9-1-211" id="h9-1-211" class="i">+        &quot;javascript&quot;,
+</a><a href="#h9-1-212" id="h9-1-212" class="i">+        &quot;json&quot;,
+</a><a href="#h9-1-213" id="h9-1-213" class="i">+        &quot;lua&quot;,
+</a><a href="#h9-1-214" id="h9-1-214" class="i">+        &quot;markdown&quot;,
+</a><a href="#h9-1-215" id="h9-1-215" class="i">+        &quot;markdown_inline&quot;,
+</a><a href="#h9-1-216" id="h9-1-216" class="i">+        &quot;python&quot;,
+</a><a href="#h9-1-217" id="h9-1-217" class="i">+        &quot;query&quot;,
+</a><a href="#h9-1-218" id="h9-1-218" class="i">+        &quot;regex&quot;,
+</a><a href="#h9-1-219" id="h9-1-219" class="i">+        &quot;tsx&quot;,
+</a><a href="#h9-1-220" id="h9-1-220" class="i">+        &quot;typescript&quot;,
+</a><a href="#h9-1-221" id="h9-1-221" class="i">+        &quot;vim&quot;,
+</a><a href="#h9-1-222" id="h9-1-222" class="i">+        &quot;yaml&quot;,
+</a><a href="#h9-1-223" id="h9-1-223" class="i">+      },
+</a><a href="#h9-1-224" id="h9-1-224" class="i">+    },
+</a><a href="#h9-1-225" id="h9-1-225" class="i">+  },
+</a><a href="#h9-1-226" id="h9-1-226" class="i">+
+</a><a href="#h9-1-227" id="h9-1-227" class="i">+  -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
+</a><a href="#h9-1-228" id="h9-1-228" class="i">+  -- would overwrite `ensure_installed` with the new value.
+</a><a href="#h9-1-229" id="h9-1-229" class="i">+  -- If you&#39;d rather extend the default config, use the code below instead:
+</a><a href="#h9-1-230" id="h9-1-230" class="i">+  {
+</a><a href="#h9-1-231" id="h9-1-231" class="i">+    &quot;nvim-treesitter/nvim-treesitter&quot;,
+</a><a href="#h9-1-232" id="h9-1-232" class="i">+    opts = function(_, opts)
+</a><a href="#h9-1-233" id="h9-1-233" class="i">+      -- add tsx and treesitter
+</a><a href="#h9-1-234" id="h9-1-234" class="i">+      vim.list_extend(opts.ensure_installed, {
+</a><a href="#h9-1-235" id="h9-1-235" class="i">+        &quot;tsx&quot;,
+</a><a href="#h9-1-236" id="h9-1-236" class="i">+        &quot;typescript&quot;,
+</a><a href="#h9-1-237" id="h9-1-237" class="i">+      })
+</a><a href="#h9-1-238" id="h9-1-238" class="i">+    end,
+</a><a href="#h9-1-239" id="h9-1-239" class="i">+  },
+</a><a href="#h9-1-240" id="h9-1-240" class="i">+
+</a><a href="#h9-1-241" id="h9-1-241" class="i">+  -- the opts function can also be used to change the default opts:
+</a><a href="#h9-1-242" id="h9-1-242" class="i">+  {
+</a><a href="#h9-1-243" id="h9-1-243" class="i">+    &quot;nvim-lualine/lualine.nvim&quot;,
+</a><a href="#h9-1-244" id="h9-1-244" class="i">+    event = &quot;VeryLazy&quot;,
+</a><a href="#h9-1-245" id="h9-1-245" class="i">+    opts = function(_, opts)
+</a><a href="#h9-1-246" id="h9-1-246" class="i">+      table.insert(opts.sections.lualine_x, {
+</a><a href="#h9-1-247" id="h9-1-247" class="i">+        function()
+</a><a href="#h9-1-248" id="h9-1-248" class="i">+          return &quot;😄&quot;
+</a><a href="#h9-1-249" id="h9-1-249" class="i">+        end,
+</a><a href="#h9-1-250" id="h9-1-250" class="i">+      })
+</a><a href="#h9-1-251" id="h9-1-251" class="i">+    end,
+</a><a href="#h9-1-252" id="h9-1-252" class="i">+  },
+</a><a href="#h9-1-253" id="h9-1-253" class="i">+
+</a><a href="#h9-1-254" id="h9-1-254" class="i">+  -- or you can return new options to override all the defaults
+</a><a href="#h9-1-255" id="h9-1-255" class="i">+  {
+</a><a href="#h9-1-256" id="h9-1-256" class="i">+    &quot;nvim-lualine/lualine.nvim&quot;,
+</a><a href="#h9-1-257" id="h9-1-257" class="i">+    event = &quot;VeryLazy&quot;,
+</a><a href="#h9-1-258" id="h9-1-258" class="i">+    opts = function()
+</a><a href="#h9-1-259" id="h9-1-259" class="i">+      return {
+</a><a href="#h9-1-260" id="h9-1-260" class="i">+        --[[add your custom lualine config here]]
+</a><a href="#h9-1-261" id="h9-1-261" class="i">+      }
+</a><a href="#h9-1-262" id="h9-1-262" class="i">+    end,
+</a><a href="#h9-1-263" id="h9-1-263" class="i">+  },
+</a><a href="#h9-1-264" id="h9-1-264" class="i">+
+</a><a href="#h9-1-265" id="h9-1-265" class="i">+  -- use mini.starter instead of alpha
+</a><a href="#h9-1-266" id="h9-1-266" class="i">+  { import = &quot;lazyvim.plugins.extras.ui.mini-starter&quot; },
+</a><a href="#h9-1-267" id="h9-1-267" class="i">+
+</a><a href="#h9-1-268" id="h9-1-268" class="i">+  -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
+</a><a href="#h9-1-269" id="h9-1-269" class="i">+  { import = &quot;lazyvim.plugins.extras.lang.json&quot; },
+</a><a href="#h9-1-270" id="h9-1-270" class="i">+
+</a><a href="#h9-1-271" id="h9-1-271" class="i">+  -- add any tools you want to have installed below
+</a><a href="#h9-1-272" id="h9-1-272" class="i">+  {
+</a><a href="#h9-1-273" id="h9-1-273" class="i">+    &quot;williamboman/mason.nvim&quot;,
+</a><a href="#h9-1-274" id="h9-1-274" class="i">+    opts = {
+</a><a href="#h9-1-275" id="h9-1-275" class="i">+      ensure_installed = {
+</a><a href="#h9-1-276" id="h9-1-276" class="i">+        &quot;stylua&quot;,
+</a><a href="#h9-1-277" id="h9-1-277" class="i">+        &quot;shellcheck&quot;,
+</a><a href="#h9-1-278" id="h9-1-278" class="i">+        &quot;shfmt&quot;,
+</a><a href="#h9-1-279" id="h9-1-279" class="i">+        &quot;flake8&quot;,
+</a><a href="#h9-1-280" id="h9-1-280" class="i">+      },
+</a><a href="#h9-1-281" id="h9-1-281" class="i">+    },
+</a><a href="#h9-1-282" id="h9-1-282" class="i">+  },
+</a> }
+<b>diff --git a/<a id="h10" href="../file/nvim/lua/plugins/lsp.lua.html">nvim/lua/plugins/lsp.lua</a> b/<a href="../file/nvim/lua/plugins/lsp.lua.html">nvim/lua/plugins/lsp.lua</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -1,108 +0,0 @@
+</a><a href="#h10-0-0" id="h10-0-0" class="d">--- Mason setup: Handles the installation of LSP servers, DAP servers, and more.
+</a><a href="#h10-0-1" id="h10-0-1" class="d">-require(&quot;mason&quot;).setup()
+</a><a href="#h10-0-2" id="h10-0-2" class="d">-
+</a><a href="#h10-0-3" id="h10-0-3" class="d">--- Mason LSPConfig setup: Ensures installation of required LSP servers.
+</a><a href="#h10-0-4" id="h10-0-4" class="d">-require(&quot;mason-lspconfig&quot;).setup({
+</a><a href="#h10-0-5" id="h10-0-5" class="d">-	ensure_installed = {
+</a><a href="#h10-0-6" id="h10-0-6" class="d">-		&quot;lua_ls&quot;, -- Lua Language Server
+</a><a href="#h10-0-7" id="h10-0-7" class="d">-		&quot;pyright&quot;, -- Python Language Server
+</a><a href="#h10-0-8" id="h10-0-8" class="d">-		&quot;jdtls&quot;, -- Java Language Server
+</a><a href="#h10-0-9" id="h10-0-9" class="d">-		&quot;marksman&quot;, -- Markdown Language Server
+</a><a href="#h10-0-10" id="h10-0-10" class="d">-		&quot;clangd&quot;, -- C/C++ Language Server (optional, add if you need C/C++)
+</a><a href="#h10-0-11" id="h10-0-11" class="d">-		-- &quot;clang-format&quot;,
+</a><a href="#h10-0-12" id="h10-0-12" class="d">-		-- &quot;codelldb&quot;,
+</a><a href="#h10-0-13" id="h10-0-13" class="d">-	},
+</a><a href="#h10-0-14" id="h10-0-14" class="d">-	automatic_installation = true, -- Automatically install missing servers
+</a><a href="#h10-0-15" id="h10-0-15" class="d">-})
+</a><a href="#h10-0-16" id="h10-0-16" class="d">-
+</a><a href="#h10-0-17" id="h10-0-17" class="d">--- Require lspconfig for setting up language servers.
+</a><a href="#h10-0-18" id="h10-0-18" class="d">-local lspconfig = require(&quot;lspconfig&quot;)
+</a><a href="#h10-0-19" id="h10-0-19" class="d">-
+</a><a href="#h10-0-20" id="h10-0-20" class="d">--- Ensure that mason-lspconfig installs these servers
+</a><a href="#h10-0-21" id="h10-0-21" class="d">-local servers = { &quot;lua_ls&quot;, &quot;pyright&quot;, &quot;jdtls&quot;, &quot;marksman&quot;, &quot;clangd&quot; }
+</a><a href="#h10-0-22" id="h10-0-22" class="d">-
+</a><a href="#h10-0-23" id="h10-0-23" class="d">--- Loop through each server and set up with default configuration
+</a><a href="#h10-0-24" id="h10-0-24" class="d">-for _, server in ipairs(servers) do
+</a><a href="#h10-0-25" id="h10-0-25" class="d">-	lspconfig[server].setup({
+</a><a href="#h10-0-26" id="h10-0-26" class="d">-		-- Common configuration for all servers
+</a><a href="#h10-0-27" id="h10-0-27" class="d">-		on_attach = function(client, bufnr)
+</a><a href="#h10-0-28" id="h10-0-28" class="d">-			-- Set tab size and expand tab settings for each LSP
+</a><a href="#h10-0-29" id="h10-0-29" class="d">-			vim.opt_local.tabstop = 4
+</a><a href="#h10-0-30" id="h10-0-30" class="d">-			vim.opt_local.shiftwidth = 4
+</a><a href="#h10-0-31" id="h10-0-31" class="d">-			vim.opt_local.expandtab = true
+</a><a href="#h10-0-32" id="h10-0-32" class="d">-		end,
+</a><a href="#h10-0-33" id="h10-0-33" class="d">-	})
+</a><a href="#h10-0-34" id="h10-0-34" class="d">-end
+</a><a href="#h10-0-35" id="h10-0-35" class="d">-
+</a><a href="#h10-0-36" id="h10-0-36" class="d">--- Lua Language Server configuration
+</a><a href="#h10-0-37" id="h10-0-37" class="d">-lspconfig.lua_ls.setup({
+</a><a href="#h10-0-38" id="h10-0-38" class="d">-	settings = {
+</a><a href="#h10-0-39" id="h10-0-39" class="d">-		Lua = {
+</a><a href="#h10-0-40" id="h10-0-40" class="d">-			diagnostics = {
+</a><a href="#h10-0-41" id="h10-0-41" class="d">-				globals = { &quot;vim&quot; }, -- Recognize &#39;vim&#39; as a global variable for Neovim
+</a><a href="#h10-0-42" id="h10-0-42" class="d">-			},
+</a><a href="#h10-0-43" id="h10-0-43" class="d">-			workspace = {
+</a><a href="#h10-0-44" id="h10-0-44" class="d">-				library = vim.api.nvim_get_runtime_file(&quot;&quot;, true), -- Automatically detect libraries
+</a><a href="#h10-0-45" id="h10-0-45" class="d">-			},
+</a><a href="#h10-0-46" id="h10-0-46" class="d">-			telemetry = { enable = false }, -- Disable telemetry data collection by Lua LS
+</a><a href="#h10-0-47" id="h10-0-47" class="d">-		},
+</a><a href="#h10-0-48" id="h10-0-48" class="d">-	},
+</a><a href="#h10-0-49" id="h10-0-49" class="d">-})
+</a><a href="#h10-0-50" id="h10-0-50" class="d">-
+</a><a href="#h10-0-51" id="h10-0-51" class="d">--- Pyright for Python
+</a><a href="#h10-0-52" id="h10-0-52" class="d">-lspconfig.pyright.setup({
+</a><a href="#h10-0-53" id="h10-0-53" class="d">-	settings = {
+</a><a href="#h10-0-54" id="h10-0-54" class="d">-		python = {
+</a><a href="#h10-0-55" id="h10-0-55" class="d">-			analysis = {
+</a><a href="#h10-0-56" id="h10-0-56" class="d">-				typeCheckingMode = &quot;basic&quot;, -- You can change this to &quot;strict&quot; or &quot;off&quot; if needed
+</a><a href="#h10-0-57" id="h10-0-57" class="d">-			},
+</a><a href="#h10-0-58" id="h10-0-58" class="d">-		},
+</a><a href="#h10-0-59" id="h10-0-59" class="d">-	},
+</a><a href="#h10-0-60" id="h10-0-60" class="d">-})
+</a><a href="#h10-0-61" id="h10-0-61" class="d">-
+</a><a href="#h10-0-62" id="h10-0-62" class="d">--- Java Language Server configuration
+</a><a href="#h10-0-63" id="h10-0-63" class="d">-lspconfig.jdtls.setup({
+</a><a href="#h10-0-64" id="h10-0-64" class="d">-	cmd = { &quot;java-lsp.sh&quot; }, -- Adjust this path if necessary for your system
+</a><a href="#h10-0-65" id="h10-0-65" class="d">-	root_dir = lspconfig.util.root_pattern(&quot;.git&quot;, &quot;mvnw&quot;, &quot;gradlew&quot;, &quot;pom.xml&quot;, &quot;build.gradle&quot;), -- Detect project root
+</a><a href="#h10-0-66" id="h10-0-66" class="d">-	settings = {
+</a><a href="#h10-0-67" id="h10-0-67" class="d">-		java = {
+</a><a href="#h10-0-68" id="h10-0-68" class="d">-			format = {
+</a><a href="#h10-0-69" id="h10-0-69" class="d">-				settings = {
+</a><a href="#h10-0-70" id="h10-0-70" class="d">-					tabSize = 4,
+</a><a href="#h10-0-71" id="h10-0-71" class="d">-					insertSpaces = true, -- Use spaces instead of tabs
+</a><a href="#h10-0-72" id="h10-0-72" class="d">-				},
+</a><a href="#h10-0-73" id="h10-0-73" class="d">-				enable = true,
+</a><a href="#h10-0-74" id="h10-0-74" class="d">-				defaultConfig = {
+</a><a href="#h10-0-75" id="h10-0-75" class="d">-					indent_style = &quot;space&quot;,
+</a><a href="#h10-0-76" id="h10-0-76" class="d">-					indent_size = &quot;4&quot;,
+</a><a href="#h10-0-77" id="h10-0-77" class="d">-				},
+</a><a href="#h10-0-78" id="h10-0-78" class="d">-			},
+</a><a href="#h10-0-79" id="h10-0-79" class="d">-		},
+</a><a href="#h10-0-80" id="h10-0-80" class="d">-	},
+</a><a href="#h10-0-81" id="h10-0-81" class="d">-})
+</a><a href="#h10-0-82" id="h10-0-82" class="d">-
+</a><a href="#h10-0-83" id="h10-0-83" class="d">--- Marksman: Markdown Language Server configuration
+</a><a href="#h10-0-84" id="h10-0-84" class="d">-lspconfig.marksman.setup({})
+</a><a href="#h10-0-85" id="h10-0-85" class="d">-
+</a><a href="#h10-0-86" id="h10-0-86" class="d">--- Clangd Language Server configuration
+</a><a href="#h10-0-87" id="h10-0-87" class="d">-lspconfig.clangd.setup({
+</a><a href="#h10-0-88" id="h10-0-88" class="d">-	cmd = { &quot;clangd&quot;, &quot;--background-index&quot; }, -- Ensure clangd is in your PATH
+</a><a href="#h10-0-89" id="h10-0-89" class="d">-	settings = {
+</a><a href="#h10-0-90" id="h10-0-90" class="d">-		clangd = {
+</a><a href="#h10-0-91" id="h10-0-91" class="d">-			format = {
+</a><a href="#h10-0-92" id="h10-0-92" class="d">-				settings = {
+</a><a href="#h10-0-93" id="h10-0-93" class="d">-					tabSize = 4,
+</a><a href="#h10-0-94" id="h10-0-94" class="d">-					insertSpaces = true, -- Use spaces instead of tabs
+</a><a href="#h10-0-95" id="h10-0-95" class="d">-				},
+</a><a href="#h10-0-96" id="h10-0-96" class="d">-				enable = true,
+</a><a href="#h10-0-97" id="h10-0-97" class="d">-				defaultConfig = {
+</a><a href="#h10-0-98" id="h10-0-98" class="d">-					indent_style = &quot;space&quot;,
+</a><a href="#h10-0-99" id="h10-0-99" class="d">-					indent_size = &quot;4&quot;,
+</a><a href="#h10-0-100" id="h10-0-100" class="d">-				},
+</a><a href="#h10-0-101" id="h10-0-101" class="d">-			},
+</a><a href="#h10-0-102" id="h10-0-102" class="d">-		},
+</a><a href="#h10-0-103" id="h10-0-103" class="d">-	},
+</a><a href="#h10-0-104" id="h10-0-104" class="d">-})
+</a><a href="#h10-0-105" id="h10-0-105" class="d">-
+</a><a href="#h10-0-106" id="h10-0-106" class="d">--- Return a valid Lua table (necessary for LazyVim to load the config properly)
+</a><a href="#h10-0-107" id="h10-0-107" class="d">-return {}
+</a><b>diff --git a/<a id="h11" href="../file/nvim/lua/plugins/lualine.lua.html">nvim/lua/plugins/lualine.lua</a> b/<a href="../file/nvim/lua/plugins/lualine.lua.html">nvim/lua/plugins/lualine.lua</a></b>
+<a href="#h11-0" id="h11-0" class="h">@@ -1,28 +1,28 @@
+</a> return {
+<a href="#h11-0-1" id="h11-0-1" class="d">-    &quot;nvim-lualine/lualine.nvim&quot;,
+</a><a href="#h11-0-2" id="h11-0-2" class="d">-    dependencies = { &quot;nvim-tree/nvim-web-devicons&quot; },
+</a><a href="#h11-0-3" id="h11-0-3" class="d">-    config = function()
+</a><a href="#h11-0-4" id="h11-0-4" class="d">-        local lualine = require(&quot;lualine&quot;)
+</a><a href="#h11-0-5" id="h11-0-5" class="d">-        local lazy_status = require(&quot;lazy.status&quot;) -- to configure lazy pending updates count
+</a><a href="#h11-0-6" id="h11-0-6" class="i">+  &quot;nvim-lualine/lualine.nvim&quot;,
+</a><a href="#h11-0-7" id="h11-0-7" class="i">+  dependencies = { &quot;nvim-tree/nvim-web-devicons&quot; },
+</a><a href="#h11-0-8" id="h11-0-8" class="i">+  config = function()
+</a><a href="#h11-0-9" id="h11-0-9" class="i">+    local lualine = require(&quot;lualine&quot;)
+</a><a href="#h11-0-10" id="h11-0-10" class="i">+    local lazy_status = require(&quot;lazy.status&quot;) -- to configure lazy pending updates count
+</a> 
+<a href="#h11-0-12" id="h11-0-12" class="d">-        lualine.setup({
+</a><a href="#h11-0-13" id="h11-0-13" class="d">-            options = {
+</a><a href="#h11-0-14" id="h11-0-14" class="d">-                theme = &quot;gruvbox&quot;,
+</a><a href="#h11-0-15" id="h11-0-15" class="d">-                section_separators = &quot;&quot;,
+</a><a href="#h11-0-16" id="h11-0-16" class="d">-                component_separators = &quot;&quot;,
+</a><a href="#h11-0-17" id="h11-0-17" class="d">-            },
+</a><a href="#h11-0-18" id="h11-0-18" class="d">-            sections = {
+</a><a href="#h11-0-19" id="h11-0-19" class="d">-                lualine_x = {
+</a><a href="#h11-0-20" id="h11-0-20" class="d">-                    {
+</a><a href="#h11-0-21" id="h11-0-21" class="d">-                        lazy_status.updates,
+</a><a href="#h11-0-22" id="h11-0-22" class="d">-                        cond = lazy_status.has_updates,
+</a><a href="#h11-0-23" id="h11-0-23" class="d">-                        color = { fg = &quot;#ff9e64&quot; },
+</a><a href="#h11-0-24" id="h11-0-24" class="d">-                    },
+</a><a href="#h11-0-25" id="h11-0-25" class="d">-                    { &quot;encoding&quot; },
+</a><a href="#h11-0-26" id="h11-0-26" class="d">-                    { &quot;fileformat&quot; },
+</a><a href="#h11-0-27" id="h11-0-27" class="d">-                    { &quot;filetype&quot; },
+</a><a href="#h11-0-28" id="h11-0-28" class="d">-                },
+</a><a href="#h11-0-29" id="h11-0-29" class="d">-            },
+</a><a href="#h11-0-30" id="h11-0-30" class="d">-        })
+</a><a href="#h11-0-31" id="h11-0-31" class="d">-    end,
+</a><a href="#h11-0-32" id="h11-0-32" class="i">+    lualine.setup({
+</a><a href="#h11-0-33" id="h11-0-33" class="i">+      options = {
+</a><a href="#h11-0-34" id="h11-0-34" class="i">+        theme = &quot;gruvbox&quot;,
+</a><a href="#h11-0-35" id="h11-0-35" class="i">+        section_separators = &quot;&quot;,
+</a><a href="#h11-0-36" id="h11-0-36" class="i">+        component_separators = &quot;&quot;,
+</a><a href="#h11-0-37" id="h11-0-37" class="i">+      },
+</a><a href="#h11-0-38" id="h11-0-38" class="i">+      sections = {
+</a><a href="#h11-0-39" id="h11-0-39" class="i">+        lualine_x = {
+</a><a href="#h11-0-40" id="h11-0-40" class="i">+          {
+</a><a href="#h11-0-41" id="h11-0-41" class="i">+            lazy_status.updates,
+</a><a href="#h11-0-42" id="h11-0-42" class="i">+            cond = lazy_status.has_updates,
+</a><a href="#h11-0-43" id="h11-0-43" class="i">+            color = { fg = &quot;#ff9e64&quot; },
+</a><a href="#h11-0-44" id="h11-0-44" class="i">+          },
+</a><a href="#h11-0-45" id="h11-0-45" class="i">+          { &quot;encoding&quot; },
+</a><a href="#h11-0-46" id="h11-0-46" class="i">+          { &quot;fileformat&quot; },
+</a><a href="#h11-0-47" id="h11-0-47" class="i">+          { &quot;filetype&quot; },
+</a><a href="#h11-0-48" id="h11-0-48" class="i">+        },
+</a><a href="#h11-0-49" id="h11-0-49" class="i">+      },
+</a><a href="#h11-0-50" id="h11-0-50" class="i">+    })
+</a><a href="#h11-0-51" id="h11-0-51" class="i">+  end,
+</a> }
+<b>diff --git a/<a id="h12" href="../file/nvim/lua/plugins/null-ls.lua.html">nvim/lua/plugins/null-ls.lua</a> b/<a href="../file/nvim/lua/plugins/null-ls.lua.html">nvim/lua/plugins/null-ls.lua</a></b>
+<a href="#h12-0" id="h12-0" class="h">@@ -1,13 +0,0 @@
+</a><a href="#h12-0-0" id="h12-0-0" class="d">-return {
+</a><a href="#h12-0-1" id="h12-0-1" class="d">-	&quot;jose-elias-alvarez/null-ls.nvim&quot;,
+</a><a href="#h12-0-2" id="h12-0-2" class="d">-	config = function()
+</a><a href="#h12-0-3" id="h12-0-3" class="d">-		local null_ls = require(&quot;null-ls&quot;)
+</a><a href="#h12-0-4" id="h12-0-4" class="d">-		null_ls.setup({
+</a><a href="#h12-0-5" id="h12-0-5" class="d">-			sources = {
+</a><a href="#h12-0-6" id="h12-0-6" class="d">-				null_ls.builtins.formatting.clang_format.with({
+</a><a href="#h12-0-7" id="h12-0-7" class="d">-					extra_args = { &quot;--style&quot;, &quot;{IndentWidth: 4}&quot; }, -- Set indent to 4 spaces
+</a><a href="#h12-0-8" id="h12-0-8" class="d">-				}),
+</a><a href="#h12-0-9" id="h12-0-9" class="d">-			},
+</a><a href="#h12-0-10" id="h12-0-10" class="d">-		})
+</a><a href="#h12-0-11" id="h12-0-11" class="d">-	end,
+</a><a href="#h12-0-12" id="h12-0-12" class="d">-}
+</a><b>diff --git a/<a id="h13" href="../file/nvim/lua/plugins/project.lua.html">nvim/lua/plugins/project.lua</a> b/<a href="../file/nvim/lua/plugins/project.lua.html">nvim/lua/plugins/project.lua</a></b>
+<a href="#h13-0" id="h13-0" class="h">@@ -1,9 +0,0 @@
+</a><a href="#h13-0-0" id="h13-0-0" class="d">-return {
+</a><a href="#h13-0-1" id="h13-0-1" class="d">-    &quot;ahmedkhalf/project.nvim&quot;,
+</a><a href="#h13-0-2" id="h13-0-2" class="d">-    config = function()
+</a><a href="#h13-0-3" id="h13-0-3" class="d">-        require(&quot;project_nvim&quot;).setup({
+</a><a href="#h13-0-4" id="h13-0-4" class="d">-            detection_methods = { &quot;pattern&quot; },
+</a><a href="#h13-0-5" id="h13-0-5" class="d">-            patterns = { &quot;.git&quot;, &quot;_darcs&quot;, &quot;.hg&quot;, &quot;.bzr&quot;, &quot;.svn&quot;, &quot;Makefile&quot;, &quot;package.json&quot;, &quot;.obsidian&quot; },
+</a><a href="#h13-0-6" id="h13-0-6" class="d">-        })
+</a><a href="#h13-0-7" id="h13-0-7" class="d">-    end,
+</a><a href="#h13-0-8" id="h13-0-8" class="d">-}
+</a><b>diff --git a/<a id="h14" href="../file/nvim/lua/plugins/snacks.lua.html">nvim/lua/plugins/snacks.lua</a> b/<a href="../file/nvim/lua/plugins/snacks.lua.html">nvim/lua/plugins/snacks.lua</a></b>
+<a href="#h14-0" id="h14-0" class="h">@@ -0,0 +1,14 @@
+</a><a href="#h14-0-0" id="h14-0-0" class="i">+return {
+</a><a href="#h14-0-1" id="h14-0-1" class="i">+  &quot;folke/snacks.nvim&quot;,
+</a><a href="#h14-0-2" id="h14-0-2" class="i">+  priority = 1000,
+</a><a href="#h14-0-3" id="h14-0-3" class="i">+  lazy = false,
+</a><a href="#h14-0-4" id="h14-0-4" class="i">+  opts = {
+</a><a href="#h14-0-5" id="h14-0-5" class="i">+    sections = {
+</a><a href="#h14-0-6" id="h14-0-6" class="i">+      { section = &quot;header&quot; },
+</a><a href="#h14-0-7" id="h14-0-7" class="i">+      { icon = &quot; &quot;, title = &quot;Keymaps&quot;, section = &quot;keys&quot;, indent = 2, padding = 1 },
+</a><a href="#h14-0-8" id="h14-0-8" class="i">+      { icon = &quot; &quot;, title = &quot;Recent Files&quot;, section = &quot;recent_files&quot;, indent = 2, padding = 1 },
+</a><a href="#h14-0-9" id="h14-0-9" class="i">+      { icon = &quot; &quot;, title = &quot;Projects&quot;, section = &quot;projects&quot;, indent = 2, padding = 1 },
+</a><a href="#h14-0-10" id="h14-0-10" class="i">+      { section = &quot;startup&quot; },
+</a><a href="#h14-0-11" id="h14-0-11" class="i">+    },
+</a><a href="#h14-0-12" id="h14-0-12" class="i">+  },
+</a><a href="#h14-0-13" id="h14-0-13" class="i">+}
+</a><b>diff --git a/<a id="h15" href="../file/nvim/lua/plugins/tetris.lua.html">nvim/lua/plugins/tetris.lua</a> b/<a href="../file/nvim/lua/plugins/tetris.lua.html">nvim/lua/plugins/tetris.lua</a></b>
+<a href="#h15-0" id="h15-0" class="h">@@ -1,4 +0,0 @@
+</a><a href="#h15-0-0" id="h15-0-0" class="d">-return {
+</a><a href="#h15-0-1" id="h15-0-1" class="d">-    &quot;alec-gibson/nvim-tetris&quot;,
+</a><a href="#h15-0-2" id="h15-0-2" class="d">-    lazy = true,
+</a><a href="#h15-0-3" id="h15-0-3" class="d">-}
+</a><b>diff --git a/<a id="h16" href="../file/nvim/lua/plugins/tokyonight.lua.html">nvim/lua/plugins/tokyonight.lua</a> b/<a href="../file/nvim/lua/plugins/tokyonight.lua.html">nvim/lua/plugins/tokyonight.lua</a></b>
+<a href="#h16-0" id="h16-0" class="h">@@ -1,4 +0,0 @@
+</a><a href="#h16-0-0" id="h16-0-0" class="d">-return {
+</a><a href="#h16-0-1" id="h16-0-1" class="d">-  &quot;folke/tokyonight.nvim&quot;,
+</a><a href="#h16-0-2" id="h16-0-2" class="d">-  lazy = false, -- Load the plugin immediately (not deferred)
+</a><a href="#h16-0-3" id="h16-0-3" class="d">-}
+</a><b>diff --git a/<a id="h17" href="../file/nvim/stylua.toml.html">nvim/stylua.toml</a> b/<a href="../file/nvim/stylua.toml.html">nvim/stylua.toml</a></b>
+<a href="#h17-0" id="h17-0" class="h">@@ -1 +1,3 @@
+</a><a href="#h17-0-0" id="h17-0-0" class="d">-indent_width = 4
+</a><a href="#h17-0-1" id="h17-0-1" class="i">+indent_type = &quot;Spaces&quot;
+</a><a href="#h17-0-2" id="h17-0-2" class="i">+indent_width = 2
+</a><a href="#h17-0-3" id="h17-0-3" class="i">+column_width = 120
+</a><a href="#h17-0-4" id="h17-0-4" class="i">+\ No newline at end of file
+</a></pre>
+</div>
+</body>
+</html>

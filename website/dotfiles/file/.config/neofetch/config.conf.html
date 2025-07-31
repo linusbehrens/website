@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>config.conf - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../"><img src="../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../log.html">Log</a> | <a href="../../../files.html">Files</a> | <a href="../../../refs.html">Refs</a> | <a href="../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> config.conf (18131B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> # See this wiki page for more info:
+<a href="#l2" class="line" id="l2">      2</a> # https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
+<a href="#l3" class="line" id="l3">      3</a> print_info() {
+<a href="#l4" class="line" id="l4">      4</a>     info title
+<a href="#l5" class="line" id="l5">      5</a>     info underline
+<a href="#l6" class="line" id="l6">      6</a> 
+<a href="#l7" class="line" id="l7">      7</a>     info &quot;OS&quot; distro
+<a href="#l8" class="line" id="l8">      8</a>     info &quot;Host&quot; model
+<a href="#l9" class="line" id="l9">      9</a>     info &quot;Kernel&quot; kernel
+<a href="#l10" class="line" id="l10">     10</a>     info &quot;Uptime&quot; uptime
+<a href="#l11" class="line" id="l11">     11</a>     info &quot;Packages&quot; packages
+<a href="#l12" class="line" id="l12">     12</a>     info &quot;Shell&quot; shell
+<a href="#l13" class="line" id="l13">     13</a>     info &quot;Resolution&quot; resolution
+<a href="#l14" class="line" id="l14">     14</a>     info &quot;DE&quot; de
+<a href="#l15" class="line" id="l15">     15</a>     info &quot;WM&quot; wm
+<a href="#l16" class="line" id="l16">     16</a>     info &quot;WM Theme&quot; wm_theme
+<a href="#l17" class="line" id="l17">     17</a>     info &quot;Theme&quot; theme
+<a href="#l18" class="line" id="l18">     18</a>     info &quot;Icons&quot; icons
+<a href="#l19" class="line" id="l19">     19</a>     info &quot;Terminal&quot; term
+<a href="#l20" class="line" id="l20">     20</a>     info &quot;Terminal Font&quot; term_font
+<a href="#l21" class="line" id="l21">     21</a>     info &quot;CPU&quot; cpu
+<a href="#l22" class="line" id="l22">     22</a>     info &quot;GPU&quot; gpu
+<a href="#l23" class="line" id="l23">     23</a>     info &quot;Memory&quot; memory
+<a href="#l24" class="line" id="l24">     24</a> 
+<a href="#l25" class="line" id="l25">     25</a>     # info &quot;GPU Driver&quot; gpu_driver  # Linux/macOS only
+<a href="#l26" class="line" id="l26">     26</a>     # info &quot;CPU Usage&quot; cpu_usage
+<a href="#l27" class="line" id="l27">     27</a>     # info &quot;Disk&quot; disk
+<a href="#l28" class="line" id="l28">     28</a>     # info &quot;Battery&quot; battery
+<a href="#l29" class="line" id="l29">     29</a>     # info &quot;Font&quot; font
+<a href="#l30" class="line" id="l30">     30</a>     # info &quot;Song&quot; song
+<a href="#l31" class="line" id="l31">     31</a>     # [[ &quot;$player&quot; ]] &amp;&amp; prin &quot;Music Player&quot; &quot;$player&quot;
+<a href="#l32" class="line" id="l32">     32</a>     # info &quot;Local IP&quot; local_ip
+<a href="#l33" class="line" id="l33">     33</a>     # info &quot;Public IP&quot; public_ip
+<a href="#l34" class="line" id="l34">     34</a>     # info &quot;Users&quot; users
+<a href="#l35" class="line" id="l35">     35</a>     # info &quot;Locale&quot; locale  # This only works on glibc systems.
+<a href="#l36" class="line" id="l36">     36</a> 
+<a href="#l37" class="line" id="l37">     37</a>     info cols
+<a href="#l38" class="line" id="l38">     38</a> }
+<a href="#l39" class="line" id="l39">     39</a> 
+<a href="#l40" class="line" id="l40">     40</a> # Title
+<a href="#l41" class="line" id="l41">     41</a> 
+<a href="#l42" class="line" id="l42">     42</a> 
+<a href="#l43" class="line" id="l43">     43</a> # Hide/Show Fully qualified domain name.
+<a href="#l44" class="line" id="l44">     44</a> #
+<a href="#l45" class="line" id="l45">     45</a> # Default:  &#39;off&#39;
+<a href="#l46" class="line" id="l46">     46</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l47" class="line" id="l47">     47</a> # Flag:     --title_fqdn
+<a href="#l48" class="line" id="l48">     48</a> title_fqdn=&quot;off&quot;
+<a href="#l49" class="line" id="l49">     49</a> 
+<a href="#l50" class="line" id="l50">     50</a> 
+<a href="#l51" class="line" id="l51">     51</a> # Kernel
+<a href="#l52" class="line" id="l52">     52</a> 
+<a href="#l53" class="line" id="l53">     53</a> 
+<a href="#l54" class="line" id="l54">     54</a> # Shorten the output of the kernel function.
+<a href="#l55" class="line" id="l55">     55</a> #
+<a href="#l56" class="line" id="l56">     56</a> # Default:  &#39;on&#39;
+<a href="#l57" class="line" id="l57">     57</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l58" class="line" id="l58">     58</a> # Flag:     --kernel_shorthand
+<a href="#l59" class="line" id="l59">     59</a> # Supports: Everything except *BSDs (except PacBSD and PC-BSD)
+<a href="#l60" class="line" id="l60">     60</a> #
+<a href="#l61" class="line" id="l61">     61</a> # Example:
+<a href="#l62" class="line" id="l62">     62</a> # on:  &#39;4.8.9-1-ARCH&#39;
+<a href="#l63" class="line" id="l63">     63</a> # off: &#39;Linux 4.8.9-1-ARCH&#39;
+<a href="#l64" class="line" id="l64">     64</a> kernel_shorthand=&quot;on&quot;
+<a href="#l65" class="line" id="l65">     65</a> 
+<a href="#l66" class="line" id="l66">     66</a> 
+<a href="#l67" class="line" id="l67">     67</a> # Distro
+<a href="#l68" class="line" id="l68">     68</a> 
+<a href="#l69" class="line" id="l69">     69</a> 
+<a href="#l70" class="line" id="l70">     70</a> # Shorten the output of the distro function
+<a href="#l71" class="line" id="l71">     71</a> #
+<a href="#l72" class="line" id="l72">     72</a> # Default:  &#39;off&#39;
+<a href="#l73" class="line" id="l73">     73</a> # Values:   &#39;on&#39;, &#39;tiny&#39;, &#39;off&#39;
+<a href="#l74" class="line" id="l74">     74</a> # Flag:     --distro_shorthand
+<a href="#l75" class="line" id="l75">     75</a> # Supports: Everything except Windows and Haiku
+<a href="#l76" class="line" id="l76">     76</a> distro_shorthand=&quot;off&quot;
+<a href="#l77" class="line" id="l77">     77</a> 
+<a href="#l78" class="line" id="l78">     78</a> # Show/Hide OS Architecture.
+<a href="#l79" class="line" id="l79">     79</a> # Show &#39;x86_64&#39;, &#39;x86&#39; and etc in &#39;Distro:&#39; output.
+<a href="#l80" class="line" id="l80">     80</a> #
+<a href="#l81" class="line" id="l81">     81</a> # Default: &#39;on&#39;
+<a href="#l82" class="line" id="l82">     82</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l83" class="line" id="l83">     83</a> # Flag:    --os_arch
+<a href="#l84" class="line" id="l84">     84</a> #
+<a href="#l85" class="line" id="l85">     85</a> # Example:
+<a href="#l86" class="line" id="l86">     86</a> # on:  &#39;Arch Linux x86_64&#39;
+<a href="#l87" class="line" id="l87">     87</a> # off: &#39;Arch Linux&#39;
+<a href="#l88" class="line" id="l88">     88</a> os_arch=&quot;on&quot;
+<a href="#l89" class="line" id="l89">     89</a> 
+<a href="#l90" class="line" id="l90">     90</a> 
+<a href="#l91" class="line" id="l91">     91</a> # Uptime
+<a href="#l92" class="line" id="l92">     92</a> 
+<a href="#l93" class="line" id="l93">     93</a> 
+<a href="#l94" class="line" id="l94">     94</a> # Shorten the output of the uptime function
+<a href="#l95" class="line" id="l95">     95</a> #
+<a href="#l96" class="line" id="l96">     96</a> # Default: &#39;on&#39;
+<a href="#l97" class="line" id="l97">     97</a> # Values:  &#39;on&#39;, &#39;tiny&#39;, &#39;off&#39;
+<a href="#l98" class="line" id="l98">     98</a> # Flag:    --uptime_shorthand
+<a href="#l99" class="line" id="l99">     99</a> #
+<a href="#l100" class="line" id="l100">    100</a> # Example:
+<a href="#l101" class="line" id="l101">    101</a> # on:   &#39;2 days, 10 hours, 3 mins&#39;
+<a href="#l102" class="line" id="l102">    102</a> # tiny: &#39;2d 10h 3m&#39;
+<a href="#l103" class="line" id="l103">    103</a> # off:  &#39;2 days, 10 hours, 3 minutes&#39;
+<a href="#l104" class="line" id="l104">    104</a> uptime_shorthand=&quot;on&quot;
+<a href="#l105" class="line" id="l105">    105</a> 
+<a href="#l106" class="line" id="l106">    106</a> 
+<a href="#l107" class="line" id="l107">    107</a> # Memory
+<a href="#l108" class="line" id="l108">    108</a> 
+<a href="#l109" class="line" id="l109">    109</a> 
+<a href="#l110" class="line" id="l110">    110</a> # Show memory pecentage in output.
+<a href="#l111" class="line" id="l111">    111</a> #
+<a href="#l112" class="line" id="l112">    112</a> # Default: &#39;off&#39;
+<a href="#l113" class="line" id="l113">    113</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l114" class="line" id="l114">    114</a> # Flag:    --memory_percent
+<a href="#l115" class="line" id="l115">    115</a> #
+<a href="#l116" class="line" id="l116">    116</a> # Example:
+<a href="#l117" class="line" id="l117">    117</a> # on:   &#39;1801MiB / 7881MiB (22%)&#39;
+<a href="#l118" class="line" id="l118">    118</a> # off:  &#39;1801MiB / 7881MiB&#39;
+<a href="#l119" class="line" id="l119">    119</a> memory_percent=&quot;off&quot;
+<a href="#l120" class="line" id="l120">    120</a> 
+<a href="#l121" class="line" id="l121">    121</a> # Change memory output unit.
+<a href="#l122" class="line" id="l122">    122</a> #
+<a href="#l123" class="line" id="l123">    123</a> # Default: &#39;mib&#39;
+<a href="#l124" class="line" id="l124">    124</a> # Values:  &#39;kib&#39;, &#39;mib&#39;, &#39;gib&#39;
+<a href="#l125" class="line" id="l125">    125</a> # Flag:    --memory_unit
+<a href="#l126" class="line" id="l126">    126</a> #
+<a href="#l127" class="line" id="l127">    127</a> # Example:
+<a href="#l128" class="line" id="l128">    128</a> # kib  &#39;1020928KiB / 7117824KiB&#39;
+<a href="#l129" class="line" id="l129">    129</a> # mib  &#39;1042MiB / 6951MiB&#39;
+<a href="#l130" class="line" id="l130">    130</a> # gib: &#39; 0.98GiB / 6.79GiB&#39;
+<a href="#l131" class="line" id="l131">    131</a> memory_unit=&quot;mib&quot;
+<a href="#l132" class="line" id="l132">    132</a> 
+<a href="#l133" class="line" id="l133">    133</a> 
+<a href="#l134" class="line" id="l134">    134</a> # Packages
+<a href="#l135" class="line" id="l135">    135</a> 
+<a href="#l136" class="line" id="l136">    136</a> 
+<a href="#l137" class="line" id="l137">    137</a> # Show/Hide Package Manager names.
+<a href="#l138" class="line" id="l138">    138</a> #
+<a href="#l139" class="line" id="l139">    139</a> # Default: &#39;tiny&#39;
+<a href="#l140" class="line" id="l140">    140</a> # Values:  &#39;on&#39;, &#39;tiny&#39; &#39;off&#39;
+<a href="#l141" class="line" id="l141">    141</a> # Flag:    --package_managers
+<a href="#l142" class="line" id="l142">    142</a> #
+<a href="#l143" class="line" id="l143">    143</a> # Example:
+<a href="#l144" class="line" id="l144">    144</a> # on:   &#39;998 (pacman), 8 (flatpak), 4 (snap)&#39;
+<a href="#l145" class="line" id="l145">    145</a> # tiny: &#39;908 (pacman, flatpak, snap)&#39;
+<a href="#l146" class="line" id="l146">    146</a> # off:  &#39;908&#39;
+<a href="#l147" class="line" id="l147">    147</a> package_managers=&quot;on&quot;
+<a href="#l148" class="line" id="l148">    148</a> 
+<a href="#l149" class="line" id="l149">    149</a> 
+<a href="#l150" class="line" id="l150">    150</a> # Shell
+<a href="#l151" class="line" id="l151">    151</a> 
+<a href="#l152" class="line" id="l152">    152</a> 
+<a href="#l153" class="line" id="l153">    153</a> # Show the path to $SHELL
+<a href="#l154" class="line" id="l154">    154</a> #
+<a href="#l155" class="line" id="l155">    155</a> # Default: &#39;off&#39;
+<a href="#l156" class="line" id="l156">    156</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l157" class="line" id="l157">    157</a> # Flag:    --shell_path
+<a href="#l158" class="line" id="l158">    158</a> #
+<a href="#l159" class="line" id="l159">    159</a> # Example:
+<a href="#l160" class="line" id="l160">    160</a> # on:  &#39;/bin/bash&#39;
+<a href="#l161" class="line" id="l161">    161</a> # off: &#39;bash&#39;
+<a href="#l162" class="line" id="l162">    162</a> shell_path=&quot;off&quot;
+<a href="#l163" class="line" id="l163">    163</a> 
+<a href="#l164" class="line" id="l164">    164</a> # Show $SHELL version
+<a href="#l165" class="line" id="l165">    165</a> #
+<a href="#l166" class="line" id="l166">    166</a> # Default: &#39;on&#39;
+<a href="#l167" class="line" id="l167">    167</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l168" class="line" id="l168">    168</a> # Flag:    --shell_version
+<a href="#l169" class="line" id="l169">    169</a> #
+<a href="#l170" class="line" id="l170">    170</a> # Example:
+<a href="#l171" class="line" id="l171">    171</a> # on:  &#39;bash 4.4.5&#39;
+<a href="#l172" class="line" id="l172">    172</a> # off: &#39;bash&#39;
+<a href="#l173" class="line" id="l173">    173</a> shell_version=&quot;on&quot;
+<a href="#l174" class="line" id="l174">    174</a> 
+<a href="#l175" class="line" id="l175">    175</a> 
+<a href="#l176" class="line" id="l176">    176</a> # CPU
+<a href="#l177" class="line" id="l177">    177</a> 
+<a href="#l178" class="line" id="l178">    178</a> 
+<a href="#l179" class="line" id="l179">    179</a> # CPU speed type
+<a href="#l180" class="line" id="l180">    180</a> #
+<a href="#l181" class="line" id="l181">    181</a> # Default: &#39;bios_limit&#39;
+<a href="#l182" class="line" id="l182">    182</a> # Values: &#39;scaling_cur_freq&#39;, &#39;scaling_min_freq&#39;, &#39;scaling_max_freq&#39;, &#39;bios_limit&#39;.
+<a href="#l183" class="line" id="l183">    183</a> # Flag:    --speed_type
+<a href="#l184" class="line" id="l184">    184</a> # Supports: Linux with &#39;cpufreq&#39;
+<a href="#l185" class="line" id="l185">    185</a> # NOTE: Any file in &#39;/sys/devices/system/cpu/cpu0/cpufreq&#39; can be used as a value.
+<a href="#l186" class="line" id="l186">    186</a> speed_type=&quot;bios_limit&quot;
+<a href="#l187" class="line" id="l187">    187</a> 
+<a href="#l188" class="line" id="l188">    188</a> # CPU speed shorthand
+<a href="#l189" class="line" id="l189">    189</a> #
+<a href="#l190" class="line" id="l190">    190</a> # Default: &#39;off&#39;
+<a href="#l191" class="line" id="l191">    191</a> # Values: &#39;on&#39;, &#39;off&#39;.
+<a href="#l192" class="line" id="l192">    192</a> # Flag:    --speed_shorthand
+<a href="#l193" class="line" id="l193">    193</a> # NOTE: This flag is not supported in systems with CPU speed less than 1 GHz
+<a href="#l194" class="line" id="l194">    194</a> #
+<a href="#l195" class="line" id="l195">    195</a> # Example:
+<a href="#l196" class="line" id="l196">    196</a> # on:    &#39;i7-6500U (4) @ 3.1GHz&#39;
+<a href="#l197" class="line" id="l197">    197</a> # off:   &#39;i7-6500U (4) @ 3.100GHz&#39;
+<a href="#l198" class="line" id="l198">    198</a> speed_shorthand=&quot;off&quot;
+<a href="#l199" class="line" id="l199">    199</a> 
+<a href="#l200" class="line" id="l200">    200</a> # Enable/Disable CPU brand in output.
+<a href="#l201" class="line" id="l201">    201</a> #
+<a href="#l202" class="line" id="l202">    202</a> # Default: &#39;on&#39;
+<a href="#l203" class="line" id="l203">    203</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l204" class="line" id="l204">    204</a> # Flag:    --cpu_brand
+<a href="#l205" class="line" id="l205">    205</a> #
+<a href="#l206" class="line" id="l206">    206</a> # Example:
+<a href="#l207" class="line" id="l207">    207</a> # on:   &#39;Intel i7-6500U&#39;
+<a href="#l208" class="line" id="l208">    208</a> # off:  &#39;i7-6500U (4)&#39;
+<a href="#l209" class="line" id="l209">    209</a> cpu_brand=&quot;on&quot;
+<a href="#l210" class="line" id="l210">    210</a> 
+<a href="#l211" class="line" id="l211">    211</a> # CPU Speed
+<a href="#l212" class="line" id="l212">    212</a> # Hide/Show CPU speed.
+<a href="#l213" class="line" id="l213">    213</a> #
+<a href="#l214" class="line" id="l214">    214</a> # Default: &#39;on&#39;
+<a href="#l215" class="line" id="l215">    215</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l216" class="line" id="l216">    216</a> # Flag:    --cpu_speed
+<a href="#l217" class="line" id="l217">    217</a> #
+<a href="#l218" class="line" id="l218">    218</a> # Example:
+<a href="#l219" class="line" id="l219">    219</a> # on:  &#39;Intel i7-6500U (4) @ 3.1GHz&#39;
+<a href="#l220" class="line" id="l220">    220</a> # off: &#39;Intel i7-6500U (4)&#39;
+<a href="#l221" class="line" id="l221">    221</a> cpu_speed=&quot;on&quot;
+<a href="#l222" class="line" id="l222">    222</a> 
+<a href="#l223" class="line" id="l223">    223</a> # CPU Cores
+<a href="#l224" class="line" id="l224">    224</a> # Display CPU cores in output
+<a href="#l225" class="line" id="l225">    225</a> #
+<a href="#l226" class="line" id="l226">    226</a> # Default: &#39;logical&#39;
+<a href="#l227" class="line" id="l227">    227</a> # Values:  &#39;logical&#39;, &#39;physical&#39;, &#39;off&#39;
+<a href="#l228" class="line" id="l228">    228</a> # Flag:    --cpu_cores
+<a href="#l229" class="line" id="l229">    229</a> # Support: &#39;physical&#39; doesn&#39;t work on BSD.
+<a href="#l230" class="line" id="l230">    230</a> #
+<a href="#l231" class="line" id="l231">    231</a> # Example:
+<a href="#l232" class="line" id="l232">    232</a> # logical:  &#39;Intel i7-6500U (4) @ 3.1GHz&#39; (All virtual cores)
+<a href="#l233" class="line" id="l233">    233</a> # physical: &#39;Intel i7-6500U (2) @ 3.1GHz&#39; (All physical cores)
+<a href="#l234" class="line" id="l234">    234</a> # off:      &#39;Intel i7-6500U @ 3.1GHz&#39;
+<a href="#l235" class="line" id="l235">    235</a> cpu_cores=&quot;logical&quot;
+<a href="#l236" class="line" id="l236">    236</a> 
+<a href="#l237" class="line" id="l237">    237</a> # CPU Temperature
+<a href="#l238" class="line" id="l238">    238</a> # Hide/Show CPU temperature.
+<a href="#l239" class="line" id="l239">    239</a> # Note the temperature is added to the regular CPU function.
+<a href="#l240" class="line" id="l240">    240</a> #
+<a href="#l241" class="line" id="l241">    241</a> # Default: &#39;off&#39;
+<a href="#l242" class="line" id="l242">    242</a> # Values:  &#39;C&#39;, &#39;F&#39;, &#39;off&#39;
+<a href="#l243" class="line" id="l243">    243</a> # Flag:    --cpu_temp
+<a href="#l244" class="line" id="l244">    244</a> # Supports: Linux, BSD
+<a href="#l245" class="line" id="l245">    245</a> # NOTE: For FreeBSD and NetBSD-based systems, you&#39;ll need to enable
+<a href="#l246" class="line" id="l246">    246</a> #       coretemp kernel module. This only supports newer Intel processors.
+<a href="#l247" class="line" id="l247">    247</a> #
+<a href="#l248" class="line" id="l248">    248</a> # Example:
+<a href="#l249" class="line" id="l249">    249</a> # C:   &#39;Intel i7-6500U (4) @ 3.1GHz [27.2°C]&#39;
+<a href="#l250" class="line" id="l250">    250</a> # F:   &#39;Intel i7-6500U (4) @ 3.1GHz [82.0°F]&#39;
+<a href="#l251" class="line" id="l251">    251</a> # off: &#39;Intel i7-6500U (4) @ 3.1GHz&#39;
+<a href="#l252" class="line" id="l252">    252</a> cpu_temp=&quot;off&quot;
+<a href="#l253" class="line" id="l253">    253</a> 
+<a href="#l254" class="line" id="l254">    254</a> 
+<a href="#l255" class="line" id="l255">    255</a> # GPU
+<a href="#l256" class="line" id="l256">    256</a> 
+<a href="#l257" class="line" id="l257">    257</a> 
+<a href="#l258" class="line" id="l258">    258</a> # Enable/Disable GPU Brand
+<a href="#l259" class="line" id="l259">    259</a> #
+<a href="#l260" class="line" id="l260">    260</a> # Default: &#39;on&#39;
+<a href="#l261" class="line" id="l261">    261</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l262" class="line" id="l262">    262</a> # Flag:    --gpu_brand
+<a href="#l263" class="line" id="l263">    263</a> #
+<a href="#l264" class="line" id="l264">    264</a> # Example:
+<a href="#l265" class="line" id="l265">    265</a> # on:  &#39;AMD HD 7950&#39;
+<a href="#l266" class="line" id="l266">    266</a> # off: &#39;HD 7950&#39;
+<a href="#l267" class="line" id="l267">    267</a> gpu_brand=&quot;on&quot;
+<a href="#l268" class="line" id="l268">    268</a> 
+<a href="#l269" class="line" id="l269">    269</a> # Which GPU to display
+<a href="#l270" class="line" id="l270">    270</a> #
+<a href="#l271" class="line" id="l271">    271</a> # Default: &#39;all&#39;
+<a href="#l272" class="line" id="l272">    272</a> # Values:  &#39;all&#39;, &#39;dedicated&#39;, &#39;integrated&#39;
+<a href="#l273" class="line" id="l273">    273</a> # Flag:    --gpu_type
+<a href="#l274" class="line" id="l274">    274</a> # Supports: Linux
+<a href="#l275" class="line" id="l275">    275</a> #
+<a href="#l276" class="line" id="l276">    276</a> # Example:
+<a href="#l277" class="line" id="l277">    277</a> # all:
+<a href="#l278" class="line" id="l278">    278</a> #   GPU1: AMD HD 7950
+<a href="#l279" class="line" id="l279">    279</a> #   GPU2: Intel Integrated Graphics
+<a href="#l280" class="line" id="l280">    280</a> #
+<a href="#l281" class="line" id="l281">    281</a> # dedicated:
+<a href="#l282" class="line" id="l282">    282</a> #   GPU1: AMD HD 7950
+<a href="#l283" class="line" id="l283">    283</a> #
+<a href="#l284" class="line" id="l284">    284</a> # integrated:
+<a href="#l285" class="line" id="l285">    285</a> #   GPU1: Intel Integrated Graphics
+<a href="#l286" class="line" id="l286">    286</a> gpu_type=&quot;all&quot;
+<a href="#l287" class="line" id="l287">    287</a> 
+<a href="#l288" class="line" id="l288">    288</a> 
+<a href="#l289" class="line" id="l289">    289</a> # Resolution
+<a href="#l290" class="line" id="l290">    290</a> 
+<a href="#l291" class="line" id="l291">    291</a> 
+<a href="#l292" class="line" id="l292">    292</a> # Display refresh rate next to each monitor
+<a href="#l293" class="line" id="l293">    293</a> # Default: &#39;off&#39;
+<a href="#l294" class="line" id="l294">    294</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l295" class="line" id="l295">    295</a> # Flag:    --refresh_rate
+<a href="#l296" class="line" id="l296">    296</a> # Supports: Doesn&#39;t work on Windows.
+<a href="#l297" class="line" id="l297">    297</a> #
+<a href="#l298" class="line" id="l298">    298</a> # Example:
+<a href="#l299" class="line" id="l299">    299</a> # on:  &#39;1920x1080 @ 60Hz&#39;
+<a href="#l300" class="line" id="l300">    300</a> # off: &#39;1920x1080&#39;
+<a href="#l301" class="line" id="l301">    301</a> refresh_rate=&quot;off&quot;
+<a href="#l302" class="line" id="l302">    302</a> 
+<a href="#l303" class="line" id="l303">    303</a> 
+<a href="#l304" class="line" id="l304">    304</a> # Gtk Theme / Icons / Font
+<a href="#l305" class="line" id="l305">    305</a> 
+<a href="#l306" class="line" id="l306">    306</a> 
+<a href="#l307" class="line" id="l307">    307</a> # Shorten output of GTK Theme / Icons / Font
+<a href="#l308" class="line" id="l308">    308</a> #
+<a href="#l309" class="line" id="l309">    309</a> # Default: &#39;off&#39;
+<a href="#l310" class="line" id="l310">    310</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l311" class="line" id="l311">    311</a> # Flag:    --gtk_shorthand
+<a href="#l312" class="line" id="l312">    312</a> #
+<a href="#l313" class="line" id="l313">    313</a> # Example:
+<a href="#l314" class="line" id="l314">    314</a> # on:  &#39;Numix, Adwaita&#39;
+<a href="#l315" class="line" id="l315">    315</a> # off: &#39;Numix [GTK2], Adwaita [GTK3]&#39;
+<a href="#l316" class="line" id="l316">    316</a> gtk_shorthand=&quot;off&quot;
+<a href="#l317" class="line" id="l317">    317</a> 
+<a href="#l318" class="line" id="l318">    318</a> 
+<a href="#l319" class="line" id="l319">    319</a> # Enable/Disable gtk2 Theme / Icons / Font
+<a href="#l320" class="line" id="l320">    320</a> #
+<a href="#l321" class="line" id="l321">    321</a> # Default: &#39;on&#39;
+<a href="#l322" class="line" id="l322">    322</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l323" class="line" id="l323">    323</a> # Flag:    --gtk2
+<a href="#l324" class="line" id="l324">    324</a> #
+<a href="#l325" class="line" id="l325">    325</a> # Example:
+<a href="#l326" class="line" id="l326">    326</a> # on:  &#39;Numix [GTK2], Adwaita [GTK3]&#39;
+<a href="#l327" class="line" id="l327">    327</a> # off: &#39;Adwaita [GTK3]&#39;
+<a href="#l328" class="line" id="l328">    328</a> gtk2=&quot;on&quot;
+<a href="#l329" class="line" id="l329">    329</a> 
+<a href="#l330" class="line" id="l330">    330</a> # Enable/Disable gtk3 Theme / Icons / Font
+<a href="#l331" class="line" id="l331">    331</a> #
+<a href="#l332" class="line" id="l332">    332</a> # Default: &#39;on&#39;
+<a href="#l333" class="line" id="l333">    333</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l334" class="line" id="l334">    334</a> # Flag:    --gtk3
+<a href="#l335" class="line" id="l335">    335</a> #
+<a href="#l336" class="line" id="l336">    336</a> # Example:
+<a href="#l337" class="line" id="l337">    337</a> # on:  &#39;Numix [GTK2], Adwaita [GTK3]&#39;
+<a href="#l338" class="line" id="l338">    338</a> # off: &#39;Numix [GTK2]&#39;
+<a href="#l339" class="line" id="l339">    339</a> gtk3=&quot;on&quot;
+<a href="#l340" class="line" id="l340">    340</a> 
+<a href="#l341" class="line" id="l341">    341</a> 
+<a href="#l342" class="line" id="l342">    342</a> # IP Address
+<a href="#l343" class="line" id="l343">    343</a> 
+<a href="#l344" class="line" id="l344">    344</a> 
+<a href="#l345" class="line" id="l345">    345</a> # Website to ping for the public IP
+<a href="#l346" class="line" id="l346">    346</a> #
+<a href="#l347" class="line" id="l347">    347</a> # Default: &#39;http://ident.me&#39;
+<a href="#l348" class="line" id="l348">    348</a> # Values:  &#39;url&#39;
+<a href="#l349" class="line" id="l349">    349</a> # Flag:    --ip_host
+<a href="#l350" class="line" id="l350">    350</a> public_ip_host=&quot;http://ident.me&quot;
+<a href="#l351" class="line" id="l351">    351</a> 
+<a href="#l352" class="line" id="l352">    352</a> # Public IP timeout.
+<a href="#l353" class="line" id="l353">    353</a> #
+<a href="#l354" class="line" id="l354">    354</a> # Default: &#39;2&#39;
+<a href="#l355" class="line" id="l355">    355</a> # Values:  &#39;int&#39;
+<a href="#l356" class="line" id="l356">    356</a> # Flag:    --ip_timeout
+<a href="#l357" class="line" id="l357">    357</a> public_ip_timeout=2
+<a href="#l358" class="line" id="l358">    358</a> 
+<a href="#l359" class="line" id="l359">    359</a> 
+<a href="#l360" class="line" id="l360">    360</a> # Desktop Environment
+<a href="#l361" class="line" id="l361">    361</a> 
+<a href="#l362" class="line" id="l362">    362</a> 
+<a href="#l363" class="line" id="l363">    363</a> # Show Desktop Environment version
+<a href="#l364" class="line" id="l364">    364</a> #
+<a href="#l365" class="line" id="l365">    365</a> # Default: &#39;on&#39;
+<a href="#l366" class="line" id="l366">    366</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l367" class="line" id="l367">    367</a> # Flag:    --de_version
+<a href="#l368" class="line" id="l368">    368</a> de_version=&quot;on&quot;
+<a href="#l369" class="line" id="l369">    369</a> 
+<a href="#l370" class="line" id="l370">    370</a> 
+<a href="#l371" class="line" id="l371">    371</a> # Disk
+<a href="#l372" class="line" id="l372">    372</a> 
+<a href="#l373" class="line" id="l373">    373</a> 
+<a href="#l374" class="line" id="l374">    374</a> # Which disks to display.
+<a href="#l375" class="line" id="l375">    375</a> # The values can be any /dev/sdXX, mount point or directory.
+<a href="#l376" class="line" id="l376">    376</a> # NOTE: By default we only show the disk info for &#39;/&#39;.
+<a href="#l377" class="line" id="l377">    377</a> #
+<a href="#l378" class="line" id="l378">    378</a> # Default: &#39;/&#39;
+<a href="#l379" class="line" id="l379">    379</a> # Values:  &#39;/&#39;, &#39;/dev/sdXX&#39;, &#39;/path/to/drive&#39;.
+<a href="#l380" class="line" id="l380">    380</a> # Flag:    --disk_show
+<a href="#l381" class="line" id="l381">    381</a> #
+<a href="#l382" class="line" id="l382">    382</a> # Example:
+<a href="#l383" class="line" id="l383">    383</a> # disk_show=(&#39;/&#39; &#39;/dev/sdb1&#39;):
+<a href="#l384" class="line" id="l384">    384</a> #      &#39;Disk (/): 74G / 118G (66%)&#39;
+<a href="#l385" class="line" id="l385">    385</a> #      &#39;Disk (/mnt/Videos): 823G / 893G (93%)&#39;
+<a href="#l386" class="line" id="l386">    386</a> #
+<a href="#l387" class="line" id="l387">    387</a> # disk_show=(&#39;/&#39;):
+<a href="#l388" class="line" id="l388">    388</a> #      &#39;Disk (/): 74G / 118G (66%)&#39;
+<a href="#l389" class="line" id="l389">    389</a> #
+<a href="#l390" class="line" id="l390">    390</a> disk_show=(&#39;/&#39;)
+<a href="#l391" class="line" id="l391">    391</a> 
+<a href="#l392" class="line" id="l392">    392</a> # Disk subtitle.
+<a href="#l393" class="line" id="l393">    393</a> # What to append to the Disk subtitle.
+<a href="#l394" class="line" id="l394">    394</a> #
+<a href="#l395" class="line" id="l395">    395</a> # Default: &#39;mount&#39;
+<a href="#l396" class="line" id="l396">    396</a> # Values:  &#39;mount&#39;, &#39;name&#39;, &#39;dir&#39;, &#39;none&#39;
+<a href="#l397" class="line" id="l397">    397</a> # Flag:    --disk_subtitle
+<a href="#l398" class="line" id="l398">    398</a> #
+<a href="#l399" class="line" id="l399">    399</a> # Example:
+<a href="#l400" class="line" id="l400">    400</a> # name:   &#39;Disk (/dev/sda1): 74G / 118G (66%)&#39;
+<a href="#l401" class="line" id="l401">    401</a> #         &#39;Disk (/dev/sdb2): 74G / 118G (66%)&#39;
+<a href="#l402" class="line" id="l402">    402</a> #
+<a href="#l403" class="line" id="l403">    403</a> # mount:  &#39;Disk (/): 74G / 118G (66%)&#39;
+<a href="#l404" class="line" id="l404">    404</a> #         &#39;Disk (/mnt/Local Disk): 74G / 118G (66%)&#39;
+<a href="#l405" class="line" id="l405">    405</a> #         &#39;Disk (/mnt/Videos): 74G / 118G (66%)&#39;
+<a href="#l406" class="line" id="l406">    406</a> #
+<a href="#l407" class="line" id="l407">    407</a> # dir:    &#39;Disk (/): 74G / 118G (66%)&#39;
+<a href="#l408" class="line" id="l408">    408</a> #         &#39;Disk (Local Disk): 74G / 118G (66%)&#39;
+<a href="#l409" class="line" id="l409">    409</a> #         &#39;Disk (Videos): 74G / 118G (66%)&#39;
+<a href="#l410" class="line" id="l410">    410</a> #
+<a href="#l411" class="line" id="l411">    411</a> # none:   &#39;Disk: 74G / 118G (66%)&#39;
+<a href="#l412" class="line" id="l412">    412</a> #         &#39;Disk: 74G / 118G (66%)&#39;
+<a href="#l413" class="line" id="l413">    413</a> #         &#39;Disk: 74G / 118G (66%)&#39;
+<a href="#l414" class="line" id="l414">    414</a> disk_subtitle=&quot;mount&quot;
+<a href="#l415" class="line" id="l415">    415</a> 
+<a href="#l416" class="line" id="l416">    416</a> # Disk percent.
+<a href="#l417" class="line" id="l417">    417</a> # Show/Hide disk percent.
+<a href="#l418" class="line" id="l418">    418</a> #
+<a href="#l419" class="line" id="l419">    419</a> # Default: &#39;on&#39;
+<a href="#l420" class="line" id="l420">    420</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l421" class="line" id="l421">    421</a> # Flag:    --disk_percent
+<a href="#l422" class="line" id="l422">    422</a> #
+<a href="#l423" class="line" id="l423">    423</a> # Example:
+<a href="#l424" class="line" id="l424">    424</a> # on:  &#39;Disk (/): 74G / 118G (66%)&#39;
+<a href="#l425" class="line" id="l425">    425</a> # off: &#39;Disk (/): 74G / 118G&#39;
+<a href="#l426" class="line" id="l426">    426</a> disk_percent=&quot;on&quot;
+<a href="#l427" class="line" id="l427">    427</a> 
+<a href="#l428" class="line" id="l428">    428</a> 
+<a href="#l429" class="line" id="l429">    429</a> # Song
+<a href="#l430" class="line" id="l430">    430</a> 
+<a href="#l431" class="line" id="l431">    431</a> 
+<a href="#l432" class="line" id="l432">    432</a> # Manually specify a music player.
+<a href="#l433" class="line" id="l433">    433</a> #
+<a href="#l434" class="line" id="l434">    434</a> # Default: &#39;auto&#39;
+<a href="#l435" class="line" id="l435">    435</a> # Values:  &#39;auto&#39;, &#39;player-name&#39;
+<a href="#l436" class="line" id="l436">    436</a> # Flag:    --music_player
+<a href="#l437" class="line" id="l437">    437</a> #
+<a href="#l438" class="line" id="l438">    438</a> # Available values for &#39;player-name&#39;:
+<a href="#l439" class="line" id="l439">    439</a> #
+<a href="#l440" class="line" id="l440">    440</a> # amarok
+<a href="#l441" class="line" id="l441">    441</a> # audacious
+<a href="#l442" class="line" id="l442">    442</a> # banshee
+<a href="#l443" class="line" id="l443">    443</a> # bluemindo
+<a href="#l444" class="line" id="l444">    444</a> # clementine
+<a href="#l445" class="line" id="l445">    445</a> # cmus
+<a href="#l446" class="line" id="l446">    446</a> # deadbeef
+<a href="#l447" class="line" id="l447">    447</a> # deepin-music
+<a href="#l448" class="line" id="l448">    448</a> # dragon
+<a href="#l449" class="line" id="l449">    449</a> # elisa
+<a href="#l450" class="line" id="l450">    450</a> # exaile
+<a href="#l451" class="line" id="l451">    451</a> # gnome-music
+<a href="#l452" class="line" id="l452">    452</a> # gmusicbrowser
+<a href="#l453" class="line" id="l453">    453</a> # gogglesmm
+<a href="#l454" class="line" id="l454">    454</a> # guayadeque
+<a href="#l455" class="line" id="l455">    455</a> # io.elementary.music
+<a href="#l456" class="line" id="l456">    456</a> # iTunes
+<a href="#l457" class="line" id="l457">    457</a> # juk
+<a href="#l458" class="line" id="l458">    458</a> # lollypop
+<a href="#l459" class="line" id="l459">    459</a> # mocp
+<a href="#l460" class="line" id="l460">    460</a> # mopidy
+<a href="#l461" class="line" id="l461">    461</a> # mpd
+<a href="#l462" class="line" id="l462">    462</a> # muine
+<a href="#l463" class="line" id="l463">    463</a> # netease-cloud-music
+<a href="#l464" class="line" id="l464">    464</a> # olivia
+<a href="#l465" class="line" id="l465">    465</a> # playerctl
+<a href="#l466" class="line" id="l466">    466</a> # pogo
+<a href="#l467" class="line" id="l467">    467</a> # pragha
+<a href="#l468" class="line" id="l468">    468</a> # qmmp
+<a href="#l469" class="line" id="l469">    469</a> # quodlibet
+<a href="#l470" class="line" id="l470">    470</a> # rhythmbox
+<a href="#l471" class="line" id="l471">    471</a> # sayonara
+<a href="#l472" class="line" id="l472">    472</a> # smplayer
+<a href="#l473" class="line" id="l473">    473</a> # spotify
+<a href="#l474" class="line" id="l474">    474</a> # strawberry
+<a href="#l475" class="line" id="l475">    475</a> # tauonmb
+<a href="#l476" class="line" id="l476">    476</a> # tomahawk
+<a href="#l477" class="line" id="l477">    477</a> # vlc
+<a href="#l478" class="line" id="l478">    478</a> # xmms2d
+<a href="#l479" class="line" id="l479">    479</a> # xnoise
+<a href="#l480" class="line" id="l480">    480</a> # yarock
+<a href="#l481" class="line" id="l481">    481</a> music_player=&quot;auto&quot;
+<a href="#l482" class="line" id="l482">    482</a> 
+<a href="#l483" class="line" id="l483">    483</a> # Format to display song information.
+<a href="#l484" class="line" id="l484">    484</a> #
+<a href="#l485" class="line" id="l485">    485</a> # Default: &#39;%artist% - %album% - %title%&#39;
+<a href="#l486" class="line" id="l486">    486</a> # Values:  &#39;%artist%&#39;, &#39;%album%&#39;, &#39;%title%&#39;
+<a href="#l487" class="line" id="l487">    487</a> # Flag:    --song_format
+<a href="#l488" class="line" id="l488">    488</a> #
+<a href="#l489" class="line" id="l489">    489</a> # Example:
+<a href="#l490" class="line" id="l490">    490</a> # default: &#39;Song: Jet - Get Born - Sgt Major&#39;
+<a href="#l491" class="line" id="l491">    491</a> song_format=&quot;%artist% - %album% - %title%&quot;
+<a href="#l492" class="line" id="l492">    492</a> 
+<a href="#l493" class="line" id="l493">    493</a> # Print the Artist, Album and Title on separate lines
+<a href="#l494" class="line" id="l494">    494</a> #
+<a href="#l495" class="line" id="l495">    495</a> # Default: &#39;off&#39;
+<a href="#l496" class="line" id="l496">    496</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l497" class="line" id="l497">    497</a> # Flag:    --song_shorthand
+<a href="#l498" class="line" id="l498">    498</a> #
+<a href="#l499" class="line" id="l499">    499</a> # Example:
+<a href="#l500" class="line" id="l500">    500</a> # on:  &#39;Artist: The Fratellis&#39;
+<a href="#l501" class="line" id="l501">    501</a> #      &#39;Album: Costello Music&#39;
+<a href="#l502" class="line" id="l502">    502</a> #      &#39;Song: Chelsea Dagger&#39;
+<a href="#l503" class="line" id="l503">    503</a> #
+<a href="#l504" class="line" id="l504">    504</a> # off: &#39;Song: The Fratellis - Costello Music - Chelsea Dagger&#39;
+<a href="#l505" class="line" id="l505">    505</a> song_shorthand=&quot;off&quot;
+<a href="#l506" class="line" id="l506">    506</a> 
+<a href="#l507" class="line" id="l507">    507</a> # &#39;mpc&#39; arguments (specify a host, password etc).
+<a href="#l508" class="line" id="l508">    508</a> #
+<a href="#l509" class="line" id="l509">    509</a> # Default:  &#39;&#39;
+<a href="#l510" class="line" id="l510">    510</a> # Example: mpc_args=(-h HOST -P PASSWORD)
+<a href="#l511" class="line" id="l511">    511</a> mpc_args=()
+<a href="#l512" class="line" id="l512">    512</a> 
+<a href="#l513" class="line" id="l513">    513</a> 
+<a href="#l514" class="line" id="l514">    514</a> # Text Colors
+<a href="#l515" class="line" id="l515">    515</a> 
+<a href="#l516" class="line" id="l516">    516</a> 
+<a href="#l517" class="line" id="l517">    517</a> # Text Colors
+<a href="#l518" class="line" id="l518">    518</a> #
+<a href="#l519" class="line" id="l519">    519</a> # Default:  &#39;distro&#39;
+<a href="#l520" class="line" id="l520">    520</a> # Values:   &#39;distro&#39;, &#39;num&#39; &#39;num&#39; &#39;num&#39; &#39;num&#39; &#39;num&#39; &#39;num&#39;
+<a href="#l521" class="line" id="l521">    521</a> # Flag:     --colors
+<a href="#l522" class="line" id="l522">    522</a> #
+<a href="#l523" class="line" id="l523">    523</a> # Each number represents a different part of the text in
+<a href="#l524" class="line" id="l524">    524</a> # this order: &#39;title&#39;, &#39;@&#39;, &#39;underline&#39;, &#39;subtitle&#39;, &#39;colon&#39;, &#39;info&#39;
+<a href="#l525" class="line" id="l525">    525</a> #
+<a href="#l526" class="line" id="l526">    526</a> # Example:
+<a href="#l527" class="line" id="l527">    527</a> # colors=(distro)      - Text is colored based on Distro colors.
+<a href="#l528" class="line" id="l528">    528</a> # colors=(4 6 1 8 8 6) - Text is colored in the order above.
+<a href="#l529" class="line" id="l529">    529</a> colors=(distro)
+<a href="#l530" class="line" id="l530">    530</a> 
+<a href="#l531" class="line" id="l531">    531</a> 
+<a href="#l532" class="line" id="l532">    532</a> # Text Options
+<a href="#l533" class="line" id="l533">    533</a> 
+<a href="#l534" class="line" id="l534">    534</a> 
+<a href="#l535" class="line" id="l535">    535</a> # Toggle bold text
+<a href="#l536" class="line" id="l536">    536</a> #
+<a href="#l537" class="line" id="l537">    537</a> # Default:  &#39;on&#39;
+<a href="#l538" class="line" id="l538">    538</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l539" class="line" id="l539">    539</a> # Flag:     --bold
+<a href="#l540" class="line" id="l540">    540</a> bold=&quot;on&quot;
+<a href="#l541" class="line" id="l541">    541</a> 
+<a href="#l542" class="line" id="l542">    542</a> # Enable/Disable Underline
+<a href="#l543" class="line" id="l543">    543</a> #
+<a href="#l544" class="line" id="l544">    544</a> # Default:  &#39;on&#39;
+<a href="#l545" class="line" id="l545">    545</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l546" class="line" id="l546">    546</a> # Flag:     --underline
+<a href="#l547" class="line" id="l547">    547</a> underline_enabled=&quot;on&quot;
+<a href="#l548" class="line" id="l548">    548</a> 
+<a href="#l549" class="line" id="l549">    549</a> # Underline character
+<a href="#l550" class="line" id="l550">    550</a> #
+<a href="#l551" class="line" id="l551">    551</a> # Default:  &#39;-&#39;
+<a href="#l552" class="line" id="l552">    552</a> # Values:   &#39;string&#39;
+<a href="#l553" class="line" id="l553">    553</a> # Flag:     --underline_char
+<a href="#l554" class="line" id="l554">    554</a> underline_char=&quot;-&quot;
+<a href="#l555" class="line" id="l555">    555</a> 
+<a href="#l556" class="line" id="l556">    556</a> 
+<a href="#l557" class="line" id="l557">    557</a> # Info Separator
+<a href="#l558" class="line" id="l558">    558</a> # Replace the default separator with the specified string.
+<a href="#l559" class="line" id="l559">    559</a> #
+<a href="#l560" class="line" id="l560">    560</a> # Default:  &#39;:&#39;
+<a href="#l561" class="line" id="l561">    561</a> # Flag:     --separator
+<a href="#l562" class="line" id="l562">    562</a> #
+<a href="#l563" class="line" id="l563">    563</a> # Example:
+<a href="#l564" class="line" id="l564">    564</a> # separator=&quot;-&gt;&quot;:   &#39;Shell-&gt; bash&#39;
+<a href="#l565" class="line" id="l565">    565</a> # separator=&quot; =&quot;:   &#39;WM = dwm&#39;
+<a href="#l566" class="line" id="l566">    566</a> separator=&quot;:&quot;
+<a href="#l567" class="line" id="l567">    567</a> 
+<a href="#l568" class="line" id="l568">    568</a> 
+<a href="#l569" class="line" id="l569">    569</a> # Color Blocks
+<a href="#l570" class="line" id="l570">    570</a> 
+<a href="#l571" class="line" id="l571">    571</a> 
+<a href="#l572" class="line" id="l572">    572</a> # Color block range
+<a href="#l573" class="line" id="l573">    573</a> # The range of colors to print.
+<a href="#l574" class="line" id="l574">    574</a> #
+<a href="#l575" class="line" id="l575">    575</a> # Default:  &#39;0&#39;, &#39;15&#39;
+<a href="#l576" class="line" id="l576">    576</a> # Values:   &#39;num&#39;
+<a href="#l577" class="line" id="l577">    577</a> # Flag:     --block_range
+<a href="#l578" class="line" id="l578">    578</a> #
+<a href="#l579" class="line" id="l579">    579</a> # Example:
+<a href="#l580" class="line" id="l580">    580</a> #
+<a href="#l581" class="line" id="l581">    581</a> # Display colors 0-7 in the blocks.  (8 colors)
+<a href="#l582" class="line" id="l582">    582</a> # neofetch --block_range 0 7
+<a href="#l583" class="line" id="l583">    583</a> #
+<a href="#l584" class="line" id="l584">    584</a> # Display colors 0-15 in the blocks. (16 colors)
+<a href="#l585" class="line" id="l585">    585</a> # neofetch --block_range 0 15
+<a href="#l586" class="line" id="l586">    586</a> block_range=(0 15)
+<a href="#l587" class="line" id="l587">    587</a> 
+<a href="#l588" class="line" id="l588">    588</a> # Toggle color blocks
+<a href="#l589" class="line" id="l589">    589</a> #
+<a href="#l590" class="line" id="l590">    590</a> # Default:  &#39;on&#39;
+<a href="#l591" class="line" id="l591">    591</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l592" class="line" id="l592">    592</a> # Flag:     --color_blocks
+<a href="#l593" class="line" id="l593">    593</a> color_blocks=&quot;on&quot;
+<a href="#l594" class="line" id="l594">    594</a> 
+<a href="#l595" class="line" id="l595">    595</a> # Color block width in spaces
+<a href="#l596" class="line" id="l596">    596</a> #
+<a href="#l597" class="line" id="l597">    597</a> # Default:  &#39;3&#39;
+<a href="#l598" class="line" id="l598">    598</a> # Values:   &#39;num&#39;
+<a href="#l599" class="line" id="l599">    599</a> # Flag:     --block_width
+<a href="#l600" class="line" id="l600">    600</a> block_width=3
+<a href="#l601" class="line" id="l601">    601</a> 
+<a href="#l602" class="line" id="l602">    602</a> # Color block height in lines
+<a href="#l603" class="line" id="l603">    603</a> #
+<a href="#l604" class="line" id="l604">    604</a> # Default:  &#39;1&#39;
+<a href="#l605" class="line" id="l605">    605</a> # Values:   &#39;num&#39;
+<a href="#l606" class="line" id="l606">    606</a> # Flag:     --block_height
+<a href="#l607" class="line" id="l607">    607</a> block_height=1
+<a href="#l608" class="line" id="l608">    608</a> 
+<a href="#l609" class="line" id="l609">    609</a> # Color Alignment
+<a href="#l610" class="line" id="l610">    610</a> #
+<a href="#l611" class="line" id="l611">    611</a> # Default: &#39;auto&#39;
+<a href="#l612" class="line" id="l612">    612</a> # Values: &#39;auto&#39;, &#39;num&#39;
+<a href="#l613" class="line" id="l613">    613</a> # Flag: --col_offset
+<a href="#l614" class="line" id="l614">    614</a> #
+<a href="#l615" class="line" id="l615">    615</a> # Number specifies how far from the left side of the terminal (in spaces) to
+<a href="#l616" class="line" id="l616">    616</a> # begin printing the columns, in case you want to e.g. center them under your
+<a href="#l617" class="line" id="l617">    617</a> # text.
+<a href="#l618" class="line" id="l618">    618</a> # Example:
+<a href="#l619" class="line" id="l619">    619</a> # col_offset=&quot;auto&quot; - Default behavior of neofetch
+<a href="#l620" class="line" id="l620">    620</a> # col_offset=7      - Leave 7 spaces then print the colors
+<a href="#l621" class="line" id="l621">    621</a> col_offset=&quot;auto&quot;
+<a href="#l622" class="line" id="l622">    622</a> 
+<a href="#l623" class="line" id="l623">    623</a> # Progress Bars
+<a href="#l624" class="line" id="l624">    624</a> 
+<a href="#l625" class="line" id="l625">    625</a> 
+<a href="#l626" class="line" id="l626">    626</a> # Bar characters
+<a href="#l627" class="line" id="l627">    627</a> #
+<a href="#l628" class="line" id="l628">    628</a> # Default:  &#39;-&#39;, &#39;=&#39;
+<a href="#l629" class="line" id="l629">    629</a> # Values:   &#39;string&#39;, &#39;string&#39;
+<a href="#l630" class="line" id="l630">    630</a> # Flag:     --bar_char
+<a href="#l631" class="line" id="l631">    631</a> #
+<a href="#l632" class="line" id="l632">    632</a> # Example:
+<a href="#l633" class="line" id="l633">    633</a> # neofetch --bar_char &#39;elapsed&#39; &#39;total&#39;
+<a href="#l634" class="line" id="l634">    634</a> # neofetch --bar_char &#39;-&#39; &#39;=&#39;
+<a href="#l635" class="line" id="l635">    635</a> bar_char_elapsed=&quot;-&quot;
+<a href="#l636" class="line" id="l636">    636</a> bar_char_total=&quot;=&quot;
+<a href="#l637" class="line" id="l637">    637</a> 
+<a href="#l638" class="line" id="l638">    638</a> # Toggle Bar border
+<a href="#l639" class="line" id="l639">    639</a> #
+<a href="#l640" class="line" id="l640">    640</a> # Default:  &#39;on&#39;
+<a href="#l641" class="line" id="l641">    641</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l642" class="line" id="l642">    642</a> # Flag:     --bar_border
+<a href="#l643" class="line" id="l643">    643</a> bar_border=&quot;on&quot;
+<a href="#l644" class="line" id="l644">    644</a> 
+<a href="#l645" class="line" id="l645">    645</a> # Progress bar length in spaces
+<a href="#l646" class="line" id="l646">    646</a> # Number of chars long to make the progress bars.
+<a href="#l647" class="line" id="l647">    647</a> #
+<a href="#l648" class="line" id="l648">    648</a> # Default:  &#39;15&#39;
+<a href="#l649" class="line" id="l649">    649</a> # Values:   &#39;num&#39;
+<a href="#l650" class="line" id="l650">    650</a> # Flag:     --bar_length
+<a href="#l651" class="line" id="l651">    651</a> bar_length=15
+<a href="#l652" class="line" id="l652">    652</a> 
+<a href="#l653" class="line" id="l653">    653</a> # Progress bar colors
+<a href="#l654" class="line" id="l654">    654</a> # When set to distro, uses your distro&#39;s logo colors.
+<a href="#l655" class="line" id="l655">    655</a> #
+<a href="#l656" class="line" id="l656">    656</a> # Default:  &#39;distro&#39;, &#39;distro&#39;
+<a href="#l657" class="line" id="l657">    657</a> # Values:   &#39;distro&#39;, &#39;num&#39;
+<a href="#l658" class="line" id="l658">    658</a> # Flag:     --bar_colors
+<a href="#l659" class="line" id="l659">    659</a> #
+<a href="#l660" class="line" id="l660">    660</a> # Example:
+<a href="#l661" class="line" id="l661">    661</a> # neofetch --bar_colors 3 4
+<a href="#l662" class="line" id="l662">    662</a> # neofetch --bar_colors distro 5
+<a href="#l663" class="line" id="l663">    663</a> bar_color_elapsed=&quot;distro&quot;
+<a href="#l664" class="line" id="l664">    664</a> bar_color_total=&quot;distro&quot;
+<a href="#l665" class="line" id="l665">    665</a> 
+<a href="#l666" class="line" id="l666">    666</a> 
+<a href="#l667" class="line" id="l667">    667</a> # Info display
+<a href="#l668" class="line" id="l668">    668</a> # Display a bar with the info.
+<a href="#l669" class="line" id="l669">    669</a> #
+<a href="#l670" class="line" id="l670">    670</a> # Default: &#39;off&#39;
+<a href="#l671" class="line" id="l671">    671</a> # Values:  &#39;bar&#39;, &#39;infobar&#39;, &#39;barinfo&#39;, &#39;off&#39;
+<a href="#l672" class="line" id="l672">    672</a> # Flags:   --cpu_display
+<a href="#l673" class="line" id="l673">    673</a> #          --memory_display
+<a href="#l674" class="line" id="l674">    674</a> #          --battery_display
+<a href="#l675" class="line" id="l675">    675</a> #          --disk_display
+<a href="#l676" class="line" id="l676">    676</a> #
+<a href="#l677" class="line" id="l677">    677</a> # Example:
+<a href="#l678" class="line" id="l678">    678</a> # bar:     &#39;[---=======]&#39;
+<a href="#l679" class="line" id="l679">    679</a> # infobar: &#39;info [---=======]&#39;
+<a href="#l680" class="line" id="l680">    680</a> # barinfo: &#39;[---=======] info&#39;
+<a href="#l681" class="line" id="l681">    681</a> # off:     &#39;info&#39;
+<a href="#l682" class="line" id="l682">    682</a> cpu_display=&quot;off&quot;
+<a href="#l683" class="line" id="l683">    683</a> memory_display=&quot;off&quot;
+<a href="#l684" class="line" id="l684">    684</a> battery_display=&quot;off&quot;
+<a href="#l685" class="line" id="l685">    685</a> disk_display=&quot;off&quot;
+<a href="#l686" class="line" id="l686">    686</a> 
+<a href="#l687" class="line" id="l687">    687</a> 
+<a href="#l688" class="line" id="l688">    688</a> # Backend Settings
+<a href="#l689" class="line" id="l689">    689</a> 
+<a href="#l690" class="line" id="l690">    690</a> 
+<a href="#l691" class="line" id="l691">    691</a> # Image backend.
+<a href="#l692" class="line" id="l692">    692</a> #
+<a href="#l693" class="line" id="l693">    693</a> # Default:  &#39;ascii&#39;
+<a href="#l694" class="line" id="l694">    694</a> # Values:   &#39;ascii&#39;, &#39;caca&#39;, &#39;chafa&#39;, &#39;jp2a&#39;, &#39;iterm2&#39;, &#39;off&#39;,
+<a href="#l695" class="line" id="l695">    695</a> #           &#39;pot&#39;, &#39;termpix&#39;, &#39;pixterm&#39;, &#39;tycat&#39;, &#39;w3m&#39;, &#39;kitty&#39;
+<a href="#l696" class="line" id="l696">    696</a> # Flag:     --backend
+<a href="#l697" class="line" id="l697">    697</a> image_backend=&quot;ascii&quot;
+<a href="#l698" class="line" id="l698">    698</a> 
+<a href="#l699" class="line" id="l699">    699</a> # Image Source
+<a href="#l700" class="line" id="l700">    700</a> #
+<a href="#l701" class="line" id="l701">    701</a> # Which image or ascii file to display.
+<a href="#l702" class="line" id="l702">    702</a> #
+<a href="#l703" class="line" id="l703">    703</a> # Default:  &#39;auto&#39;
+<a href="#l704" class="line" id="l704">    704</a> # Values:   &#39;auto&#39;, &#39;ascii&#39;, &#39;wallpaper&#39;, &#39;/path/to/img&#39;, &#39;/path/to/ascii&#39;, &#39;/path/to/dir/&#39;
+<a href="#l705" class="line" id="l705">    705</a> #           &#39;command output (neofetch --ascii &quot;$(fortune | cowsay -W 30)&quot;)&#39;
+<a href="#l706" class="line" id="l706">    706</a> # Flag:     --source
+<a href="#l707" class="line" id="l707">    707</a> #
+<a href="#l708" class="line" id="l708">    708</a> # NOTE: &#39;auto&#39; will pick the best image source for whatever image backend is used.
+<a href="#l709" class="line" id="l709">    709</a> #       In ascii mode, distro ascii art will be used and in an image mode, your
+<a href="#l710" class="line" id="l710">    710</a> #       wallpaper will be used.
+<a href="#l711" class="line" id="l711">    711</a> image_source=&quot;auto&quot;
+<a href="#l712" class="line" id="l712">    712</a> 
+<a href="#l713" class="line" id="l713">    713</a> 
+<a href="#l714" class="line" id="l714">    714</a> # Ascii Options
+<a href="#l715" class="line" id="l715">    715</a> 
+<a href="#l716" class="line" id="l716">    716</a> 
+<a href="#l717" class="line" id="l717">    717</a> # Ascii distro
+<a href="#l718" class="line" id="l718">    718</a> # Which distro&#39;s ascii art to display.
+<a href="#l719" class="line" id="l719">    719</a> #
+<a href="#l720" class="line" id="l720">    720</a> # Default: &#39;auto&#39;
+<a href="#l721" class="line" id="l721">    721</a> # Values:  &#39;auto&#39;, &#39;distro_name&#39;
+<a href="#l722" class="line" id="l722">    722</a> # Flag:    --ascii_distro
+<a href="#l723" class="line" id="l723">    723</a> # NOTE: AIX, Alpine, Anarchy, Android, Antergos, antiX, &quot;AOSC OS&quot;,
+<a href="#l724" class="line" id="l724">    724</a> #       &quot;AOSC OS/Retro&quot;, Apricity, ArcoLinux, ArchBox, ARCHlabs,
+<a href="#l725" class="line" id="l725">    725</a> #       ArchStrike, XFerience, ArchMerge, Arch, Artix, Arya, Bedrock,
+<a href="#l726" class="line" id="l726">    726</a> #       Bitrig, BlackArch, BLAG, BlankOn, BlueLight, bonsai, BSD,
+<a href="#l727" class="line" id="l727">    727</a> #       BunsenLabs, Calculate, Carbs, CentOS, Chakra, ChaletOS,
+<a href="#l728" class="line" id="l728">    728</a> #       Chapeau, Chrom*, Cleanjaro, ClearOS, Clear_Linux, Clover,
+<a href="#l729" class="line" id="l729">    729</a> #       Condres, Container_Linux, CRUX, Cucumber, Debian, Deepin,
+<a href="#l730" class="line" id="l730">    730</a> #       DesaOS, Devuan, DracOS, DarkOs, DragonFly, Drauger, Elementary,
+<a href="#l731" class="line" id="l731">    731</a> #       EndeavourOS, Endless, EuroLinux, Exherbo, Fedora, Feren, FreeBSD,
+<a href="#l732" class="line" id="l732">    732</a> #       FreeMiNT, Frugalware, Funtoo, GalliumOS, Garuda, Gentoo, Pentoo,
+<a href="#l733" class="line" id="l733">    733</a> #       gNewSense, GNOME, GNU, GoboLinux, Grombyang, Guix, Haiku, Huayra,
+<a href="#l734" class="line" id="l734">    734</a> #       Hyperbola, janus, Kali, KaOS, KDE_neon, Kibojoe, Kogaion,
+<a href="#l735" class="line" id="l735">    735</a> #       Korora, KSLinux, Kubuntu, LEDE, LFS, Linux_Lite,
+<a href="#l736" class="line" id="l736">    736</a> #       LMDE, Lubuntu, Lunar, macos, Mageia, MagpieOS, Mandriva,
+<a href="#l737" class="line" id="l737">    737</a> #       Manjaro, Maui, Mer, Minix, LinuxMint, MX_Linux, Namib,
+<a href="#l738" class="line" id="l738">    738</a> #       Neptune, NetBSD, Netrunner, Nitrux, NixOS, Nurunner,
+<a href="#l739" class="line" id="l739">    739</a> #       NuTyX, OBRevenge, OpenBSD, openEuler, OpenIndiana, openmamba,
+<a href="#l740" class="line" id="l740">    740</a> #       OpenMandriva, OpenStage, OpenWrt, osmc, Oracle, OS Elbrus, PacBSD,
+<a href="#l741" class="line" id="l741">    741</a> #       Parabola, Pardus, Parrot, Parsix, TrueOS, PCLinuxOS, Peppermint,
+<a href="#l742" class="line" id="l742">    742</a> #       popos, Porteus, PostMarketOS, Proxmox, Puppy, PureOS, Qubes, Radix,
+<a href="#l743" class="line" id="l743">    743</a> #       Raspbian, Reborn_OS, Redstar, Redcore, Redhat, Refracted_Devuan,
+<a href="#l744" class="line" id="l744">    744</a> #       Regata, Rosa, sabotage, Sabayon, Sailfish, SalentOS, Scientific,
+<a href="#l745" class="line" id="l745">    745</a> #       Septor, SereneLinux, SharkLinux, Siduction, Slackware, SliTaz,
+<a href="#l746" class="line" id="l746">    746</a> #       SmartOS, Solus, Source_Mage, Sparky, Star, SteamOS, SunOS,
+<a href="#l747" class="line" id="l747">    747</a> #       openSUSE_Leap, openSUSE_Tumbleweed, openSUSE, SwagArch, Tails,
+<a href="#l748" class="line" id="l748">    748</a> #       Trisquel, Ubuntu-Budgie, Ubuntu-GNOME, Ubuntu-MATE, Ubuntu-Studio,
+<a href="#l749" class="line" id="l749">    749</a> #       Ubuntu, Venom, Void, Obarun, windows10, Windows7, Xubuntu, Zorin,
+<a href="#l750" class="line" id="l750">    750</a> #       and IRIX have ascii logos
+<a href="#l751" class="line" id="l751">    751</a> # NOTE: Arch, Ubuntu, Redhat, and Dragonfly have &#39;old&#39; logo variants.
+<a href="#l752" class="line" id="l752">    752</a> #       Use &#39;{distro name}_old&#39; to use the old logos.
+<a href="#l753" class="line" id="l753">    753</a> # NOTE: Ubuntu has flavor variants.
+<a href="#l754" class="line" id="l754">    754</a> #       Change this to Lubuntu, Kubuntu, Xubuntu, Ubuntu-GNOME,
+<a href="#l755" class="line" id="l755">    755</a> #       Ubuntu-Studio, Ubuntu-Mate  or Ubuntu-Budgie to use the flavors.
+<a href="#l756" class="line" id="l756">    756</a> # NOTE: Arcolinux, Dragonfly, Fedora, Alpine, Arch, Ubuntu,
+<a href="#l757" class="line" id="l757">    757</a> #       CRUX, Debian, Gentoo, FreeBSD, Mac, NixOS, OpenBSD, android,
+<a href="#l758" class="line" id="l758">    758</a> #       Antrix, CentOS, Cleanjaro, ElementaryOS, GUIX, Hyperbola,
+<a href="#l759" class="line" id="l759">    759</a> #       Manjaro, MXLinux, NetBSD, Parabola, POP_OS, PureOS,
+<a href="#l760" class="line" id="l760">    760</a> #       Slackware, SunOS, LinuxLite, OpenSUSE, Raspbian,
+<a href="#l761" class="line" id="l761">    761</a> #       postmarketOS, and Void have a smaller logo variant.
+<a href="#l762" class="line" id="l762">    762</a> #       Use &#39;{distro name}_small&#39; to use the small variants.
+<a href="#l763" class="line" id="l763">    763</a> ascii_distro=&quot;auto&quot;
+<a href="#l764" class="line" id="l764">    764</a> 
+<a href="#l765" class="line" id="l765">    765</a> # Ascii Colors
+<a href="#l766" class="line" id="l766">    766</a> #
+<a href="#l767" class="line" id="l767">    767</a> # Default:  &#39;distro&#39;
+<a href="#l768" class="line" id="l768">    768</a> # Values:   &#39;distro&#39;, &#39;num&#39; &#39;num&#39; &#39;num&#39; &#39;num&#39; &#39;num&#39; &#39;num&#39;
+<a href="#l769" class="line" id="l769">    769</a> # Flag:     --ascii_colors
+<a href="#l770" class="line" id="l770">    770</a> #
+<a href="#l771" class="line" id="l771">    771</a> # Example:
+<a href="#l772" class="line" id="l772">    772</a> # ascii_colors=(distro)      - Ascii is colored based on Distro colors.
+<a href="#l773" class="line" id="l773">    773</a> # ascii_colors=(4 6 1 8 8 6) - Ascii is colored using these colors.
+<a href="#l774" class="line" id="l774">    774</a> ascii_colors=(distro)
+<a href="#l775" class="line" id="l775">    775</a> 
+<a href="#l776" class="line" id="l776">    776</a> # Bold ascii logo
+<a href="#l777" class="line" id="l777">    777</a> # Whether or not to bold the ascii logo.
+<a href="#l778" class="line" id="l778">    778</a> #
+<a href="#l779" class="line" id="l779">    779</a> # Default: &#39;on&#39;
+<a href="#l780" class="line" id="l780">    780</a> # Values:  &#39;on&#39;, &#39;off&#39;
+<a href="#l781" class="line" id="l781">    781</a> # Flag:    --ascii_bold
+<a href="#l782" class="line" id="l782">    782</a> ascii_bold=&quot;on&quot;
+<a href="#l783" class="line" id="l783">    783</a> 
+<a href="#l784" class="line" id="l784">    784</a> 
+<a href="#l785" class="line" id="l785">    785</a> # Image Options
+<a href="#l786" class="line" id="l786">    786</a> 
+<a href="#l787" class="line" id="l787">    787</a> 
+<a href="#l788" class="line" id="l788">    788</a> # Image loop
+<a href="#l789" class="line" id="l789">    789</a> # Setting this to on will make neofetch redraw the image constantly until
+<a href="#l790" class="line" id="l790">    790</a> # Ctrl+C is pressed. This fixes display issues in some terminal emulators.
+<a href="#l791" class="line" id="l791">    791</a> #
+<a href="#l792" class="line" id="l792">    792</a> # Default:  &#39;off&#39;
+<a href="#l793" class="line" id="l793">    793</a> # Values:   &#39;on&#39;, &#39;off&#39;
+<a href="#l794" class="line" id="l794">    794</a> # Flag:     --loop
+<a href="#l795" class="line" id="l795">    795</a> image_loop=&quot;off&quot;
+<a href="#l796" class="line" id="l796">    796</a> 
+<a href="#l797" class="line" id="l797">    797</a> # Thumbnail directory
+<a href="#l798" class="line" id="l798">    798</a> #
+<a href="#l799" class="line" id="l799">    799</a> # Default: &#39;~/.cache/thumbnails/neofetch&#39;
+<a href="#l800" class="line" id="l800">    800</a> # Values:  &#39;dir&#39;
+<a href="#l801" class="line" id="l801">    801</a> thumbnail_dir=&quot;${XDG_CACHE_HOME:-${HOME}/.cache}/thumbnails/neofetch&quot;
+<a href="#l802" class="line" id="l802">    802</a> 
+<a href="#l803" class="line" id="l803">    803</a> # Crop mode
+<a href="#l804" class="line" id="l804">    804</a> #
+<a href="#l805" class="line" id="l805">    805</a> # Default:  &#39;normal&#39;
+<a href="#l806" class="line" id="l806">    806</a> # Values:   &#39;normal&#39;, &#39;fit&#39;, &#39;fill&#39;
+<a href="#l807" class="line" id="l807">    807</a> # Flag:     --crop_mode
+<a href="#l808" class="line" id="l808">    808</a> #
+<a href="#l809" class="line" id="l809">    809</a> # See this wiki page to learn about the fit and fill options.
+<a href="#l810" class="line" id="l810">    810</a> # https://github.com/dylanaraps/neofetch/wiki/What-is-Waifu-Crop%3F
+<a href="#l811" class="line" id="l811">    811</a> crop_mode=&quot;normal&quot;
+<a href="#l812" class="line" id="l812">    812</a> 
+<a href="#l813" class="line" id="l813">    813</a> # Crop offset
+<a href="#l814" class="line" id="l814">    814</a> # Note: Only affects &#39;normal&#39; crop mode.
+<a href="#l815" class="line" id="l815">    815</a> #
+<a href="#l816" class="line" id="l816">    816</a> # Default:  &#39;center&#39;
+<a href="#l817" class="line" id="l817">    817</a> # Values:   &#39;northwest&#39;, &#39;north&#39;, &#39;northeast&#39;, &#39;west&#39;, &#39;center&#39;
+<a href="#l818" class="line" id="l818">    818</a> #           &#39;east&#39;, &#39;southwest&#39;, &#39;south&#39;, &#39;southeast&#39;
+<a href="#l819" class="line" id="l819">    819</a> # Flag:     --crop_offset
+<a href="#l820" class="line" id="l820">    820</a> crop_offset=&quot;center&quot;
+<a href="#l821" class="line" id="l821">    821</a> 
+<a href="#l822" class="line" id="l822">    822</a> # Image size
+<a href="#l823" class="line" id="l823">    823</a> # The image is half the terminal width by default.
+<a href="#l824" class="line" id="l824">    824</a> #
+<a href="#l825" class="line" id="l825">    825</a> # Default: &#39;auto&#39;
+<a href="#l826" class="line" id="l826">    826</a> # Values:  &#39;auto&#39;, &#39;00px&#39;, &#39;00%&#39;, &#39;none&#39;
+<a href="#l827" class="line" id="l827">    827</a> # Flags:   --image_size
+<a href="#l828" class="line" id="l828">    828</a> #          --size
+<a href="#l829" class="line" id="l829">    829</a> image_size=&quot;auto&quot;
+<a href="#l830" class="line" id="l830">    830</a> 
+<a href="#l831" class="line" id="l831">    831</a> # Gap between image and text
+<a href="#l832" class="line" id="l832">    832</a> #
+<a href="#l833" class="line" id="l833">    833</a> # Default: &#39;3&#39;
+<a href="#l834" class="line" id="l834">    834</a> # Values:  &#39;num&#39;, &#39;-num&#39;
+<a href="#l835" class="line" id="l835">    835</a> # Flag:    --gap
+<a href="#l836" class="line" id="l836">    836</a> gap=3
+<a href="#l837" class="line" id="l837">    837</a> 
+<a href="#l838" class="line" id="l838">    838</a> # Image offsets
+<a href="#l839" class="line" id="l839">    839</a> # Only works with the w3m backend.
+<a href="#l840" class="line" id="l840">    840</a> #
+<a href="#l841" class="line" id="l841">    841</a> # Default: &#39;0&#39;
+<a href="#l842" class="line" id="l842">    842</a> # Values:  &#39;px&#39;
+<a href="#l843" class="line" id="l843">    843</a> # Flags:   --xoffset
+<a href="#l844" class="line" id="l844">    844</a> #          --yoffset
+<a href="#l845" class="line" id="l845">    845</a> yoffset=0
+<a href="#l846" class="line" id="l846">    846</a> xoffset=0
+<a href="#l847" class="line" id="l847">    847</a> 
+<a href="#l848" class="line" id="l848">    848</a> # Image background color
+<a href="#l849" class="line" id="l849">    849</a> # Only works with the w3m backend.
+<a href="#l850" class="line" id="l850">    850</a> #
+<a href="#l851" class="line" id="l851">    851</a> # Default: &#39;&#39;
+<a href="#l852" class="line" id="l852">    852</a> # Values:  &#39;color&#39;, &#39;blue&#39;
+<a href="#l853" class="line" id="l853">    853</a> # Flag:    --bg_color
+<a href="#l854" class="line" id="l854">    854</a> background_color=
+<a href="#l855" class="line" id="l855">    855</a> 
+<a href="#l856" class="line" id="l856">    856</a> 
+<a href="#l857" class="line" id="l857">    857</a> # Misc Options
+<a href="#l858" class="line" id="l858">    858</a> 
+<a href="#l859" class="line" id="l859">    859</a> # Stdout mode
+<a href="#l860" class="line" id="l860">    860</a> # Turn off all colors and disables image backend (ASCII/Image).
+<a href="#l861" class="line" id="l861">    861</a> # Useful for piping into another command.
+<a href="#l862" class="line" id="l862">    862</a> # Default: &#39;off&#39;
+<a href="#l863" class="line" id="l863">    863</a> # Values: &#39;on&#39;, &#39;off&#39;
+<a href="#l864" class="line" id="l864">    864</a> stdout=&quot;off&quot;
+</pre>
+</div>
+</body>
+</html>

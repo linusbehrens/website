@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>yazi - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/27c7361a5632123bbb40c64f959c668375a513af.html">27c7361a5632123bbb40c64f959c668375a513af</a>
+<b>parent</b> <a href="../commit/93892729262cee7143ee410bf0b06f9aa94d2e7d.html">93892729262cee7143ee410bf0b06f9aa94d2e7d</a>
+<b>Author:</b> linus &lt;<a href="mailto:linus@behrens-familie.de">linus@behrens-familie.de</a>&gt;
+<b>Date:</b>   Sun, 11 May 2025 13:19:36 +0000
+
+yazi
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">init.bash</a></td><td> | </td><td class="num">6</td><td><span class="i">+++++</span><span class="d">-</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">nvim/lazy-lock.json</a></td><td> | </td><td class="num">42</td><td><span class="i">+++++++++++++++++++++++++</span><span class="d">-----------------</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">yazi/yazi.toml</a></td><td> | </td><td class="num">2</td><td><span class="i">++</span><span class="d"></span></td></tr>
+</table></pre><pre>3 files changed, 32 insertions(+), 18 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/init.bash.html">init.bash</a> b/<a href="../file/init.bash.html">init.bash</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -11,4 +11,8 @@ rm -rf ~/.scripts
+</a> ln -s ~/dotfiles/.scripts/ ~/.scripts
+ 
+ rm -rf $HOME/Library/Application Support/com.mitchellh.ghostty
+<a href="#h0-0-3" id="h0-0-3" class="d">-ln -s $HOME/dotfiles/ghostty/ $HOME/Library/Application Support/com.mitchellh.ghostty
+</a><a href="#h0-0-4" id="h0-0-4" class="i">+rm -rf $HOME/.config/ghostty
+</a><a href="#h0-0-5" id="h0-0-5" class="i">+ln -s $HOME/dotfiles/ghostty/ $HOME/.config/
+</a><a href="#h0-0-6" id="h0-0-6" class="i">+
+</a><a href="#h0-0-7" id="h0-0-7" class="i">+rm -rf $HOME/.config/yazi
+</a><a href="#h0-0-8" id="h0-0-8" class="i">+ln -s $HOME/dotfiles/yazi/ $HOME/.config/
+</a><b>diff --git a/<a id="h1" href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a> b/<a href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -1,33 +1,41 @@
+</a> {
+   &quot;LazyVim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;3f034d0a7f58031123300309f2efd3bb0356ee21&quot; },
+<a href="#h1-0-2" id="h1-0-2" class="d">-  &quot;blink.cmp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;cb5e346d9e0efa7a3eee7fd4da0b690c48d2a98e&quot; },
+</a><a href="#h1-0-3" id="h1-0-3" class="i">+  &quot;LuaSnip&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;458560534a73f7f8d7a11a146c801db00b081df0&quot; },
+</a>   &quot;bufferline.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3&quot; },
+<a href="#h1-0-5" id="h1-0-5" class="d">-  &quot;catppuccin&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;5b5e3aef9ad7af84f463d17b5479f06b87d5c429&quot; },
+</a><a href="#h1-0-6" id="h1-0-6" class="d">-  &quot;conform.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;6632e7d788a85bf8405ea0c812d343fc308b7b8c&quot; },
+</a><a href="#h1-0-7" id="h1-0-7" class="d">-  &quot;friendly-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;31f2a2657b6261724313281fe0d8ba6f43f4a4fa&quot; },
+</a><a href="#h1-0-8" id="h1-0-8" class="d">-  &quot;fzf-lua&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;34de8546d932497d90b24081045b8238b9818c76&quot; },
+</a><a href="#h1-0-9" id="h1-0-9" class="d">-  &quot;gitsigns.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;02eafb1273afec94447f66d1a43fc5e477c2ab8a&quot; },
+</a><a href="#h1-0-10" id="h1-0-10" class="d">-  &quot;grug-far.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1c9325f6ab18fc8ac4d4c57e765aa845af148277&quot; },
+</a><a href="#h1-0-11" id="h1-0-11" class="i">+  &quot;catppuccin&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1bf070129c0b6f77cc23f6a2212dcdc868308c52&quot; },
+</a><a href="#h1-0-12" id="h1-0-12" class="i">+  &quot;cmp-buffer&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b74fab3656eea9de20a9b8116afa3cfc4ec09657&quot; },
+</a><a href="#h1-0-13" id="h1-0-13" class="i">+  &quot;cmp-nvim-lsp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a8912b88ce488f411177fc8aed358b04dc246d7b&quot; },
+</a><a href="#h1-0-14" id="h1-0-14" class="i">+  &quot;cmp-path&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;c6635aae33a50d6010bf1aa756ac2398a2d54c32&quot; },
+</a><a href="#h1-0-15" id="h1-0-15" class="i">+  &quot;cmp_luasnip&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;98d9cb5c2c38532bd9bdb481067b20fea8f32e90&quot; },
+</a><a href="#h1-0-16" id="h1-0-16" class="i">+  &quot;conform.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;374aaf384e2e841607b8e2fe63fa3ad01d111c91&quot; },
+</a><a href="#h1-0-17" id="h1-0-17" class="i">+  &quot;friendly-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;572f5660cf05f8cd8834e096d7b4c921ba18e175&quot; },
+</a><a href="#h1-0-18" id="h1-0-18" class="i">+  &quot;fzf-lua&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b45881a2043d96506ba628f3bc65a4594b179c4e&quot; },
+</a><a href="#h1-0-19" id="h1-0-19" class="i">+  &quot;gitsigns.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;43b0c856ae5f32a195d83f4a27fe21d63e6c966c&quot; },
+</a><a href="#h1-0-20" id="h1-0-20" class="i">+  &quot;grug-far.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;78c8d27c6f3300bfa92bb535236732d8e9bcb614&quot; },
+</a>   &quot;lazy.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a&quot; },
+   &quot;lazydev.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c&quot; },
+   &quot;lualine.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;f4f791f67e70d378a754d02da068231d2352e5bc&quot; },
+<a href="#h1-0-24" id="h1-0-24" class="d">-  &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1a31f824b9cd5bc6f342fc29e9a53b60d74af245&quot; },
+</a><a href="#h1-0-25" id="h1-0-25" class="d">-  &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;fc98833b6da5de5a9c5b1446ac541577059555be&quot; },
+</a><a href="#h1-0-26" id="h1-0-26" class="i">+  &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d39a75bbce4b8aad5d627191ea915179c77c100f&quot; },
+</a><a href="#h1-0-27" id="h1-0-27" class="i">+  &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;7c7318e8bae7e3536ef6b9e86b9e38e74f2e125e&quot; },
+</a>   &quot;mini.ai&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;e139eb1101beb0250fea322f8c07a42f0f175688&quot; },
+<a href="#h1-0-29" id="h1-0-29" class="i">+  &quot;mini.comment&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;fb867a9246f9b892cf51a8c84a3f8479cdf1558c&quot; },
+</a>   &quot;mini.icons&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;397ed3807e96b59709ef3292f0a3e253d5c1dc0a&quot; },
+   &quot;mini.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;ed581c333798e08a68fbe1aecfdf95d3c1432d3f&quot; },
+   &quot;mini.pairs&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;69864a2efb36c030877421634487fd90db1e4298&quot; },
+   &quot;mini.starter&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d8038690eadf203a40863c3a9423df880a901d39&quot; },
+<a href="#h1-0-34" id="h1-0-34" class="d">-  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1ef260eb4f54515fe121a2267b477efb054d108a&quot; },
+</a><a href="#h1-0-35" id="h1-0-35" class="d">-  &quot;no-neck-pain.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8d17abf5ff9208865439e683da7bbe93dde8d4e1&quot; },
+</a><a href="#h1-0-36" id="h1-0-36" class="i">+  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;73d63376352ac731379892e27ac7b3d9449148e3&quot; },
+</a><a href="#h1-0-37" id="h1-0-37" class="i">+  &quot;neodev.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;46aa467dca16cf3dfe27098042402066d2ae242d&quot; },
+</a><a href="#h1-0-38" id="h1-0-38" class="i">+  &quot;no-neck-pain.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;53c8ef094c86e8897be2dcce0259d35914f6cdc0&quot; },
+</a>   &quot;noice.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;0427460c2d7f673ad60eb02b35f5e9926cf67c59&quot; },
+<a href="#h1-0-40" id="h1-0-40" class="d">-  &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8d3bce9764e627b62b07424e0df77f680d47ffdb&quot; },
+</a><a href="#h1-0-41" id="h1-0-41" class="d">-  &quot;nvim-lint&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;3615c26c4922ae5f7366f0c1943a0e7cece04325&quot; },
+</a><a href="#h1-0-42" id="h1-0-42" class="d">-  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;32b6a6449aaba11461fffbb596dd6310af79eea4&quot; },
+</a><a href="#h1-0-43" id="h1-0-43" class="d">-  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;684eeac91ed8e297685a97ef70031d19ac1de25a&quot; },
+</a><a href="#h1-0-44" id="h1-0-44" class="d">-  &quot;nvim-treesitter-textobjects&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;205e3369bc83d8cb83f7409c36120e24611f8c5c&quot; },
+</a><a href="#h1-0-45" id="h1-0-45" class="i">+  &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;f535005e6ad1016383f24e39559833759453564e&quot; },
+</a><a href="#h1-0-46" id="h1-0-46" class="i">+  &quot;nvim-cmp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b5311ab3ed9c846b585c0c15b7559be131ec4be9&quot; },
+</a><a href="#h1-0-47" id="h1-0-47" class="i">+  &quot;nvim-lint&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;9dfb77ef6c5092a19502883c02dc5a02ec648729&quot; },
+</a><a href="#h1-0-48" id="h1-0-48" class="i">+  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;61e5109c8cf24807e4ae29813a3a82b31821dd45&quot; },
+</a><a href="#h1-0-49" id="h1-0-49" class="i">+  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;28d480e0624b259095e56f353ec911f9f2a0f404&quot; },
+</a><a href="#h1-0-50" id="h1-0-50" class="i">+  &quot;nvim-treesitter-textobjects&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;0e3be38005e9673d044e994b1e4b123adb040179&quot; },
+</a>   &quot;nvim-ts-autotag&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a1d526af391f6aebb25a8795cbc05351ed3620b5&quot; },
+<a href="#h1-0-52" id="h1-0-52" class="d">-  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;c90dee4e930ab9f49fa6d77f289bff335b49e972&quot; },
+</a><a href="#h1-0-53" id="h1-0-53" class="i">+  &quot;nvim-ts-context-commentstring&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f&quot; },
+</a><a href="#h1-0-54" id="h1-0-54" class="i">+  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;4c3a5848ee0b09ecdea73adcd2a689190aeb728c&quot; },
+</a>   &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;166a79a55bfa7a4db3e26fc031b4d92af71d0b51&quot; },
+   &quot;plenary.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;857c5ac632080dba10aae49dba902ce3abf91b35&quot; },
+   &quot;render-markdown.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;dfc1299d9f32b53b34b7ac6c3a7553b5fd29977f&quot; },
+<b>diff --git a/<a id="h2" href="../file/yazi/yazi.toml.html">yazi/yazi.toml</a> b/<a href="../file/yazi/yazi.toml.html">yazi/yazi.toml</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,2 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+[manager]
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+show_hidden = true
+</a></pre>
+</div>
+</body>
+</html>

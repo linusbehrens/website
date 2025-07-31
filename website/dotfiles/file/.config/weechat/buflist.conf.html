@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>buflist.conf - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../"><img src="../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../log.html">Log</a> | <a href="../../../files.html">Files</a> | <a href="../../../refs.html">Refs</a> | <a href="../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> buflist.conf (1333B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> #
+<a href="#l2" class="line" id="l2">      2</a> # weechat -- buflist.conf
+<a href="#l3" class="line" id="l3">      3</a> #
+<a href="#l4" class="line" id="l4">      4</a> # WARNING: It is NOT recommended to edit this file by hand,
+<a href="#l5" class="line" id="l5">      5</a> # especially if WeeChat is running.
+<a href="#l6" class="line" id="l6">      6</a> #
+<a href="#l7" class="line" id="l7">      7</a> # Use commands like /set or /fset to change settings in WeeChat.
+<a href="#l8" class="line" id="l8">      8</a> #
+<a href="#l9" class="line" id="l9">      9</a> # For more info, see: https://weechat.org/doc/weechat/quickstart/
+<a href="#l10" class="line" id="l10">     10</a> #
+<a href="#l11" class="line" id="l11">     11</a> 
+<a href="#l12" class="line" id="l12">     12</a> [look]
+<a href="#l13" class="line" id="l13">     13</a> add_newline = on
+<a href="#l14" class="line" id="l14">     14</a> auto_scroll = 50
+<a href="#l15" class="line" id="l15">     15</a> display_conditions = &quot;${buffer.hidden}==0&quot;
+<a href="#l16" class="line" id="l16">     16</a> enabled = on
+<a href="#l17" class="line" id="l17">     17</a> mouse_jump_visited_buffer = off
+<a href="#l18" class="line" id="l18">     18</a> mouse_move_buffer = on
+<a href="#l19" class="line" id="l19">     19</a> mouse_wheel = on
+<a href="#l20" class="line" id="l20">     20</a> nick_prefix = off
+<a href="#l21" class="line" id="l21">     21</a> nick_prefix_empty = on
+<a href="#l22" class="line" id="l22">     22</a> signals_refresh = &quot;&quot;
+<a href="#l23" class="line" id="l23">     23</a> sort = &quot;number,-active&quot;
+<a href="#l24" class="line" id="l24">     24</a> use_items = 1
+<a href="#l25" class="line" id="l25">     25</a> 
+<a href="#l26" class="line" id="l26">     26</a> [format]
+<a href="#l27" class="line" id="l27">     27</a> buffer = &quot;${format_number}${indent}${format_nick_prefix}${color_hotlist}${format_name}&quot;
+<a href="#l28" class="line" id="l28">     28</a> buffer_current = &quot;${color:,17}${format_buffer}&quot;
+<a href="#l29" class="line" id="l29">     29</a> hotlist = &quot; ${color:green}(${hotlist}${color:green})&quot;
+<a href="#l30" class="line" id="l30">     30</a> hotlist_highlight = &quot;${color:magenta}&quot;
+<a href="#l31" class="line" id="l31">     31</a> hotlist_low = &quot;${color:white}&quot;
+<a href="#l32" class="line" id="l32">     32</a> hotlist_message = &quot;${color:brown}&quot;
+<a href="#l33" class="line" id="l33">     33</a> hotlist_none = &quot;${color:default}&quot;
+<a href="#l34" class="line" id="l34">     34</a> hotlist_private = &quot;${color:green}&quot;
+<a href="#l35" class="line" id="l35">     35</a> hotlist_separator = &quot;${color:default},&quot;
+<a href="#l36" class="line" id="l36">     36</a> indent = &quot;  &quot;
+<a href="#l37" class="line" id="l37">     37</a> lag = &quot; ${color:green}[${color:brown}${lag}${color:green}]&quot;
+<a href="#l38" class="line" id="l38">     38</a> name = &quot;${name}&quot;
+<a href="#l39" class="line" id="l39">     39</a> nick_prefix = &quot;${color_nick_prefix}${nick_prefix}&quot;
+<a href="#l40" class="line" id="l40">     40</a> number = &quot;${color:green}${number}${if:${number_displayed}?.: }&quot;
+<a href="#l41" class="line" id="l41">     41</a> tls_version = &quot; ${color:default}(${if:${tls_version}==TLS1.3?${color:green}:${if:${tls_version}==TLS1.2?${color:yellow}:${color:red}}}${translate:${tls_version}}${color:default})&quot;
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>taskell themed - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/b9305eddbd443db1fa43a74f404440945f4a555a.html">b9305eddbd443db1fa43a74f404440945f4a555a</a>
+<b>parent</b> <a href="../commit/bee2da6f59d9de0bcda1e548c9368548e7d4c2fc.html">bee2da6f59d9de0bcda1e548c9368548e7d4c2fc</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Tue,  8 Jul 2025 23:33:00 +0200
+
+taskell themed
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.config/bash/.bashrc</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">.config/btop/btop.conf</a></td><td> | </td><td class="num">8</td><td><span class="i">++++</span><span class="d">----</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">.config/nvim/lua/linus/extensions/agenda.chat.lua</a></td><td> | </td><td class="num">48</td><td><span class="i">++++++++++++++++++++++++++++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">.config/taskell/bindings.ini</a></td><td> | </td><td class="num">16</td><td><span class="i">++++++++</span><span class="d">--------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">.config/taskell/config.ini</a></td><td> | </td><td class="num">2</td><td><span class="i">+</span><span class="d">-</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h5">.config/taskell/taskell.md</a></td><td> | </td><td class="num">11</td><td><span class="i">+++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h6">.config/taskell/theme.ini</a></td><td> | </td><td class="num">6</td><td><span class="i">+++</span><span class="d">---</span></td></tr>
+</table></pre><pre>7 files changed, 76 insertions(+), 16 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a> b/<a href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -53,6 +53,7 @@ alias n=&#39;nvim&#39;
+</a> alias v=&#39;vim&#39;
+ alias y=&#39;yazi&#39;
+ alias ne=&#39;neofetch&#39;
+<a href="#h0-0-3" id="h0-0-3" class="i">+alias t=&quot;taskell&quot;
+</a> 
+ ########## PATH ##########
+ 
+<b>diff --git a/<a id="h1" href="../file/.config/btop/btop.conf.html">.config/btop/btop.conf</a> b/<a href="../file/.config/btop/btop.conf.html">.config/btop/btop.conf</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -1,4 +1,4 @@
+</a><a href="#h1-0-0" id="h1-0-0" class="d">-#? Config file for btop v. 1.4.3
+</a><a href="#h1-0-1" id="h1-0-1" class="i">+#? Config file for btop v. 1.4.4
+</a> 
+ #* Name of a btop++/bpytop/bashtop formatted &quot;.theme&quot; file, &quot;Default&quot; and &quot;TTY&quot; for builtin themes.
+ #* Themes should be placed in &quot;../share/btop/themes&quot; relative to binary or &quot;$HOME/.config/btop/themes&quot;
+<a href="#h1-1" id="h1-1" class="h">@@ -47,14 +47,14 @@ graph_symbol_net = &quot;default&quot;
+</a> graph_symbol_proc = &quot;default&quot;
+ 
+ #* Manually set which boxes to show. Available values are &quot;cpu mem net proc&quot; and &quot;gpu0&quot; through &quot;gpu5&quot;, separate values with whitespace.
+<a href="#h1-1-3" id="h1-1-3" class="d">-shown_boxes = &quot;cpu mem net proc&quot;
+</a><a href="#h1-1-4" id="h1-1-4" class="i">+shown_boxes = &quot;cpu proc net&quot;
+</a> 
+ #* Update time in milliseconds, recommended 2000 ms or above for better sample times for graphs.
+ update_ms = 2000
+ 
+ #* Processes sorting, &quot;pid&quot; &quot;program&quot; &quot;arguments&quot; &quot;threads&quot; &quot;user&quot; &quot;memory&quot; &quot;cpu lazy&quot; &quot;cpu direct&quot;,
+ #* &quot;cpu lazy&quot; sorts top process over time (easier to follow), &quot;cpu direct&quot; updates top process directly.
+<a href="#h1-1-11" id="h1-1-11" class="d">-proc_sorting = &quot;cpu lazy&quot;
+</a><a href="#h1-1-12" id="h1-1-12" class="i">+proc_sorting = &quot;pid&quot;
+</a> 
+ #* Reverse sorting order, True or False.
+ proc_reversed = False
+<a href="#h1-2" id="h1-2" class="h">@@ -144,7 +144,7 @@ background_update = True
+</a> custom_cpu_name = &quot;&quot;
+ 
+ #* Optional filter for shown disks, should be full path of a mountpoint, separate multiple values with whitespace &quot; &quot;.
+<a href="#h1-2-3" id="h1-2-3" class="d">-#* Begin line with &quot;exclude=&quot; to change to exclude filter, otherwise defaults to &quot;most include&quot; filter. Example: disks_filter=&quot;exclude=/boot /home/user&quot;.
+</a><a href="#h1-2-4" id="h1-2-4" class="i">+#* Only disks matching the filter will be shown. Prepend exclude= to only show disks not matching the filter. Examples: disk_filter=&quot;/boot /home/user&quot;, disks_filter=&quot;exclude=/boot /home/user&quot;
+</a> disks_filter = &quot;&quot;
+ 
+ #* Show graphs instead of meters for memory values.
+<b>diff --git a/<a id="h2" href="../file/.config/nvim/lua/linus/extensions/agenda.chat.lua.html">.config/nvim/lua/linus/extensions/agenda.chat.lua</a> b/<a href="../file/.config/nvim/lua/linus/extensions/agenda.chat.lua.html">.config/nvim/lua/linus/extensions/agenda.chat.lua</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1,48 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+-- a chatGPT generated agenda extension
+</a><a href="#h2-0-1" id="h2-0-1" class="i">+
+</a><a href="#h2-0-2" id="h2-0-2" class="i">+local telescope_ok, telescope = pcall(require, &quot;telescope&quot;)
+</a><a href="#h2-0-3" id="h2-0-3" class="i">+if not telescope_ok then
+</a><a href="#h2-0-4" id="h2-0-4" class="i">+    vim.notify(&quot;telescope.nvim not available&quot;, vim.log.levels.ERROR)
+</a><a href="#h2-0-5" id="h2-0-5" class="i">+    return
+</a><a href="#h2-0-6" id="h2-0-6" class="i">+end
+</a><a href="#h2-0-7" id="h2-0-7" class="i">+
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+local pickers, finders, conf = require(telescope.pickers), require(telescope.finders), require(telescope.config).values
+</a><a href="#h2-0-9" id="h2-0-9" class="i">+local Path, scandir = require(plenary.path), require(plenary.scandir)
+</a><a href="#h2-0-10" id="h2-0-10" class="i">+
+</a><a href="#h2-0-11" id="h2-0-11" class="i">+-- yyyy-mm-dd converter to time
+</a><a href="#h2-0-12" id="h2-0-12" class="i">+local function to_secs(date)
+</a><a href="#h2-0-13" id="h2-0-13" class="i">+    local y, m, d = date:match &quot;(%d+)%-(%d+)%-(%d+)&quot;
+</a><a href="#h2-0-14" id="h2-0-14" class="i">+    return os.time {year = y, month = m, day = d, hour = 0}
+</a><a href="#h2-0-15" id="h2-0-15" class="i">+end
+</a><a href="#h2-0-16" id="h2-0-16" class="i">+
+</a><a href="#h2-0-17" id="h2-0-17" class="i">+-- filter yaml
+</a><a href="#h2-0-18" id="h2-0-18" class="i">+
+</a><a href="#h2-0-19" id="h2-0-19" class="i">+local function parse_yaml(path)
+</a><a href="#h2-0-20" id="h2-0-20" class="i">+    local meta, in_yaml = {}, false
+</a><a href="#h2-0-21" id="h2-0-21" class="i">+    for _, line in ipairs(Path:new(path):head(40)) do
+</a><a href="#h2-0-22" id="h2-0-22" class="i">+        if line == &quot;---&quot; then
+</a><a href="#h2-0-23" id="h2-0-23" class="i">+            if in_yaml then break end
+</a><a href="#h2-0-24" id="h2-0-24" class="i">+            in_yaml = true
+</a><a href="#h2-0-25" id="h2-0-25" class="i">+        elseif in_yaml then
+</a><a href="#h2-0-26" id="h2-0-26" class="i">+            local k, v = line:match &quot;^(%w+):%s*(.+)$&quot;
+</a><a href="#h2-0-27" id="h2-0-27" class="i">+            if k and v then meta[k] = vim.trim(v) end
+</a><a href="#h2-0-28" id="h2-0-28" class="i">+        end
+</a><a href="#h2-0-29" id="h2-0-29" class="i">+    end
+</a><a href="#h2-0-30" id="h2-0-30" class="i">+    return meta
+</a><a href="#h2-0-31" id="h2-0-31" class="i">+end
+</a><a href="#h2-0-32" id="h2-0-32" class="i">+
+</a><a href="#h2-0-33" id="h2-0-33" class="i">+local function include(meta, today)
+</a><a href="#h2-0-34" id="h2-0-34" class="i">+    local scheduled = meta.scheduled and to_secs(meta.scheduled)
+</a><a href="#h2-0-35" id="h2-0-35" class="i">+    local deadline = meta.deadline and to_secs(meta.deadline)
+</a><a href="#h2-0-36" id="h2-0-36" class="i">+    if not scheduled then return false end
+</a><a href="#h2-0-37" id="h2-0-37" class="i">+
+</a><a href="#h2-0-38" id="h2-0-38" class="i">+    local tomorrow = today + 24 * 60 * 60
+</a><a href="#h2-0-39" id="h2-0-39" class="i">+
+</a><a href="#h2-0-40" id="h2-0-40" class="i">+    if scheduled == tomorrow then return true end
+</a><a href="#h2-0-41" id="h2-0-41" class="i">+
+</a><a href="#h2-0-42" id="h2-0-42" class="i">+    if scheduled and deadline 
+</a><a href="#h2-0-43" id="h2-0-43" class="i">+
+</a><a href="#h2-0-44" id="h2-0-44" class="i">+end
+</a><a href="#h2-0-45" id="h2-0-45" class="i">+
+</a><a href="#h2-0-46" id="h2-0-46" class="i">+
+</a><a href="#h2-0-47" id="h2-0-47" class="i">+
+</a><b>diff --git a/<a id="h3" href="../file/.config/taskell/bindings.ini.html">.config/taskell/bindings.ini</a> b/<a href="../file/.config/taskell/bindings.ini.html">.config/taskell/bindings.ini</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -7,10 +7,10 @@ help = ?
+</a> due = !
+ 
+ # navigation
+<a href="#h3-0-3" id="h3-0-3" class="d">-previous = k
+</a><a href="#h3-0-4" id="h3-0-4" class="d">-next = j
+</a><a href="#h3-0-5" id="h3-0-5" class="d">-left = h
+</a><a href="#h3-0-6" id="h3-0-6" class="d">-right = l
+</a><a href="#h3-0-7" id="h3-0-7" class="i">+previous = &lt;Up&gt;
+</a><a href="#h3-0-8" id="h3-0-8" class="i">+next = &lt;Down&gt;
+</a><a href="#h3-0-9" id="h3-0-9" class="i">+left = &lt;Left&gt;
+</a><a href="#h3-0-10" id="h3-0-10" class="i">+right = &lt;Right&gt;
+</a> bottom = G
+ top = g
+ 
+<a href="#h3-1" id="h3-1" class="h">@@ -29,16 +29,16 @@ dueDate = @
+</a> clearDate = &lt;Backspace&gt;
+ 
+ # moving tasks
+<a href="#h3-1-3" id="h3-1-3" class="d">-moveUp = K
+</a><a href="#h3-1-4" id="h3-1-4" class="d">-moveDown = J
+</a><a href="#h3-1-5" id="h3-1-5" class="i">+moveUp = R
+</a><a href="#h3-1-6" id="h3-1-6" class="i">+moveDown = N
+</a> # move to top of previous list
+ moveLeftTop = ˙
+ # move to top of next list
+ moveRightTop = ¬
+ # move to bottom of previous list
+<a href="#h3-1-12" id="h3-1-12" class="d">-moveLeftBottom = H
+</a><a href="#h3-1-13" id="h3-1-13" class="i">+moveLeftBottom = B
+</a> # move to bottom of next list
+<a href="#h3-1-15" id="h3-1-15" class="d">-moveRightBottom = L
+</a><a href="#h3-1-16" id="h3-1-16" class="i">+moveRightBottom = S
+</a> # move to bottom of last list
+ complete = &lt;Space&gt;
+ # move to top of last list
+<b>diff --git a/<a id="h4" href="../file/.config/taskell/config.ini.html">.config/taskell/config.ini</a> b/<a href="../file/.config/taskell/config.ini.html">.config/taskell/config.ini</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -6,7 +6,7 @@ padding = 1
+</a> column_width = 30
+ column_padding = 3
+ description_indicator = &quot;≡&quot;
+<a href="#h4-0-3" id="h4-0-3" class="d">-statusbar = true
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+statusbar = false
+</a> 
+ [markdown]
+ title = &quot;##&quot;
+<b>diff --git a/<a id="h5" href="../file/.config/taskell/taskell.md.html">.config/taskell/taskell.md</a> b/<a href="../file/.config/taskell/taskell.md.html">.config/taskell/taskell.md</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -0,0 +1,11 @@
+</a><a href="#h5-0-0" id="h5-0-0" class="i">+## To Do
+</a><a href="#h5-0-1" id="h5-0-1" class="i">+
+</a><a href="#h5-0-2" id="h5-0-2" class="i">+- eee
+</a><a href="#h5-0-3" id="h5-0-3" class="i">+- kkk
+</a><a href="#h5-0-4" id="h5-0-4" class="i">+- eeeei
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+
+</a><a href="#h5-0-6" id="h5-0-6" class="i">+## Doing
+</a><a href="#h5-0-7" id="h5-0-7" class="i">+
+</a><a href="#h5-0-8" id="h5-0-8" class="i">+
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+## Done
+</a><a href="#h5-0-10" id="h5-0-10" class="i">+
+</a><b>diff --git a/<a id="h6" href="../file/.config/taskell/theme.ini.html">.config/taskell/theme.ini</a> b/<a href="../file/.config/taskell/theme.ini.html">.config/taskell/theme.ini</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -1,17 +1,17 @@
+</a> [other]
+ 
+ ; list title
+<a href="#h6-0-3" id="h6-0-3" class="d">-title.fg = green
+</a><a href="#h6-0-4" id="h6-0-4" class="i">+title.fg = white
+</a> 
+ ; status bar
+ statusBar.bg = blue
+ statusBar.fg = black
+ 
+ ; current list title
+<a href="#h6-0-11" id="h6-0-11" class="d">-titleCurrent.fg = blue
+</a><a href="#h6-0-12" id="h6-0-12" class="i">+titleCurrent.fg = cyan
+</a> 
+ ; current task
+<a href="#h6-0-15" id="h6-0-15" class="d">-taskCurrent.fg = magenta
+</a><a href="#h6-0-16" id="h6-0-16" class="i">+taskCurrent.fg = blue
+</a> 
+ ; subtasks
+ ; selected
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ghostty 2 - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/93892729262cee7143ee410bf0b06f9aa94d2e7d.html">93892729262cee7143ee410bf0b06f9aa94d2e7d</a>
+<b>parent</b> <a href="../commit/3f2be61c779cf9f97b6070736bc6d67e119512f7.html">3f2be61c779cf9f97b6070736bc6d67e119512f7</a>
+<b>Author:</b> KoenigLinus &lt;<a href="mailto:linus@behrens-familie.de">linus@behrens-familie.de</a>&gt;
+<b>Date:</b>   Sun, 11 May 2025 14:57:01 +0200
+
+ghostty 2
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h1">.sources/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h2">.sources/sent</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="A">A</td><td><a href="#h3">Icon</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">nvim/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">nvim/lazy-lock.json</a></td><td> | </td><td class="num">28</td><td><span class="i">++++++++++++++</span><span class="d">--------------</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h6">nvim/lua/plugins/bufferline.lua</a></td><td> | </td><td class="num">38</td><td><span class="i">++++++++++++++++++++++++++++++++++</span><span class="d">----</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h7">nvim/lua/plugins/markview.lua</a></td><td> | </td><td class="num">22</td><td><span class="i">++++++++++++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h8">nvim/lua/plugins/render.lua</a></td><td> | </td><td class="num">19</td><td><span class="i">+++++++</span><span class="d">------------</span></td></tr>
+</table></pre><pre>9 files changed, 78 insertions(+), 30 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.DS_Store.html">.DS_Store</a> b/<a href="../file/.DS_Store.html">.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h1" href="../file/.sources/.DS_Store.html">.sources/.DS_Store</a> b/<a href="../file/.sources/.DS_Store.html">.sources/.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h2" href="../file/.sources/sent.html">.sources/sent</a> b/<a href="../file/.sources/sent.html">.sources/sent</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -0,0 +1 @@
+</a><a href="#h2-0-0" id="h2-0-0" class="i">+Subproject commit 882d54c225b83c762acf5bb3967f4890c3ecef86
+</a><b>diff --git a/<a id="h3" href="../file/Icon%0D.html">Icon</a> b/<a href="../file/Icon%0D.html">Icon</a></b>
+<b>diff --git a/<a id="h4" href="../file/nvim/.DS_Store.html">nvim/.DS_Store</a> b/<a href="../file/nvim/.DS_Store.html">nvim/.DS_Store</a></b>
+Binary files differ.
+<b>diff --git a/<a id="h5" href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a> b/<a href="../file/nvim/lazy-lock.json.html">nvim/lazy-lock.json</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -3,34 +3,34 @@
+</a>   &quot;blink.cmp&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;cb5e346d9e0efa7a3eee7fd4da0b690c48d2a98e&quot; },
+   &quot;bufferline.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3&quot; },
+   &quot;catppuccin&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;5b5e3aef9ad7af84f463d17b5479f06b87d5c429&quot; },
+<a href="#h5-0-3" id="h5-0-3" class="d">-  &quot;conform.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;b1a75324ddf96b7bb84963a297b1ed334db087c0&quot; },
+</a><a href="#h5-0-4" id="h5-0-4" class="d">-  &quot;friendly-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;efff286dd74c22f731cdec26a70b46e5b203c619&quot; },
+</a><a href="#h5-0-5" id="h5-0-5" class="d">-  &quot;fzf-lua&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6488ada2f376e47789391dc353b6d91a3f9de6f6&quot; },
+</a><a href="#h5-0-6" id="h5-0-6" class="d">-  &quot;gitsigns.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;17ab794b6fce6fce768430ebc925347e349e1d60&quot; },
+</a><a href="#h5-0-7" id="h5-0-7" class="d">-  &quot;grug-far.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6ef402861468c6bd987155be17a34ba4291dc1d0&quot; },
+</a><a href="#h5-0-8" id="h5-0-8" class="d">-  &quot;gruvbox.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;12b5420b665e8053d74eb075d8a589477333f67d&quot; },
+</a><a href="#h5-0-9" id="h5-0-9" class="i">+  &quot;conform.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;6632e7d788a85bf8405ea0c812d343fc308b7b8c&quot; },
+</a><a href="#h5-0-10" id="h5-0-10" class="i">+  &quot;friendly-snippets&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;31f2a2657b6261724313281fe0d8ba6f43f4a4fa&quot; },
+</a><a href="#h5-0-11" id="h5-0-11" class="i">+  &quot;fzf-lua&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;34de8546d932497d90b24081045b8238b9818c76&quot; },
+</a><a href="#h5-0-12" id="h5-0-12" class="i">+  &quot;gitsigns.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;02eafb1273afec94447f66d1a43fc5e477c2ab8a&quot; },
+</a><a href="#h5-0-13" id="h5-0-13" class="i">+  &quot;grug-far.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1c9325f6ab18fc8ac4d4c57e765aa845af148277&quot; },
+</a>   &quot;lazy.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a&quot; },
+   &quot;lazydev.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c&quot; },
+   &quot;lualine.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;f4f791f67e70d378a754d02da068231d2352e5bc&quot; },
+<a href="#h5-0-17" id="h5-0-17" class="d">-  &quot;markview.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;4f9ad36efe01c283aa886453ba75bf569c897c84&quot; },
+</a>   &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1a31f824b9cd5bc6f342fc29e9a53b60d74af245&quot; },
+   &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;fc98833b6da5de5a9c5b1446ac541577059555be&quot; },
+   &quot;mini.ai&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;e139eb1101beb0250fea322f8c07a42f0f175688&quot; },
+   &quot;mini.icons&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;397ed3807e96b59709ef3292f0a3e253d5c1dc0a&quot; },
+<a href="#h5-0-22" id="h5-0-22" class="i">+  &quot;mini.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;ed581c333798e08a68fbe1aecfdf95d3c1432d3f&quot; },
+</a>   &quot;mini.pairs&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;69864a2efb36c030877421634487fd90db1e4298&quot; },
+   &quot;mini.starter&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;d8038690eadf203a40863c3a9423df880a901d39&quot; },
+<a href="#h5-0-25" id="h5-0-25" class="d">-  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;73d63376352ac731379892e27ac7b3d9449148e3&quot; },
+</a><a href="#h5-0-26" id="h5-0-26" class="d">-  &quot;no-neck-pain.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;53c8ef094c86e8897be2dcce0259d35914f6cdc0&quot; },
+</a><a href="#h5-0-27" id="h5-0-27" class="i">+  &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1ef260eb4f54515fe121a2267b477efb054d108a&quot; },
+</a><a href="#h5-0-28" id="h5-0-28" class="i">+  &quot;no-neck-pain.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8d17abf5ff9208865439e683da7bbe93dde8d4e1&quot; },
+</a>   &quot;noice.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;0427460c2d7f673ad60eb02b35f5e9926cf67c59&quot; },
+   &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8d3bce9764e627b62b07424e0df77f680d47ffdb&quot; },
+<a href="#h5-0-31" id="h5-0-31" class="d">-  &quot;nvim-lint&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;81e8ba7655cc4395b1092ef4e1b6e83f54cd54ad&quot; },
+</a><a href="#h5-0-32" id="h5-0-32" class="d">-  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;3e873195f501b1e02d9fd7e5af5cbe74fc2f98c1&quot; },
+</a><a href="#h5-0-33" id="h5-0-33" class="d">-  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;523a9e148919f58eb5a013f76787e57696e00c93&quot; },
+</a><a href="#h5-0-34" id="h5-0-34" class="d">-  &quot;nvim-treesitter-textobjects&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;9937e5e356e5b227ec56d83d0a9d0a0f6bc9cad4&quot; },
+</a><a href="#h5-0-35" id="h5-0-35" class="i">+  &quot;nvim-lint&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;3615c26c4922ae5f7366f0c1943a0e7cece04325&quot; },
+</a><a href="#h5-0-36" id="h5-0-36" class="i">+  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;32b6a6449aaba11461fffbb596dd6310af79eea4&quot; },
+</a><a href="#h5-0-37" id="h5-0-37" class="i">+  &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;684eeac91ed8e297685a97ef70031d19ac1de25a&quot; },
+</a><a href="#h5-0-38" id="h5-0-38" class="i">+  &quot;nvim-treesitter-textobjects&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;205e3369bc83d8cb83f7409c36120e24611f8c5c&quot; },
+</a>   &quot;nvim-ts-autotag&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a1d526af391f6aebb25a8795cbc05351ed3620b5&quot; },
+<a href="#h5-0-40" id="h5-0-40" class="d">-  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;4c3a5848ee0b09ecdea73adcd2a689190aeb728c&quot; },
+</a><a href="#h5-0-41" id="h5-0-41" class="i">+  &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;c90dee4e930ab9f49fa6d77f289bff335b49e972&quot; },
+</a>   &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;166a79a55bfa7a4db3e26fc031b4d92af71d0b51&quot; },
+   &quot;plenary.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;857c5ac632080dba10aae49dba902ce3abf91b35&quot; },
+<a href="#h5-0-44" id="h5-0-44" class="i">+  &quot;render-markdown.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;dfc1299d9f32b53b34b7ac6c3a7553b5fd29977f&quot; },
+</a>   &quot;snacks.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;bc0630e43be5699bb94dadc302c0d21615421d93&quot; },
+   &quot;substitute.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;9db749a880e3dd3b0eb57f698aa8f1e1630e1f25&quot; },
+   &quot;telescope-fzf-native.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;1f08ed60cafc8f6168b72b80be2b2ea149813e55&quot; },
+<b>diff --git a/<a id="h6" href="../file/nvim/lua/plugins/bufferline.lua.html">nvim/lua/plugins/bufferline.lua</a> b/<a href="../file/nvim/lua/plugins/bufferline.lua.html">nvim/lua/plugins/bufferline.lua</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -1,12 +1,42 @@
+</a><a href="#h6-0-0" id="h6-0-0" class="i">+-- ~/.config/nvim/lua/plugins/catppuccin.lua
+</a> return {
+<a href="#h6-0-2" id="h6-0-2" class="d">-  -- add gruvbox
+</a><a href="#h6-0-3" id="h6-0-3" class="d">-  { &quot;ellisonleao/gruvbox.nvim&quot; },
+</a><a href="#h6-0-4" id="h6-0-4" class="i">+  -- 1. Add the Catppuccin colourscheme
+</a><a href="#h6-0-5" id="h6-0-5" class="i">+  {
+</a><a href="#h6-0-6" id="h6-0-6" class="i">+    &quot;catppuccin/nvim&quot;,
+</a><a href="#h6-0-7" id="h6-0-7" class="i">+    name = &quot;catppuccin&quot;,
+</a><a href="#h6-0-8" id="h6-0-8" class="i">+    priority = 1000, -- load first to avoid a flash of default colours
+</a><a href="#h6-0-9" id="h6-0-9" class="i">+    lazy = false, -- start with Neovim, not on demand
+</a><a href="#h6-0-10" id="h6-0-10" class="i">+    opts = {
+</a><a href="#h6-0-11" id="h6-0-11" class="i">+      flavour = &quot;mocha&quot;, -- latte | frappe | macchiato | mocha
+</a><a href="#h6-0-12" id="h6-0-12" class="i">+      transparent_background = false,
+</a><a href="#h6-0-13" id="h6-0-13" class="i">+      integrations = {
+</a><a href="#h6-0-14" id="h6-0-14" class="i">+        cmp = true,
+</a><a href="#h6-0-15" id="h6-0-15" class="i">+        telescope = { enabled = true },
+</a><a href="#h6-0-16" id="h6-0-16" class="i">+        treesitter = true,
+</a><a href="#h6-0-17" id="h6-0-17" class="i">+        which_key = true,
+</a><a href="#h6-0-18" id="h6-0-18" class="i">+        -- add/remove integrations as you like
+</a><a href="#h6-0-19" id="h6-0-19" class="i">+      },
+</a><a href="#h6-0-20" id="h6-0-20" class="i">+    },
+</a><a href="#h6-0-21" id="h6-0-21" class="i">+  },
+</a> 
+<a href="#h6-0-23" id="h6-0-23" class="d">-  -- Configure LazyVim to load gruvbox
+</a><a href="#h6-0-24" id="h6-0-24" class="i">+  -- 2. Tell LazyVim to *use* that colourscheme
+</a>   {
+     &quot;LazyVim/LazyVim&quot;,
+     opts = {
+<a href="#h6-0-28" id="h6-0-28" class="d">-      colorscheme = &quot;gruvbox&quot;,
+</a><a href="#h6-0-29" id="h6-0-29" class="i">+      colorscheme = &quot;catppuccin&quot;,
+</a>     },
+   },
+ }
+<a href="#h6-0-33" id="h6-0-33" class="i">+
+</a><a href="#h6-0-34" id="h6-0-34" class="i">+-- return {
+</a><a href="#h6-0-35" id="h6-0-35" class="i">+--   -- add gruvbox
+</a><a href="#h6-0-36" id="h6-0-36" class="i">+--   { &quot;ellisonleao/gruvbox.nvim&quot; },
+</a><a href="#h6-0-37" id="h6-0-37" class="i">+--
+</a><a href="#h6-0-38" id="h6-0-38" class="i">+--   -- Configure LazyVim to load gruvbox
+</a><a href="#h6-0-39" id="h6-0-39" class="i">+--   {
+</a><a href="#h6-0-40" id="h6-0-40" class="i">+--     &quot;LazyVim/LazyVim&quot;,
+</a><a href="#h6-0-41" id="h6-0-41" class="i">+--     opts = {
+</a><a href="#h6-0-42" id="h6-0-42" class="i">+--       colorscheme = &quot;gruvbox&quot;,
+</a><a href="#h6-0-43" id="h6-0-43" class="i">+--     },
+</a><a href="#h6-0-44" id="h6-0-44" class="i">+--   },
+</a><a href="#h6-0-45" id="h6-0-45" class="i">+-- }
+</a><b>diff --git a/<a id="h7" href="../file/nvim/lua/plugins/markview.lua.html">nvim/lua/plugins/markview.lua</a> b/<a href="../file/nvim/lua/plugins/markview.lua.html">nvim/lua/plugins/markview.lua</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -0,0 +1,22 @@
+</a><a href="#h7-0-0" id="h7-0-0" class="i">+-- ~/.config/nvim/lua/plugins/markview.lua
+</a><a href="#h7-0-1" id="h7-0-1" class="i">+return {
+</a><a href="#h7-0-2" id="h7-0-2" class="i">+  &quot;OXY2DEV/markview.nvim&quot;,
+</a><a href="#h7-0-3" id="h7-0-3" class="i">+  enabled = false,
+</a><a href="#h7-0-4" id="h7-0-4" class="i">+  ft = { &quot;markdown&quot; }, -- load only in Markdown
+</a><a href="#h7-0-5" id="h7-0-5" class="i">+  dependencies = {
+</a><a href="#h7-0-6" id="h7-0-6" class="i">+    &quot;nvim-treesitter/nvim-treesitter&quot;,
+</a><a href="#h7-0-7" id="h7-0-7" class="i">+  },
+</a><a href="#h7-0-8" id="h7-0-8" class="i">+  config = function()
+</a><a href="#h7-0-9" id="h7-0-9" class="i">+    require(&quot;markview&quot;).setup({
+</a><a href="#h7-0-10" id="h7-0-10" class="i">+      latex = {
+</a><a href="#h7-0-11" id="h7-0-11" class="i">+        enable = true,
+</a><a href="#h7-0-12" id="h7-0-12" class="i">+        -- only inline math
+</a><a href="#h7-0-13" id="h7-0-13" class="i">+        inline = { enable = true },
+</a><a href="#h7-0-14" id="h7-0-14" class="i">+        -- disable block equations
+</a><a href="#h7-0-15" id="h7-0-15" class="i">+        block = { enable = false },
+</a><a href="#h7-0-16" id="h7-0-16" class="i">+        -- no extra bracket highlighting
+</a><a href="#h7-0-17" id="h7-0-17" class="i">+        brackets = { enable = false },
+</a><a href="#h7-0-18" id="h7-0-18" class="i">+      },
+</a><a href="#h7-0-19" id="h7-0-19" class="i">+    })
+</a><a href="#h7-0-20" id="h7-0-20" class="i">+  end,
+</a><a href="#h7-0-21" id="h7-0-21" class="i">+}
+</a><b>diff --git a/<a id="h8" href="../file/nvim/lua/plugins/render.lua.html">nvim/lua/plugins/render.lua</a> b/<a href="../file/nvim/lua/plugins/render.lua.html">nvim/lua/plugins/render.lua</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -1,14 +1,9 @@
+</a> return {
+<a href="#h8-0-1" id="h8-0-1" class="d">-  &quot;OXY2DEV/markview.nvim&quot;,
+</a><a href="#h8-0-2" id="h8-0-2" class="d">-  lazy = false,
+</a><a href="#h8-0-3" id="h8-0-3" class="i">+  &quot;MeanderingProgrammer/render-markdown.nvim&quot;,
+</a><a href="#h8-0-4" id="h8-0-4" class="i">+  dependencies = { &quot;nvim-treesitter/nvim-treesitter&quot;, &quot;echasnovski/mini.nvim&quot; }, -- if you use the mini.nvim suite
+</a><a href="#h8-0-5" id="h8-0-5" class="i">+  -- dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;echasnovski/mini.icons&#39; }, -- if you use standalone mini plugins
+</a><a href="#h8-0-6" id="h8-0-6" class="i">+  -- dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;nvim-tree/nvim-web-devicons&#39; }, -- if you prefer nvim-web-devicons
+</a><a href="#h8-0-7" id="h8-0-7" class="i">+  ---@module &#39;render-markdown&#39;
+</a><a href="#h8-0-8" id="h8-0-8" class="i">+  ---@type render.md.UserConfig
+</a><a href="#h8-0-9" id="h8-0-9" class="i">+  opts = {},
+</a> }
+<a href="#h8-0-11" id="h8-0-11" class="d">-
+</a><a href="#h8-0-12" id="h8-0-12" class="d">--- return {
+</a><a href="#h8-0-13" id="h8-0-13" class="d">---   &quot;MeanderingProgrammer/render-markdown.nvim&quot;,
+</a><a href="#h8-0-14" id="h8-0-14" class="d">---   dependencies = { &quot;nvim-treesitter/nvim-treesitter&quot;, &quot;echasnovski/mini.nvim&quot; }, -- if you use the mini.nvim suite
+</a><a href="#h8-0-15" id="h8-0-15" class="d">---   -- dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;echasnovski/mini.icons&#39; }, -- if you use standalone mini plugins
+</a><a href="#h8-0-16" id="h8-0-16" class="d">---   -- dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;nvim-tree/nvim-web-devicons&#39; }, -- if you prefer nvim-web-devicons
+</a><a href="#h8-0-17" id="h8-0-17" class="d">---   ---@module &#39;render-markdown&#39;
+</a><a href="#h8-0-18" id="h8-0-18" class="d">---   ---@type render.md.UserConfig
+</a><a href="#h8-0-19" id="h8-0-19" class="d">---   opts = {},
+</a><a href="#h8-0-20" id="h8-0-20" class="d">--- }
+</a></pre>
+</div>
+</body>
+</html>

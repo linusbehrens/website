@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>pgp-yubikey.html - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../"><img src="../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../log.html">Log</a> | <a href="../../files.html">Files</a> | <a href="../../refs.html">Refs</a> | <a href="../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> pgp-yubikey.html (6045B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> &lt;!DOCTYPE html&gt;
+<a href="#l2" class="line" id="l2">      2</a> &lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+<a href="#l3" class="line" id="l3">      3</a> &lt;head&gt;
+<a href="#l4" class="line" id="l4">      4</a> 	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+<a href="#l5" class="line" id="l5">      5</a> 	&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;en&quot; /&gt;
+<a href="#l6" class="line" id="l6">      6</a> 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+<a href="#l7" class="line" id="l7">      7</a> 	&lt;meta name=&quot;keywords&quot; content=&quot;blog, git, dev-log, life-log&quot; /&gt;
+<a href="#l8" class="line" id="l8">      8</a> 	&lt;meta name=&quot;description&quot; content=&quot;Setup for pgp supported by a yubikey&quot; /&gt;
+<a href="#l9" class="line" id="l9">      9</a> 	&lt;meta name=&quot;author&quot; content=&quot;linusbehrens&quot; /&gt;
+<a href="#l10" class="line" id="l10">     10</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+<a href="#l11" class="line" id="l11">     11</a> 	&lt;title&gt;yubikey pgp config - Linus Blog&lt;/title&gt;
+<a href="#l12" class="line" id="l12">     12</a> 
+<a href="#l13" class="line" id="l13">     13</a>     &lt;link rel=&quot;preconnect&quot; href=&quot;https://rsms.me/&quot;&gt;
+<a href="#l14" class="line" id="l14">     14</a>     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://rsms.me/inter/inter.css&quot;&gt;
+<a href="#l15" class="line" id="l15">     15</a> 	&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+<a href="#l16" class="line" id="l16">     16</a>     &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+<a href="#l17" class="line" id="l17">     17</a>     &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+<a href="#l18" class="line" id="l18">     18</a> 
+<a href="#l19" class="line" id="l19">     19</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#l20" class="line" id="l20">     20</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#l21" class="line" id="l21">     21</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+<a href="#l22" class="line" id="l22">     22</a> 
+<a href="#l23" class="line" id="l23">     23</a> 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+<a href="#l24" class="line" id="l24">     24</a> 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<a href="#l25" class="line" id="l25">     25</a> 	&lt;link rel=&quot;icon&quot; href=&quot;/favicon.png&quot; type=&quot;image/png&quot; /&gt;
+<a href="#l26" class="line" id="l26">     26</a> &lt;/head&gt;
+<a href="#l27" class="line" id="l27">     27</a> &lt;body&gt;
+<a href="#l28" class="line" id="l28">     28</a> 	&lt;nav id=&quot;menuwrap&quot;&gt;
+<a href="#l29" class="line" id="l29">     29</a> 		&lt;table id=&quot;menu&quot; width=&quot;100%&quot; border=&quot;0&quot;&gt;
+<a href="#l30" class="line" id="l30">     30</a> 		&lt;tr&gt;
+<a href="#l31" class="line" id="l31">     31</a> 			&lt;td id=&quot;links&quot; align=&quot;left&quot;&gt;
+<a href="#l32" class="line" id="l32">     32</a> 				&lt;a href=&quot;index.html&quot;&gt;Blog&lt;/a&gt; |
+<a href="#l33" class="line" id="l33">     33</a> 				&lt;a href=&quot;./git/&quot; title=&quot;Git repository with some of my projects&quot;&gt;Git&lt;/a&gt; &lt;!-- | --&gt;
+<a href="#l34" class="line" id="l34">     34</a> 				&lt;!-- &lt;a href=&quot;/releases/&quot;&gt;Releases&lt;/a&gt; | --&gt;
+<a href="#l35" class="line" id="l35">     35</a> 				&lt;!-- &lt;a href=&quot;gopher://codemadness.org&quot;&gt;Gopherhole&lt;/a&gt; --&gt;
+<a href="#l36" class="line" id="l36">     36</a> 			&lt;/td&gt;
+<a href="#l37" class="line" id="l37">     37</a> 			&lt;td id=&quot;links-contact&quot; align=&quot;right&quot;&gt;
+<a href="#l38" class="line" id="l38">     38</a> 				&lt;span class=&quot;hidden&quot;&gt; | &lt;/span&gt;
+<a href="#l39" class="line" id="l39">     39</a> 				&lt;!-- &lt;a href=&quot;feeds.html&quot;&gt;Feeds&lt;/a&gt; | --&gt;
+<a href="#l40" class="line" id="l40">     40</a> 				&lt;a href=&quot;pgp.asc&quot;&gt;PGP&lt;/a&gt; |
+<a href="#l41" class="line" id="l41">     41</a> 				&lt;a href=&quot;mailto:mail@linus-behrens.de&quot;&gt;Mail&lt;/a&gt;
+<a href="#l42" class="line" id="l42">     42</a> 			&lt;/td&gt;
+<a href="#l43" class="line" id="l43">     43</a> 		&lt;/tr&gt;
+<a href="#l44" class="line" id="l44">     44</a> 		&lt;/table&gt;
+<a href="#l45" class="line" id="l45">     45</a> 	&lt;/nav&gt;
+<a href="#l46" class="line" id="l46">     46</a> 	&lt;hr class=&quot;hidden&quot; /&gt;
+<a href="#l47" class="line" id="l47">     47</a> 	&lt;main id=&quot;mainwrap&quot;&gt;
+<a href="#l48" class="line" id="l48">     48</a> 		&lt;div id=&quot;main&quot;&gt;
+<a href="#l49" class="line" id="l49">     49</a> 			&lt;article&gt;
+<a href="#l50" class="line" id="l50">     50</a> &lt;header&gt;
+<a href="#l51" class="line" id="l51">     51</a> 	&lt;h1&gt;yubikey pgp config&lt;/h1&gt;
+<a href="#l52" class="line" id="l52">     52</a> 	&lt;p&gt;
+<a href="#l53" class="line" id="l53">     53</a> 	&lt;strong&gt;Last modification on &lt;/strong&gt; &lt;time&gt;2025-07-05&lt;/time&gt;
+<a href="#l54" class="line" id="l54">     54</a> 	&lt;/p&gt;
+<a href="#l55" class="line" id="l55">     55</a> &lt;/header&gt;
+<a href="#l56" class="line" id="l56">     56</a> 
+<a href="#l57" class="line" id="l57">     57</a> &lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb1-1&quot;&gt;&lt;a href=&quot;#cb1-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--expert&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--full-gen-key&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<a href="#l58" class="line" id="l58">     58</a> &lt;ul&gt;
+<a href="#l59" class="line" id="l59">     59</a> &lt;li&gt;Enter &lt;code&gt;RSA&lt;/code&gt;&lt;/li&gt;
+<a href="#l60" class="line" id="l60">     60</a> &lt;li&gt;Enter &lt;code&gt;4096&lt;/code&gt;&lt;/li&gt;
+<a href="#l61" class="line" id="l61">     61</a> &lt;li&gt;Enter expiration date&lt;/li&gt;
+<a href="#l62" class="line" id="l62">     62</a> &lt;li&gt;Enter user information and email&lt;/li&gt;
+<a href="#l63" class="line" id="l63">     63</a> &lt;li&gt;Enter random input (mouse, keyboard) to gain entropy&lt;/li&gt;
+<a href="#l64" class="line" id="l64">     64</a> &lt;/ul&gt;
+<a href="#l65" class="line" id="l65">     65</a> &lt;p&gt;Output:&lt;/p&gt;
+<a href="#l66" class="line" id="l66">     66</a> &lt;pre&gt;&lt;code&gt;gpg: key &amp;lt;keyID&amp;gt; marked as ultimately trusted&lt;/code&gt;&lt;/pre&gt;
+<a href="#l67" class="line" id="l67">     67</a> &lt;h2 id=&quot;add-authentication-key-if-not-default&quot;&gt;Add authentication key
+<a href="#l68" class="line" id="l68">     68</a> (if not default)&lt;/h2&gt;
+<a href="#l69" class="line" id="l69">     69</a> &lt;div class=&quot;sourceCode&quot; id=&quot;cb3&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb3-1&quot;&gt;&lt;a href=&quot;#cb3-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--expert&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--edit-key&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;keyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<a href="#l70" class="line" id="l70">     70</a> &lt;div class=&quot;sourceCode&quot; id=&quot;cb4&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb4-1&quot;&gt;&lt;a href=&quot;#cb4-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;addkey&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<a href="#l71" class="line" id="l71">     71</a> &lt;ul&gt;
+<a href="#l72" class="line" id="l72">     72</a> &lt;li&gt;Enter the &lt;code&gt;passphrase&lt;/code&gt;&lt;/li&gt;
+<a href="#l73" class="line" id="l73">     73</a> &lt;li&gt;Enter &lt;code&gt;8&lt;/code&gt; for RSA&lt;/li&gt;
+<a href="#l74" class="line" id="l74">     74</a> &lt;li&gt;Enter &lt;code&gt;S&lt;/code&gt; for disabling “sign”&lt;/li&gt;
+<a href="#l75" class="line" id="l75">     75</a> &lt;li&gt;Enter &lt;code&gt;E&lt;/code&gt; for disabling “encrypt”&lt;/li&gt;
+<a href="#l76" class="line" id="l76">     76</a> &lt;li&gt;Enter &lt;code&gt;A&lt;/code&gt; for enabling “authentication”&lt;/li&gt;
+<a href="#l77" class="line" id="l77">     77</a> &lt;li&gt;Enter &lt;code&gt;Q&lt;/code&gt; for leaving dialoge&lt;/li&gt;
+<a href="#l78" class="line" id="l78">     78</a> &lt;li&gt;Enter key size&lt;/li&gt;
+<a href="#l79" class="line" id="l79">     79</a> &lt;li&gt;Enter same expiration date as before&lt;/li&gt;
+<a href="#l80" class="line" id="l80">     80</a> &lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to safe the changes&lt;/li&gt;
+<a href="#l81" class="line" id="l81">     81</a> &lt;/ul&gt;
+<a href="#l82" class="line" id="l82">     82</a> &lt;h2 id=&quot;back-pgp-key-up&quot;&gt;Back pgp-Key up&lt;/h2&gt;
+<a href="#l83" class="line" id="l83">     83</a> &lt;div class=&quot;sourceCode&quot; id=&quot;cb5&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb5-1&quot;&gt;&lt;a href=&quot;#cb5-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--export-secret-key&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--armor&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;KeyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<a href="#l84" class="line" id="l84">     84</a> &lt;ul&gt;
+<a href="#l85" class="line" id="l85">     85</a> &lt;li&gt;Store output safe&lt;/li&gt;
+<a href="#l86" class="line" id="l86">     86</a> &lt;/ul&gt;
+<a href="#l87" class="line" id="l87">     87</a> &lt;h2 id=&quot;add-pgp-keys-to-the-yubikey&quot;&gt;Add pgp-keys to the YubiKey&lt;/h2&gt;
+<a href="#l88" class="line" id="l88">     88</a> &lt;ul&gt;
+<a href="#l89" class="line" id="l89">     89</a> &lt;li&gt;Insert YubiKey into a USB port&lt;/li&gt;
+<a href="#l90" class="line" id="l90">     90</a> &lt;/ul&gt;
+<a href="#l91" class="line" id="l91">     91</a> &lt;div class=&quot;sourceCode&quot; id=&quot;cb6&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb6-1&quot;&gt;&lt;a href=&quot;#cb6-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;gpg&lt;/span&gt; &lt;span class=&quot;at&quot;&gt;--edit-key&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt;KeyID&lt;span class=&quot;op&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<a href="#l92" class="line" id="l92">     92</a> &lt;div class=&quot;sourceCode&quot; id=&quot;cb7&quot;&gt;&lt;pre class=&quot;sourceCode sh&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span id=&quot;cb7-1&quot;&gt;&lt;a href=&quot;#cb7-1&quot; aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;ex&quot;&gt;keytocard&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<a href="#l93" class="line" id="l93">     93</a> &lt;ul&gt;
+<a href="#l94" class="line" id="l94">     94</a> &lt;li&gt;Signature subkey:
+<a href="#l95" class="line" id="l95">     95</a> &lt;ul&gt;
+<a href="#l96" class="line" id="l96">     96</a> &lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+<a href="#l97" class="line" id="l97">     97</a> &lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to continue&lt;/li&gt;
+<a href="#l98" class="line" id="l98">     98</a> &lt;li&gt;Enter &lt;code&gt;1&lt;/code&gt; to move the signature subkey to a slot in the
+<a href="#l99" class="line" id="l99">     99</a> yubikey&lt;/li&gt;
+<a href="#l100" class="line" id="l100">    100</a> &lt;li&gt;Enter &lt;code&gt;key 1&lt;/code&gt;&lt;/li&gt;
+<a href="#l101" class="line" id="l101">    101</a> &lt;/ul&gt;&lt;/li&gt;
+<a href="#l102" class="line" id="l102">    102</a> &lt;li&gt;Encryption subkey:
+<a href="#l103" class="line" id="l103">    103</a> &lt;ul&gt;
+<a href="#l104" class="line" id="l104">    104</a> &lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+<a href="#l105" class="line" id="l105">    105</a> &lt;li&gt;Enter &lt;code&gt;Y&lt;/code&gt; to continue&lt;/li&gt;
+<a href="#l106" class="line" id="l106">    106</a> &lt;li&gt;Enter &lt;code&gt;2&lt;/code&gt; to move the encryption subkey to a slot in the
+<a href="#l107" class="line" id="l107">    107</a> yubikey&lt;/li&gt;
+<a href="#l108" class="line" id="l108">    108</a> &lt;li&gt;Enter &lt;code&gt;key 1&lt;/code&gt;&lt;/li&gt;
+<a href="#l109" class="line" id="l109">    109</a> &lt;li&gt;Enter &lt;code&gt;key 2&lt;/code&gt;&lt;/li&gt;
+<a href="#l110" class="line" id="l110">    110</a> &lt;/ul&gt;&lt;/li&gt;
+<a href="#l111" class="line" id="l111">    111</a> &lt;li&gt;Authentication subkey
+<a href="#l112" class="line" id="l112">    112</a> &lt;ul&gt;
+<a href="#l113" class="line" id="l113">    113</a> &lt;li&gt;Enter &lt;code&gt;keytocard&lt;/code&gt;&lt;/li&gt;
+<a href="#l114" class="line" id="l114">    114</a> &lt;li&gt;Enter &lt;code&gt;3&lt;/code&gt; to move the authentication subkey to a slot in
+<a href="#l115" class="line" id="l115">    115</a> the yubikey&lt;/li&gt;
+<a href="#l116" class="line" id="l116">    116</a> &lt;/ul&gt;&lt;/li&gt;
+<a href="#l117" class="line" id="l117">    117</a> &lt;li&gt;Enter &lt;code&gt;quit&lt;/code&gt; to leave&lt;/li&gt;
+<a href="#l118" class="line" id="l118">    118</a> &lt;/ul&gt;
+<a href="#l119" class="line" id="l119">    119</a> &lt;p&gt;When asked &lt;strong&gt;do not safe&lt;/strong&gt; your changes enabling you to
+<a href="#l120" class="line" id="l120">    120</a> copy the key to another Yubikey.&lt;/p&gt;
+<a href="#l121" class="line" id="l121">    121</a> &lt;hr /&gt;
+<a href="#l122" class="line" id="l122">    122</a> &lt;p&gt;&lt;a
+<a href="#l123" class="line" id="l123">    123</a> href=&quot;https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP&quot;&gt;article
+<a href="#l124" class="line" id="l124">    124</a> by yubikey&lt;/a&gt;&lt;/p&gt;
+<a href="#l125" class="line" id="l125">    125</a> 
+<a href="#l126" class="line" id="l126">    126</a> 			&lt;/article&gt;
+<a href="#l127" class="line" id="l127">    127</a> 		&lt;/div&gt;
+<a href="#l128" class="line" id="l128">    128</a> 	&lt;/main&gt;
+<a href="#l129" class="line" id="l129">    129</a> &lt;/body&gt;
+<a href="#l130" class="line" id="l130">    130</a> &lt;/html&gt;
+</pre>
+</div>
+</body>
+</html>

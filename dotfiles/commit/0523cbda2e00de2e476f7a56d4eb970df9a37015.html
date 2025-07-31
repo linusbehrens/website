@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>exit - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/0523cbda2e00de2e476f7a56d4eb970df9a37015.html">0523cbda2e00de2e476f7a56d4eb970df9a37015</a>
+<b>parent</b> <a href="../commit/444a02940a47b2da61a2ae6997f2fc10128d38be.html">444a02940a47b2da61a2ae6997f2fc10128d38be</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Wed, 23 Jul 2025 18:14:03 +0200
+
+exit
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">.config/bash/.bashrc</a></td><td> | </td><td class="num">3</td><td><span class="i">++</span><span class="d">-</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">.config/ghostty/config</a></td><td> | </td><td class="num">2</td><td><span class="i">+</span><span class="d">-</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">.config/nvim/lazy-lock.json</a></td><td> | </td><td class="num">5</td><td><span class="i">++++</span><span class="d">-</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">.config/nvim/lua/linus/plugins/mason.lua</a></td><td> | </td><td class="num">2</td><td><span class="i">+</span><span class="d">-</span></td></tr>
+<tr><td class="A">A</td><td><a href="#h4">.config/nvim/lua/linus/plugins/render-markdown.lua</a></td><td> | </td><td class="num">13</td><td><span class="i">+++++++++++++</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">.config/tmux/tmux.conf</a></td><td> | </td><td class="num">3</td><td><span class="i">++</span><span class="d">-</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h6">.sources/plan9port</a></td><td> | </td><td class="num">1</td><td><span class="i"></span><span class="d">-</span></td></tr>
+<tr><td class="D">D</td><td><a href="#h7">wallpaper/.DS_Store</a></td><td> | </td><td class="num">0</td><td><span class="i"></span><span class="d"></span></td></tr>
+</table></pre><pre>8 files changed, 23 insertions(+), 6 deletions(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a> b/<a href="../file/.config/bash/.bashrc.html">.config/bash/.bashrc</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -64,7 +64,8 @@ export GPG_TTY=$(tty)
+</a> export XDG_CONFIG_HOME=&quot;$HOME/.config&quot;
+ export MANPAGER=&#39;nvim +Man!&#39;
+ export EDITOR=vim
+<a href="#h0-0-3" id="h0-0-3" class="d">-export MAIL=&quot;/home/linus/Mail/mail@linus-behrens.de/&quot;
+</a><a href="#h0-0-4" id="h0-0-4" class="i">+export MAIL=&quot;$HOME/Mail/mail@linus-behrens.de/&quot;
+</a><a href="#h0-0-5" id="h0-0-5" class="i">+export TERMINAL=&quot;ghostty&quot;
+</a> # export ISYNCRC=&quot;$HOME/Mail/mail@linus-behrens.de/.mbsyncrc&quot;
+ 
+ ########## PS1 ##########
+<b>diff --git a/<a id="h1" href="../file/.config/ghostty/config.html">.config/ghostty/config</a> b/<a href="../file/.config/ghostty/config.html">.config/ghostty/config</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -2,7 +2,7 @@ cursor-style = block
+</a> cursor-style-blink = false
+ 
+ theme = &quot;3024 Night&quot;
+<a href="#h1-0-3" id="h1-0-3" class="d">-background = #000000
+</a><a href="#h1-0-4" id="h1-0-4" class="i">+# background = #000000
+</a> 
+ macos-titlebar-style = transparent
+ macos-titlebar-proxy-icon = hidden
+<b>diff --git a/<a id="h2" href="../file/.config/nvim/lazy-lock.json.html">.config/nvim/lazy-lock.json</a> b/<a href="../file/.config/nvim/lazy-lock.json.html">.config/nvim/lazy-lock.json</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -8,17 +8,20 @@
+</a>   &quot;mason-lspconfig.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a9c876d72d82b6640266f8b248ac05a63630b1d9&quot; },
+   &quot;mason-null-ls.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de19726de7260c68d94691afb057fa73d3cc53e7&quot; },
+   &quot;mason.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8024d64e1330b86044fed4c8494ef3dcd483a67c&quot; },
+<a href="#h2-0-3" id="h2-0-3" class="i">+  &quot;mini.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;77e20cd6ed80fdf1738c116c35da81e7d9ad997e&quot; },
+</a>   &quot;neo-tree.nvim&quot;: { &quot;branch&quot;: &quot;v3.x&quot;, &quot;commit&quot;: &quot;cea666ef965884414b1b71f6b39a537f9238bdb2&quot; },
+   &quot;none-ls.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;a5954f00ee88bcdf154e931198ec636a26a1077c&quot; },
+   &quot;nui.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;de740991c12411b663994b2860f1a4fd0937c130&quot; },
+<a href="#h2-0-7" id="h2-0-7" class="d">-  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;d3934000788ab0a8f98ed58bc69e4b73ad26b110&quot; },
+</a><a href="#h2-0-8" id="h2-0-8" class="i">+  &quot;nvim-lspconfig&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;dbfd8da6206b4ab0e2fe9b72a538f82e2b410102&quot; },
+</a>   &quot;nvim-treesitter&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;42fc28ba918343ebfd5565147a42a26580579482&quot; },
+   &quot;nvim-web-devicons&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;0422a19d9aa3aad2c7e5cca167e5407b13407a9d&quot; },
+   &quot;persistence.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;166a79a55bfa7a4db3e26fc031b4d92af71d0b51&quot; },
+   &quot;plenary.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;857c5ac632080dba10aae49dba902ce3abf91b35&quot; },
+<a href="#h2-0-13" id="h2-0-13" class="i">+  &quot;render-markdown.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;b540997fbf7ccf3a39ce21162ce8957be2f67e37&quot; },
+</a>   &quot;rustaceanvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;709d35ca3a8e42ec855467de62d43f70f7adc656&quot; },
+   &quot;snacks.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;bc0630e43be5699bb94dadc302c0d21615421d93&quot; },
+   &quot;substitute.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;9db749a880e3dd3b0eb57f698aa8f1e1630e1f25&quot; },
+<a href="#h2-0-17" id="h2-0-17" class="i">+  &quot;telescope.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;a0bbec21143c7bc5f8bb02e0005fa0b982edc026&quot; },
+</a>   &quot;transparent.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;8ac59883de84e9cd1850ea25cf087031c5ba7d54&quot; },
+   &quot;trouble.nvim&quot;: { &quot;branch&quot;: &quot;main&quot;, &quot;commit&quot;: &quot;85bedb7eb7fa331a2ccbecb9202d8abba64d37b3&quot; },
+   &quot;typst-preview.nvim&quot;: { &quot;branch&quot;: &quot;master&quot;, &quot;commit&quot;: &quot;dea4525d5420b7c32eebda7de15a6beb9d6574fa&quot; },
+<b>diff --git a/<a id="h3" href="../file/.config/nvim/lua/linus/plugins/mason.lua.html">.config/nvim/lua/linus/plugins/mason.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/mason.lua.html">.config/nvim/lua/linus/plugins/mason.lua</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -29,7 +29,7 @@ return {
+</a>                 &quot;pyright&quot;,
+                 &quot;clangd&quot;,
+                 -- &quot;rust-analyzer&quot;,
+<a href="#h3-0-3" id="h3-0-3" class="d">-                &quot;tsserver&quot;
+</a><a href="#h3-0-4" id="h3-0-4" class="i">+                -- &quot;tsserver&quot;
+</a>             }
+             for _, server in ipairs(servers) do
+                 lspconfig[server].setup({})
+<b>diff --git a/<a id="h4" href="../file/.config/nvim/lua/linus/plugins/render-markdown.lua.html">.config/nvim/lua/linus/plugins/render-markdown.lua</a> b/<a href="../file/.config/nvim/lua/linus/plugins/render-markdown.lua.html">.config/nvim/lua/linus/plugins/render-markdown.lua</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -0,0 +1,13 @@
+</a><a href="#h4-0-0" id="h4-0-0" class="i">+-- MeanderingProgrammer/render-markdown.nvim
+</a><a href="#h4-0-1" id="h4-0-1" class="i">+return {
+</a><a href="#h4-0-2" id="h4-0-2" class="i">+    &#39;MeanderingProgrammer/render-markdown.nvim&#39;,
+</a><a href="#h4-0-3" id="h4-0-3" class="i">+    dependencies = { &#39;nvim-treesitter/nvim-treesitter&#39;, &#39;echasnovski/mini.nvim&#39; },
+</a><a href="#h4-0-4" id="h4-0-4" class="i">+    config = function()
+</a><a href="#h4-0-5" id="h4-0-5" class="i">+        require(&#39;render-markdown&#39;).setup({
+</a><a href="#h4-0-6" id="h4-0-6" class="i">+            bullet = {
+</a><a href="#h4-0-7" id="h4-0-7" class="i">+                enabled = false,
+</a><a href="#h4-0-8" id="h4-0-8" class="i">+                -- icons = { &#39;●&#39;, &#39;○&#39;, &#39;◆&#39;, &#39;◇&#39; },
+</a><a href="#h4-0-9" id="h4-0-9" class="i">+            },
+</a><a href="#h4-0-10" id="h4-0-10" class="i">+        })
+</a><a href="#h4-0-11" id="h4-0-11" class="i">+    end,
+</a><a href="#h4-0-12" id="h4-0-12" class="i">+}
+</a><b>diff --git a/<a id="h5" href="../file/.config/tmux/tmux.conf.html">.config/tmux/tmux.conf</a> b/<a href="../file/.config/tmux/tmux.conf.html">.config/tmux/tmux.conf</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -7,7 +7,8 @@ bind C-e send-prefix
+</a> # set -g status-fg &#39;#000000&#39;
+ 
+ set -g status-bg &#39;#000000&#39;
+<a href="#h5-0-3" id="h5-0-3" class="d">-set -g status-fg &#39;#1f5b39&#39;
+</a><a href="#h5-0-4" id="h5-0-4" class="i">+# set -g status-fg &#39;#1f5b39&#39;
+</a><a href="#h5-0-5" id="h5-0-5" class="i">+set -g status-fg &#39;#ffffff&#39;
+</a> 
+ set-option -g base-index 1
+ set-option -g pane-base-index 1
+<b>diff --git a/<a id="h6" href="../file/.sources/plan9port.html">.sources/plan9port</a> b/<a href="../file/.sources/plan9port.html">.sources/plan9port</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -1 +0,0 @@
+</a><a href="#h6-0-0" id="h6-0-0" class="d">-Subproject commit 9da5b4451365e33c4f561d74a99ad5c17ff20fed
+</a><b>diff --git a/<a id="h7" href="../file/wallpaper/.DS_Store.html">wallpaper/.DS_Store</a> b/<a href="../file/wallpaper/.DS_Store.html">wallpaper/.DS_Store</a></b>
+Binary files differ.
+</pre>
+</div>
+</body>
+</html>

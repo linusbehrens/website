@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>wWifi - dotfiles - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../../../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed" href="../../../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="dotfiles Atom Feed (tags)" href="../../../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../../../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../../../"><img src="../../../logo.png" alt="" width="32" height="32" /></a></td><td><h1>dotfiles</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../../../log.html">Log</a> | <a href="../../../files.html">Files</a> | <a href="../../../refs.html">Refs</a> | <a href="../../../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<p> wWifi (681B)</p><hr/><pre id="blob">
+<a href="#l1" class="line" id="l1">      1</a> #!/bin/bash 
+<a href="#l2" class="line" id="l2">      2</a> 
+<a href="#l3" class="line" id="l3">      3</a> awk -F, &#39;{
+<a href="#l4" class="line" id="l4">      4</a>   if ($1 ~ /^nmcli/) {
+<a href="#l5" class="line" id="l5">      5</a>     # custom command + description
+<a href="#l6" class="line" id="l6">      6</a>     print $2
+<a href="#l7" class="line" id="l7">      7</a>   } else {
+<a href="#l8" class="line" id="l8">      8</a>     # regular SSID
+<a href="#l9" class="line" id="l9">      9</a>     print $1
+<a href="#l10" class="line" id="l10">     10</a>   }
+<a href="#l11" class="line" id="l11">     11</a> }&#39; $HOME/scripts/wifi.csv | dmenu -i | while read selection; do
+<a href="#l12" class="line" id="l12">     12</a>   if [ -z &quot;$selection&quot; ]; then
+<a href="#l13" class="line" id="l13">     13</a>     exit 0
+<a href="#l14" class="line" id="l14">     14</a>   fi
+<a href="#l15" class="line" id="l15">     15</a> 
+<a href="#l16" class="line" id="l16">     16</a>   # search for the selection
+<a href="#l17" class="line" id="l17">     17</a>   awk -F, -v sel=&quot;$selection&quot; &#39;
+<a href="#l18" class="line" id="l18">     18</a>   {
+<a href="#l19" class="line" id="l19">     19</a>     if ($1 ~ /^nmcli/ &amp;&amp; $2 == sel) {
+<a href="#l20" class="line" id="l20">     20</a> 	  # custom command + description
+<a href="#l21" class="line" id="l21">     21</a>       cmd = $1
+<a href="#l22" class="line" id="l22">     22</a>       found = 1
+<a href="#l23" class="line" id="l23">     23</a>     } else if ($1 == sel) {
+<a href="#l24" class="line" id="l24">     24</a>       cmd = sprintf(&quot;nmcli device wifi connect \&quot;%s\&quot; password \&quot;%s\&quot;&quot;, $1, $2)
+<a href="#l25" class="line" id="l25">     25</a>       found = 1
+<a href="#l26" class="line" id="l26">     26</a>     }
+<a href="#l27" class="line" id="l27">     27</a>   }
+<a href="#l28" class="line" id="l28">     28</a>   END {
+<a href="#l29" class="line" id="l29">     29</a>     if (found) {
+<a href="#l30" class="line" id="l30">     30</a>       print cmd
+<a href="#l31" class="line" id="l31">     31</a>     }
+<a href="#l32" class="line" id="l32">     32</a>   }&#39; $HOME/scripts/wifi.csv | while read cmd; do
+<a href="#l33" class="line" id="l33">     33</a>     eval &quot;$cmd&quot;
+<a href="#l34" class="line" id="l34">     34</a>   done
+<a href="#l35" class="line" id="l35">     35</a> done
+</pre>
+</div>
+</body>
+</html>

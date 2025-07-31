@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>css fix &amp; time index.html mono typeface - website - Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</title>
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed" href="../atom.xml" />
+<link rel="alternate" type="application/atom+xml" title="website Atom Feed (tags)" href="../tags.xml" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+<table><tr><td><a href="../../"><img src="../logo.png" alt="" width="32" height="32" /></a></td><td><h1>website</h1><span class="desc">Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</span></td></tr><tr><td></td><td>
+<a href="../log.html">Log</a> | <a href="../files.html">Files</a> | <a href="../refs.html">Refs</a> | <a href="../file/README.md.html">README</a></td></tr></table>
+<hr/>
+<div id="content">
+<pre><b>commit</b> <a href="../commit/9e5832e2b8b4a7ce4d51119154f0a54557e6081a.html">9e5832e2b8b4a7ce4d51119154f0a54557e6081a</a>
+<b>parent</b> <a href="../commit/82c5ab6b7ed8e43f935558119d70bf2015473f2e.html">82c5ab6b7ed8e43f935558119d70bf2015473f2e</a>
+<b>Author:</b> linus &lt;<a href="mailto:mail@linus-behrens.de">mail@linus-behrens.de</a>&gt;
+<b>Date:</b>   Thu, 31 Jul 2025 21:27:06 +0200
+
+css fix &amp; time index.html mono typeface
+
+<b>Diffstat:</b>
+<table><tr><td class="M">M</td><td><a href="#h0">css/typeface.css</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h1">output/dwl.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h2">output/index.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h3">output/linux.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h4">output/mario-kart.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h5">output/markdown.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h6">output/pgp-yubikey.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h7">output/typst.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h8">templates/index.html/header.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+<tr><td class="M">M</td><td><a href="#h9">templates/index.html/item.html</a></td><td> | </td><td class="num">2</td><td><span class="i">+</span><span class="d">-</span></td></tr>
+<tr><td class="M">M</td><td><a href="#h10">templates/page/header.html</a></td><td> | </td><td class="num">1</td><td><span class="i">+</span><span class="d"></span></td></tr>
+</table></pre><pre>11 files changed, 11 insertions(+), 1 deletion(-)
+<hr/><b>diff --git a/<a id="h0" href="../file/css/typeface.css.html">css/typeface.css</a> b/<a href="../file/css/typeface.css.html">css/typeface.css</a></b>
+<a href="#h0-0" id="h0-0" class="h">@@ -34,6 +34,7 @@ code &gt; span &gt; span &gt; * , code &gt; span &gt; * , code &gt; * {
+</a>   font-family: &#39;Noto Sans Mono&#39;;
+   font-size: 14px;
+ }
+<a href="#h0-0-3" id="h0-0-3" class="i">+
+</a> code {
+   background: #ffffff55;
+   font-family: &#39;Noto Sans Mono&#39;;
+<b>diff --git a/<a id="h1" href="../file/output/dwl.html.html">output/dwl.html</a> b/<a href="../file/output/dwl.html.html">output/dwl.html</a></b>
+<a href="#h1-0" id="h1-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;dwl config - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h1-0-3" id="h1-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h2" href="../file/output/index.html.html">output/index.html</a> b/<a href="../file/output/index.html.html">output/index.html</a></b>
+<a href="#h2-0" id="h2-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;Posts - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h2-0-3" id="h2-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h3" href="../file/output/linux.html.html">output/linux.html</a> b/<a href="../file/output/linux.html.html">output/linux.html</a></b>
+<a href="#h3-0" id="h3-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;Why Linux - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h3-0-3" id="h3-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h4" href="../file/output/mario-kart.html.html">output/mario-kart.html</a> b/<a href="../file/output/mario-kart.html.html">output/mario-kart.html</a></b>
+<a href="#h4-0" id="h4-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;Mario Kart Emulator Setup - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h4-0-3" id="h4-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h5" href="../file/output/markdown.html.html">output/markdown.html</a> b/<a href="../file/output/markdown.html.html">output/markdown.html</a></b>
+<a href="#h5-0" id="h5-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;Markdown - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h5-0-3" id="h5-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h6" href="../file/output/pgp-yubikey.html.html">output/pgp-yubikey.html</a> b/<a href="../file/output/pgp-yubikey.html.html">output/pgp-yubikey.html</a></b>
+<a href="#h6-0" id="h6-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;yubikey pgp config - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h6-0-3" id="h6-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h7" href="../file/output/typst.html.html">output/typst.html</a> b/<a href="../file/output/typst.html.html">output/typst.html</a></b>
+<a href="#h7-0" id="h7-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;saait (https://git.codemadness.org/saait/file/README.html)&quot; /&gt;
+ 	&lt;title&gt;Typst - Linus Blog&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h7-0-3" id="h7-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;Linus Blog Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h8" href="../file/templates/index.html/header.html.html">templates/index.html/header.html</a> b/<a href="../file/templates/index.html/header.html.html">templates/index.html/header.html</a></b>
+<a href="#h8-0" id="h8-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;${sitegenerator}&quot; /&gt;
+ 	&lt;title&gt;Posts - ${sitetitle}&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h8-0-3" id="h8-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed with content&quot; /&gt;
+<b>diff --git a/<a id="h9" href="../file/templates/index.html/item.html.html">templates/index.html/item.html</a> b/<a href="../file/templates/index.html/item.html.html">templates/index.html/item.html</a></b>
+<a href="#h9-0" id="h9-0" class="h">@@ -1 +1 @@
+</a><a href="#h9-0-0" id="h9-0-0" class="d">-&lt;tr&gt;&lt;td&gt;&lt;time&gt;${created}&lt;/time&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;${filename}&quot;&gt;${title}&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><a href="#h9-0-1" id="h9-0-1" class="i">+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&lt;time&gt;${created}&lt;/time&gt;&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;${filename}&quot;&gt;${title}&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+</a><b>diff --git a/<a id="h10" href="../file/templates/page/header.html.html">templates/page/header.html</a> b/<a href="../file/templates/page/header.html.html">templates/page/header.html</a></b>
+<a href="#h10-0" id="h10-0" class="h">@@ -10,6 +10,7 @@
+</a> 	&lt;meta name=&quot;generator&quot; content=&quot;${sitegenerator}&quot; /&gt;
+ 	&lt;title&gt;${title} - ${sitetitle}&lt;/title&gt;
+ 	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+<a href="#h10-0-3" id="h10-0-3" class="i">+	&lt;link rel=&quot;stylesheet&quot; href=&quot;typeface.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</a> 	&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed&quot; /&gt;
+ 	&lt;link rel=&quot;alternate&quot; href=&quot;atom_content.xml&quot; type=&quot;application/atom+xml&quot; title=&quot;${sitetitle} Atom Feed with content&quot; /&gt;
+</pre>
+</div>
+</body>
+</html>

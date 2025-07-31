@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>website, branch HEAD</title>
+<subtitle>Unnamed repository; edit this file &#39;description&#39; to name the repository.
+</subtitle>
+<entry>
+<id>c36ecc9b9c6304904d80b5f1ad08577d1585282c</id>
+<published>2025-07-31T20:25:53Z</published>
+<updated>2025-07-31T20:25:53Z</updated>
+<title>vergessen neu zu builden</title>
+<link rel="alternate" type="text/html" href="commit/c36ecc9b9c6304904d80b5f1ad08577d1585282c.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit c36ecc9b9c6304904d80b5f1ad08577d1585282c
+parent 39dd28a8d9081c4c998201954027555c65a72f32
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 22:25:53 +0200
+
+vergessen neu zu builden
+
+</content>
+</entry>
+<entry>
+<id>39dd28a8d9081c4c998201954027555c65a72f32</id>
+<published>2025-07-31T20:23:45Z</published>
+<updated>2025-07-31T20:23:45Z</updated>
+<title>git link fix</title>
+<link rel="alternate" type="text/html" href="commit/39dd28a8d9081c4c998201954027555c65a72f32.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 39dd28a8d9081c4c998201954027555c65a72f32
+parent a19b02b7845ae3d28ca162f24a44df168741561b
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 22:23:45 +0200
+
+git link fix
+
+</content>
+</entry>
+<entry>
+<id>a19b02b7845ae3d28ca162f24a44df168741561b</id>
+<published>2025-07-31T20:18:28Z</published>
+<updated>2025-07-31T20:18:28Z</updated>
+<title>git/ with stagit</title>
+<link rel="alternate" type="text/html" href="commit/a19b02b7845ae3d28ca162f24a44df168741561b.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit a19b02b7845ae3d28ca162f24a44df168741561b
+parent b6ebcce6acd9ded9506c44f42ddbf1be479cb40c
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 22:18:28 +0200
+
+git/ with stagit
+
+</content>
+</entry>
+<entry>
+<id>b6ebcce6acd9ded9506c44f42ddbf1be479cb40c</id>
+<published>2025-07-31T19:45:39Z</published>
+<updated>2025-07-31T19:45:39Z</updated>
+<title>Create README.md</title>
+<link rel="alternate" type="text/html" href="commit/b6ebcce6acd9ded9506c44f42ddbf1be479cb40c.html" />
+<author>
+<name>Linus</name>
+<email>93053722+linusbehrens@users.noreply.github.com</email>
+</author>
+<content>commit b6ebcce6acd9ded9506c44f42ddbf1be479cb40c
+parent 878a2b20d7854cae60b0b2b03695118c4a863060
+Author: Linus &lt;93053722+linusbehrens@users.noreply.github.com&gt;
+Date:   Thu, 31 Jul 2025 21:45:39 +0200
+
+Create README.md
+</content>
+</entry>
+<entry>
+<id>878a2b20d7854cae60b0b2b03695118c4a863060</id>
+<published>2025-07-31T19:44:07Z</published>
+<updated>2025-07-31T19:44:07Z</updated>
+<title>external typefaces loaded</title>
+<link rel="alternate" type="text/html" href="commit/878a2b20d7854cae60b0b2b03695118c4a863060.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 878a2b20d7854cae60b0b2b03695118c4a863060
+parent de0fc1967615f150838d8cf8a59adeb0746f2ace
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 21:44:07 +0200
+
+external typefaces loaded
+
+</content>
+</entry>
+<entry>
+<id>de0fc1967615f150838d8cf8a59adeb0746f2ace</id>
+<published>2025-07-31T19:31:36Z</published>
+<updated>2025-07-31T19:31:36Z</updated>
+<title>Merge pull request #1 from linusbehrens/css-fix</title>
+<link rel="alternate" type="text/html" href="commit/de0fc1967615f150838d8cf8a59adeb0746f2ace.html" />
+<author>
+<name>Linus</name>
+<email>93053722+linusbehrens@users.noreply.github.com</email>
+</author>
+<content>commit de0fc1967615f150838d8cf8a59adeb0746f2ace
+parent c4eab6ac2d9d39c9ebdaeac1bba138c40184d239
+Author: Linus &lt;93053722+linusbehrens@users.noreply.github.com&gt;
+Date:   Thu, 31 Jul 2025 21:31:36 +0200
+
+Merge pull request #1 from linusbehrens/css-fix
+
+css fix &amp; time index.html mono typeface
+
+jo! konkret 1 stück ey
+</content>
+</entry>
+<entry>
+<id>bc258f9a146fc2abe091ff1981d1780429f89ee0</id>
+<published>2025-07-31T19:31:10Z</published>
+<updated>2025-07-31T19:31:10Z</updated>
+<title>Merge branch &#39;main&#39; into css-fix</title>
+<link rel="alternate" type="text/html" href="commit/bc258f9a146fc2abe091ff1981d1780429f89ee0.html" />
+<author>
+<name>Linus</name>
+<email>93053722+linusbehrens@users.noreply.github.com</email>
+</author>
+<content>commit bc258f9a146fc2abe091ff1981d1780429f89ee0
+parent 9e5832e2b8b4a7ce4d51119154f0a54557e6081a
+Author: Linus &lt;93053722+linusbehrens@users.noreply.github.com&gt;
+Date:   Thu, 31 Jul 2025 21:31:10 +0200
+
+Merge branch &#39;main&#39; into css-fix
+</content>
+</entry>
+<entry>
+<id>9e5832e2b8b4a7ce4d51119154f0a54557e6081a</id>
+<published>2025-07-31T19:27:06Z</published>
+<updated>2025-07-31T19:27:06Z</updated>
+<title>css fix &amp; time index.html mono typeface</title>
+<link rel="alternate" type="text/html" href="commit/9e5832e2b8b4a7ce4d51119154f0a54557e6081a.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 9e5832e2b8b4a7ce4d51119154f0a54557e6081a
+parent 82c5ab6b7ed8e43f935558119d70bf2015473f2e
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 21:27:06 +0200
+
+css fix &amp; time index.html mono typeface
+
+</content>
+</entry>
+<entry>
+<id>c4eab6ac2d9d39c9ebdaeac1bba138c40184d239</id>
+<published>2025-07-31T19:19:10Z</published>
+<updated>2025-07-31T19:19:10Z</updated>
+<title>datum als code classe -&gt; mono typeface</title>
+<link rel="alternate" type="text/html" href="commit/c4eab6ac2d9d39c9ebdaeac1bba138c40184d239.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit c4eab6ac2d9d39c9ebdaeac1bba138c40184d239
+parent 82c5ab6b7ed8e43f935558119d70bf2015473f2e
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 21:19:10 +0200
+
+datum als code classe -&gt; mono typeface
+
+</content>
+</entry>
+<entry>
+<id>82c5ab6b7ed8e43f935558119d70bf2015473f2e</id>
+<published>2025-07-31T19:15:01Z</published>
+<updated>2025-07-31T19:15:01Z</updated>
+<title>new css (code in darkmode) und header2</title>
+<link rel="alternate" type="text/html" href="commit/82c5ab6b7ed8e43f935558119d70bf2015473f2e.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 82c5ab6b7ed8e43f935558119d70bf2015473f2e
+parent 30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 21:15:01 +0200
+
+new css (code in darkmode) und header2
+
+</content>
+</entry>
+<entry>
+<id>30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963</id>
+<published>2025-07-31T19:09:58Z</published>
+<updated>2025-07-31T19:09:58Z</updated>
+<title>new css (code)</title>
+<link rel="alternate" type="text/html" href="commit/30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 30a3b3b6a29f4b3cb15617c2172b2fcad4c2a963
+parent 5e7f392ae45484aa01886c447ecb6f1cc9deabd0
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 21:09:58 +0200
+
+new css (code)
+
+</content>
+</entry>
+<entry>
+<id>5e7f392ae45484aa01886c447ecb6f1cc9deabd0</id>
+<published>2025-07-31T18:51:37Z</published>
+<updated>2025-07-31T18:51:37Z</updated>
+<title>standard css added</title>
+<link rel="alternate" type="text/html" href="commit/5e7f392ae45484aa01886c447ecb6f1cc9deabd0.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 5e7f392ae45484aa01886c447ecb6f1cc9deabd0
+parent 8f23b0d6f9effedc84b4892bda3db4cb285bee34
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 20:51:37 +0200
+
+standard css added
+
+</content>
+</entry>
+<entry>
+<id>8f23b0d6f9effedc84b4892bda3db4cb285bee34</id>
+<published>2025-07-31T18:45:40Z</published>
+<updated>2025-07-31T18:45:40Z</updated>
+<title>convert</title>
+<link rel="alternate" type="text/html" href="commit/8f23b0d6f9effedc84b4892bda3db4cb285bee34.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 8f23b0d6f9effedc84b4892bda3db4cb285bee34
+parent 46656807bc204aeedfb9c976c7d5cf76b05c5c42
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 20:45:40 +0200
+
+convert
+
+</content>
+</entry>
+<entry>
+<id>46656807bc204aeedfb9c976c7d5cf76b05c5c42</id>
+<published>2025-07-31T18:02:03Z</published>
+<updated>2025-07-31T18:02:03Z</updated>
+<title>batman</title>
+<link rel="alternate" type="text/html" href="commit/46656807bc204aeedfb9c976c7d5cf76b05c5c42.html" />
+<author>
+<name>linus</name>
+<email>mail@linus-behrens.de</email>
+</author>
+<content>commit 46656807bc204aeedfb9c976c7d5cf76b05c5c42
+Author: linus &lt;mail@linus-behrens.de&gt;
+Date:   Thu, 31 Jul 2025 20:02:03 +0200
+
+batman
+
+</content>
+</entry>
+</feed>
