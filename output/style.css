@@ -55,15 +55,15 @@ table tr td {
 pre {
 	margin: 0;
 }
-code {
-	background-color: #eee;
-	border: 3px solid #aaa;
-	display: block;
-	font-family: monospace;
-	overflow-x: auto;
-	padding: 5px;
-	word-wrap: normal;
-}
+/* code { */
+/* 	background-color: #eee; */
+/* 	border: 3px solid #aaa; */
+/* 	display: block; */
+/* 	font-family: monospace; */
+/* 	overflow-x: auto; */
+/* 	padding: 5px; */
+/* 	word-wrap: normal; */
+/* } */
 #menu td {
 	padding: 1ex 0;
 }
