@@ -24,8 +24,19 @@ a {
     text-decoration: none;
 }
 
-code.long {
+.center {
+    padding: 10px;
+    width: calc(100% - 2 * 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+code:has(br), code.long {
+    /* display: block; */
     background: #aaaaaa55;
+}
+code > * {
+    margin: 0;
 }
 code, code > * {
     width: 100%;
@@ -36,9 +47,6 @@ code, code > * {
 code time {
     font-family: 'Inter', sans-serif;
     font-variant-numeric: tabular-nums;
-}
-code:has(br), code.long {
-    display: block;
 }
 
 ul {
