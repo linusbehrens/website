@@ -48,6 +48,16 @@ code.long {
   display: block;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "- ";
+  /* margin-right: 0.5em; */
+}
+
 /* body { */
 /*   background-color: #111; */
 /*   color: #333; */

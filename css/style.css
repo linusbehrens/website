@@ -96,7 +96,9 @@ pre {
 		border-color: #222;
 	}
 	a {
-		color: #56c8ff;
+		/* color: #56c8ff; */
+		color: #495FFE;
+
 	}
 	#main {
 		border-top: 3px solid #222;

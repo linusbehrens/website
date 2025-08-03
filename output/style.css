@@ -49,9 +49,6 @@ h3 a:hover {
 	color: inherit;
 	text-decoration: none;
 }
-table tr td {
-	padding: 2px 10px 2px 0px;
-}
 pre {
 	margin: 0;
 }
@@ -96,7 +93,9 @@ pre {
 		border-color: #222;
 	}
 	a {
-		color: #56c8ff;
+		/* color: #56c8ff; */
+		color: #98C0FE;
+
 	}
 	#main {
 		border-top: 3px solid #222;

@@ -29,7 +29,7 @@
 		<table id="menu" width="100%" border="0">
 		<tr>
 			<td id="links" align="left">
-				<a href="index.html">Blog</a> |
+				<a href="index.html">Blog</a>,
 				<a href="./git/" title="Git repository with some of my projects">Git</a> <!-- | -->
 				<!-- <a href="/releases/">Releases</a> | -->
 				<!-- <a href="gopher://codemadness.org">Gopherhole</a> -->
@@ -37,7 +37,7 @@
 			<td id="links-contact" align="right">
 				<span class="hidden"> | </span>
 				<!-- <a href="feeds.html">Feeds</a> | -->
-				<a href="pgp.asc">PGP</a> |
+				<a href="pgp.asc">PGP</a>,
 				<a href="mailto:mail@linus-behrens.de">Mail</a>
 			</td>
 		</tr>
@@ -50,30 +50,36 @@
 <header>
 	<h1>Typst</h1>
 	<p>
-	<strong>Last modification on </strong> <time>2025-06-01</time>
+        <strong>Last modification on </strong> <code><time>2025-06-01</time></code>
 	</p>
+    <hr \>
 </header>
 
-<p>When ever editing big text projects I used <span
-class="math inline">$\LaTeX$</span>. Just because Latex is the right
-tool for the job.</p>
-<p>But as it turned out there has been a simpler tool for the job. And
-it is called Typst.</p>
-<p>Why it is simpler:</p>
+<p>
+    When ever editing big text projects I used 
+    <code>
+        $\Latex$
+    </code>
+    . Just because Latex is the right tool for the job. <br>
+    But as it turned out there has been a simpler tool for the job. And it is called Typst.
+</p>
+<p>
+    Why it is simpler:
+</p>
+
 <ul>
-<li>It is FOSS</li>
-<li>Ready to write: no <code>\document{begin}</code></li>
-<li>Markdown based syntax where it can: eg. headings with
-<code>=</code></li>
-<li>Easy math syntax</li>
-<li>Simple coding constructs instead of single use case based
-macros</li>
-<li>FOSS templates ready to clone</li>
-<li>Renders preview from buffer: instant update without having to
-safe</li>
+    <li>It is FOSS</li>
+    <li>Ready to write: no <code>\document{begin}</code></li>
+    <li>Markdown based syntax where it can: eg. headings with <code>=</code></li>
+    <li>Easy math syntax</li>
+    <li>Simple coding constructs instead of single use case based macros</li>
+    <li>FOSS templates ready to clone</li>
+    <li>Renders preview from buffer: instant update without having to safe</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode typ"><code class="sourceCode typst"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lim_(x-&gt;oo) 1/x = 0</span></code></pre></div>
+
+<code class="long">
+    lim_(x-&gt;oo) 1/x = 0
+</code>
 <p>Their <a href="https://github.com/typst">GitHub Page</a></p>
 
 			</article>
