@@ -1,30 +1,22 @@
-html {
-	overflow-y: scroll;
-}
+/* html { */
+/* 	overflow-y: scroll; */
+/* } */
 body {
 	background-color: #fff;
 	color: #000;
 	font-family: sans-serif;
-	margin: 0;
-	padding: 1ex;
+	margin: 0 auto;
+	max-width: 80ex;
 }
+a {
+	color: #4860FE !IMPORTANT;
+}
+
 /* HTML5 semantic tags: some (older) browsers display this inline by default */
 article, figcaption, figure, header, main, nav {
 	display: block;
 }
 /* center images */
-img {
-	display: block;
-	margin: 0 auto;
-}
-table, img {
-	border: 0;
-}
-hr {
-	border: 0;
-	border-bottom: 3px solid #aaa;
-	height: 3px;
-}
 h1 {
 	font-size: 140%;
 }
@@ -64,14 +56,9 @@ pre {
 #menu td {
 	padding: 1ex 0;
 }
-#main {
-	border-top: 3px solid #aaa;
-}
-#menuwrap,
-#menu,
-#main {
-	margin: 0px auto;
-	max-width: 80ex;
+/* #main  */
+#mainwrap > * {
+	border-top: 3px solid #dddddd55;
 }
 #menu a {
 	font-weight: bold;
@@ -81,23 +68,11 @@ pre {
 	display: none;
 }
 @media (prefers-color-scheme: dark) {
+    * {
+        color: #fff !IMPORTANT;
+    }
 	body {
 		background-color: #000;
-		color: #bdbdbd;
-	}
-	/* code { */
-	/* 	background-color: #111; */
-	/* 	border-color: #222; */
-	/* } */
-	hr {
-		border-color: #222;
-	}
-	a {
-		/* color: #56c8ff; */
-		color: #98C0FE;
-
-	}
-	#main {
-		border-top: 3px solid #222;
+		color: #111111;
 	}
 }

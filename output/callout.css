@@ -1,0 +1,36 @@
+div.callout {
+	/* border-top: 3px solid #dddddd55; */
+    display: block;
+    margin: 1ex 0;
+    padding: 1rem;
+    width: calc(100% - 2 * 1rem);
+    /* background: #FF000055; */
+    background: #4860FE55;
+
+}
+div.callout > * {
+    margin: 0;
+}
+.callout .horizontal {
+    display: flex;
+    flex-direction: row;
+}
+.callout div .vertical {
+    display: flex;
+    flex-direction: column;
+}
+p .callout {
+    display: inline;
+    margin: 0;
+}
+.callout .icon {
+    display: inline;
+    margin: 0;
+    color: #4860FE;
+    margin-right: 4px;
+}
+.callout .heading {
+    display: inline;
+    margin: 0;
+    color: #FFFFFF;
+}
