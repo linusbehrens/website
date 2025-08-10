@@ -2,7 +2,6 @@ img {
 	border: 0;
     width: 100%;
 	display: block;
-	margin: 0 auto;
 }
 hr {
 	border: 0;
@@ -12,4 +11,18 @@ hr {
 img.rss {
     width: 16px;
     height: 16px;
+}
+
+.horizontal.scroll {
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    gap: 0.5rem;                 /* optional spacing */
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal.scroll.height img {
+    height: 30vh !important;     
+    width: auto !important;     
+    display: block;
 }
