@@ -1,0 +1,59 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+.noto-sans-mono-<uniquifier> {
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+* {
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding: 10px;
+    width: calc(100% - 2 * 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+code:has(br), code.long {
+    /* display: block; */
+    background: #aaaaaa55;
+}
+code > * {
+    margin: 0;
+}
+code, code > * {
+    width: 100%;
+    background: none;
+    font-family: 'Noto Sans Mono';
+    font-size: 16px;
+}
+code time {
+    font-family: 'Inter', sans-serif;
+    font-variant-numeric: tabular-nums;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li::before {
+  content: " -  ";
+  /* margin-right: 0.5em; */
+}

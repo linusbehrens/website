@@ -1,34 +1,45 @@
+<!--
+    title:Yubikey PGP Config
+    description:Setup for pgp supported by a yubikey
+    created:2025-07-05
+    last_update:2025-07-05
+    author:linusbehrens
+    path:pgp-yubikey.html
+    hidden:false
+-->
 <code class="long">gpg --expert --full-gen-key</code>
 
 <ul>
-<li>Enter <code>RSA</code></li>
-<li>Enter <code>4096</code></li>
-<li>Enter expiration date</li>
-<li>Enter user information and email</li>
-<li>Enter random input (mouse, keyboard) to gain entropy</li>
+  <li>Enter <code>RSA</code></li>
+  <li>Enter <code>4096</code></li>
+  <li>Enter expiration date</li>
+  <li>Enter user information and email</li>
+  <li>Enter random input (mouse, keyboard) to gain entropy</li>
 </ul>
 <p>Output:</p>
 
 <code class="long">gpg: key &lt;keyID&gt; marked as ultimately trusted</code>
 
-<h2 id="add-authentication-key-if-not-default">Add authentication key (if not default)</h2>
+<h2 id="add-authentication-key-if-not-default">
+  Add authentication key (if not default)
+</h2>
 
 <code class="long">gpg --expert --edit-key &lt;keyID&gt;</code>
 
-<br>
+<br />
 
 <code class="long">addkey</code>
 
 <ul>
-    <li>Enter the <code>passphrase</code></li>
-    <li>Enter <code>8</code> for RSA</li>
-    <li>Enter <code>S</code> for disabling “sign”</li>
-    <li>Enter <code>E</code> for disabling “encrypt”</li>
-    <li>Enter <code>A</code> for enabling “authentication”</li>
-    <li>Enter <code>Q</code> for leaving dialoge</li>
-    <li>Enter key size</li>
-    <li>Enter same expiration date as before</li>
-    <li>Enter <code>Y</code> to safe the changes</li>
+  <li>Enter the <code>passphrase</code></li>
+  <li>Enter <code>8</code> for RSA</li>
+  <li>Enter <code>S</code> for disabling “sign”</li>
+  <li>Enter <code>E</code> for disabling “encrypt”</li>
+  <li>Enter <code>A</code> for enabling “authentication”</li>
+  <li>Enter <code>Q</code> for leaving dialoge</li>
+  <li>Enter key size</li>
+  <li>Enter same expiration date as before</li>
+  <li>Enter <code>Y</code> to safe the changes</li>
 </ul>
 
 <h2 id="back-pgp-key-up">Back pgp-Key up</h2>
@@ -36,49 +47,67 @@
 <code class="long">gpg --export-secret-key --armor &lt;keyID&gt;</code>
 
 <ul>
-    <li>Store output safe</li>
+  <li>Store output safe</li>
 </ul>
 
 <h2 id="add-pgp-keys-to-the-yubikey">Add pgp-keys to the YubiKey</h2>
 
 <ul>
-    <li>Insert YubiKey into a USB port</li>
+  <li>Insert YubiKey into a USB port</li>
 </ul>
 
 <code class="long">gpg --expert --edit-key &lt;keyID&gt;</code>
 
-<br>
+<br />
 
 <code class="long">addkey</code>
 
 <ul>
-    <li>Signature subkey:
-<ul>
-    <li>Enter <code>keytocard</code></li>
-    <li>Enter <code>Y</code> to continue</li>
-    <li>Enter <code>1</code> to move the signature subkey to a slot in the yubikey</li>
-    <li>Enter <code>key 1</code></li>
-</ul></li>
-<li>Encryption subkey:
-<ul>
-<li>Enter <code>keytocard</code></li>
-<li>Enter <code>Y</code> to continue</li>
-<li>Enter <code>2</code> to move the encryption subkey to a slot in the
-yubikey</li>
-<li>Enter <code>key 1</code></li>
-<li>Enter <code>key 2</code></li>
-</ul></li>
-<li>Authentication subkey
-<ul>
-<li>Enter <code>keytocard</code></li>
-<li>Enter <code>3</code> to move the authentication subkey to a slot in
-the yubikey</li>
-</ul></li>
-<li>Enter <code>quit</code> to leave</li>
+  <li>
+    Signature subkey:
+    <ul>
+      <li>Enter <code>keytocard</code></li>
+      <li>Enter <code>Y</code> to continue</li>
+      <li>
+        Enter <code>1</code> to move the signature subkey to a slot in the
+        yubikey
+      </li>
+      <li>Enter <code>key 1</code></li>
+    </ul>
+  </li>
+  <li>
+    Encryption subkey:
+    <ul>
+      <li>Enter <code>keytocard</code></li>
+      <li>Enter <code>Y</code> to continue</li>
+      <li>
+        Enter <code>2</code> to move the encryption subkey to a slot in the
+        yubikey
+      </li>
+      <li>Enter <code>key 1</code></li>
+      <li>Enter <code>key 2</code></li>
+    </ul>
+  </li>
+  <li>
+    Authentication subkey
+    <ul>
+      <li>Enter <code>keytocard</code></li>
+      <li>
+        Enter <code>3</code> to move the authentication subkey to a slot in the
+        yubikey
+      </li>
+    </ul>
+  </li>
+  <li>Enter <code>quit</code> to leave</li>
 </ul>
-<p>When asked <strong>do not safe</strong> your changes enabling you to
-copy the key to another Yubikey.</p>
+<p>
+  When asked <strong>do not safe</strong> your changes enabling you to copy the
+  key to another Yubikey.
+</p>
 <hr />
-<p><a
-href="https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP">article
-by yubikey</a></p>
+<p>
+  <a
+    href="https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP"
+    >article by yubikey</a
+  >
+</p>

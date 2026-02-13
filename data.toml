@@ -1,0 +1,10 @@
+sitetitle = "linus behrens blog"
+language = "en"
+author = "linus behrens"
+sitegenerator = "zuschalten"
+sitemail = "mail@linus-behrens.de"
+set_focus = false
+focus_descriptionn = "Projekt: "
+focus_path = "./pages/setup.html"
+title_left = "<a href='/index.html' class='normal'>Blog<span class='blue'> by linus behrens</span></a>"
+main_color = "blue"

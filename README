@@ -1,0 +1,25 @@
+linus behrens blog
+==================
+
+eine static website generiert mit zuschalten.
+
+Initial setup
+-------------
+
+    $ git clone https://git.sr.ht/~linusbehrens/zuschalten
+    $ cargo build --release && mv target/release/zuschalten /website/dir
+
+    $ cd /website/dir
+    $ ./zuschalten
+
+Details
+-------
+
+    $ nvim data.toml
+    $ nvim links.csv
+
+    $ ./zuschalten
+
+now deploy the ./output directory
+
+

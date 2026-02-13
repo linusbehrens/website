@@ -77,3 +77,10 @@ code pre {
 }
 
 /* horizontal scroller with equal-height images */
+
+.footer {
+  margin-top: 20px;
+  padding-top: 7px;
+  border-top: 3px solid #dddddd55;
+  /* opacity: 0.5; */
+}

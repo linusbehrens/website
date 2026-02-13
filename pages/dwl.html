@@ -1,88 +1,114 @@
-<p>My first rather serious linux system should be built on a Thinkpad x61s in 2023. Due to a lack in performence I thought about installing only the most minimal software on it.</p>
+<!--
+    title:dwl config
+    description:the perfect high DPI window manager?
+    created:2025-06-16
+    last_update:2025-06-16
+    author:linusbehrens
+    path:dwl.html
+    hidden:false
+-->
+<p>
+  My first rather serious linux system should be built on a Thinkpad x61s in
+  2023. Due to a lack in performence I thought about installing only the most
+  minimal software on it.
+</p>
 
-<p>So I came to see the famouse Thinkpad Arch combination. (I know and knew that it was not the most minimal os possible, but I was convinced) When trying to find the most minimal and fast window manager found the perfect fit: <code>dwm</code>.</p>
+<p>
+  So I came to see the famouse Thinkpad Arch combination. (I know and knew that
+  it was not the most minimal os possible, but I was convinced) When trying to
+  find the most minimal and fast window manager found the perfect fit:
+  <code>dwm</code>.
+</p>
 
 <p><code>dwm</code> became my wm that just worked.</p>
 
 <hr />
 
-<p>However as I continued to gain understanding of how Xorg works and as I understood the bloat in the <code>X Window System </code>, I found it hard to swich. 
+<p>
+  However as I continued to gain understanding of how Xorg works and as I
+  understood the bloat in the <code>X Window System </code>, I found it hard to
+  swich. On YouTube I came across <code>dwl</code> a project about translating
+  <code>dwl</code> to work with <code>wlroots</code>.
+</p>
 
-On YouTube I came across <code>dwl</code> a project about translating <code>dwl</code> to work with <code>wlroots</code>.</p>
-
-<p>Even though being familiar with the rather difficult to install <code>dwm</code>, I wasn’t able to even compile <code>dwl</code>. Now I understand and give you - the reader - a path to follow.</p>
-
-<code class="long">
-    ```bash <br>
-git clone https://codeberg.org/dwl/dwl.git <br>
-cd dwl <br>
-git checkout v0.7 <br>
-make <br>
-sudo make install <br>
-``` <br>
-</code>
-
-<br>
+<p>
+  Even though being familiar with the rather difficult to install
+  <code>dwm</code>, I wasn’t able to even compile <code>dwl</code>. Now I
+  understand and give you - the reader - a path to follow.
+</p>
 
 <code class="long">
-```bash <br>
-sudo dnf install \ <br>
-  libinput libinput-devel \ <br>
-  wayland wayland-devel \ <br>
-  wlroots wlroots-devel \ <br>
-  xkbcommon xkbcommon-devel \ <br>
-  wayland-protocols-devel \ <br>
-  pkgconf-pkg-config \ <br>
-  meson ninja-build \ <br>
-  gcc <br>
-```
+  ```bash <br />
+  git clone https://codeberg.org/dwl/dwl.git <br />
+  cd dwl <br />
+  git checkout v0.7 <br />
+  make <br />
+  sudo make install <br />
+  ``` <br />
 </code>
 
-<br>
+<br />
 
 <code class="long">
-```bash <br>
-git clone https://github.com/waycrate/wmenu.git <br>
-cd wmenu <br>
-meson setup build <br>
-ninja -C build <br>
-sudo ninja -C build install <br>
-```
+  ```bash <br />
+  sudo dnf install \ <br />
+  libinput libinput-devel \ <br />
+  wayland wayland-devel \ <br />
+  wlroots wlroots-devel \ <br />
+  xkbcommon xkbcommon-devel \ <br />
+  wayland-protocols-devel \ <br />
+  pkgconf-pkg-config \ <br />
+  meson ninja-build \ <br />
+  gcc <br />
+  ```
 </code>
 
-<br>
+<br />
+
+<code class="long">
+  ```bash <br />
+  git clone https://github.com/waycrate/wmenu.git <br />
+  cd wmenu <br />
+  meson setup build <br />
+  ninja -C build <br />
+  sudo ninja -C build install <br />
+  ```
+</code>
+
+<br />
 <hr />
 
 <p>Edits in <code>dwl</code> source</p>
 <p>Edits to <code>sources/dwl/config.h</code>:</p>
 
 <code class="long">
-```c <br>
-static const char *termcmd[] = { "ghostty", NULL }; <br>
-```
+  ```c <br />
+  static const char *termcmd[] = { "ghostty", NULL }; <br />
+  ```
 </code>
 
-<br>
+<br />
 
 <code class="long">
-```c <br>
-static const MonitorRule monrules[] = { <br>
-    /* macbook m1 14" */ <br>
-    { "eDP-1",    0.5f,  1,      2,    &layouts[0], WL_OUTPUT_TRANSFORM_NORMAL,   -1,  -1 }, <br>
-}; <br>
-```
+  ```c <br />
+  static const MonitorRule monrules[] = { <br />
+  /* macbook m1 14" */ <br />
+  { "eDP-1", 0.5f, 1, 2, &layouts[0], WL_OUTPUT_TRANSFORM_NORMAL, -1, -1 },
+  <br />
+  }; <br />
+  ```
 </code>
 
-<br>
+<br />
 
 <code class="long">
-```c <br>
-static const struct xkb_rule_names xkb_rules = { <br>
-    /* default: <br>
-    .options = NULL, <br>
-    */ <br>
-    .layout = "de", <br>
-    .variant = "latin1", <br>
-}; <br>
-```
+  ```c <br />
+  static const struct xkb_rule_names xkb_rules = { <br />
+  /* default: <br />
+  .options = NULL, <br />
+  */ <br />
+  .layout = "de", <br />
+  .variant = "latin1", <br />
+  }; <br />
+  ```
 </code>

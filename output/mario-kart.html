@@ -1,162 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="Content-Language" content="en" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="keywords" content="blog, git, dev-log, life-log" />
-	<meta name="description" content="How to setup Mario Kart Wii on a dolphin Emulator" />
-	<meta name="author" content="linusbehrens" />
-	<meta name="generator" content="saait (https://git.codemadness.org/saait/file/README.html)" />
-	<title>Mario Kart Emulator Setup - Linus Blog</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="keywords" content="${keywords}" /> -->
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="author" content="linus behrens" />
+    <meta name="generator" content="zuschalten" />
+    <title>TITLE - linus behrens blog</title>
 
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="table.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="img.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="callout.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="typeface.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="table.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="img.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="callout.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="typeface.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="print.css" type="text/css" media="print" />
 
-	<link rel="alternate" href="atom.xml" type="application/atom+xml" title="Linus Blog Atom Feed" />
-	<link rel="alternate" href="atom_content.xml" type="application/atom+xml" title="Linus Blog Atom Feed with content" />
-	<link rel="icon" href="/favicon.png" type="image/png" />
-</head>
-<body>
-	<nav id="menuwrap">
-		<table id="menu" width="100%" border="0">
-		<tr>
-			<td id="links" align="left">
-				<a href="index.html">Blog</a>,
-				<a href="./git/" title="Git repository with some of my projects">Git</a> <!-- | -->
-				<!-- <a href="/releases/">Releases</a> | -->
-				<!-- <a href="gopher://codemadness.org">Gopherhole</a> -->
-			</td>
-			<td id="links-contact" align="right">
-				<span class="hidden"> | </span>
-				<!-- <a href="feeds.html">Feeds</a> | -->
-				<a href="pgp.asc">PGP</a>,
-				<a href="mailto:mail@linus-behrens.de">Mail</a>
-			</td>
-		</tr>
-		</table>
-	</nav>
-	<hr class="hidden" />
-	<main id="mainwrap">
-		<div id="main">
-			<article>
-<header>
-	<h1>Mario Kart Emulator Setup</h1>
-	<p>
-        <strong>Last modification: </strong> <code><time>2025-04-11</time></code>
-	</p>
-    <hr \>
-</header>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <nav id="menuwrap">
+      <table id="menu" width="100%" border="0">
+        <tr>
+          <td id="links" align="left">
+            <a href='/index.html' class='normal'>Blog<span class='blue'> by linus behrens</span></a>
+          </td>
+          <td id="links-contact" align="right">
+            <a href='mailto:mail@linus-behrens.de'>Mail</a>
+          </td>
+        </tr>
+      </table>
+    </nav>
+    <hr class="hidden" />
+    <main id="mainwrap">
+      <div id="main">
+        <article></article>
+      </div>
+    </main>
+  </body>
+</html>
+<!--
+    title:Mario Kart Emulator
+    description:How to setup Mario Kart Wii on a dolphin Emulator
+    created:2025-04-11
+    last_update:2025-04-11
+    author:linusbehrens
+    path:mario-kart.html
+    hidden:false
+-->
 
 <h2 id="standard-game-on-emulator">Standard game on Emulator</h2>
 
 <ol type="1">
-    <li>Get you Mario Kart Wiis Disc <code>.iso</code>. If you burner is broken like mine <a href="https://romsfun.com/roms/nintendo-wii/mario-kart-wii.html">download it</a>.</li>
-    <li>Get the <a href="https://de.dolphin-emu.org/download/?ref=btn">Dolphin Emulator</a></li>
-    <li>Choose your game directory with dolphin</li>
-    <li>Copy the <a href="https://newwfc.xyz/codes/">code</a> in Mario Kart Wii <code>right click</code> &gt; Properties &gt; Gecko Codes &gt; Add Codes. Give it a name</li>
-    <li>Settings &gt; generell &gt; activate cheats <code>checked</code></li>
+  <li>
+    Get you Mario Kart Wiis Disc <code>.iso</code>. If you burner is broken like
+    mine
+    <a href="https://romsfun.com/roms/nintendo-wii/mario-kart-wii.html"
+      >download it</a
+    >.
+  </li>
+  <li>
+    Get the
+    <a href="https://de.dolphin-emu.org/download/?ref=btn">Dolphin Emulator</a>
+  </li>
+  <li>Choose your game directory with dolphin</li>
+  <li>
+    Copy the <a href="https://newwfc.xyz/codes/">code</a> in Mario Kart Wii
+    <code>right click</code> &gt; Properties &gt; Gecko Codes &gt; Add Codes.
+    Give it a name
+  </li>
+  <li>Settings &gt; generell &gt; activate cheats <code>checked</code></li>
 </ol>
 
 <h3 id="the-code">The <em>code</em></h3>
 
-<code class="long">C0000000 00000029 <br>
-    3C004E80 60000020 <br>
-    900F0000 7D8802A6 <br>
-    9421FF80 BC610008 <br>
-    48000019 6e657777 <br>
-    66632e78 797a0000 <br>
-    00000000 00000000 <br>
-    7F2802A6 3AC0FFFF <br>
-    3B19FFFF 8EF80001 <br>
-    2C170000 3AD60001 <br>
-    4082FFF4 3E208000 <br>
-    8B9F5F27 623E2FFF <br>
-    2C1C00EC 623FF1F0 <br>
-    41820020 2C1C0010 <br>
-    623FF114 41820014 <br>
-    2C1C0054 623FF258 <br>
-    41820008 623FE690 <br>
-    3E202E6E 6231696E <br>
-    3F80017F 639CCFFC <br>
-    87BE0001 7C1D8800 <br>
-    4182001D 379CFFFF <br>
-    4082FFF0 B8610008 <br>
-    38210080 7D8803A6 <br>
-    4E800020 7F4802A6 <br>
-    7FDBF378 3B19FFFF <br>
-    7ED0B378 8EF80001 <br>
-    9EFB0001 3610FFFF <br>
-    4082FFF4 3A800010 <br>
-    7E96A051 41820064 <br>
-    7E54DA14 8A720001 <br>
-    2C13002F 41A20014 <br>
-    9E7B0001 3694FFFF <br>
-    4082FFF8 48000044 <br>
-    38920001 387B0001 <br>
-    38C4FFFF 38A00000 <br>
-    8CE60001 2C070000 <br>
-    38A50001 4082FFF4 <br>
-    3A05FFFE 7FE803A6 <br>
-    4E800021 7E101A14 <br>
-    39E00000 9DF00001 <br>
-    3694FFFF 4082FFF8 <br>
-    7F4803A6 4E800020 <br>
-    C0000000 0000000E <br>
-    3C004E80 60000020 <br>
-    900F0000 3D808000 <br>
-    618C3000 3C00017F <br>
-    6000CFFC 7C0903A6 <br>
-    3D607474 616B7073 <br>
-    800C0000 7C005800 <br>
-    40A20034 394C0003 <br>
-    392C0002 7D455378 <br>
-    38600000 8C050001 <br>
-    2C000000 38630001 <br>
-    4082FFF4 8C0A0001 <br>
-    9C090001 3463FFFF <br>
-    4082FFF4 398C0001 <br>
-    4200FFC0 4E800020
+<code class="long"
+  >C0000000 00000029 <br />
+  3C004E80 60000020 <br />
+  900F0000 7D8802A6 <br />
+  9421FF80 BC610008 <br />
+  48000019 6e657777 <br />
+  66632e78 797a0000 <br />
+  00000000 00000000 <br />
+  7F2802A6 3AC0FFFF <br />
+  3B19FFFF 8EF80001 <br />
+  2C170000 3AD60001 <br />
+  4082FFF4 3E208000 <br />
+  8B9F5F27 623E2FFF <br />
+  2C1C00EC 623FF1F0 <br />
+  41820020 2C1C0010 <br />
+  623FF114 41820014 <br />
+  2C1C0054 623FF258 <br />
+  41820008 623FE690 <br />
+  3E202E6E 6231696E <br />
+  3F80017F 639CCFFC <br />
+  87BE0001 7C1D8800 <br />
+  4182001D 379CFFFF <br />
+  4082FFF0 B8610008 <br />
+  38210080 7D8803A6 <br />
+  4E800020 7F4802A6 <br />
+  7FDBF378 3B19FFFF <br />
+  7ED0B378 8EF80001 <br />
+  9EFB0001 3610FFFF <br />
+  4082FFF4 3A800010 <br />
+  7E96A051 41820064 <br />
+  7E54DA14 8A720001 <br />
+  2C13002F 41A20014 <br />
+  9E7B0001 3694FFFF <br />
+  4082FFF8 48000044 <br />
+  38920001 387B0001 <br />
+  38C4FFFF 38A00000 <br />
+  8CE60001 2C070000 <br />
+  38A50001 4082FFF4 <br />
+  3A05FFFE 7FE803A6 <br />
+  4E800021 7E101A14 <br />
+  39E00000 9DF00001 <br />
+  3694FFFF 4082FFF8 <br />
+  7F4803A6 4E800020 <br />
+  C0000000 0000000E <br />
+  3C004E80 60000020 <br />
+  900F0000 3D808000 <br />
+  618C3000 3C00017F <br />
+  6000CFFC 7C0903A6 <br />
+  3D607474 616B7073 <br />
+  800C0000 7C005800 <br />
+  40A20034 394C0003 <br />
+  392C0002 7D455378 <br />
+  38600000 8C050001 <br />
+  2C000000 38630001 <br />
+  4082FFF4 8C0A0001 <br />
+  9C090001 3463FFFF <br />
+  4082FFF4 398C0001 <br />
+  4200FFC0 4E800020
 </code>
 
 <h2 id="modded-game-on-a-wii">Modded game on a Wii</h2>
 <h3 id="what-you-need">What you Need</h3>
 
 <ul>
-    <li>Wii (OS on version 4.3)</li>
-    <li>SD-Card (<code>&gt;=8GB</code> I suggest)</li>
-    <li>Computer with SD-Slot (or adapter)</li>
-    <li>Internet connection (computer and Wii)</li>
+  <li>Wii (OS on version 4.3)</li>
+  <li>SD-Card (<code>&gt;=8GB</code> I suggest)</li>
+  <li>Computer with SD-Slot (or adapter)</li>
+  <li>Internet connection (computer and Wii)</li>
 </ul>
 
 <h3 id="steps">Steps</h3>
 
 <ol type="1">
-    <li><p>Get you Wiis MAC-adress (Settings &gt; Internet &gt; console information)</p></li>
-    <li><p><a href="https://please.hackmii.com/">Letterbomb download</a></p></li>
-    <li><p>Put the <code>.zip</code>s content in the root of the SD-card</p></li>
-    <li><p>Put the SD-card in the Wii</p></li>
-    <li><p>Open mail on Wii and open the Letterbomb (you will see)</p></li>
-    <li><p>Follow the instructions to install the homebrew channel and BootMii</p></li>
-    <li><p>If asked choose “Install BootMii as boot2”. If it failed choose “Install BootMii as IOS”</p></li>
-    <li><p>If you want to back up <a href="http://monkeydesk.at/f19-anleitungen/anleitung-nand-backup-eurer-wii-erstellen-178/">follow those instructions</a></p></li>
-    <li><p>Get the <a href="https://www.chadsoft.co.uk/">CTGP-R</a> <code>.zip</code>.</p></li>
-    <li><p>Copy the folder content in the root oft the SD card.</p></li>
-    <li><p>Open CTGP-R on the homebrew channel and follow the instructions</p></li>
+  <li>
+    <p>
+      Get you Wiis MAC-adress (Settings &gt; Internet &gt; console information)
+    </p>
+  </li>
+  <li>
+    <p><a href="https://please.hackmii.com/">Letterbomb download</a></p>
+  </li>
+  <li>
+    <p>Put the <code>.zip</code>s content in the root of the SD-card</p>
+  </li>
+  <li><p>Put the SD-card in the Wii</p></li>
+  <li><p>Open mail on Wii and open the Letterbomb (you will see)</p></li>
+  <li>
+    <p>Follow the instructions to install the homebrew channel and BootMii</p>
+  </li>
+  <li>
+    <p>
+      If asked choose “Install BootMii as boot2”. If it failed choose “Install
+      BootMii as IOS”
+    </p>
+  </li>
+  <li>
+    <p>
+      If you want to back up
+      <a
+        href="http://monkeydesk.at/f19-anleitungen/anleitung-nand-backup-eurer-wii-erstellen-178/"
+        >follow those instructions</a
+      >
+    </p>
+  </li>
+  <li>
+    <p>
+      Get the <a href="https://www.chadsoft.co.uk/">CTGP-R</a>
+      <code>.zip</code>.
+    </p>
+  </li>
+  <li><p>Copy the folder content in the root oft the SD card.</p></li>
+  <li>
+    <p>Open CTGP-R on the homebrew channel and follow the instructions</p>
+  </li>
 </ol>
-
 			</article>
 		</div>
 	</main>
+    <div class="footer">
+        Copyright Linus Behrens, <a href="/impressum.html">Impressum</a>
+    </div>
 </body>
 </html>
